@@ -1,0 +1,16 @@
+{
+	"companies": [
+		{
+			"name": "Wal-Mart",
+			"code": "WM"
+		},
+		{
+			"name": "CVS-Texas",
+			"code": "CVS"
+		},
+		{
+			"name": "Valley National Bank",
+			"code": "VNB"
+		}
+	]
+}

@@ -1,0 +1,83 @@
+/* McTabs - menucool.com */
+
+ul#tabsdemo
+{
+    height:30px; /* height #1 */
+    text-align:left; /*set to left, center, or right to align the tabs as desired*/    
+    font-size:0;
+    margin:0;padding:0;
+    list-style-type:none;
+}
+        
+ul#tabsdemo li
+{
+    display:inline;
+    margin:0;padding:0;
+    margin-right:3px; /*distance between tabs*/
+}
+        
+ul#tabsdemo li a
+{
+    padding:0 16px; /* edit 16px for different tab width */
+    display:inline-block;    
+    font:normal 10px Verdana;
+    line-height:30px;/* height #1 */
+    text-decoration: none;
+    color:#222;
+    border:1px solid #CCC; /*This color can be different from color #2 */
+    border-bottom:none;
+    background:#F0F0F0 url(tabbg.gif) 0 0 repeat-x;
+    outline:none;
+    border-radius:3px 3px 0 0;
+    position:relative;
+}
+        
+ul#tabsdemo li a:link, ul#tabsdemo li a:visited
+{
+    color:#222;
+}
+        
+ul#tabsdemo li a:hover
+{
+    border-color: #DDD; /*color #1*/
+    background:#F0F0F0 url(tabbg.gif) 0 -36px repeat-x;
+}
+  
+/*selected tab style */
+ul#tabsdemo li.selected a
+{
+    color:#000;
+    font-weight:normal;
+    border-color:#DDD; /*color #1*/
+    background:white; /*color #2*/
+    z-index:3;
+}   
+        
+/*selected tab style on hover */
+ul#tabsdemo li.selected a:hover
+{
+    text-decoration:none;
+}
+
+/* container of content panels */
+div#tabsdemo-panel-container
+{
+    border:1px solid #DDD; /*color #1*/ 
+    border-radius:0 4px 4px 4px;
+    background-color:white; /*color #2*/
+    position:relative;    
+    padding:0px; margin:0px;
+}
+
+/* content panel */       
+div#tabsdemo-panel-container > div
+{
+    padding:10px 10px;
+    
+    /* The two settings below should not be changed. */
+    display: block;
+    margin:0px;
+}
+
+/* loading image before ajax content is retrieved. Only applicable when Ajax is used.*/
+div.ajaxLoading {background:transparent url(loading.gif) no-repeat center center; height:150px; font-size:0;padding:0; margin:0; }

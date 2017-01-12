@@ -1,0 +1,330 @@
+<configuration>
+
+	<property>
+		<name>datalake.database.chunksize</name>
+		<value>1000000</value>
+	</property>
+
+	<property>
+		<name>datalake.database.fetchsize</name>
+		<value>1000000</value>
+	</property>
+
+	<property>
+		<name>datalake.tmp.dir</name>
+		<value>/tmp</value>
+	</property>
+
+	<property>
+		<name>datalake.web.log.dir</name>
+		<value>/tmp/out.log
+		</value>
+	</property>
+
+	<property>
+		<name>datalake.job.execution.class</name>
+		<value>com.rcggs.datalake.connect.EngineClient
+		</value>
+	</property>
+
+	<property>
+		<name>datalake.metadata.database.url</name>
+		<value>jdbc:mysql://localhost:3306/DATALAKE</value>
+	</property>
+
+	<property>
+		<name>datalake.metadata.database.driver</name>
+		<value>com.mysql.jdbc.Driver</value>
+	</property>
+
+	<property>
+		<name>datalake.metadata.database.user</name>
+		<value>root</value>
+	</property>
+
+	<property>
+		<name>datalake.metadata.database.password</name>
+		<value>root</value>
+	</property>
+
+	<property>
+		<name>datalake.engine.url</name>
+		<value>http://192.168.37.101:9988/service/</value>
+	</property>
+
+	<property>
+		<name>datalake.cluster.url</name>
+		<value>http://192.168.37.101:8088/ws/v1/cluster/metrics</value>
+	</property>
+
+	<property>
+		<name>datalake.cluster.logs.url</name>
+		<value>http://192.168.37.101:50070/logs/hadoop-hdfs-datanode-node1.rcggs.com.log
+		</value>
+	</property>
+
+	<property>
+		<name>datalake.frontend.callback.url</name>
+		<value>http://localhost:8082/ingest-engine-web/service/updateMetric
+		</value>
+	</property>
+
+
+	<drivers>
+		<driver>
+			<name>mysql</name>
+			<class>com.mysql.jdbc.Driver</class>
+		</driver>
+		<driver>
+			<name>oracle</name>
+			<class>oracle.jdbc.driver.OracleDriver</class>
+		</driver>
+		<driver>
+			<name>phoenix</name>
+			<class>org.apache.phoenix.jdbc.PhoenixDriver</class>
+		</driver>
+	</drivers>
+
+	<transformations>
+		<transformation>
+			<name>toXML</name>
+			<type>basic</type>
+			<class>com.rcggs.datalake.transform.xml.XmlTransformer</class>
+		</transformation>
+
+		<transformation>
+			<name>toJSON</name>
+			<type>basic</type>
+			<class>com.rcggs.datalake.transform.json.JsonTransformer</class>
+		</transformation>
+		<transformation>
+			<name>toCSV</name>
+			<type>basic</type>
+			<class>com.rcggs.datalake.transform.csv.CSVTransformer</class>
+		</transformation>
+		<transformation>
+			<name>toTSV</name>
+			<type>basic</type>
+			<class>com.rcggs.datalake.transform.tsv.TSVTransformer</class>
+		</transformation>
+		<transformation>
+			<name>toDelimited</name>
+			<type>basic</type>
+			<class>com.rcggs.datalake.transform.xml.DelimitedTransformer</class>
+		</transformation>
+		<transformation>
+			<name>toXLS</name>
+			<type>basic</type>
+			<class>com.rcggs.datalake.transform.xml.XlsTransformer</class>
+		</transformation>
+		<transformation>
+			<name>toORC</name>
+			<type>hadoop</type>
+			<class>com.rcggs.datalake.transform.xml.ORCTransformer</class>
+		</transformation>
+		<transformation>
+			<name>toSequenceFile</name>
+			<type>hadoop</type>
+			<class>com.rcggs.datalake.transform.xml.SequenceFileTransformer
+			</class>
+		</transformation>
+		<transformation>
+			<name>toRCFile</name>
+			<type>hadoop</type>
+			<class>com.rcggs.datalake.transform.xml.RCFileTransformer</class>
+		</transformation>
+		<transformation>
+			<name>toParquet</name>
+			<type>hadoop</type>
+			<class>com.rcggs.datalake.transform.xml.ParquetTransformer</class>
+		</transformation>
+		<transformation>
+			<name>UTCtoEST</name>
+			<type>custom</type>
+			<class>com.rcggs.datalake.transform.xml.UTCtoESTransformer</class>
+		</transformation>
+		<transformation>
+			<name>fromCopybook</name>
+			<type>custom</type>
+			<class>com.rcggs.datalake.transform.xml.UTCtoESTransformer</class>
+		</transformation>
+	</transformations>
+
+	<connections>
+
+<!-- 		<connection>
+			<name>local-filesystem</name>
+			<type>file</type>
+			<host>192.168.37.101</host>
+			<port></port>
+			<path>/vbox/files/</path>
+			<user></user>
+			<pwd></pwd>
+			<class>com.rcggs.datalake.connect.fs.LocalFileSystemConnection
+			</class>
+		</connection> -->
+
+		<!-- <connection> <name>remote-filesystem</name> <type>file</type> <host>192.168.37.101</host> 
+			<port>22</port> <path>/tmp/root/</path> <user>root</user> <pwd>adminuser</pwd> 
+			<class>com.rcggs.datalake.connect.fs.RemoteFileSystemConnection </class> 
+			</connection> -->
+		<connection>
+			<name>rcg-mysql</name>
+			<type>mysql</type>
+			<host>localhost</host>
+			<port>3306</port>
+			<path>mysql</path>
+			<user>root</user>
+			<pwd>root</pwd>
+			<class>com.rcggs.datalake.connect.rdbms.SQLConnection</class>
+		</connection>
+
+	<!-- 	<connection>
+			<name>local-hdfs</name>
+			<type>hdfs2</type>
+			<host>192.168.37.101</host>
+			<port>8020</port>
+			<path>/data/</path>
+			<user></user>
+			<pwd></pwd>
+			<class>com.rcggs.datalake.connect.hdfs.HdfsConnection</class>
+			<props>
+				<prop>
+					<name>show.files</name>
+					<value>false</value>
+				</prop>
+				<prop>
+					<name>excludes</name>
+					<value>/apps,/app-logs,/tmp,/mr-history,/user/ambari-qa,/user/oozie,/hdp
+					</value>
+				</prop>
+				<prop>
+					<name>use.ha.mode</name>
+					<value>false</value>
+				</prop>
+			</props>
+		</connection> -->
+
+	<!-- 	<connection>
+			<name>rcg-solr</name>
+			<type>solr</type>
+			<host>192.168.1.228</host>
+			<port>8983</port>
+			<path></path>
+			<user></user>
+			<pwd></pwd>
+			<port></port>
+			<class>com.rcggs.datalake.connect.solr.HttpSolrConnection</class>
+		</connection> -->
+		<!-- <connection> <name>rcg-oracle</name> <type>oracle</type> <host>192.168.1.228</host> 
+			<port>1521</port> <path>rcglab</path> <user>system</user> <pwd>rcg1234</pwd> 
+			<class>com.rcggs.datalake.connect.rdbms.SQLConnection</class> </connection> 
+			<connection> <name>rcg-phoenix</name> <type>phoenix</type> <host>192.168.37.101</host> 
+			<port>2181</port> <path>hbase-unsecure</path> <user></user> <pwd></pwd> <class>com.rcggs.datalake.connect.rdbms.SQLConnection</class> 
+			</connection> <connection> <name>local-hdfs</name> <type>hdfs2</type> <host>192.168.37.101</host> 
+			<port>8020</port> <path>/data/</path> <user></user> <pwd></pwd> <class>com.rcggs.datalake.connect.hdfs.HdfsConnection</class> 
+			<props> <prop> <name>show.files</name> <value>false</value> </prop> <prop> 
+			<name>excludes</name> <value>/apps,/app-logs,/tmp,/mr-history,/user/ambari-qa,/user/oozie,/hdp 
+			</value> </prop> <prop> <name>use.ha.mode</name> <value>false</value> </prop> 
+			</props> </connection> <connection> <name>local-hive</name> <type>hive2</type> 
+			<host>192.168.37.101</host> <port>10000</port> <path>default</path> <user>hdfs</user> 
+			<pwd>hdfs</pwd> <class>com.rcggs.datalake.connect.hive.HiveConnection</class> 
+			</connection> <connection> <name>rcg-aws</name> <type>aws-s3</type> <host></host> 
+			<port></port> <path>bucket-6454d9d0</path> <user></user> <pwd></pwd> <class>com.rcggs.datalake.connect.amazon.AmazonS3Connection</class> 
+			<props> <prop> <name>accessKey</name> <value>AKIAJH2XIWIHW6HWUTXQ</value> 
+			</prop> <prop> <name>secretKey</name> <value>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</value> 
+			</prop> <prop> <name>endpoint</name> <value>s3-external-1.amazonaws.com</value> 
+			</prop> </props> </connection> <connection> <name>rcg-sftp</name> <type>sftp</type> 
+			<host>192.168.37.101</host> <port>22</port> <path></path> <user>ftpuser</user> 
+			<pwd>ftpuser</pwd> <class>com.rcggs.datalake.connect.sftp.SftpConnection</class> 
+			</connection> <connection> <name>rcg-cassandra</name> <type>cassandra</type> 
+			<host>192.168.1.228</host> <path>mykeyspace</path> <port></port> <user></user> 
+			<pwd></pwd> <class>com.rcggs.datalake.connect.cassandra.CassandraConnection 
+			</class> </connection> <connection> <name>rcg-splunk</name> <type>splunk</type> 
+			<host>192.168.1.228</host> <port></port> <path></path> <user>admin</user> 
+			<pwd>admin</pwd> <port></port> <class>com.rcggs.datalake.connect.splunk.SplunkConnection</class> 
+			</connection> <connection> <name>local-ems</name> <type>ems</type> <host>localhost</host> 
+			<port>7222</port> <path></path> <user>admin</user> <pwd></pwd> <class>com.rcggs.datalake.connect.tibco.TibcoConnection</class> 
+			</connection> <connection> <name>twitter</name> <type>twitter</type> <host></host> 
+			<port></port> <path></path> <user></user> <pwd></pwd> <class>com.rcggs.datalake.connect.twitter.TwitterConnection</class> 
+			<props> <prop> <name>oauth.consumerKey</name> <value>JUyVZ5qt9XkiaIx3erA3mEkhk</value> 
+			</prop> <prop> <name>oauth.consumerSecret</name> <value>WCkF2rAd3KW1alh6hJX4yhHMs6SBpqdkl6aIDuAcvnrbQFV46r</value> 
+			</prop> <prop> <name>oauth.accessToken</name> <value>1963779312-cnHJFsDW4i1oxFuvqpGHBgqututg0HWjOa18iUN</value> 
+			</prop> <prop> <name>oauth.accessTokenSecret</name> <value>Wz1clNjILVhvhPu1UbarL9GZKDUYNwmV1XKWlrqsHiF80</value> 
+			</prop> </props> </connection> <connection> <name>local-kafka</name> <type>kafka</type> 
+			<host>192.168.37.101</host> <path></path> <port>6667</port> <class>com.rcggs.datalake.connect.kafka.KafkaConnection</class> 
+			<props> <prop> <name>zookeeper.connect</name> <value>192.168.37.101:2181</value> 
+			</prop> <prop> <name>serializer.class</name> <value>kafka.serializer.StringEncoder</value> 
+			</prop> <prop> <name>group.id</name> <value>local</value> </prop> <prop> 
+			<name>metadata.broker.list</name> <value>192.168.37.101:6667</value> </prop> 
+			<prop> <name>partitioner.class</name> <value>com.rcggs.engine.kafka.DefaultPartitioner</value> 
+			</prop> <prop> <name>request.required.acks</name> <value>1</value> </prop> 
+			</props> <user></user> <pwd></pwd> </connection> <connection> <name>accumulo-local</name> 
+			<type>accumulo</type> <host>192.168.37.101</host> <port>2181</port> <path>hdp-accumulo-instance</path> 
+			<user>root</user> <pwd>root</pwd> <class>com.rcggs.datalake.connect.accumulo.AccumuloConnection</class> 
+			</connection> <connection> <name>hbase-local</name> <type>hbase</type> <host>192.168.37.101</host> 
+			<port>2181</port> <path>/hbase-unsecure</path> <user>root</user> <pwd>root</pwd> 
+			<class>com.rcggs.datalake.connect.hbase.HbaseConnection</class> <props> <prop> 
+			<name>zookeeper</name> <value>192.168.37.101</value> </prop> </props> </connection> -->
+
+
+		<!-- <connection> <name>rcg-hdfs</name> <type>hdfs2</type> <host>node2.rcggs.com</host> 
+			<port>8020</port> <path>/data/test/</path> <user></user> <pwd></pwd> <class>com.rcggs.datalake.connect.hdfs.HdfsConnection</class> 
+			<props> <prop> <name>use.ha.mode</name> <value>true</value> </prop> <prop> 
+			<name>nameservices</name> <value>HARCG</value> </prop> <prop> <name>namenode1</name> 
+			<value>nn1</value> </prop> <prop> <name>namenode2</name> <value>nn2</value> 
+			</prop> <prop> <name>namenode1.rpc.address</name> <value>node2.rcggs.com:8020</value> 
+			</prop> <prop> <name>namenode2.rpc.address</name> <value>node3.rcggs.com:8020</value> 
+			</prop> </props> </connection> -->
+
+	</connections>
+
+	<services>
+		<service>
+			<name>sms</name>
+			<type>sms</type>
+			<props>
+				<prop>
+					<name>sid</name>
+					<value>AC19d3c00bf106023220b8f584cdd3cd5b</value>
+				</prop>
+				<prop>
+					<name>token</name>
+					<value>16ee2c5ca57d88b632584e4bb9137579</value>
+				</prop>
+				<prop>
+					<name>number</name>
+					<value>+1 630-581-8288</value>
+				</prop>
+				<prop>
+					<name>to</name>
+					<value>+1 630-697-5262</value>
+				</prop>
+			</props>
+			<user></user>
+			<pwd></pwd>
+		</service>
+	</services>
+
+	<plugins>
+		<plugin>
+			<name>dq-process-1</name>
+			<type>data-qaulity</type>
+			<class>com.rcggs.datalake.transform.CommonsValidatorDataQualityProcessor
+			</class>
+			<resources>
+				<resource></resource>
+			</resources>
+		</plugin>
+		<plugin>
+			<name>rules-process-1</name>
+			<type>rules</type>
+			<class>com.rcggs.drools.DroolsDecisionTable
+			</class>
+			<resources>
+				<resource>/ruleset.xls</resource>
+			</resources>
+		</plugin>
+	</plugins>
+
+</configuration>

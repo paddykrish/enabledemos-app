@@ -1,0 +1,665 @@
+html, body {
+    min-height: 100%;
+    height: 100%;
+}
+
+article.container-fluid {
+    padding: 0;
+    font-family: "lato";    
+    min-height: 100%;
+    position: relative;  
+}
+
+.container {
+    max-width: 970px;
+}
+
+/**** HEADER ****/
+
+.nav-tabs {
+    border-bottom: 0 !important;
+}
+
+.nav-tabs {
+    text-align:center;
+}
+
+
+
+.nav-tabs > li > a {
+    color: #b8b4b0;
+    border: 0 !important;
+}
+
+.nav-tabs > li > a > i {
+    margin-right: 5px;
+    color: #b8b4b0;
+	font-size: 24px;
+	display: block;
+}
+
+.nav.nav-tabs > li:active{
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+}
+
+.nav-tabs>li.active {
+    border-bottom: 0 !important;
+    background: transparent !important;    
+}
+
+.nav> li.active > a {
+    color: #fff;
+	font-weight: 500;
+}
+
+.nav> li.active > a > i {
+	color: #fff;
+}
+
+.nav-tabs>li.active>a, 
+.nav-tabs>li.active>a:focus, 
+.nav-tabs>li.active>a:hover{
+    border: 0 !important;
+    background: transparent !important;
+    color: #fff !important;
+}
+
+.nav>li>a:focus, 
+.nav>li>a:hover {
+    text-decoration: none;
+    background-color: transparent !important;
+    border: 0 !important;
+    
+}
+
+header .submenu-container {
+    background: #393532;
+}
+
+
+.pull-left { 
+    padding-left: 10px;
+}
+.pull-right .top {
+    text-align: right;
+    
+}
+
+.pull-right .top > ul {
+    margin: 0;
+    height: 75px;
+    line-height: 75px;
+}
+
+.pull-right .top > ul > li {
+    display: inline-block;
+    color: #333;
+    font-size: 18px;
+}
+
+.pull-right .top > ul > li.username {
+    margin-right: 15px;
+    font-size: 15px;
+}
+
+
+.pull-right .top > ul > li.username > i {
+    margin-right: 5px;
+    color: #333;
+    font-size: 20px;
+}
+
+.pull-right .top > ul > li.main-menu {
+    background: #393532;
+    width: 75px;
+    text-align:center;
+}
+.pull-right .top > ul > li.main-menu:hover {
+    background: #9ccaf2;
+}
+
+.pull-right .top > ul > li.main-menu > a {
+    color: #fff; 
+    display:block;
+    width: 100%;
+    height: 100%;    
+}
+
+/**** MAIN CONTENT - TAB CONTENT ****/
+
+.main-content .tab-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 780px;
+}
+
+.main-content .tab-content > #overview {
+    position:relative;
+}
+
+.main-shape-container {
+    width: 556px;
+    margin: auto;
+}  
+
+.shape-container {
+    width: 556px;
+    height: 160px;
+    position: relative;
+}
+
+.layer-1, .layer-3 {
+    padding: 0 93px;
+}
+
+.hex {
+    width:175px;
+    height:100px;
+    background-color: #ccc;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;			
+    background-size: auto 173px;							
+    position: relative;
+    float:left;
+    margin:25px 5px;
+    text-align:center;
+    zoom:1;
+    cursor: pointer;
+}
+
+.hex a {
+    display:block;
+    width: 100%;
+    height:100%;
+    text-indent:-9999em;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.hex .corner-1,
+.hex .corner-2 {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: inherit;								
+    z-index:-2;						
+    overflow:hidden;		
+    backface-visibility: hidden;			
+}
+
+.hex .corner-1 {
+    z-index:-1;
+    transform: rotate(60deg);
+    cursor: pointer;
+}
+
+.hex .corner-2 {
+    transform: rotate(-60deg);
+    cursor: pointer;
+}
+
+.hex .corner-1:before,
+.hex .corner-2:before {
+    width: 173px;
+    height:	173px;
+    content: '';
+    position: absolute;
+    background: inherit;
+    top:0;
+    left: 0;
+    z-index: 1;
+    background: inherit;
+    background-repeat:no-repeat;
+    backface-visibility: hidden;				  
+}			
+
+.hex .corner-1:before {
+    transform: rotate(-60deg) translate(-87px, 0px);	
+    transform-origin: 0 0;
+}			
+
+.hex .corner-2:before {
+    transform: rotate(60deg) translate(-48px, -11px);	
+    bottom:0;
+}		
+
+/**** HEXAGON BACKGROUND COLORS ****/
+
+.hex.hex-3.marketing-sales {
+    background: #1cade4;
+}
+
+.hex.hex-3.marketing-sales:hover {
+    background: #1791bf;
+}
+
+.hex.hex-3.claims {
+    background: #c0504d;
+}
+
+.hex.hex-3.claims:hover {
+    background: #a54542;
+}
+
+.hex.hex-3.finance {
+    background: #4bacc6;
+}
+
+.hex.hex-3.finance:hover {
+    background: #3e8fa4;
+}
+
+.hex.hex-3.actuarial {
+    background: #333;
+}
+
+.hex.hex-3.actuarial:hover  {
+    background: #222;
+}
+
+.hex.hex-3.underwriting {
+    background: #8064a2;
+}
+
+.hex.hex-3.underwriting:hover {
+    background: #675183;
+}
+
+.hex.hex-3.loss-prevention {
+    background: #f79646;
+}
+
+.hex.hex-3.loss-prevention:hover {
+    background: #d7823d;
+}
+
+.hex.hex-3.policy-admin {
+    background: #479b5f;
+}
+
+.hex.hex-3.policy-admin:hover {
+    background: #3a7f4e;
+}
+
+.inner {
+    color: #fff;
+    height: 201px;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    margin-top: -51px;
+}
+
+/* CATEGORY DESCRIPTION POSITIONING */
+
+.category-description {
+    position:absolute;
+    width: 268px;
+    color: #777;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.category-description.left {
+    left:-195px;
+    top: 45px;
+    text-align: right;
+}
+
+.category-description.right {
+    right: -195px;
+    top: 45px;
+}
+
+.category-description.left.second {
+    left:-285px;
+}
+
+.category-description.right.second {
+    right: -285px;
+}
+
+/**** CATEGORY DESCRIPTION COLORS ****/
+
+.category-description.marketing-sales {
+    color: #1cade4;
+}
+.category-description.claims {
+    color: #c0504d;
+}
+.category-description.finance {
+    color: #4bacc6;
+}
+.category-description.actuarial {
+    color: #000;
+}
+.category-description.underwriting {
+    color: #8064a2;
+}
+.category-description.loss-prevention {
+    color: #f79646;
+}
+
+.category-description.policy-admin {
+    color: #479b5f;
+}
+
+.category-description.actuarial > div {
+    width: 250px;
+    margin:auto;
+}
+
+.category-description.actuarial.top {
+    left:0;
+    top: -85px;
+    text-align: center;
+    width: 100%;
+}
+
+.category-description.actuarial.bottom{
+    right: 0;
+    bottom: -85px;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+/* UNDERWRITING */
+
+    
+    /****** General ******/
+    
+    #underwriting  .panelCont {
+        padding: 40px 0;
+    }
+    
+    #underwriting  .panelCont h1 {
+        font-size: 18px;
+        font-weight: 800;
+        margin-bottom: 5px;
+        margin-top: 0;
+        text-align:center;
+        color: #555;
+    }
+    
+    
+    /****** summaryMain ******/
+    
+    #underwriting .summaryMain  {
+        text-align: center;
+    }
+
+
+    #underwriting .summaryMain h2 {
+        font-size: 24px;
+        font-weight: 800;
+        color: #888;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    #underwriting .summaryMain .header-container {
+        padding-top: 35px;
+    }
+
+    #underwriting  .summaryMain .header-container p span {
+        font-size: 12px;
+    }
+
+    #underwriting  .summaryMain .col-md-4 {
+        border-right: 1px solid #ddd;
+    }
+
+    #underwriting  .summaryMain .col-md-4:last-child {
+        border-right: 0;
+    }
+
+    
+    /****** submissionsbyLob ******/
+
+    #underwriting .submissionsByLob .header-container  {
+        margin-bottom: 35px;
+
+    }
+    
+    #underwriting .submissionsByLob .body-container  {
+        background: #eee;
+        min-height: 200px;
+        margin-bottom: 30px;
+
+    }
+
+    
+    /****** statusBreakdown ******/
+
+   #underwriting .statusBreakdown .header-container {
+       margin-bottom: 35px;
+   } 
+    
+   #underwriting .statusBreakdown .statusBreakdownCont {
+       width: 100%;
+       background: #eee;
+       border: 3px solid #cbcbcb;
+       
+   }
+   
+   #underwriting .statusBreakdown .statusBreakdownCont .item {
+       display: inline-block;
+       color: #000;
+       width: 19.5%;
+       border-left: 4px solid #cbcbcb;
+   }
+   
+   #underwriting .statusBreakdown .statusBreakdownCont .item:first-child {
+       border-left: 0;
+   }
+   
+   #underwriting .statusBreakdown .statusBreakdownCont .item > div {
+       color: #fff;
+       padding: 10px 0 10px 10px;
+   }
+      
+   #underwriting .statusBreakdown .statusBreakdownCont .item.sub > div {
+       background: #6bbc6b;
+   }
+   
+   #underwriting .statusBreakdown .statusBreakdownCont .item.veri  > div {
+       background: #6e68c1;
+   }
+
+   #underwriting .statusBreakdown .statusBreakdownCont .item.rith  > div {
+       background: #e26868;
+   }
+   
+   #underwriting .statusBreakdown .statusBreakdownCont .item.quotePrep  > div {
+       background: #62a0ca;
+   }
+   
+   #underwriting .statusBreakdown .statusBreakdownCont .item.stat  > div {
+       background: #ffa556;
+   }
+   
+   #underwriting .statusBreakdown .statusBreakdownNames {
+       
+   }
+
+   #underwriting .statusBreakdown .statusBreakdownNames .item {
+       display: inline-block;
+       color: #555;
+       width: 19.5%;
+       text-align: center;
+       padding-top: 20px;
+       font-weight: 800;
+   }
+   
+   
+    /****** annualPremium ******/
+
+    #underwriting .annualPremium .header-container  {
+        margin-bottom: 35px;
+
+    }
+    
+    #underwriting .annualPremium .body-container  {
+        min-height: 200px;
+    }
+
+    #underwriting .annualPremium .body-container .table thead tr th {
+        padding-bottom: 20px;
+        color: #555;
+    }
+        
+    #underwriting .annualPremium .body-container .table tbody > tr > td  {
+        padding: 25px 0;
+        color: #888;
+    }
+
+    /****** risk ******/
+    
+    #underwriting  .risk .header-container {
+        margin-bottom: 35px;
+    }
+    
+    #underwriting  .risk .body-container .blockContainer {
+        width: 360px;
+        display:flex;
+        flex-direction: column;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        height:360px;
+        margin: auto;
+    }
+    
+    #underwriting  .risk .body-container .blockContainer > .block {
+        flex: 1 auto;
+        padding: 10px;
+        position: relative;
+    }
+    
+    #underwriting  .risk .body-container .blockContainer > .block > span.riskname {
+        position:absolute;
+        top: 5px;
+        left: 5px;
+        font-size: 13px;
+    }
+    
+    #underwriting  .risk .body-container .blockContainer > .block > span.count {
+        position:absolute;
+        bottom: 5px;
+        left: 5px;
+        font-size: 13px;
+    }
+    
+    #underwriting  .risk .body-container .blockContainer > .lowRisk {
+        background: #75c948;
+        color: #fff;
+        height: 317px;
+        width: 120px;
+    }
+    
+    #underwriting  .risk .body-container .blockContainer > .mediumRisk {
+        background: #c345ed;
+        color: #fff;
+        height: 317px;
+        width: 120px;
+    }
+    
+    #underwriting  .risk .body-container .blockContainer > .highRisk {
+        background: #62a0ca;
+        color: #fff;
+        height: 217px;
+        width: 120px;
+    }
+    
+    #underwriting  .risk .body-container .blockContainer > .veryHighRisk {
+        background: #ffa556;
+        color: #fff;
+        height: 100px;
+        width: 120px;
+    }
+   
+    /***** RISK ******/
+   
+    #underwriting  .risk .body-container .blockContainer > .quotePrep {
+        background: #75c948;
+        color: #fff;
+        height: 317px;
+        width: 95px;
+    }
+    
+    #underwriting  .risk .body-container .blockContainer > .verification {
+        background: #c345ed;
+        color: #fff;
+        height: 317px;
+        width: 95px;
+    }
+    
+    #underwriting  .risk .body-container .blockContainer > .rating {
+        background: #62a0ca;
+        color: #fff;
+        height: 217px;
+        width: 95px;
+    }
+    
+    #underwriting  .risk .body-container .blockContainer > .submission {
+        background: #ffa556;
+        color: #fff;
+        height: 100px;
+        width: 95px;
+    }
+   
+    #underwriting  .risk .body-container .blockContainer > .quoteDelivery {
+        background: #c94869;
+        color: #fff;
+        height: 100px;
+        width: 95px;
+    }
+   
+    #underwriting  .risk .body-container .percentage {
+        text-align: center;
+    }
+   
+    #underwriting  .risk .body-container .percentage h4 {
+        font-size: 16px;
+        margin-bottom: 5px;
+        color: #555;
+        font-weight: 800;
+        margin: 50px 0 30px;
+    }
+  
+    #underwriting  .risk .body-container .percentage h3 {
+        font-size: 24px;
+        margin-top: 5px;
+        font-weight: 800;
+        color: #888;
+    }
+  
+  
+    /**** STATUS BREAKDOWN  *****/
+   
+    
+   
+  
+  
+  
+/****OOTER ****/
+
+footer {
+   
+    width: 100%;
+    height: 30px;
+    background: #393532;
+    color: #fff;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 0 10px;
+    
+}

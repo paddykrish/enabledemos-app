@@ -1,0 +1,402 @@
+
+#iphone {
+	margin: 0 auto;
+	width: 456px;
+	z-index: 998;
+}
+
+#iphone #top {
+	background-image: url('../images/top.png');
+	width: 456px;
+	height: 141px;
+}
+
+#iphone #center {
+	background: url('../images/center.png') 0 0 no-repeat,
+		url('../images/center-continue.png') 0 0 repeat-y;
+}
+
+#iphone #center #msg {
+	width: 390px;
+	margin: 0 auto;
+	padding-left: 6px;
+}
+
+#iphone #center .col-md-4 {
+	padding: 0;
+	margin: 0;
+}
+
+#iphone #center #msg #msg-top {
+	height: 76px;
+	border-bottom: solid 1px rgba(212, 212, 212, 1);
+	font: 12px Helvetica, Arial, sans-serif;
+	color: #101010;
+	padding: 6px 7px;
+	background-color: rgba(247, 247, 247, 0.95);
+	width: 384px;
+	height: 75px;
+	position: absolute;
+	z-index: 998;
+}
+
+#iphone #center #msg #msg-top #connection {
+	padding: 0;
+}
+
+#iphone #center #msg #msg-top #operator {
+	padding: 1px 5px;
+	text-shadow: 1px 1px 0 #fff;
+}
+
+#iphone #center #msg #msg-top #connection-type {
+	padding: 0 2px;
+	text-shadow: 1px 1px 0 #fff;
+	height: 16px;
+	overflow: hidden;
+}
+
+#iphone #center #msg #msg-top #clock {
+	font-weight: bold;
+	text-shadow: 1px 1px 0 #fff;
+}
+
+#iphone #center #msg #msg-top #battery {
+	background-image: url('../images/battery.png');
+	width: 30px;
+	height: 13px;
+	padding: 2px 1px;
+}
+
+#iphone #center #msg #msg-top #battery #battery-percent {
+	background-image: url('../images/battery-percent.jpg');
+	border: solid 1px #eee;
+	width: 50%;
+	max-width: 25px;
+	height: 9px;
+}
+
+#iphone #center #msg #msg-top #battery #battery-percent.red {
+	background-image: none;
+	background-color: #ff3b30;
+}
+
+#iphone #center #msg #msg-top #txt-messages {
+	color: #0079ff;
+	font-family: 'Open Sans', sans-serif;
+	text-shadow: 1px 1px 0 #fff;
+	font-size: 19px;
+	margin: 13px 7px;
+}
+
+#iphone #center #msg #msg-top #txt-messages i {
+	font-size: 40px;
+	margin-top: -6px;
+}
+
+#iphone #center #msg #msg-top #txt-name {
+	color: #000;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	text-shadow: 1px 1px 0 #fff;
+	font-size: 19px;
+	margin-top: 14px;
+	position: absolute;
+	background-color: #f7f7f7;
+	width: 170px;
+	text-align: center;
+	margin-left: 0px;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+}
+
+#iphone #center #msg #msg-top #txt-name.active {
+	width: 270px;
+	margin-left: -97px;
+}
+
+#iphone #center #msg #msg-top #txt-contact {
+	color: #0079ff;
+	font-family: 'Open Sans', sans-serif;
+	text-shadow: 1px 1px 0 #fff;
+	font-size: 19px;
+	margin: 13px 0;
+	text-align: right;
+}
+
+#iphone #center #msgs {
+	overflow: visible;
+	padding: 0;
+	margin: 0;
+	min-height: 544px;
+	padding-top: 76px;
+	padding-bottom: 20px;
+	overflow: hidden;
+}
+
+#iphone #center #msgs-wrapper {
+	overflow: hidden;
+}
+
+#iphone #center #msgs.fixed {
+	position: relative;
+	overflow-y: scroll;
+	width: 401px;
+	height: 640px;
+	z-index: 997;
+}
+
+#iphone #center #msgs .msg-img {
+	margin: 9px 0;
+	margin-left: 19px;
+	clear: both;
+	overflow: visible;
+	float: left;
+	width: 212px;
+	padding: 0;
+}
+
+#iphone #center #msgs .msg-img .img-borders {
+	display: none;
+}
+
+#iphone #center #msgs .msg-img .top-left-border {
+	background-image: url('../images/top-left-border.png');
+	width: 20px;
+	height: 20px;
+	margin-top: -1px;
+	margin-left: -1px;
+	position: absolute;
+	border: 0;
+	z-index: 88;
+}
+
+#iphone #center #msgs .msg-img .top-right-border {
+	background-image: url('../images/top-right-border.png');
+	width: 20px;
+	height: 20px;
+	margin-top: -1px;
+	margin-left: 193px;
+	position: absolute;
+	border: 0;
+	z-index: 88;
+}
+
+#iphone #center #msgs .msg-img .bottom-left-border {
+	background-image: url('../images/bottom-left-border.png');
+	width: 20px;
+	height: 20px;
+	margin-left: 193px;
+	position: absolute;
+	border: 0;
+	z-index: 88;
+}
+
+#iphone #center #msgs .msg-img .bottom-right-border {
+	background-image: url('../images/bottom-right-border.png');
+	width: 20px;
+	height: 20px;
+	margin-left: -1px;
+	position: absolute;
+	border: 0;
+	z-index: 88;
+}
+
+#iphone #center #msgs .msg-timestamp {
+	text-align: center;
+	font-size: 11px;
+	color: #8e8e93;
+	width: 383px;
+	float: left;
+	margin: 15px 0 -5px 0;
+	font-weight: 300;
+}
+
+#iphone #center #msgs .msg-timestamp span {
+	font-weight: 600;
+}
+
+#iphone #center #msgs .msg-img img {
+	max-width: 212px;
+	-moz-border-radius: 20px !important; /* Firefox */
+	-webkit-border-radius: 20px !important; /* Safari and Chrome */
+	border-radius: 20px !important; /* CSS3 */
+	-khtml-border-radius: 20px; /* Linux Browsers */
+}
+
+#blurred-result {
+	padding: 2px;
+	border: dashed 2px rgba(0, 0, 0, 0.2);
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+#iphone #center #msgs li {
+	list-style: none;
+	padding: 0;
+	display: block;
+	margin: 0;
+}
+
+#iphone #center #msgs li:hover {
+	cursor: move;
+}
+
+#iphone #center #msgs .msg {
+	background-color: #e5e5ea;
+	width: 250px;
+	border-radius: 20px;
+	border-bottom-left-radius: 16px;
+	padding: 9px 0;
+	margin: 5px;
+	margin-left: 19px;
+	color: #070707;
+	clear: both;
+	overflow: visible;
+	float: left;
+	padding-bottom: 0px;
+}
+
+#iphone #center #msgs .msg .sep {
+	margin-top: -25px;
+	min-height: 38px;
+	background-image: url('../images/msg-grey-bottom.jpg');
+	background-position: bottom 0px left 0px;
+	background-repeat: no-repeat;
+	position: relative;
+	margin-left: -11px;
+}
+
+#iphone #center #msgs .msg.green {
+	background-color: #4fd73b;
+	border-bottom-left-radius: 20px;
+	color: #fff;
+	float: right;
+	margin-left: 5px;
+	margin-right: 19px;
+	overflow: visible;
+	padding-bottom: 0px;
+}
+
+#iphone #center #msgs .msg.green .sep {
+	width: 257px;
+	background-image: url('../images/msg-green-bottom.jpg');
+	background-position: bottom 0 left 0px;
+	background-repeat: no-repeat;
+	position: relative;
+	margin-left: 0;
+}
+
+#iphone #center #msgs .msg.blue {
+	background-color: #49b9fb;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 16px;
+	color: #fff;
+	float: right;
+	margin-left: 5px;
+	margin-right: 19px;
+	padding-bottom: 0px;
+}
+
+#iphone #center #msgs .msg.blue .sep {
+	width: 257px;
+	background-image: url('../images/msg-blue-bottom.jpg');
+	background-position: bottom 0 left 0px;
+	background-repeat: no-repeat;
+	position: relative;
+	margin-left: 0;
+}
+
+#iphone #center #msgs .msg .content {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	line-height: 130%;
+}
+
+#iphone #center #msgs .msg .content p {
+	padding: 0 14px;
+	margin: 0;
+	text-shadow: 1px 1px 0 #fff;
+	position: relative;
+	z-index: 999;
+}
+
+#iphone #center #msgs .msg.green .content p,#iphone #center #msgs .msg.blue .content p
+	{
+	text-shadow: 0 0 0;
+}
+
+#iphone #center #msgs .msg .bubble {
+	background-image: url('../images/msg-grey-bubble.jpg');
+	width: 33px;
+	height: 13px;
+	position: absolute;
+	margin-left: -9px;
+	margin-top: -4px;
+}
+
+#iphone #center #msgs .msg.green .bubble {
+	background-image: url('../images/msg-green-bubble.jpg');
+	margin-left: 225px;
+	margin-top: -1px;
+}
+
+#iphone #center #msgs .msg.blue .bubble {
+	background-image: url('../images/msg-blue-bubble.jpg');
+	margin-left: 226px;
+}
+
+#iphone #center #msgs .delete {
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	position: absolute;
+	margin-left: 50px;
+	background-color: #000;
+	opacity: 0.6;
+	z-index: 999;
+	margin-left: 0px;
+	color: #fff;
+	text-align: center;
+	z-index: 999;
+}
+
+#iphone #center #msgs .delete:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+#iphone #center #msgs-bottom {
+	background-image: url('../images/msgs-bottom.jpg');
+	width: 384px;
+	height: 53px;
+}
+
+#iphone #center #msgs-bottom #text-textmessage-result {
+	color: #c7c7cd;
+	font-family: 'Open Sans', sans-serif;
+	text-shadow: 1px 1px 0 #fff;
+	font-size: 18px;
+	padding: 13px 0 12px 60px;
+	float: left;
+}
+
+#iphone #center #msgs-bottom #text-send-result {
+	color: #85858b;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	text-shadow: 1px 1px 0 #fff;
+	font-size: 18px;
+	padding: 12px 12px;
+	float: right;
+	text-align: right;
+	background-image: url('../img/bg-send.jpg');
+	background-repeat: no-repeat;
+	background-position: -3px 7px;
+	min-width: 71px;
+}
+
+#iphone #bottom {
+	background-image: url('../images/bottom.png');
+	width: 456px;
+	height: 152px;
+}

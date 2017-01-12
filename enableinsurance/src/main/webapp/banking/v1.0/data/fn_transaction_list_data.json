@@ -1,0 +1,94 @@
+{
+	"transaction_list": [
+		{
+			"transaction_number": "26941-608970785424088-608",
+			"transaction_type": "Deposit",
+			"transaction_date": "12/15/16 6:33",
+			"account_number": "7569-4857-4644-8683",
+			"account_type": "Savings",
+			"account_name": "Albert Fisher",
+			"beneficiary_account_number": "1111-2222-3333-1234",
+			"amount": 1205
+		},
+		{
+			"transaction_number": "56217-588811179595560-371",
+			"transaction_type": "Withdrawal",
+			"transaction_date": "12/16/16 3:58",
+			"account_number": "7569-4857-4644-8683",
+			"account_type": "Savings",
+			"account_name": "Albert Fisher",
+			"beneficiary_account_number": "1111-2222-3333-1234",
+			"amount": 1342
+		},
+		{
+			"transaction_number": "49727-661472498757745-201",
+			"transaction_type": "Transfer",
+			"transaction_date": "12/17/16 18:15",
+			"account_number": "7569-4857-4644-8683",
+			"account_type": "Savings",
+			"account_name": "Albert Fisher",
+			"beneficiary_account_number": "1111-2222-3333-1234",
+			"amount": 3562
+		},
+		{
+			"transaction_number": "34371-423446382729030-412",
+			"transaction_type": "Charge",
+			"transaction_date": "12/18/16 19:25",
+			"account_number": "9047-6741-7894-1540",
+			"account_type": "Credit Card",
+			"account_name": "Albert Fisher",
+			"beneficiary_account_number": "1111-2222-3333-1234",
+			"amount": 130
+		},
+		{
+			"transaction_number": "41115-399440237607566-549",
+			"transaction_type": "Charge",
+			"transaction_date": "12/15/16 4:15",
+			"account_number": "9047-6741-7894-1540",
+			"account_type": "Credit Card",
+			"account_name": "Albert Fisher",
+			"beneficiary_account_number": "1111-2222-3333-1234",
+			"amount": 234
+		},
+		{
+			"transaction_number": "53275-793439205580075-314",
+			"transaction_type": "Charge",
+			"transaction_date": "12/17/16 16:30",
+			"account_number": "9047-6741-7894-1540",
+			"account_type": "Credit Card",
+			"account_name": "Albert Fisher",
+			"beneficiary_account_number": "1111-2222-3333-1234",
+			"amount": 6639
+		},
+		{
+			"transaction_number": "22248-674007536478304-417",
+			"transaction_type": "Charge",
+			"transaction_date": "12/19/16 9:36",
+			"account_number": "9047-6741-7894-1540",
+			"account_type": "Credit Card",
+			"account_name": "Albert Fisher",
+			"beneficiary_account_number": "1111-2222-3333-1234",
+			"amount": 119
+		},
+		{
+			"transaction_number": "38602-374068711611153-623",
+			"transaction_type": "Charge",
+			"transaction_date": "12/20/16 22:57",
+			"account_number": "9047-6741-7894-1540",
+			"account_type": "Credit Card",
+			"account_name": "Albert Fisher",
+			"beneficiary_account_number": "1111-2222-3333-1234",
+			"amount": 195
+		},
+		{
+			"transaction_number": "75705-220448220342524-570",
+			"transaction_type": "Deposit",
+			"transaction_date": "12/25/16 18:43",
+			"account_number": "7569-4857-4644-8683",
+			"account_type": "Savings",
+			"account_name": "Albert Fisher",
+			"beneficiary_account_number": "1111-2222-3333-1234",
+			"amount": 1157
+		}
+	]
+}

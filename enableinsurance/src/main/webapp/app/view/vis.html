@@ -1,0 +1,543 @@
+<script type="text/javascript"
+	src="http://www.amcharts.com/lib/3/amcharts.js"></script>
+<script type="text/javascript"
+	src="http://www.amcharts.com/lib/3/serial.js"></script>
+<script type="text/javascript"
+	src="http://www.amcharts.com/lib/3/ammap.js"></script>
+<script type="text/javascript"
+	src="http://www.amcharts.com/lib/3/maps/js/usaLow.js"></script>
+<script type="text/javascript"
+	src="http://www.amcharts.com/lib/3/themes/none.js"></script>
+<script type="text/javascript"
+	src="http://www.amcharts.com/lib/3/pie.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js"></script>
+<script src="../../lib/jquery/jquery.ui/d3pie.min.js"></script>
+
+<script type="text/javascript"
+	src="/bigdata-demo/lib/jquery/jquery.jqwidgets/jqxcore.js"></script>
+<script type="text/javascript"
+	src="/bigdata-demo/lib/jquery/jquery.jqwidgets/jqxdata.js"></script>
+<script type="text/javascript"
+	src="/bigdata-demo/lib/jquery/jquery.jqwidgets/jqxbuttons.js"></script>
+<script type="text/javascript"
+	src="/bigdata-demo/lib/jquery/jquery.jqwidgets/jqxscrollbar.js"></script>
+<script type="text/javascript"
+	src="/bigdata-demo/lib/jquery/jquery.jqwidgets/jqxmenu.js"></script>
+<script type="text/javascript"
+	src="/bigdata-demo/lib/jquery/jquery.jqwidgets/jqxlistbox.js"></script>
+<script type="text/javascript"
+	src="/bigdata-demo/lib/jquery/jquery.jqwidgets/jqxdropdownlist.js"></script>
+<script type="text/javascript"
+	src="/bigdata-demo/lib/jquery/jquery.jqwidgets/jqxgrid.js"></script>
+<script type="text/javascript"
+	src="/bigdata-demo/lib/jquery/jquery.jqwidgets/jqxgrid.selection.js"></script>
+<script type="text/javascript"
+	src="/bigdata-demo/lib/jquery/jquery.jqwidgets/jqxgrid.columnsresize.js"></script>
+<script type="text/javascript"
+	src="/bigdata-demo/lib/jquery/jquery.jqwidgets/jqxgrid.filter.js"></script>
+<script type="text/javascript"
+	src="/bigdata-demo/lib/jquery/jquery.jqwidgets/jqxgrid.sort.js"></script>
+<script type="text/javascript"
+	src="/bigdata-demo/lib/jquery/jquery.jqwidgets/jqxgrid.pager.js"></script>
+<script type="text/javascript"
+	src="/bigdata-demo/lib/jquery/jquery.jqwidgets/jqxgrid.grouping.js"></script>
+
+<link rel="stylesheet"
+	href="/bigdata-demo/lib/jquery/jquery.jqwidgets/styles/jqx.base.css"
+	type="text/css" />
+
+
+<style>
+.jqx-grid-column-header,.jqx-widget-header {
+	background-color: #efefef;
+	background: -webkit-linear-gradient(top, #F9F9F9 0, #efefef 100%);
+	background: -moz-linear-gradient(top, #F9F9F9 0, #efefef 100%);
+	background: -o-linear-gradient(top, #F9F9F9 0, #efefef 100%);
+	background: linear-gradient(to bottom, #F9F9F9 0, #efefef 100%);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#F9F9F9,
+		endColorstr=#efefef, GradientType=0);
+}
+</style>
+
+<script src="http://d3js.org/queue.v1.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+
+<style>
+.counties {
+	fill: none;
+}
+
+.states {
+	fill: none;
+	stroke: #fff;
+	stroke-linejoin: round;
+}
+
+.q0-9 {
+	fill: rgb(247, 251, 255);
+}
+
+.q1-9 {
+	fill: rgb(222, 235, 247);
+}
+
+.q2-9 {
+	fill: rgb(198, 219, 239);
+}
+
+.q3-9 {
+	fill: rgb(158, 202, 225);
+}
+
+.q4-9 {
+	fill: rgb(107, 174, 214);
+}
+
+.q5-9 {
+	fill: rgb(66, 146, 198);
+}
+
+.q6-9 {
+	fill: rgb(33, 113, 181);
+}
+
+.q7-9 {
+	fill: rgb(8, 81, 156);
+}
+
+.q8-9 {
+	fill: rgb(8, 48, 107);
+}
+</style>
+<style>
+#chartdiv {
+	width: 100%;
+	height: 1200px;
+}
+
+.jqx-grid-column-header,.jqx-widget-header,.jqx-grid-cell,.jqx-grid-empty-cell,.jqx-widget,.jqx-dropdownlist-state-normal,.jqx-rc-all,.jqx-fill-state-normal,.jqx-input,.jqx-widget-content,.jqx-grid-pager-input,.jqx-rc-all
+	{
+	font-size: 11px;
+}
+</style>
+
+<div id="mask" class="mask">
+
+	<div
+		style="text-align: left; position: absolute; height: 200px; width: 500; background-color: #fff; top: 1%; z-index: 200">
+		<div style="">
+			<table>
+				<tr>
+					<td><img alt="" id="logo" src="../../images/wait.gif"
+						height="90%" width="90%" /></td>
+					<td><span
+						style="font-size: 14px; color: #000; font-family: arial">Please
+							Wait</span><br> <span
+						style="font-size: 12px; color: #aaa; font-family: arial">We
+							are processing your request</span></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+</div>
+
+<div id='jqxWidget'
+	style="font-size: 13px; font-family: Verdana; float: left;">
+	<div id="jqxgrid"></div>
+</div>
+<div id='jqxWidget1' style="width: 100%"></div>
+
+
+<script>
+	$(document).ready(
+			function() {
+
+				var result = unescape(window.location.search.split("?")[1].split("=")[1]);
+				var types = jQuery.parseJSON(result);
+
+				/* function refresh() {
+
+					$.each(types, function(i, val) {
+
+						console.log(val.type)
+						if (val.type === 'bar') {
+							makeBarChart();
+						} else if (val.type === 'pie') {
+							console.log($('#chart2div'))
+							$('#chart2div').remove();
+							makePieChart();
+						} else if (val.type === 'region') {
+							$('#chart3div').remove();
+							makeRegionChart();
+						} else if (val.type === 'grid') {
+							makeGrid(val);
+						}
+					});
+					setTimeout(refresh, 10000);
+				}
+
+				setTimeout(refresh, 10000); */
+
+				function makediv(name) {
+					console.log(name)
+
+					var div = document.createElement('div');
+					div.id = name;
+					div.style.width = 800;
+					div.style.height = 500;
+					div.style.padding = 20;
+					if (name == 'chart2div')
+						div.style.display = 'inline-block';
+					if (name == 'chart3div') {
+						div.style.display = 'inline-block';
+						div.style.cssFloat = 'right';
+
+						div.style.position = 'absolute';
+						div.style.left = '450px';
+						div.style.top = '50px';
+					}
+
+					$("#jqxWidget1").append(div);
+				}
+
+				$.each(types, function(i, val) {
+					if (val.type === 'bar') {
+						makeBarChart();
+					} else if (val.type === 'pie') {
+						makePieChart();
+					} else if (val.type === 'region') {
+						makeRegionChart();
+					} else if (val.type === 'grid') {
+						makeGrid(val);
+					}
+				});
+
+				function makeGrid(type) {
+
+					var colnames = []
+					$.each(type.data.data, function(i, val) {
+						colnames.push(val.text);
+					});
+
+					var cols = {
+						cols : colnames.join(),
+						context : type.context
+					};
+
+					//console.log(JSON.stringify(cols));
+
+					$.ajax({
+						url : "../../service/dataservice/runQry/",
+						type : "POST",
+						contentType : "application/json; charset=utf-8",
+						dataType : "json",
+						data : JSON.stringify(cols),
+						cache : false,
+						success : function(result) {
+
+							//console.log(result)
+
+							var columns = cols.cols.split(",");
+							var columnDefs = [];
+							$.each(columns, function(i, val) {
+								columnDefs.push({
+									text : val
+								})
+							});
+
+							var imagerenderer = function(row, datafield, value) {
+								return '<img height=80% width=40% src="../../images/flags/' + value + '"/>';
+							}
+
+							var source = {
+								localdata : result,
+								datatype : "array"
+							};
+							var dataAdapter = new $.jqx.dataAdapter(source);
+
+							$("#jqxgrid").jqxGrid({
+								width : 1000,
+								source : dataAdapter,
+								selectionmode : 'multiplerowsextended',
+								sortable : true,
+								pageable : true,
+								autoheight : true,
+								columnsresize : true,
+								source : dataAdapter,
+								rowsheight : 20,
+								columns : columnDefs
+							});
+
+							document.getElementById("mask").style.display = 'none';
+						},
+						error : function(XMLHttpRequest, textStatus, errorThrown) {
+							console.log("Status: " + textStatus);
+							console.log("Error: " + errorThrown);
+
+							document.getElementById("mask").innerHTML = 'Error'
+						}
+					});
+				}
+
+				function makePieChart() {
+					$.ajax({
+						url : "../../service/dataservice/run/asd",
+						success : function(result) {
+
+							var areas = jQuery.parseJSON(result);
+
+							makediv('chart2div');
+							var arr = [];
+							var _data = {};
+							$.each(areas, function(i, val) {
+								arr.push({
+									label : val.id,
+									value : parseInt(val.value)
+								});
+							});
+
+							var pie = new d3pie("chart2div", {
+								"header" : {
+									"title" : {
+										"text" : "New Report",
+										"fontSize" : 24,
+										"font" : "open sans"
+									},
+									"subtitle" : {
+										"text" : "Created on " + new Date(),
+										"color" : "#999999",
+										"fontSize" : 12,
+										"font" : "arial"
+									},
+									"titleSubtitlePadding" : 9
+								},
+								"footer" : {
+									"color" : "#999999",
+									"fontSize" : 10,
+									"font" : "open sans",
+									"location" : "bottom-left"
+								},
+								"size" : {
+									"canvasWidth" : 400
+								},
+								"data" : {
+									"sortOrder" : "value-desc",
+									"content" : arr
+								},
+								"labels" : {
+									"outer" : {
+										"pieDistance" : 32
+									},
+									"inner" : {
+										"hideWhenLessThanPercentage" : 3
+									},
+									"mainLabel" : {
+										"fontSize" : 11
+									},
+									"percentage" : {
+										"color" : "#ffffff",
+										"decimalPlaces" : 0
+									},
+									"value" : {
+										"color" : "#adadad",
+										"fontSize" : 11
+									},
+									"lines" : {
+										"enabled" : true
+									}
+								},
+								"effects" : {
+									"pullOutSegmentOnClick" : {
+										"effect" : "linear",
+										"speed" : 400,
+										"size" : 8
+									}
+								},
+								"misc" : {
+									colors : {
+										background : null, // transparent
+										segments : [ "#2484c1", "#65a620", "#7b6888", "#a05d56", "#961a1a", "#d8d23a", "#e98125", "#d0743c", "#635222", "#6ada6a", "#0c6197",
+												"#7d9058", "#207f33", "#44b9b0", "#bca44a", "#e4a14b", "#a3acb2", "#8cc3e9", "#69a6f9", "#5b388f", "#546e91", "#8bde95", "#d2ab58",
+												"#273c71", "#98bf6e", "#4daa4b", "#98abc5", "#cc1010", "#31383b", "#006391", "#c2643f", "#b0a474", "#a5a39c", "#a9c2bc", "#22af8c",
+												"#7fcecf", "#987ac6", "#3d3b87", "#b77b1c", "#c9c2b6", "#807ece", "#8db27c", "#be66a2", "#9ed3c6", "#00644b", "#005064", "#77979f",
+												"#77e079", "#9c73ab", "#1f79a7" ],
+										segmentStroke : "#ffffff"
+									},
+									"gradient" : {
+										"enabled" : true,
+										"percentage" : 100
+									}
+								}
+							});
+
+							document.getElementById("mask").style.display = 'none';
+						},
+						error : function(XMLHttpRequest, textStatus, errorThrown) {
+							console.log("Status: " + textStatus);
+							console.log("Error: " + errorThrown);
+						}
+					});
+				}
+
+				function makeBarChart() {
+	/* 				$.ajax({
+						url : "../../service/dataservice/run/asd",
+						success : function(result) {
+
+							console.log(result) */
+							var chart = AmCharts.makeChart("chartdiv", {
+								"type" : "serial",
+								"theme" : "none",
+								"dataProvider" : [ {
+									"country" : "USA",
+									"visits" : 2025
+								}, {
+									"country" : "China",
+									"visits" : 1882
+								}, {
+									"country" : "Japan",
+									"visits" : 1809
+								}, {
+									"country" : "Germany",
+									"visits" : 1322
+								}, {
+									"country" : "UK",
+									"visits" : 1122
+								}, {
+									"country" : "France",
+									"visits" : 1114
+								}, {
+									"country" : "India",
+									"visits" : 984
+								}, {
+									"country" : "Spain",
+									"visits" : 711
+								}, {
+									"country" : "Netherlands",
+									"visits" : 665
+								}, {
+									"country" : "Russia",
+									"visits" : 580
+								}, {
+									"country" : "South Korea",
+									"visits" : 443
+								}, {
+									"country" : "Canada",
+									"visits" : 441
+								}, {
+									"country" : "Brazil",
+									"visits" : 395
+								} ],
+								"valueAxes" : [ {
+									"gridColor" : "#FFFFFF",
+									"gridAlpha" : 0.2,
+									"dashLength" : 0
+								} ],
+								"gridAboveGraphs" : true,
+								"startDuration" : 1,
+								"graphs" : [ {
+									"balloonText" : "[[category]]: <b>[[value]]</b>",
+									"fillAlphas" : 0.8,
+									"lineAlpha" : 0.2,
+									"type" : "column",
+									"valueField" : "visits"
+								} ],
+								"chartCursor" : {
+									"categoryBalloonEnabled" : false,
+									"cursorAlpha" : 0,
+									"zoomable" : false
+								},
+								"categoryField" : "country",
+								"categoryAxis" : {
+									"gridPosition" : "start",
+									"gridAlpha" : 0,
+									"tickPosition" : "start",
+									"tickLength" : 20
+								},
+								"exportConfig" : {
+									"menuTop" : 0,
+									"menuItems" : [ {
+										"icon" : '/lib/3/images/export.png',
+										"format" : 'png'
+									} ]
+								}
+							});
+
+							document.getElementById("mask").style.display = 'none';
+				/* 		},
+						error : function(XMLHttpRequest, textStatus, errorThrown) {
+							console.log("Status: " + textStatus);
+							console.log("Error: " + errorThrown);
+						}
+					}); */
+				}
+
+				function makeRegionChart() {
+					$.ajax({
+						url : "../../service/dataservice/run/asd",
+						success : function(result) {
+
+							makediv('chart3div');
+
+							var areas = jQuery.parseJSON(result);
+							var cleaned = [];
+
+							$.each(areas, function(i, val) {
+								console.log(val);
+								cleaned.push({
+									id : val.id,
+									value : parseInt(val.value)
+								})
+							});
+
+							var map = AmCharts.makeChart('chart3div', {
+								type : "map",
+								"theme" : "none",
+								buttonFillColor : '5A87B5',
+								pathToImages : "http://www.amcharts.com/lib/3/images/",
+
+								colorSteps : 10,
+
+								dataProvider : {
+									map : "usaLow",
+									areas : cleaned
+								},
+
+								areasSettings : {
+									autoZoom : true,
+									colorSolid : '#5A87B5',
+									color : '#002547'
+								},
+
+								valueLegend : {
+									right : 10,
+									minValue : "low",
+									maxValue : "high"
+								},
+
+								zoomControl : {
+									buttonFillColor : '#5A87B5'
+								}
+
+							});
+
+							document.getElementById("mask").style.display = 'none';
+						},
+						error : function(XMLHttpRequest, textStatus, errorThrown) {
+							console.log("Status: " + textStatus);
+							console.log("Error: " + errorThrown);
+						}
+					});
+				}
+			});
+</script>
+
+
+</body>
+</html>
+

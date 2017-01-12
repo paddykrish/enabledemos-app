@@ -1,0 +1,486 @@
+#underwriting-child .row {
+	margin-left: 0!important;
+	margin-right: 0!important;
+	margin-bottom: 40px;
+}	
+
+#underwriting-child .panel h1 {
+	font-size: 18px;
+	font-weight: 800;
+	margin-top:0;
+	margin-bottom: 10px;
+	color: #444;
+}
+
+#underwriting-child .table thead th {
+	font-size: 13px;
+	color: #444;
+}
+
+#underwriting-child .table tbody td {
+	font-size: 13px;
+	color: #888;
+}
+
+#underwriting-child .table {
+	margin-bottom: 0;
+}
+
+#underwriting-child .panel p  {
+	font-size: 15px;
+	font-weight: 800;
+	margin: 0;
+	color: #888;
+}
+#underwriting-child  .quoteDropdown {
+	margin-top: 30px;
+	margin-bottom: 10px;
+    margin-right: -15px !important;
+    margin-left: -15px !important;
+}
+
+#underwriting-child .panelSummary {
+	border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#underwriting-child  .quoteSummary .panel {
+	text-align: center;
+	border-right: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-radius: 0;
+	margin-left: -15px;
+    margin-right: -15px;
+	margin-bottom: 0;
+	padding: 30px 0;
+	box-shadow: 0 0 0!important;
+	background: #ededed !important;
+}
+
+#underwriting-child  .quoteSummary .col-lg-3:first-child .panel {
+	border-left: 1px solid #ccc;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+#underwriting-child  .quoteSummary .col-lg-3:last-child .panel {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+#underwriting-child .quoteTable {
+	margin: 0;
+}
+
+#underwriting-child .quoteTable .panel {
+	box-shadow: 0 0 0 !important;
+	margin: 0;
+}
+
+#underwriting-child .quoteTable thead th {
+	padding: 0 35px 15px 0;
+}
+
+#underwriting-child .quoteTable tbody tr td {
+	color: #888;
+	border: 0;
+	padding: 0 35px 20px 0;
+}
+
+#underwriting-child .quoteTable tbody tr:first-child td {
+	padding: 15px 35px 20px 0;
+}
+
+#underwriting-child .trendingBox .panel {
+	box-shadow: 0 0 0 !important;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	margin-right: -15px;
+}
+
+#underwriting-child .trendingBox h3 {
+	font-size: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-weight: 800;
+	color: #444;
+}
+
+#underwriting-child .trendingBox i {
+	float: left;
+	margin-right: 15px;
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+#underwriting-child .trendingBox li {
+	border :0;
+}
+
+#underwriting-child .trendingBox li:nth-child(even) {
+	background: #ededed;
+}
+
+#underwriting-child .trendingBox li:first-child {
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+
+#underwriting-child .trendingBox li:last-child {
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+
+
+/*********** ACCORDION ******************/
+
+#underwriting-child #accordion .owl-carousel .owl-dots {
+    display: none;
+}
+
+#underwriting-child #accordion {
+	margin-bottom: 40px;
+}
+
+#underwriting-child #accordion > .panel {
+	background: transparent;	
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+#underwriting-child #accordion > .panel > #headingOne {
+    /*background: #1cade4;*/
+   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#83c5db+0,1cade4+100 */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background: #83c5db; /* Old browsers */
+    background: -moz-linear-gradient(top,  #83c5db 0%, #1cade4 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #83c5db 0%,#1cade4 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #83c5db 0%,#1cade4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#83c5db', endColorstr='#1cade4',GradientType=0 ); /* IE6-9 */
+}
+
+#underwriting-child #accordion > .panel > #headingTwo {
+    /*background: #a54542;*/
+   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#db8787+0,a54542+100 */
+   border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background: #db8787; /* Old browsers */
+    background: -moz-linear-gradient(top,  #db8787 0%, #a54542 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #db8787 0%,#a54542 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #db8787 0%,#a54542 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db8787', endColorstr='#a54542',GradientType=0 ); /* IE6-9 */
+}
+
+#underwriting-child #accordion > .panel > #headingThree {
+    /*background: #3a7f4e;*/
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#82b584+0,3a7f4e+100 */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background: #82b584; /* Old browsers */
+    background: -moz-linear-gradient(top,  #82b584 0%, #3a7f4e 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #82b584 0%,#3a7f4e 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #82b584 0%,#3a7f4e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#82b584', endColorstr='#3a7f4e',GradientType=0 ); /* IE6-9 */
+}
+
+#underwriting-child #accordion > .panel > #headingFour {
+    /*background: #d7823d;*/
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e29278+0,d7823d+100 */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background: #e29278; /* Old browsers */
+    background: -moz-linear-gradient(top,  #e29278 0%, #d7823d 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #e29278 0%,#d7823d 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #e29278 0%,#d7823d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e29278', endColorstr='#d7823d',GradientType=0 ); /* IE6-9 */
+}
+
+#underwriting-child #accordion > .panel > #headingFive{
+    /*background: #675183;*/
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9c7bc4+0,675183+100 */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background: #9c7bc4; /* Old browsers */
+    background: -moz-linear-gradient(top,  #9c7bc4 0%, #675183 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #9c7bc4 0%,#675183 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #9c7bc4 0%,#675183 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9c7bc4', endColorstr='#675183',GradientType=0 ); /* IE6-9 */
+
+    
+}
+
+/*#underwriting-child #accordion > .panel > .panel-heading {
+	background: rgba(215,215,215,1);
+	background: -moz-linear-gradient(top, rgba(215,215,215,1) 0%, rgba(167,167,167,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(215,215,215,1)), color-stop(100%, rgba(167,167,167,1)));
+	background: -webkit-linear-gradient(top, rgba(215,215,215,1) 0%, rgba(167,167,167,1) 100%);
+	background: -o-linear-gradient(top, rgba(215,215,215,1) 0%, rgba(167,167,167,1) 100%);
+	background: -ms-linear-gradient(top, rgba(215,215,215,1) 0%, rgba(167,167,167,1) 100%);
+	background: linear-gradient(to bottom, rgba(215,215,215,1) 0%, rgba(167,167,167,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d7d7d7', endColorstr='#a7a7a7', GradientType=0 );
+	padding: 15px;
+}*/
+
+#underwriting-child #accordion > .panel > .panel-heading a {
+	text-decoration: none;
+	color: #fff;
+	padding: 0;
+}
+#underwriting-child #accordion > .panel > .panel-heading a h2{
+	font-size: 15px;
+	text-decoration: none;
+	color: #fff;
+	margin:0;
+}
+
+/** LOSS RATIO **/
+
+
+#underwriting-child #accordion #lossRatio .panel-body {
+	padding-top: 30px;
+}
+
+#underwriting-child #accordion #lossRatio .lossRatioPercent {
+	box-shadow: 0 0 0 !important;
+}
+
+#underwriting-child #accordion #lossRatio .lossRatioPercent .col-lg-3  .row {
+	margin-bottom: 0;
+}
+
+#underwriting-child #accordion #lossRatio .lossRatioPercent .col-lg-3 .col-lg-6 {
+	text-align:center;
+	padding: 25px 0;
+	
+}
+
+#underwriting-child #accordion #lossRatio .lossRatioPercent .col-lg-3 .col-lg-6 h1 {
+	margin: 0;
+	color: #fff;
+}
+
+#underwriting-child #accordion #lossRatio .lossRatioPercent .col-lg-3 .col-lg-6:first-child {
+	background: #a0a0a0;
+}
+
+#underwriting-child #accordion #lossRatio .lossRatioPercent .col-lg-3 .col-lg-6:last-child {
+	background: #898685;
+	
+}
+
+#underwriting-child #accordion #lossRatio .lossRatioGraphs {
+	box-shadow: 0 0 0 !important;
+}
+
+#underwriting-child #accordion #lossRatio .lossRatioGraphs .col-lg-6 h4 ,
+#underwriting-child #accordion #lossRatio .lossRatioHistory h1 {
+	text-align: center;
+	font-size: 18px;
+	color: #444;
+	font-weight: 800;
+}
+
+#underwriting-child #accordion #lossRatio .lossRatioGraphs .col-lg-6 div {
+	height: 250px;
+	background: #ddd;
+}
+
+#underwriting-child #accordion #lossRatio .lossRatioHistory {
+	box-shadow: 0 0 0!important; 
+} 
+
+#underwriting-child #accordion #lossRatio .lossRatioHistory h1  {
+	margin-bottom: 30px;
+}	
+
+#underwriting-child #accordion #lossRatio .lossRatioHistory .table tr:nth-child(even) {
+	background: #ededed;
+}
+
+#underwriting-child #accordion #lossRatio .lossRatioHistory .table tbody td {
+	color: #888;
+}
+
+
+/** RISK MANAGEMENT EXPOSURE **/
+
+#underwriting-child #accordion #rgExposure .panel { 
+	box-shadow: 0 0 0 !important;
+}
+
+#underwriting-child #accordion #rgExposure .panel-body {
+	padding-top: 30px;
+}
+
+#underwriting-child #accordion #rgExposure .panel .owl-carousel .item {
+	border: 3px solid #ddd;
+	border-radius: 8px;
+}
+
+#underwriting-child #accordion #rgExposure .panel .owl-carousel .item .row  { 
+	margin-bottom: 0;
+}
+
+#underwriting-child #accordion #rgExposure .panel .owl-carousel .item .panel {
+	background: transparent !important;
+	margin-right: -15px;
+	margin-left: -15px;
+}
+
+#underwriting-child #accordion #rgExposure .riskTitle {
+	padding: 20px 15px;
+	border-bottom: 1px solid #ddd;
+}
+
+#underwriting-child #accordion #rgExposure .riskTitle h2 {
+	margin-bottom: 0;
+	font-size: 18px;
+	color: #444;
+	margin-top: 10px;
+	font-weight: 800;
+}
+
+#underwriting-child #accordion #rgExposure .riskTitle span {
+	background: #8d8d8d;
+    border-radius: 99px;
+    height: 35px;
+    width: 35px;
+    display: block;
+    float: left;
+    padding: 10px;
+	margin-right: 10px;
+}
+
+#underwriting-child #accordion #rgExposure .riskTitle i  { 
+	font-size: 16px;
+	color: #fff;
+}
+
+#underwriting-child #accordion #rgExposure .table thead th {
+	border-bottom: 1px solid #ddd;
+}
+
+#underwriting-child #accordion #rgExposure .table tbody td {
+	border: 0;
+}
+
+#underwriting-child #accordion #rgExposure .rgExposureMap .col-lg-12 div {
+	background: #ddd; 
+	min-height: 250px;
+}
+
+#underwriting-child #accordion #rgExposure .rgExposureTable .row {
+	margin: 0;
+}
+
+/** RISK ASSESSMENT GRADE **/
+
+
+#underwriting-child #accordion #raGrade .row {
+	margin: 0; 
+}
+
+#underwriting-child #accordion #raGrade .row  .col-lg-8 div {
+	background: #ddd;
+	min-height: 250px;
+}
+
+#underwriting-child #accordion #raGrade .panel-body {
+	padding-top: 30px;
+}
+
+#underwriting-child #accordion #raGrade .panel {
+	box-shadow: 0 0 0 !important;
+}
+
+
+/** QUOTED EXPOSURE VS TARGETS **/
+
+
+#underwriting-child #accordion #qExposure .panel-body {
+	padding-top: 30px;
+}
+
+#underwriting-child #accordion #qExposure .panel {
+	box-shadow: 0 0 0!important;
+}
+
+#underwriting-child #accordion #qExposure .owl-carousel .item .thumbnail {
+	border: 0 !important;
+	padding: 0 !important;
+	
+}
+
+#underwriting-child #accordion #qExposure .owl-carousel .item .thumbnail .gimage {
+    min-height: 200px;
+    background: #ddd;
+}
+
+#underwriting-child #accordion #qExposure .owl-carousel .item .thumbnail .caption {
+	text-align: center;
+	color: #444;
+}
+
+#underwriting-child #accordion #qExposure .owl-carousel .item .thumbnail .caption h3 {
+	font-size: 32px;
+	font-weight: 800;
+}
+
+#underwriting-child #accordion #qExposure .owl-carousel .item .thumbnail .caption h4 {
+	font-size: 18px;
+}
+
+#underwriting-child #accordion #qExposure .owl-carousel .item .thumbnail .caption p {
+	font-size: 16px;
+	font-weight: 400;
+}
+
+
+/** FRAUD RISK GUIDE **/
+
+
+#underwriting-child #accordion #frGuide .panel {
+	box-shadow: 0 0 0!important;
+}
+
+#underwriting-child #accordion #frGuide .panel-body {
+	padding-top: 30px;
+}
+
+#underwriting-child #accordion #frGuide .panel-body ul li:first-child {
+	list-style-type:none;
+	margin-left: -15px;
+}
+
+#underwriting-child #accordion #frGuide .panel-body ul li:first-child h3 {
+	font-size:20px;
+	margin:0;
+}
+
+#underwriting-child #accordion #frGuide .panel-body ul {
+	list-style-type: square;
+}
+
+#underwriting-child #accordion #frGuide .panel-body ul li {
+	padding: 7px 0;
+	color: #888;
+}
+
+#underwriting-child #accordion #frGuide .row {
+	margin: 0;
+}
+
+#underwriting-child #accordion #frGuide .frGuideGraph div {
+	background: #ddd;
+	min-height: 300px;
+}
+
+#underwriting-child #accordion .panel-heading i {
+	float:left;
+	margin-right: 10px;
+}
+	

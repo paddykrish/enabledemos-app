@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="serviceincidents">
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
+        <dependent-module archiveName="htrace-core-3.1.0-incubating.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/htrace-core-3.1.0-incubating.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-protocol-1.1.2.2.4.0.0-169.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-protocol-1.1.2.2.4.0.0-169.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="phoenix-client.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/phoenix-client.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-rest.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-rest.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-prefix-tree.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-prefix-tree.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-prefix-tree-1.1.2.2.4.0.0-169.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-prefix-tree-1.1.2.2.4.0.0-169.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-hadoop2-compat.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-hadoop2-compat.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-server-1.1.2.2.4.0.0-169-tests.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-server-1.1.2.2.4.0.0-169-tests.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-client-1.1.2.2.4.0.0-169.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-client-1.1.2.2.4.0.0-169.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-hadoop-compat.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-hadoop-compat.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-thrift-1.1.2.2.4.0.0-169.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-thrift-1.1.2.2.4.0.0-169.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="phoenix-4.4.0.2.4.0.0-169-client.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/phoenix-4.4.0.2.4.0.0-169-client.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-hadoop-compat-1.1.2.2.4.0.0-169.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-hadoop-compat-1.1.2.2.4.0.0-169.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-it.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-it.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="netty-3.2.4.Final.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/netty-3.2.4.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-client.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-client.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-shell.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-shell.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-common.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-common.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-annotations.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-annotations.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-protocol.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-protocol.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-common-1.1.2.2.4.0.0-169.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-common-1.1.2.2.4.0.0-169.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-resource-bundle-1.1.2.2.4.0.0-169.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-resource-bundle-1.1.2.2.4.0.0-169.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zookeeper.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/zookeeper.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-examples.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-examples.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-annotations-1.1.2.2.4.0.0-169-tests.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-annotations-1.1.2.2.4.0.0-169-tests.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-examples-1.1.2.2.4.0.0-169.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-examples-1.1.2.2.4.0.0-169.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="phoenix-thin-client.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/phoenix-thin-client.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-resource-bundle.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-resource-bundle.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="phoenix-4.4.0.2.4.0.0-169-thin-client.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/phoenix-4.4.0.2.4.0.0-169-thin-client.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="phoenix-server.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/phoenix-server.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-server.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-server.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-shell-1.1.2.2.4.0.0-169.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-shell-1.1.2.2.4.0.0-169.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-hadoop2-compat-1.1.2.2.4.0.0-169.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-hadoop2-compat-1.1.2.2.4.0.0-169.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-it-1.1.2.2.4.0.0-169-tests.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-it-1.1.2.2.4.0.0-169-tests.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-annotations-1.1.2.2.4.0.0-169.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-annotations-1.1.2.2.4.0.0-169.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-procedure.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-procedure.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-server-1.1.2.2.4.0.0-169.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-server-1.1.2.2.4.0.0-169.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-it-1.1.2.2.4.0.0-169.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-it-1.1.2.2.4.0.0-169.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="netty-all-4.0.23.Final.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/netty-all-4.0.23.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-rest-1.1.2.2.4.0.0-169.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-rest-1.1.2.2.4.0.0-169.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-procedure-1.1.2.2.4.0.0-169.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-procedure-1.1.2.2.4.0.0-169.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-thrift.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-thrift.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="phoenix-4.4.0.2.4.0.0-169-server.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/phoenix-4.4.0.2.4.0.0-169-server.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-common-1.1.2.2.4.0.0-169-tests.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hbase-common-1.1.2.2.4.0.0-169-tests.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-lang-2.5.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/commons-lang-2.5.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-beanutils-core-1.8.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/commons-beanutils-core-1.8.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-el-1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/commons-el-1.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-core-4.0.0.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/spring-core-4.0.0.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-net-3.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/commons-net-3.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-lang3-3.3.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/commons-lang3-3.3.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-validator-1.4.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/commons-validator-1.4.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-beanutils-1.8.3.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/commons-beanutils-1.8.3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-web-4.0.0.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/spring-web-4.0.0.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-math-2.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/commons-math-2.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-aop-4.0.0.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/spring-aop-4.0.0.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-webmvc-4.0.0.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/spring-webmvc-4.0.0.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-daemon-1.0.13.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/commons-daemon-1.0.13.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-csv-1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/commons-csv-1.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-httpclient-3.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/commons-httpclient-3.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-xc-1.8.3.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/jackson-xc-1.8.3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-jaxrs-1.8.3.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/jackson-jaxrs-1.8.3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-expression-4.0.0.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/spring-expression-4.0.0.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-pool-1.5.4.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/commons-pool-1.5.4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-databind-2.2.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/jackson-databind-2.2.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-websocket-4.0.0.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/spring-websocket-4.0.0.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-module-jsonSchema-2.5.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/jackson-module-jsonSchema-2.5.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-mapper-asl-1.9.10.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/jackson-mapper-asl-1.9.10.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-core-2.2.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/jackson-core-2.2.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-digester-1.8.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/commons-digester-1.8.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-annotations-2.2.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/jackson-annotations-2.2.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-configuration-1.6.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/commons-configuration-1.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-logging-1.1.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/commons-logging-1.1.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-context-4.0.0.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/spring-context-4.0.0.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-compress-1.4.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/commons-compress-1.4.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-beans-4.0.0.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/spring-beans-4.0.0.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-messaging-4.0.0.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/spring-messaging-4.0.0.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-io-2.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/commons-io-2.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-core-asl-1.9.10.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/jackson-core-asl-1.9.10.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-collections-3.2.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/commons-collections-3.2.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-codec-1.4.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/commons-codec-1.4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-cli-1.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/commons-cli-1.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ingest-engine-java.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/ingest-engine-java.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="slf4j-log4j12-1.7.5.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/slf4j-log4j12-1.7.5.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="log4j-1.2.17.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/log4j-1.2.17.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="slf4j-api-1.6.4.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/slf4j-api-1.6.4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="slf4j-simple-1.6.4.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/slf4j-simple-1.6.4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="guava-11.0.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/guava-11.0.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="kudu-client-0.5.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/kudu-client-0.5.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="async-1.4.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/async-1.4.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="twitter4j-core-4.0.4.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/twitter4j-core-4.0.4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="twilio-master-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/twilio-master-1.0.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="twitter4j-stream-4.0.4.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/Hospitality_war/WEB-INF/lib/twitter4j-stream-4.0.4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hadoop-nfs.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hadoop-nfs.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hadoop-common-2.7.1.2.4.0.0-169-tests.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hadoop-common-2.7.1.2.4.0.0-169-tests.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hadoop-auth-2.7.1.2.4.0.0-169.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hadoop-auth-2.7.1.2.4.0.0-169.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hadoop-nfs-2.7.1.2.4.0.0-169.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hadoop-nfs-2.7.1.2.4.0.0-169.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hadoop-annotations-2.7.1.2.4.0.0-169.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hadoop-annotations-2.7.1.2.4.0.0-169.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hadoop-auth.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hadoop-auth.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hadoop-azure-2.7.1.2.4.0.0-169.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hadoop-azure-2.7.1.2.4.0.0-169.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hadoop-common-tests.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hadoop-common-tests.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hadoop-aws-2.7.1.2.4.0.0-169.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hadoop-aws-2.7.1.2.4.0.0-169.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hadoop-aws.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hadoop-aws.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hadoop-common-2.7.1.2.4.0.0-169.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hadoop-common-2.7.1.2.4.0.0-169.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hadoop-common.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hadoop-common.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hadoop-annotations.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hadoop-annotations.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hadoop-azure.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hadoop-azure.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="aws-java-sdk-1.7.4.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/aws-java-sdk-1.7.4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hadoop-hdfs-tests.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hadoop-hdfs-tests.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hadoop-hdfs-nfs-2.7.1.2.4.0.0-169.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hadoop-hdfs-nfs-2.7.1.2.4.0.0-169.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hadoop-hdfs-2.7.1.2.4.0.0-169-tests.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hadoop-hdfs-2.7.1.2.4.0.0-169-tests.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hadoop-hdfs-nfs.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hadoop-hdfs-nfs.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hadoop-hdfs-2.7.1.2.4.0.0-169.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hadoop-hdfs-2.7.1.2.4.0.0-169.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hadoop-hdfs.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/hadoop-hdfs.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-io-2.4.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/RCG/IOTDemo/hbaselibs/commons-io-2.4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="serviceincidents"/>
+        <property name="java-output-path" value="/serviceincidents/target/classes"/>
+    </wb-module>
+</project-modules>

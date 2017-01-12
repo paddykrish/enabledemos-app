@@ -1,0 +1,474 @@
+#underwriting h1.pageTitle {
+   text-align: center;
+    font-size: 25px;
+    margin-bottom: 35px;
+    margin-top: 35px;
+}
+
+#underwriting .panel-group {
+    margin-bottom: 15px;
+}
+
+#underwriting .panel-group .panel {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-bottom: 15px;
+}
+
+#underwriting #collapseOne.panel-collapse,
+#underwriting #collapseInv.panel-collapse,
+#underwriting #collapseFive.panel-collapse,
+#underwriting #collapseSix.panel-collapse {
+    height: 430px;
+}
+
+
+#underwriting #collapseTwo.panel-collapse,
+#underwriting #collapseThree.panel-collapse {
+    overflow: scroll;
+    height: 430px;
+}
+
+
+#underwriting .panel-group .panel .panel-heading {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+#underwriting .panel-group .panel .panel-heading a {
+    display: block;
+    width: 100%;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+}
+
+#underwriting .panel-group .panel .panel-heading a > i {
+    position: absolute;
+    right: 0px;
+}
+
+#underwriting .panel-group .panel #headingOne {
+  background: #6bbc6b;  
+}
+
+#underwriting .panel-group .panel #headingTwo {
+  background: #d64040;
+}
+
+#underwriting .panel-group .panel #headingThree {
+  background: #6bc8ce;
+}
+
+#underwriting .panel-group .panel #headingFour {
+  background: #ec9950; 
+}
+
+#underwriting .panel-group .panel #headingFive {
+  background: #6e0684;
+}
+
+#underwriting .panel-group .panel #headingSix {
+   background: #2e77b5; 
+}
+
+#underwriting  .owl-carousel .owl-dots {
+    display: none;
+}
+
+/* collapse 1 - Quotes Summary */
+
+
+#underwriting #collapseOne .col-lg-12:first-child {
+    margin-top: 25px;
+}
+
+#underwriting #collapseOne .col-lg-12:last-child {
+    margin-bottom: 0;
+}
+
+
+#underwriting #collapseOne .col-lg-12 {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+#underwriting #collapseOne h1    {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 5px;
+    margin-top: 0;
+    color: #555;
+}
+
+#underwriting #collapseOne h2 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #888;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+
+/* collapse 2 - Top 10 Active Quotes by Annual  Premium */
+
+#underwriting #collapseTwo .rgExposureMap {
+	margin: 5px 0 30px !important;
+}
+
+
+#underwriting #collapseTwo table tbody td:nth-child(2) {
+    width: 50px;
+}
+
+#underwriting #collapseTwo .owl-carousel .item {
+	border: 3px solid #ddd;
+	border-radius: 8px;
+}
+
+#underwriting #collapseTwo .owl-carousel .item .row  { 
+	margin-bottom: 0;
+}
+
+#underwriting #collapseTwo .owl-carousel .item .panel {
+	background: transparent !important;
+}
+
+#underwriting #collapseTwo .riskTitle {
+	padding: 20px 15px;
+	border-bottom: 1px solid #ddd;
+}
+
+#underwriting #collapseTwo .riskTitle h2 {
+	margin-bottom: 0;
+	font-size: 18px;
+	color: #444;
+	margin-top: 10px;
+	font-weight: 800;
+}
+
+#underwriting #collapseTwo .riskTitle span {
+	background: #8d8d8d;
+    border-radius: 99px;
+    height: 35px;
+    width: 35px;
+    display: block;
+    float: left;
+    padding: 10px;
+	margin-right: 10px;
+}
+
+#underwriting #collapseTwo .riskTitle i  { 
+	font-size: 16px;
+	color: #fff;
+}
+
+#underwriting #collapseTwo .table thead th {
+	border-bottom: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+#underwriting #collapseTwo .table tbody td {
+	border: 0;
+}
+
+
+/* collapse 3 - Submissions by LOB */
+
+
+
+/* collapse 4 - Status Breakdown */
+
+
+#underwriting #collapseInv .statusBreakdown .statusBreakdownCont .item {
+   border: 2px solid #cbcbcb;
+   margin-bottom: 3px;
+
+}
+
+#underwriting #collapseInv .statusBreakdown .statusBreakdownCont .item > div {
+   color: #fff;
+   padding: 10px 5px;
+}
+  
+#underwriting #collapseInv .statusBreakdown .statusBreakdownCont .item.sub > div {
+   background: #7030A0;
+}
+
+#underwriting #collapseInv .statusBreakdown .statusBreakdownCont .item.veri  > div {
+   background: #996600;
+}
+
+#underwriting #collapseInv .statusBreakdown .statusBreakdownCont .item.rith  > div {
+   background: #D60093;
+}
+
+#underwriting #collapseInv .statusBreakdown .statusBreakdownCont .item.quotePrep  > div {
+   background: #6bbc6b;
+}
+
+#underwriting #collapseInv .statusBreakdown .statusBreakdownCont .item.stat  > div {
+   background: #FF7C80;
+}
+
+#underwriting #collapseInv .statusBreakdown .statusBreakdownCont h4 {
+   display: inline-block;
+   color: #555;
+   width: 100%;
+   padding-top: 0px;
+   margin-top: 0;
+   margin-bottom: 10px;
+   font-weight: 800;
+   font-size: 12px;
+}
+
+
+/* collapse 5 - Quotes by Risk Client */
+   
+
+    
+#underwriting #collapseFive .header-container {
+    margin-bottom: 35px;
+}    
+
+#underwriting #collapseFive .body-container .riskFlexContainer,
+#underwriting #collapseFive .body-container .riskStepsFlexContainer {
+    width: 340px;
+    display: flex; /* or inline-flex */
+    flex-direction: column;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    height: 300px;
+    margin: auto;
+}
+
+#underwriting #collapseFive .body-container .riskFlexContainer .item,
+#underwriting #collapseFive .body-container .riskStepsFlexContainer .item  {            
+    flex: 1 auto;
+    padding: 10px;
+    color: #fff;
+    position: relative;
+}
+
+#underwriting #collapseFive .body-container .riskFlexContainer > .item  > span.riskname,
+#underwriting #collapseFive .body-container .riskStepsFlexContainer > .item  > span.riskname {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 13px;
+}
+
+#underwriting #collapseFive .body-container .riskFlexContainer > .item  >  span.count,
+#underwriting #collapseFive .body-container .riskStepsFlexContainer > .item  >  span.count {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 13px;
+}	
+
+#underwriting #collapseFive .body-container .riskFlexContainer > .item.lowRisk {
+    background: #75c948;        
+    height: 300px;
+}
+
+#underwriting #collapseFive .body-container .riskFlexContainer > .item.mediumRisk {
+    background: #c345ed;
+    height: 300px;
+}
+
+#underwriting #collapseFive .body-container .riskFlexContainer > .item.highRisk {
+    background: #62a0ca;       
+}
+
+#underwriting #collapseFive .body-container .riskFlexContainer > .item.veryHighRisk {
+    background: #ffa556;
+}
+
+
+#underwriting #collapseFive .body-container .riskStepsFlexContainer > .item.preparation {
+    background: #75c948;
+    height: 300px;
+}
+
+#underwriting #collapseFive .body-container .riskStepsFlexContainer > .item.verification {
+    background: #c345ed;
+    height: 300px;
+}
+
+#underwriting #collapseFive .body-container .riskStepsFlexContainer > .item.rating {
+    background: #62a0ca;
+}
+
+#underwriting #collapseFive .body-container .riskStepsFlexContainer > .item.submission {
+    background: #ffa556;
+}
+
+#underwriting #collapseFive .body-container .riskStepsFlexContainer > .item.delivery {
+    background: #c94869;
+    height: 300px;
+}	
+
+#underwriting #collapseFive .body-container .riskStepsFlexContainer > .quotePrep {
+    background: #75c948;
+    color: #fff;
+    height: 317px;
+    width: 95px;
+}       
+
+#underwriting #collapseFive .body-container .percentage {
+    text-align:center;
+} 
+
+#underwriting #collapseFive .body-container .percentage h4 {
+    font-size: 14px;
+    font-weight: 800;
+    margin: 15px 0 5px 0;
+} 
+
+#underwriting #collapseFive .body-container .percentage h3{
+    font-size: 14px;
+    margin: 5px 0 15px 0;
+}
+
+
+/* collapse 6 - Very High Risk Quotes by Process Step */
+
+#underwriting #collapseSix .header-container {
+    margin-bottom: 35px;
+}    
+
+#underwriting #collapseSix .body-container .riskFlexContainer,
+#underwriting #collapseSix .body-container .riskStepsFlexContainer {
+    width: 341px;
+    display: flex; /* or inline-flex */
+    flex-direction: column;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    height: 300px;
+    margin: auto;
+}
+
+#underwriting #collapseSix .body-container .riskFlexContainer .item,
+#underwriting #collapseSix .body-container .riskStepsFlexContainer .item  {            
+    flex: 1 auto;
+    padding: 10px;
+    color: #fff;
+    position: relative;
+}
+
+#underwriting #collapseSix .body-container .riskFlexContainer > .item  > span.riskname,
+#underwriting #collapseSix .body-container .riskStepsFlexContainer > .item  > span.riskname {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 13px;
+}
+
+#underwriting #collapseSix .body-container .riskFlexContainer > .item  >  span.count,
+#underwriting #collapseSix .body-container .riskStepsFlexContainer > .item  >  span.count {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 13px;
+}	
+
+#underwriting #collapseSix .body-container .riskFlexContainer > .item.lowRisk {
+    background: #75c948;        
+    height: 300px;
+}
+
+#underwriting #collapseSix .body-container .riskFlexContainer > .item.mediumRisk {
+    background: #c345ed;
+    height: 300px;
+}
+
+#underwriting #collapseSix .body-container .riskFlexContainer > .item.highRisk {
+    background: #62a0ca;       
+}
+
+#underwriting #collapseSix .body-container .riskFlexContainer > .item.veryHighRisk {
+    background: #ffa556;
+}
+
+#underwriting #collapseSix .body-container .riskStepsFlexContainer > .item.preparation {
+    background: #75c948;
+    height: 300px;
+}
+
+#underwriting #collapseSix .body-container .riskStepsFlexContainer > .item.verification {
+    background: #c345ed;
+    height: 300px;
+}
+
+#underwriting #collapseSix .body-container .riskStepsFlexContainer > .item.rating {
+    background: #62a0ca;
+}
+
+#underwriting #collapseSix .body-container .riskStepsFlexContainer > .item.submission {
+    background: #ffa556;
+}
+
+#underwriting #collapseSix .body-container .riskStepsFlexContainer > .item.delivery {
+    background: #c94869;
+    height: 300px;
+}	
+
+#underwriting #collapseSix .body-container .riskStepsFlexContainer > .quotePrep {
+    background: #75c948;
+    color: #fff;
+    height: 317px;
+    width: 95px;
+}     
+
+#underwriting #collapseSix .body-container .percentage {
+    text-align:center;
+} 
+
+#underwriting #collapseSix .body-container .percentage h4 {
+    font-size: 14px;
+    font-weight: 800;
+    margin: 15px 0 5px 0;
+} 
+
+#underwriting #collapseSix .body-container .percentage h3{
+    font-size: 14px;
+    margin: 5px 0 15px 0;
+}
+    
+/* TABLE */
+
+ #underwriting .table {
+    overflow-x: scroll;
+    margin-bottom: 0;
+}
+
+#underwriting #collapseTwo table {
+    width: 980px
+}
+
+#underwriting .table thead th {
+    font-size: 11px;
+    padding-top: 0;
+}
+
+#underwriting .table tbody td {
+    font-size: 11px;
+    width: 100px;
+}
+
+#underwriting .table tbody td:first-child,
+#underwriting .table tbody td:nth-child(3),
+#underwriting .table tbody td:nth-child(4) {
+    width: 60px;
+}			
+    
+.co-Yes {
+    background-color: #F8CBAD;
+}
+.co-Benign {
+    background-color: #C6E0B4;
+}
+
+
+
+

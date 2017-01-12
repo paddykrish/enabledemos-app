@@ -1,0 +1,213 @@
+package com.rcggs.enablefs.demo.service.controller;
+
+import org.apache.commons.io.IOUtils;
+import org.joda.time.DateTime;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.text.DecimalFormat;
+import java.util.*;
+import org.apache.commons.lang.math.RandomUtils;
+
+/**
+ * Created by Administrator on 1/6/17.
+ */
+public class DataLoader {
+    protected List<Quote> alllocations = new LinkedList<Quote>();
+    protected HashMap<String , RiskFactor> riskFactors = new HashMap<String, RiskFactor>();
+    protected ArrayList<String> sampleLatLongs = new ArrayList<String>();
+
+    public Date getRandomDate(Date from, Date to) {
+        double d = from.getTime() + Math.random() * (to.getTime() - from.getTime());
+        return new Date(  (long)d );
+    }
+
+    public void loadRiskFactors(){
+        FileInputStream in = null;
+        try {
+
+            in = new FileInputStream("/apps/data/insurance_riskfactors.csv");
+            String prods = IOUtils.toString(in);
+            String[] lines = prods.split("\n");
+            boolean header = false;
+            for (String line: lines) {
+                if (!header){
+                    header = true;
+                    continue;
+                }
+                String tokens[] = line.split(",");
+                RiskFactor r = new RiskFactor();
+                r.setType(tokens[0]);
+                r.setValue(tokens[1]);
+                r.setFireRisk(Float.parseFloat(tokens[2]));
+                r.setCrimeRisk(Float.parseFloat(tokens[3]));
+                r.setHailRisk(Float.parseFloat(tokens[4]));
+                r.setEarthquakeRisk(Float.parseFloat(tokens[5]));
+                r.setWindstromRisk(Float.parseFloat(tokens[6]));
+                r.setFloodRisk(Float.parseFloat(tokens[7]));
+                riskFactors.put(r.getValue(), r);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+    public void loadSampleLatLongs() {
+
+        FileInputStream in = null;
+        try {
+            in = new FileInputStream("/apps/data/test_locations.csv");
+            String prods = IOUtils.toString(in);
+            this.sampleLatLongs = new ArrayList<String>(Arrays.asList(prods.split("\n")));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+    public DataLoader()  {
+        loadRiskFactors();
+        loadSampleLatLongs();
+        FileInputStream in = null;
+        try {
+            in = new FileInputStream("/apps/data/insurance_locations.csv");
+            String prods = IOUtils.toString(in);
+            String[] lines = prods.split("\n");
+            System.out.println(lines.length);
+            Random rand = new Random();
+            DecimalFormat dFormat = new DecimalFormat("####,###,###.00");
+
+            DateTime startdate = new DateTime();
+            DateTime enddate = new DateTime();
+            startdate = startdate.minusDays(30);
+            float minrisk = 0.0f;
+            float maxrisk = 9.9f;
+            String[] LOB = new String[] {"BO",  "CP",  "GL", "WC", "CR", "DF",  "MM"};
+            String[] UNDERWRITERS = new String[] {"John King",  "Scott Summers",  "Ronald Drews", "Marie Mitz", "Carla Emeril", "Dave Starr",  "Jason Jumba"};
+            String[] STATUS = new String[] {"Submission", "Verification", "Rating", "Quote prep", "Quote Delivery"};
+
+            String [] RISKCLASS = new String[] {"Preferred", "Selected" };
+            int quoteseq = 0;
+            for (String line: lines) {
+                String tokens[] = line.split(",");
+                if ("StoreID".equals(tokens[0])) {
+                    continue;
+                }
+
+                Quote q = new Quote();
+                Set<String> lob = new TreeSet<String>();
+                lob.add("CP");
+                for (int i = 0; i < (1 + rand.nextInt(6)); i ++){
+                    lob.add(LOB[rand.nextInt(LOB.length)]);
+                }
+                StringBuffer sb = new StringBuffer();
+                for (String l : lob){
+                    sb.append(l + ", ");
+                }
+                q.setQuote( tokens[0] + quoteseq + "");
+                q.setCompany(tokens[2]);
+                q.setAddress(tokens[4]);
+                q.setCity(tokens[5]);
+                q.setState(tokens[6]);
+                q.setZipcode(tokens[7]);
+                q.setStorename(tokens[3]);
+                q.setCounty(tokens[8]);
+                q.setCompanyCode( tokens[1]);
+
+
+                q.setLobs(sb.toString().substring(0, sb.toString().length() -2));
+                if ( tokens.length > 9 && tokens[9] != null) {
+                    q.setStoretype(tokens[9]);
+                }
+
+                if ( rand.nextInt( 100) % 10 == 8){
+                    q.setQuoteType("RENEWAL");
+                } else {
+                    q.setQuoteType("NBA");
+                }
+                int premium = 24000 + (100* rand.nextInt(15));
+                if( q.companyCode.equals("WM")){
+                    if (  q.getStoretype() != null && q.getStoretype().equals("Supercenter")) {
+                        premium = 290000 + (1000 * rand.nextInt(15));
+                    } else {
+                        premium = 125000 + (1000 * rand.nextInt(150));
+                    }
+                } else if( q.companyCode.equals("VNB")){
+                    premium = 65000 + (1000* rand.nextInt(100));
+                }
+                q.setAnnualpremium(  premium );
+
+
+                q.setCompletion(Math.round(Math.floor((50 + rand.nextInt(400))/5 )) + "%");
+                q.setCurrentstep(STATUS[rand.nextInt(STATUS.length)]);
+                q.setUnderwriter(UNDERWRITERS[rand.nextInt(UNDERWRITERS.length)]);
+                q.setRiskclass(RISKCLASS[rand.nextInt(RISKCLASS.length)]);
+
+
+                q.setQuoteRequestDate(getRandomDate(startdate.toDate(), enddate.toDate()));
+                q.setQuoteResponseDate(getRandomDate(q.getQuoteRequestDate(), enddate.toDate()));
+
+                q.setCrimeRisk((float)Math.random() * (maxrisk - minrisk) + minrisk);
+                q.setHailRisk((float)Math.random() * (maxrisk - minrisk) + minrisk);
+                q.setFireRisk((float)Math.random() * (maxrisk - minrisk) + minrisk);
+                q.setFloodRisk((float)Math.random() * (maxrisk - minrisk) + minrisk);
+                q.setEarthquakeRisk((float)Math.random() * (maxrisk - minrisk) + minrisk);
+                q.setWindstromRisk((float)Math.random() * (maxrisk - minrisk) + minrisk);
+                RiskFactor r = null;
+                if( q.getCompanyCode().equals("VNB") && q.getCounty() != null ){
+                    if (riskFactors.keySet().contains(q.getCounty())){
+                        r = riskFactors.get( q.getCounty());
+                    }
+                }  else if ( q.getCompanyCode().equals("WM") && q.getState() != null ){
+                    if (riskFactors.keySet().contains(q.getState())){
+                        r = riskFactors.get( q.getState());
+                    }
+                }  else if ( q.getCompanyCode().equals("CVS") && q.getZipcode() != null ){
+                    if (riskFactors.keySet().contains(q.getZipcode())){
+                        r = riskFactors.get( q.getZipcode());
+                    }
+                }
+
+                if ( r != null){
+                    q.setCrimeRisk( r.getCrimeRisk());
+                    q.setHailRisk(r.getHailRisk());
+                    q.setFireRisk(r.getFireRisk());
+                    q.setFloodRisk(r.getFloodRisk());
+                    q.setEarthquakeRisk(r.getEarthquakeRisk());
+                    q.setWindstromRisk(r.getWindstromRisk());
+                }
+                q.setPolicyTerm(1+ rand.nextInt(3));
+                int coverageamt = 800000;
+                if (q.getCompanyCode().equals("WM")) {
+                    coverageamt =+ 6000000;
+                } else if (q.getCompanyCode().equals("CVS")) {
+                    coverageamt =+ 2000000;
+                } else if (q.getCompanyCode().equals("VNB")) {
+                    coverageamt =+ 1000000;
+                }
+                q.setCoverageAmount(coverageamt +  RandomUtils.nextInt( rand, 10000));
+                //System.out.println(q.toString());
+                alllocations.add(q);
+                quoteseq ++;
+
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public List<Quote> loadAllLocations(){
+        return this.alllocations;
+    }
+    public ArrayList<String> loadLatLongs(){
+        return this.sampleLatLongs;
+    }
+
+
+}

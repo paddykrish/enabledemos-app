@@ -1,0 +1,398 @@
+/* graph */
+
+.ng-scope .nv-focus text {
+    font-family: "Lato";
+}
+
+.ng-scope .nvd3.nv-legend text {
+    font-family: "Lato";
+}
+
+.ng-scope .nv-focus {
+    margin-top: 30px !important;
+}
+
+h1.pageTitle {
+   text-align: center;
+    font-size: 25px;
+    margin-bottom: 0;
+    margin-top: 35px;
+}
+
+/* TOP DROPDOWN */
+
+#underwriting-child  .quoteDropdown {
+	margin-top: 30px;
+}
+
+#underwriting-child  .quoteDropdown form {
+	width: 455px;
+    margin:auto;
+}
+
+#underwriting-child .summary > .summaryContainer {
+    margin: 20px auto 35px;
+    padding: 15px 0;
+    width: 861px;
+}
+
+#underwriting-child .summary > .summaryContainer .summaryBox {
+    float:left;
+    margin-right: 20px;
+}
+
+#underwriting-child .summary > .summaryContainer .summaryBox:last-child {
+    margin-right: 0;
+}
+
+#underwriting-child .summary > .summaryContainer .box {
+    float:left;
+}
+
+#underwriting-child .summary > .summaryContainer .icon-container {
+    text-align: center;
+    height: 60px;
+    background: #24619b;
+    color: #fff;
+    width:70px;
+    font-size: 25px;
+    display: table;
+}
+
+ #underwriting-child .summary > .summaryContainer .icon-container i {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+ #underwriting-child .summary > .summaryContainer .details-container {
+    height: 60px;
+    background: #edf0f3;
+    color: #fff;
+    width: 130px;
+    color: #444;
+    padding-left: 11px;
+    display: table;
+}
+
+ #underwriting-child .summary > .summaryContainer .details-container > div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+ #underwriting-child .summary > .summaryContainer .details-container p {
+    margin: 0;
+    font-size:12px;
+}
+
+ #underwriting-child .summary > .summaryContainer .details-container h3 {
+    margin: 3px 0 0;
+    font-weight: 800;
+    font-size: 22px;
+}
+
+
+ #underwriting-child .panel-group {
+    margin-bottom: 15px;
+}
+
+ #underwriting-child .panel-group .panel {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-bottom: 15px;
+}
+
+ #underwriting-child #collapseOne.panel-collapse  {
+    height: 485px;
+}
+
+ #underwriting-child #collapseOne.panel-collapse,
+ #underwriting-child #collapseTwo.panel-collapse,
+ #underwriting-child #collapseThree.panel-collapse,
+ #underwriting-child #collapseInv.panel-collapse,
+ #underwriting-child #collapseFive.panel-collapse,
+ #underwriting-child #collapseSix.panel-collapse {
+    overflow: scroll;
+    height: 465px;
+}
+
+
+ #underwriting-child .panel-group .panel .panel-heading {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+ #underwriting-child .panel-group .panel .panel-heading a {
+    display: block;
+    width: 100%;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+}
+
+ #underwriting-child .panel-group .panel .panel-heading a > i {
+    position: absolute;
+    right: 0px;
+}
+
+ #underwriting-child .panel-group .panel #headingOne {
+  background: #6bbc6b;  
+}
+
+ #underwriting-child .panel-group .panel #headingTwo {
+  background: #d64040;
+}
+
+ #underwriting-child .panel-group .panel #headingThree {
+  background: #6bc8ce;
+}
+
+ #underwriting-child .panel-group .panel #headingFour {
+  background: #ec9950; 
+}
+
+ #underwriting-child .panel-group .panel #headingFive {
+  background: #6e0684;
+}
+
+ #underwriting-child .panel-group .panel #headingSix {
+   background: #2e77b5; 
+}
+
+ #underwriting-child  .owl-carousel .owl-dots {
+    display: none;
+}
+
+
+/* collapse 1 - Quotes Summary */
+
+#underwriting-child #collapseOne .graph {
+    background: #ddd;
+    height: 200px;
+    margin-bottom: 15px;
+}
+
+#underwriting-child #collapseOne h4 {
+    font-size: 14px;
+    font-weight: 800;
+    color: #d64040;
+    margin: 25px 0;
+}
+
+/* collapse 2 - Risk Exposure */
+
+#underwriting-child #collapseTwo .rgExposureMap {
+	margin: 5px 0 30px !important;
+}
+
+
+#underwriting-child #collapseTwo table tbody td:nth-child(2) {
+    width: 50px;
+}
+
+#underwriting-child #collapseTwo .owl-carousel .item {
+	border: 3px solid #ddd;
+	border-radius: 8px;
+}
+
+#underwriting-child #collapseTwo .owl-carousel .item .row  { 
+	margin-bottom: 0;
+}
+
+#underwriting-child #collapseTwo .owl-carousel .item .panel {
+	background: transparent !important;
+}
+
+#underwriting-child #collapseTwo .riskTitle {
+	padding: 20px 15px;
+	border-bottom: 1px solid #ddd;
+}
+
+#underwriting-child #collapseTwo .riskTitle h2 {
+	margin-bottom: 0;
+	font-size: 18px;
+	color: #444;
+	margin-top: 10px;
+	font-weight: 800;
+}
+
+#underwriting-child #collapseTwo .riskTitle span {
+	background: #8d8d8d;
+    border-radius: 99px;
+    height: 35px;
+    width: 35px;
+    display: block;
+    float: left;
+    padding: 10px;
+	margin-right: 10px;
+}
+
+#underwriting-child #collapseTwo .riskTitle i  { 
+	font-size: 16px;
+	color: #fff;
+}
+
+#underwriting-child #collapseTwo .table thead th {
+	border-bottom: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+#underwriting-child #collapseTwo .table tbody td {
+	border: 0;
+}
+
+
+/* collapse 3 - Loss Ratio */
+
+#underwriting-child #collapseThree .asOfCont .col-lg-3 {
+    padding: 0 4px;
+    margin-bottom: 15px;
+}
+
+#underwriting-child #collapseThree .asOfCont .box {
+   width: 50%;
+   background: #898685;
+   float: left;
+   text-align: center;
+   padding: 15px 5px;
+   color: #fff;
+   font-size: 11px;
+}
+
+#underwriting-child #collapseThree .asOfCont .box:first-child {
+   background: #a0a0a0;
+}
+
+#underwriting-child #collapseThree h4 {
+    font-size: 14px;
+    font-weight: 800;
+    color: #d64040;
+}
+
+
+/* collapse 4 - Social Stream */
+
+
+#underwriting-child #collapseInv .panel {
+	box-shadow: 0 0 0 !important;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	margin-right: -15px;
+}
+
+#underwriting-child #collapseInv h3 {
+	font-size: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-weight: 800;
+	color: #444;
+}
+
+#underwriting-child #collapseInv i {
+	float: left;
+	margin-right: 15px;
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+#underwriting-child #collapseInv li {
+	border :0;
+}
+
+#underwriting-child #collapseInv li:nth-child(even) {
+	background: #ededed;
+}
+
+#underwriting-child #collapseInv li:first-child {
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+
+#underwriting-child #collapseInv li:last-child {
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+
+/* collapse 5 */
+
+#underwriting-child #collapseFive .tableContainer {
+    margin-top: 35px;
+}
+
+#underwriting-child #collapseFive .row .col-lg-12:first-child {
+    margin-top: 15px;
+}
+
+/* collapse 6 */
+
+#underwriting-child #collapseSix .frGuideGraph {
+    width: 140%;
+}
+
+#underwriting-child #collapseSix ul li:first-child {
+	list-style-type:none;
+	margin-left: -15px;
+    margin-bottom: 15px;
+    
+}
+
+#underwriting-child #collapseSix ul li:first-child h3 {
+	font-size: 11px;
+	margin:0;
+    color: #333;
+    font-weight: 800;
+}
+
+#underwriting-child #collapseSix ul {
+	list-style-type: square;
+    font-size: 11px;
+}
+
+#underwriting-child #collapseSix ul li {
+	color: #888;
+    margin-bottom: 5px;
+}
+
+
+    
+/* TABLE */
+
+ #underwriting-child .table {
+    overflow-x: scroll;
+    margin-bottom: 0;
+}
+
+#underwriting-child #collapseSix table {
+    width: 980px
+}
+
+#underwriting-child  #collapseInv table {
+    width: 500px;
+}
+
+#underwriting-child .table thead th {
+    font-size: 11px;
+    padding-top: 0;
+}
+
+#underwriting-child .table tbody td {
+    font-size: 11px;
+    width: 100px;
+}
+
+#underwriting-child .table tbody td:first-child {
+    width: 60px;
+}			
+
+#underwriting-child  .tableContainer.transactionsList .table tbody td:first-child {
+    width: 60px;
+}	
+    
+   
+.co-Yes {
+    background-color: #F8CBAD;
+}
+.co-Benign {
+    background-color: #C6E0B4;
+}

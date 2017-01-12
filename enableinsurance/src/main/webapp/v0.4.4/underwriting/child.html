@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Insurance POC - Underwriting Details Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../plugins/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="../plugins/owl/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../plugins/fontawesome/css/font-awesome.min.css">
+    
+    <!-- PAGES CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/pages/overview.css">
+    <link rel="stylesheet" href="../css/pages/underwriting-child.css">
+    <link rel="stylesheet" href="../css/pages/banking.css">
+	
+	<!-- Chart JS -->
+	<script src="../js/fusioncharts.js"></script>
+	<script src="../js/fusioncharts.widgets.js"></script>
+	<script src="../js/fusioncharts.theme.fint.js"></script>
+	<script src="../js/highcharts.js"></script>
+
+  </head>
+  <body>
+    <article class="mainWrapper container-fluid">
+        <header>
+            <div class="clearfix">
+                <div class="pull-left">
+                    <div class="poc-logo">
+                       <img src="../images/poc-logo.jpg">    
+                    </div>
+                </div>
+                <div class="pull-right">
+                    <div class="top">
+                        <ul class="list-unstyled">
+                            <li class="username">
+                             <i class="fa fa-user" aria-hidden="true"></i> Hi! Mike Sommers
+                            </li>
+                            <li class="main-menu">
+                                <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="submenu-container">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation"><a href="../index.html" aria-controls="overview"><i class="fa fa-eye" aria-hidden="true"></i> Overview</a></li>
+                    <li role="presentation"><a href="#marketing-sales" aria-controls="marketing-sales" role="tab" data-toggle="tab"><i class="fa fa-line-chart" aria-hidden="true"></i> Marketing & Sales</a></li>
+                    <li role="presentation" class="active"><a href="index.html" aria-controls="underwriting"><i class="fa fa-suitcase" aria-hidden="true"></i>Underwriting</a></li>
+                    <li role="presentation"><a href="#loss-prevention" aria-controls="loss-prevention" role="tab" data-toggle="tab"><i class="fa fa-level-down" aria-hidden="true"></i> Loss Prevention</a></li>
+                    <li role="presentation"><a href="#claims" aria-controls="claims" role="tab" data-toggle="tab"><i class="fa fa-users" aria-hidden="true"></i> Claims</a></li>
+                    <li role="presentation"><a href="#fraud" aria-controls="fraud" role="tab" data-toggle="tab"><i class="fa fa-user-times" aria-hidden="true"></i> Claims Fraud</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="main-content">
+        	<div class="container" id="underwriting-child">
+                <div>
+                    <div class="row quoteDropdown">
+                        <div class="col-lg-6">
+                            <form>
+                                <div class="form-group">
+                                    <select class="form-control">
+                                      <option>Company ABC - 12345</option>
+                                      <option>Company JKK - 12345</option>
+                                      <option>Company HYT - 12345</option>
+                                      <option>Company QYZ - 12345</option>
+                                      <option>Company MNF - 12345</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="panel panelSummary">
+                        <div class="panel-body">
+                            <div class="row quoteSummary">
+                            <div class="col-lg-3">
+                                <div class="panel">
+                                    <h1>Type</h1>
+                                    <p>Renewal</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="panel">
+                                    <h1>No. of Prior Policies</h1>
+                                    <p>5</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="panel">
+                                    <h1>Policy Term</h1>
+                                    <p>1 year</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="panel">
+                                    <h1>No. of Quotes Sent</h1>
+                                    <p>5</p>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="row quoteTable">
+                                <div class="col-lg-6">
+                                <div class="panel">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Quote Request Date</th>	
+                                                    <th>Annual Premium</th>	
+                                                    <th>Quote Sent Date</th>	
+                                                    <th>Underwriter</th>	
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>12/23/17</td>
+                                                    <td>$  560</td>
+                                                    <td>12/27/17</td>
+                                                    <td>Halley Berry</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>12/23/17</td>
+                                                    <td>$  560</td>
+                                                    <td>12/27/17</td>
+                                                    <td>Halley Berry</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>12/23/17</td>
+                                                    <td>$  560</td>
+                                                    <td>12/27/17</td>
+                                                    <td>Halley Berry</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>12/23/17</td>
+                                                    <td>$  560</td>
+                                                    <td>12/27/17</td>
+                                                    <td>Halley Berry</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>12/23/17</td>
+                                                    <td>$  560</td>
+                                                    <td>12/27/17</td>
+                                                    <td>Halley Berry</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="col-lg-6 trendingBox">
+                            <div class="panel">
+                                <ul class="list-group">
+                                  <li class="list-group-item"><i class="fa fa-paper-plane" aria-hidden="true"></i><h3>Social Stream</h3></li>
+                                  <li class="list-group-item">#ABCNewManagemnt <a href="#">(4,567)</a></li>
+                                  <li class="list-group-item">#Why It's Time for Paperless Benefits <a href="#">(4,567)</a></li>
+                                  <li class="list-group-item">#What's Next Innovation in Controlling Haelthcare Costs <a href="#">(211)</a></li>
+                                  <li class="list-group-item">#The ACA's Small Group Designation: What it Means <a href="#">(4,567)</a></li>
+                                  <li class="list-group-item">#ABCProfits <a href="#">(4,567)</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>		
+                <div class="panel-group" id="accordion" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="headingOne">
+                          <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" href="#lossRatio" aria-expanded="false" aria-controls="lossRatio">
+                              <i class="fa fa-caret-right" aria-hidden="true"></i><h2>Loss Ratio</h2>
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="lossRatio" class="panel-collapse collapse" aria-labelledby="headingOne">
+                          <div class="panel-body">
+                            <div class="panel lossRatioPercent">
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <h1>12/12</h1>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <h1>45%</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <h1>12/12</h1>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <h1>45%</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <h1>12/12</h1>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <h1>45%</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <h1>12/12</h1>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <h1>45%</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel lossRatioGraphs">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <h4>Claims and Premium by Date</h4>
+                                        <!-- graph here -->
+                                        <div></div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <h4>Loss Ratio by Date</h4>
+                                        <!-- graph here -->
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel lossRatioHistory">
+                                <h1>Loss Ratio History</h1>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Claim No.</th>	
+                                                <th>Policy No.</th>	
+                                                <th>Date</th>	
+                                                <th>Claim Amount</th>	
+                                                <th>LOB</th>
+                                                <th>LImit</th>
+                                                <th>Loss Ratio</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>12356</td>
+                                                <td>2489658565</td>
+                                                <td>05/25/14</td>
+                                                <td>$  560</td>
+                                                <td>$  560</td>
+                                                <td>Property</td>
+                                                <td>35%</td>
+                                                
+                                            </tr>
+                                            <tr>
+                                                <td>12356</td>
+                                                <td>2489658565</td>
+                                                <td>05/25/14</td>
+                                                <td>$  560</td>
+                                                <td>$  560</td>
+                                                <td>Property</td>
+                                                <td>35%</td>
+                                                
+                                            </tr>
+                                            <tr>
+                                                <td>12356</td>
+                                                <td>2489658565</td>
+                                                <td>05/25/14</td>
+                                                <td>$  560</td>
+                                                <td>$  560</td>
+                                                <td>Property</td>
+                                                <td>35%</td>
+                                                
+                                            </tr>
+                                            <tr>
+                                                <td>12356</td>
+                                                <td>2489658565</td>
+                                                <td>05/25/14</td>
+                                                <td>$  560</td>
+                                                <td>$  560</td>
+                                                <td>Property</td>
+                                                <td>35%</td>
+                                                
+                                            </tr>
+                                            <tr>
+                                                <td>12356</td>
+                                                <td>2489658565</td>
+                                                <td>05/25/14</td>
+                                                <td>$  560</td>
+                                                <td>$  560</td>
+                                                <td>Property</td>
+                                                <td>35%</td>
+                                                
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="headingTwo">
+                          <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" href="#rgExposure" aria-expanded="false" aria-controls="rgExposure">
+                              <i class="fa fa-caret-right" aria-hidden="true"></i><h2>Risk Management Exposure</h2>
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="rgExposure" class="panel-collapse collapse" aria-labelledby="headingTwo">
+                          <div class="panel-body">
+                            <div class="panel rgExposureMap">
+                                <div class="row">
+                                    <div class ="col-lg-12">
+                                    <!-- map here -->
+                                    <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel rgExposureTable">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="owl-carousel owl-theme">
+                                            <div class="item">
+                                                <div class="panel">
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <div class="riskTitle">
+                                                                <span><i class="fa fa-snowflake-o" aria-hidden="true"></i></span>
+                                                                <h2>Hail</h2>
+                                                            </div>
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Date</th>	
+                                                                            <th>Type</th>
+                                                                            <th>Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>12/25/17</td>
+                                                                            <td>Storm</td>
+                                                                            <td>Thunderstorm Alert</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>12/25/17</td>
+                                                                            <td>Storm</td>
+                                                                            <td>Thunderstorm Alert</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>12/25/17</td>
+                                                                            <td>Storm</td>
+                                                                            <td>Thunderstorm Alert</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>12/25/17</td>
+                                                                            <td>Storm</td>
+                                                                            <td>Thunderstorm Alert</td>
+                                                                        </tr>
+                                                                        
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            
+                                            </div>
+                                            <div class="item">
+                                                <div class="panel">
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <div class="riskTitle">
+                                                                <span><i class="fa fa-sun-o" aria-hidden="true"></i></span>
+                                                                <h2>Weather</h2>
+                                                            </div>
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Date</th>	
+                                                                            <th>Type</th>
+                                                                            <th>Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>12/25/17</td>
+                                                                            <td>Storm</td>
+                                                                            <td>Thunderstorm Alert</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>12/25/17</td>
+                                                                            <td>Storm</td>
+                                                                            <td>Thunderstorm Alert</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>12/25/17</td>
+                                                                            <td>Storm</td>
+                                                                            <td>Thunderstorm Alert</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>12/25/17</td>
+                                                                            <td>Storm</td>
+                                                                            <td>Thunderstorm Alert</td>
+                                                                        </tr>
+                                                                        
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            
+                                            </div>
+                                            <div class="item">
+                                                <div class="panel">
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <div class="riskTitle">
+                                                                <span><i class="fa fa-hand-paper-o" aria-hidden="true"></i></span>
+                                                                <h2>Crime</h2>
+                                                            </div>
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Date</th>	
+                                                                            <th>Type</th>
+                                                                            <th>Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>12/25/17</td>
+                                                                            <td>Storm</td>
+                                                                            <td>Thunderstorm Alert</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>12/25/17</td>
+                                                                            <td>Storm</td>
+                                                                            <td>Thunderstorm Alert</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>12/25/17</td>
+                                                                            <td>Storm</td>
+                                                                            <td>Thunderstorm Alert</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>12/25/17</td>
+                                                                            <td>Storm</td>
+                                                                            <td>Thunderstorm Alert</td>
+                                                                        </tr>
+                                                                        
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            
+                                            </div>
+                                            <div class="item">
+                                                <div class="panel">
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <div class="riskTitle">
+                                                                <span><i class="fa fa-fire" aria-hidden="true"></i></span>
+                                                                <h2>Fire</h2>
+                                                            </div>
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Date</th>	
+                                                                            <th>Type</th>
+                                                                            <th>Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>12/25/17</td>
+                                                                            <td>Storm</td>
+                                                                            <td>Thunderstorm Alert</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>12/25/17</td>
+                                                                            <td>Storm</td>
+                                                                            <td>Thunderstorm Alert</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>12/25/17</td>
+                                                                            <td>Storm</td>
+                                                                            <td>Thunderstorm Alert</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>12/25/17</td>
+                                                                            <td>Storm</td>
+                                                                            <td>Thunderstorm Alert</td>
+                                                                        </tr>
+                                                                        
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="headingThree">
+                          <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" href="#raGrade" aria-expanded="false" aria-controls="raGrade">
+                              <i class="fa fa-caret-right" aria-hidden="true"></i><h2>Risk Assessment Grade</h2>
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="raGrade" class="panel-collapse collapse" aria-labelledby="headingThree">
+                          <div class="panel-body">
+                            <div class="panel">
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                     <!-- graph here -->
+                                     <div></div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Risk</th>	
+                                                    <th>Assessment Grade</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Fire Risk</td>
+                                                    <td>3.2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Earthquake Risk</td>
+                                                    <td>5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Flood Risk</td>
+                                                    <td>9.3</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Hail Risk</td>
+                                                    <td>2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Hail Risk</td>
+                                                    <td>2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Hail Risk</td>
+                                                    <td>2</td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                    </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="headingFour">
+                          <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" href="#qExposure" aria-expanded="false" aria-controls="qExposure">
+                              <i class="fa fa-caret-right" aria-hidden="true"></i><h2>Quoted Exposure vs Targets</h2>
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="qExposure" class="panel-collapse collapse" aria-labelledby="headingFour">
+                          <div class="panel-body">
+                            <div class="owl-carousel owl-theme">
+                                <div class="item">
+                                    <div class="thumbnail">
+                                        <div id="container0"></div>
+                                        <div class="caption">
+                                            <h3>45%</h3>
+                                            <h4>Flood</h4>
+                                            <p>$75M</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="thumbnail">
+                                        <div id="container1"></div>
+                                        <div class="caption">
+                                            <h3>58%</h3>
+                                            <h4>Earthquake</h4>
+                                            <p>$45M</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="thumbnail">
+                                        <div id="container2"></div>
+                                        <div class="caption">
+                                            <h3>65%</h3>
+                                            <h4>Crime</h4>
+                                            <p>$75M</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="thumbnail">
+                                        <div id="container3"></div>
+                                        <div class="caption">
+                                            <h3>91%</h3>
+                                            <h4>Fire</h4>
+                                            <p>$75M</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="thumbnail">
+                                        <div id="container4"></div>
+                                        <div class="caption">
+                                            <h3>82%</h3>
+                                            <h4>Hail</h4>
+                                            <p>$75M</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+				<div class="panel-heading" id="headingFive">
+				  <h4 class="panel-title">
+					<a class="collapsed" role="button" data-toggle="collapse" href="#frGuide" aria-expanded="false" aria-controls="frGuide">
+					  <i class="fa fa-caret-right" aria-hidden="true"></i><h2>Fraud Risk Guide</h2>
+					</a>
+				  </h4>
+				</div>
+				<div id="frGuide" class="panel-collapse collapse" aria-labelledby="headingFive">
+				  <div class="panel-body">
+					<div class="panel">
+						<div class="row">
+							<div class="col-lg-6 frGuideList">
+								<div class="panel">
+									<ul>
+									  <li><h3>Insights </h3></li>
+									  <li>Customer has been a policy holder for the past 5 years</li>
+									  <li>Average Loss Ratio through policies is 34%</li>
+									  <li>Company has reported recent plans for expansion</li>
+									  <li>Comapny has reported recent plans for expansion</li>
+									  <li>No issues with payments</li>
+									  <li>Company has changed company friends</li>
+									  <li>New company contact has established relations with possible fraud suspects</li>
+									  <li>Social media analytic has assessed that company has negative rating</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-lg-6 frGuideGraph">
+								<!-- graph here -->	
+								<div id="gauge-chart-container">Loading...</div>	
+							</div>
+						</div>
+					</div>
+				  </div>
+				</div>
+			</div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            &copy;2017 RCG GLOBAL SERVICES
+        </footer>
+    </article>
+    <script type="text/javascript" src="../js/pages/dvc.js"></script>
+    <script type="text/javascript"  src="../js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript"  src="../js/bootstrap.min.js"></script>
+    <script src="../plugins/owl/owl.carousel.min.js"></script>
+    <script type="text/javascript"  src="../js/pages/plugins.js"></script>
+	<script type="text/javascript"  src="../js/plugin-charts.js"></script>
+  </body>
+</html>
