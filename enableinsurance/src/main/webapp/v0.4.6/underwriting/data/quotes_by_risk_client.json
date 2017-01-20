@@ -1,0 +1,15 @@
+{
+	"quotesByRiskClient": {
+		"lowRisk" : 12,
+		"mediumRisk" : 11,
+		"highRisk" : 64,
+		"veryHighRisk" : 33
+	},
+	"highRiskQuotesStep": {
+		"preparation" : 12,
+		"verification" : 11,
+		"rating" : 4,
+		"submission" : 3,
+		"delivery" : 3
+	}
+}

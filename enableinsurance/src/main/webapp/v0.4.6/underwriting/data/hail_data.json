@@ -1,0 +1,19 @@
+{
+	"hail": [
+		{
+			"date": "12/25/2016",
+			"type": "Storm",
+			"description": "Thunderstorm Alert"
+		},
+		{
+			"date": "09/18/2016",
+			"type": "Storm",
+			"description": "Thunderstorm Alert"
+		},
+		{
+			"date": "01/30/2016",
+			"type": "Storm",
+			"description": "Thunderstorm Alert"
+		}
+	]
+}

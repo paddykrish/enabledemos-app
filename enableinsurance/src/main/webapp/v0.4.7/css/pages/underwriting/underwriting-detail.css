@@ -1,0 +1,690 @@
+/*** CSS FOR UNDERWRITING DETAIL PAGE ***/
+
+
+/* graph */
+
+#underwriting-child .ng-scope .nv-focus text {
+    font-family: "Lato";
+}
+
+#underwriting-child .ng-scope .nvd3.nv-legend text {
+    font-family: "Lato";
+}
+
+#underwriting-child .ng-scope .nv-focus {
+    margin-top: 30px !important;
+}
+
+/* TOP DROPDOWN */
+
+#underwriting-child  .quoteDropdown {
+	margin-top: 30px;
+}
+
+#underwriting-child  .quoteDropdown form {
+	width: 455px;
+    margin:auto;
+}
+
+#underwriting-child .summary > .summaryContainer {
+    margin: 20px auto 35px;
+    padding: 15px 0;
+    width: 861px;
+}
+
+#underwriting-child .summary > .summaryContainer .summaryBox {
+    float:left;
+    margin-right: 20px;
+}
+
+#underwriting-child .summary > .summaryContainer .summaryBox:last-child {
+    margin-right: 0;
+}
+
+#underwriting-child .summary > .summaryContainer .box {
+    float:left;
+}
+
+#underwriting-child .summary > .summaryContainer .icon-container {
+    text-align: center;
+    height: 60px;
+    background: #24619b;
+    color: #fff;
+    width:70px;
+    font-size: 25px;
+    display: table;
+}
+
+ #underwriting-child .summary > .summaryContainer .icon-container i {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+ #underwriting-child .summary > .summaryContainer .details-container {
+    height: 60px;
+    background: #edf0f3;
+    color: #fff;
+    width: 130px;
+    color: #444;
+    padding-left: 11px;
+    display: table;
+}
+
+ #underwriting-child .summary > .summaryContainer .details-container > div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+ #underwriting-child .summary > .summaryContainer .details-container p {
+    margin: 0;
+    font-size:12px;
+}
+
+ #underwriting-child .summary > .summaryContainer .details-container h3 {
+    margin: 3px 0 0;
+    font-weight: 800;
+    font-size: 22px;
+}
+
+
+ #underwriting-child .panel-group {
+    margin-bottom: 15px;
+}
+
+ #underwriting-child .panel-group .panel {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-bottom: 15px;
+}
+
+ #underwriting-child #collapseOne.panel-collapse  {
+    height: 465px;
+}
+
+ #underwriting-child #collapseTwo.panel-collapse,
+ #underwriting-child #collapseThree.panel-collapse,
+ #underwriting-child #collapseInv.panel-collapse,
+ #underwriting-child #collapseFive.panel-collapse,
+ #underwriting-child #collapseSix.panel-collapse {
+    overflow: scroll;
+    height: 465px;
+}
+
+
+ #underwriting-child .panel-group .panel .panel-heading {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+ #underwriting-child .panel-group .panel .panel-heading a {
+    display: block;
+    width: 100%;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+}
+
+ #underwriting-child .panel-group .panel .panel-heading a > i {
+    position: absolute;
+    right: 0px;
+}
+
+ #underwriting-child .panel-group .panel #headingOne {
+  background: #6bbc6b;  
+}
+
+ #underwriting-child .panel-group .panel #headingTwo {
+  background: #d64040;
+}
+
+ #underwriting-child .panel-group .panel #headingThree {
+  background: #6bc8ce;
+}
+
+ #underwriting-child .panel-group .panel #headingFour {
+  background: #ec9950; 
+}
+
+ #underwriting-child .panel-group .panel #headingFive {
+  background: #6e0684;
+}
+
+ #underwriting-child .panel-group .panel #headingSix {
+   background: #2e77b5; 
+}
+
+ #underwriting-child  .owl-carousel .owl-dots {
+    display: none;
+}
+
+
+/* collapse 1 - Quotes Summary */
+
+#underwriting-child #collapseOne .graph {
+    background: #ddd;
+    height: 200px;
+    margin-bottom: 15px;
+}
+
+#underwriting-child #collapseOne h4 {
+    font-size: 14px;
+    font-weight: 800;
+    color: #d64040;
+    margin: 25px 0;
+}
+
+/* collapse 2 - Risk Exposure */
+
+#underwriting-child #collapseTwo .rgExposureMap {
+	margin: 5px 0 30px !important;
+}
+
+
+#underwriting-child #collapseTwo table tbody td:nth-child(2) {
+    width: 50px;
+}
+
+#underwriting-child #collapseTwo .table thead th {
+	border-bottom: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+#underwriting-child #collapseTwo .table tbody td {
+	border: 0;
+}
+
+#underwriting-child #collapseTwo .slider .riskTitle {
+    color: #fff;
+    text-align:center;
+    background: #222;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+#underwriting-child #collapseTwo .slider .riskTitle h2 {
+    font-size: 14px;
+    margin: 0;
+    float: left;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+#underwriting-child #collapseTwo .slider .riskTitle span {
+    float:left;
+    height: 30px;
+    width: 30px;
+    background: #c2317c;
+    border-right: 1px solid #ddd;
+    margin-right: 10px;
+}
+
+#underwriting-child #collapseTwo .slider  .panel {
+    margin-bottom: 0;
+}
+
+#underwriting-child #collapseTwo .slider .col-lg-12 {
+    padding: 0 35px;
+}
+
+#claims-overview #collapseThree .owl-nav {
+    margin-top: 0 !important;
+}
+
+#underwriting-child #collapseTwo .slider .owl-nav .owl-prev,
+#underwriting-child #collapseTwo .slider .owl-nav .owl-next {
+    background: transparent !important;
+    color: #ddd !important;
+    padding: 0!important;
+    margin: 0!important;
+}
+
+#underwriting-child #collapseTwo .slider .owl-nav .owl-prev {
+    position: absolute; 
+    left: 0;
+    top: 50%;
+}
+
+#underwriting-child #collapseTwo .slider .owl-nav .owl-next {
+    position: absolute; 
+    right: 0;
+    top: 50%;
+}
+
+
+/* collapse 3 - Loss Ratio */
+
+#underwriting-child #collapseThree .asOfCont .col-lg-3 {
+    padding: 0 4px;
+    margin-bottom: 15px;
+}
+
+#underwriting-child #collapseThree .asOfCont .box {
+   width: 50%;
+   background: #898685;
+   float: left;
+   text-align: center;
+   padding: 15px 5px;
+   color: #fff;
+   font-size: 11px;
+}
+
+#underwriting-child #collapseThree .asOfCont .box:first-child {
+   background: #a0a0a0;
+}
+
+#underwriting-child #collapseThree h4 {
+    font-size: 14px;
+    font-weight: 800;
+    color: #d64040;
+}
+
+#underwriting-child #collapseThree .lossRatioHistory {
+    margin-top: 30px;
+}
+
+#underwriting-child #collapseThree .lossRatioHistory h4 {
+    margin-bottom: 30px;
+}
+
+/* collapse 4 - Social Stream */
+
+
+#underwriting-child #collapseInv .panel {
+	box-shadow: 0 0 0 !important;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	margin-right: -15px;
+}
+
+#underwriting-child #collapseInv h3 {
+	font-size: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-weight: 800;
+	color: #444;
+}
+
+#underwriting-child #collapseInv i {
+	float: left;
+	margin-right: 15px;
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+#underwriting-child #collapseInv li {
+	border :0;
+}
+
+#underwriting-child #collapseInv li:nth-child(even) {
+	background: #ededed;
+}
+
+#underwriting-child #collapseInv li:first-child {
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+
+#underwriting-child #collapseInv li:last-child {
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+
+/* collapse 5 */
+
+
+/* collapse 6 */
+#underwriting-child #collapseSix ul li:first-child h3 {
+	font-size: 11px;
+	margin:0;
+    color: #333;
+    font-weight: 800;
+}
+
+#underwriting-child #collapseSix ul {
+	list-style-type: square;
+    font-size: 11px;
+}
+
+#underwriting-child #collapseSix ul li {
+	color: #888;
+    margin-bottom: 5px;
+}
+
+
+    
+/* TABLE */
+
+ #underwriting-child .table {
+    overflow-x: scroll;
+    margin-bottom: 0;
+}
+
+#underwriting-child #collapseSix table,
+#underwriting-child #collapseFive table {
+    width: 980px
+}
+
+#underwriting-child  #collapseInv table {
+    width: 500px;
+}
+
+#underwriting-child .table thead th {
+    font-size: 11px;
+    padding-top: 0;
+}
+
+#underwriting-child .table tbody td {
+    font-size: 11px;
+    width: 100px;
+}
+
+#underwriting-child  .tableContainer.locationRisk .table tbody td {
+    width: 40px;
+}	    
+
+#underwriting-child  .tableContainer.locationRisk .table tbody td:first-child {
+    width: 50px;
+}	    
+
+#underwriting-child  .tableContainer.locationRisk .table tbody td.lowRisk {
+    width: 20px;
+	background-color: #B9D81C;
+}	
+
+#underwriting-child  .tableContainer.locationRisk .table tbody td.highRisk {
+    width: 20px;
+	background-color: #FC7171;
+}	
+
+#underwriting-child  .tableContainer.locationRisk .table tbody td.mediumRisk {
+    width: 20px;
+	background-color: #FFED91;
+}	
+    
+   
+.co-Yes {
+    background-color: #F8CBAD;
+}
+.co-Benign {
+    background-color: #C6E0B4;
+}
+
+#underwriting-child .capitalize {
+   text-transform: capitalize;
+}
+
+/* MODAL */
+
+
+#underwriting-child #myModal .modal-dialog {
+    width: 95%;
+}
+
+#underwriting-child #myModal .modal-body {
+    padding-top: 10px;
+}
+
+#underwriting-child #myModal .modal-content {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+#underwriting-child #myModal .modal-content .modal-header {
+    background: #e26868;
+    color: #fff;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 10px;
+}
+
+#underwriting-child #myModal .modal-content .modal-header button {
+    color: #fff;
+    opacity: 1;
+}
+
+#underwriting-child #myModal h2.headerDivision {
+    margin: 0 0 20px;
+    font-size: 18px;
+}
+
+/* locationRiskAssessmentDetails */
+
+#underwriting-child #myModal .locationRiskAssessmentDetails .graph .gcFull {
+    height: 247px;
+    background: #eee;
+}
+
+#underwriting-child #myModal .locationRiskAssessmentDetails .graph {
+    margin-bottom: 20px;
+}
+
+#underwriting-child #myModal .locationRiskAssessmentDetails .graph .tableContainer {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#underwriting-child #myModal .locationRiskAssessmentDetails .listRisk table thead th,
+#underwriting-child #myModal .locationRiskAssessmentDetails .graph table thead th  {
+    padding-left: 0 !important;
+    font-size: 14px;
+}
+
+#underwriting-child #myModal .locationRiskAssessmentDetails .listRisk table tbody td,
+#underwriting-child #myModal .locationRiskAssessmentDetails .graph table tbody td {
+    padding: 8px 0 !important;
+    font-size: 11px;
+}
+
+#underwriting-child #myModal .locationRiskAssessmentDetails .listRisk .item {
+    padding: 0 15px;
+}
+
+#underwriting-child #myModal .locationRiskAssessmentDetails .listRisk .riskTitle {
+    text-align:center;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+#underwriting-child #myModal .locationRiskAssessmentDetails .listRisk .riskTitle h2 {
+    font-size: 14px;
+    margin: 0;
+    float: left;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #222;
+}
+
+#underwriting-child #myModal .locationRiskAssessmentDetails .listRisk .riskTitle h2.riskCount {
+    float: right;
+    color: red;
+}
+
+#underwriting-child #myModal .locationRiskAssessmentDetails .listRisk .riskTitle span {
+    float:left;
+    height: 30px;
+    width: 30px;
+    background: #222;
+    margin-right: 10px;
+    color: #fff;
+}
+
+#underwriting-child #myModal .locationRiskAssessmentDetails .listRisk .col-lg-6 .panel {
+    border: 1px solid #ccc;
+    padding: 20px;
+    min-height: 280px;
+    border-radius: 8px;
+}
+
+#underwriting-child #myModal .locationRiskAssessmentDetails .listRisk .col-lg-6 {
+    margin-bottom: 10px;
+}
+
+#underwriting-child #myModal .locationRiskAssessmentDetails .listRisk .weather .riskTitle {
+    border-bottom: 1px solid #6bbc6b;
+}
+
+#underwriting-child #myModal .locationRiskAssessmentDetails .listRisk .weather span {
+    background: #6bbc6b;
+}
+
+#underwriting-child #myModal .locationRiskAssessmentDetails .listRisk .fire .riskTitle {
+    border-bottom: 1px solid #ec9950;
+}
+
+#underwriting-child #myModal .locationRiskAssessmentDetails .listRisk .fire span {
+    background: #ec9950;
+}
+
+#underwriting-child #myModal .locationRiskAssessmentDetails .listRisk .crime .riskTitle {
+    border-bottom: 1px solid #2e77b5;
+}
+
+#underwriting-child #myModal .locationRiskAssessmentDetails .listRisk .crime span {
+    background: #2e77b5;
+}
+
+#underwriting-child #myModal .locationRiskAssessmentDetails .listRisk .hail .riskTitle {
+    border-bottom: 1px solid #6e0684;
+}
+
+#underwriting-child #myModal .locationRiskAssessmentDetails .listRisk .hail span {
+    background: #6e0684;
+}
+
+#underwriting-child #myModal .locationRiskAssessmentDetails .owl-nav {
+    margin: 0;
+}
+
+
+
+
+/* RlocationBuildingInformation */
+
+#underwriting-child #myModal .locationBuildingInformation .row ul {
+    margin: 0;
+    padding: 0;
+}
+
+#underwriting-child #myModal .locationBuildingInformation .row ul.address {
+    margin-top: 50px;
+}
+
+#underwriting-child #myModal .locationBuildingInformation .row ul.address li .icon {
+    background: #2e77b5;
+}
+
+#underwriting-child #myModal .locationBuildingInformation .row ul li {
+    list-style-type: none;
+    margin-bottom: 15px;
+}
+
+#underwriting-child #myModal .locationBuildingInformation .row ul li .icon {
+    float:left;
+    font-size: 20px;
+    background: #e26868;
+    color: #fff;
+    height: 50px;
+    width: 50px;
+    text-align:center;
+    line-height: 50px;
+}
+
+#underwriting-child #myModal .locationBuildingInformation .row ul li .details {
+    float:left;
+    margin-left: 10px;
+    width: 109px;
+    word-break: break-all;
+}
+
+
+#underwriting-child #myModal .locationBuildingInformation .row ul li .details h4 {
+    font-size: 14px;
+    font-weight: 800;
+    margin: 5px 0 5px 0;
+}
+
+
+#underwriting-child #myModal .locationBuildingInformation .row ul li .details p {
+    margin: 0;
+}
+
+
+
+
+
+
+#underwriting-child #myModal .locationBuildingInformation table tbody.one tr:nth-child(odd) {
+    background: #cee7f5;
+}
+
+#underwriting-child #myModal .locationBuildingInformation table tbody.two tr:nth-child(odd) {
+    background: #f6daf6;
+}
+
+#underwriting-child #myModal .locationBuildingInformation table td {
+    border: 0;
+    padding: 5px 0 6px;
+    font-size: 13px;
+}
+
+#underwriting-child #myModal .locationBuildingInformation table td:first {
+    border: 0;
+    padding: 5px 0;
+}
+
+#underwriting-child #myModal .locationBuildingInformation table th {
+    border-top: 0;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ccc;
+    padding-left: 0;
+    font-size: 14px;
+    color: #222;
+}
+
+#underwriting-child #myModal .locationBuildingInformation table thead:after {
+    content: "-";
+    display: block;
+    line-height: 1em;
+    color: transparent;
+}
+
+#underwriting-child #myModal .locationBuildingInformation table tbody:after {
+    content: "-";
+    display: block;
+    line-height: 10px;
+    color: transparent;
+}
+
+#underwriting-child #myModal .locationBuildingInformation table.locationAttributes {
+    width: 369px;
+}
+
+#underwriting-child #myModal .locationBuildingInformation table.locationAttributes tbody td:first-child {
+    width: 163px;
+}
+
+#underwriting-child #myModal .locationBuildingInformation table.locationAttributes thead:before {
+    content: "-";
+    display: block;
+    line-height: 20px;
+    color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

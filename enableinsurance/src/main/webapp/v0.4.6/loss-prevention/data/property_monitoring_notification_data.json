@@ -1,0 +1,104 @@
+{
+	"propertyMonitoringNotification": [
+		{
+			"address": "70 Riley St Manchester FL 15199",
+			"recommendation": "Send preventive alert notification on event",
+			"notificationType": ["Email", "Text"],
+			"status": {
+				"description": "Notifications Sent",
+				"notifiedBy": ["Email", "Text"]
+			},
+			"response": "N/A"
+		},
+		{
+			"address": "107 McArthur St Manchester TX 30641",
+			"recommendation": "Send preventive alert notification on event",
+			"notificationType": ["Email", "Text"],
+			"status": {
+				"description": "Notifications Sent",
+				"notifiedBy": ["Email", "Text"]
+			},
+			"response": "N/A"
+		},
+		{
+			"address": "59 Main St Harrisburg PA 58337",
+			"recommendation": "Send notification on device reading delay; Send preventive alert notification on event",
+			"notificationType": ["Email", "Text"],
+			"status": {
+				"description": "Notifications Sent",
+				"notifiedBy": ["Email", "Text"]
+			},
+			"response": "N/A"
+		},
+		{
+			"address": "410 Mercury St Orange NY 46299",
+			"recommendation": "Send notification on reading; Send preventive alert notification",
+			"notificationType": ["Email", "Text", "Call Center"], 
+			"status": {
+				"description": "Notifications Sent",
+				"notifiedBy": ["Email", "Text", "Call Center"]
+			},
+			"response": "Client is investigating"
+		},
+		{
+			"address": "31 Blake St Orange FL 60768",
+			"recommendation": "Send notification on devices that are offline",
+			"notificationType": ["Email", "Text", "Call Center"], 
+			"status": {
+				"description": "Notifications Sent",
+				"notifiedBy": ["Email", "Text", "Call Center"] 
+			},
+			"response": "Client is investigating"
+		},
+		{
+			"address": "44 Holland St New Town TX 31374",
+			"recommendation": "Send notification on devices that are offline",
+			"notificationType": ["Email", "Text", "Call Center"], 
+			"status": {
+				"description": "Not notified",
+				"notifiedBy": null
+			},
+			"response": "--"
+		},
+		{
+			"address": "364 Blake St New Town TN 62657",
+			"recommendation": "Send notification on devices that are offline; Send preventive alert notification",
+			"notificationType": ["Email", "Text", "Call Center"], 
+			"status": {
+				"description": "Not notified",
+				"notifiedBy": null
+			},
+			"response": "--"
+		},
+		{
+			"address": "385 Valley Drive Harris MA 33447",
+			"recommendation": "Send notification on reading; Send preventive alert notification",
+			"notificationType": ["Email", "Text", "Call Center"], 
+			"status": {
+				"description": "Notifications Sent",
+				"notifiedBy": ["Email", "Text", "Call Center"]
+			},
+			"response": "Client is investigating"
+		},
+		{
+			"address": "224 Harrison Ave Lemoyne CT 53609",
+			"recommendation": "--",
+			"notificationType": "--",
+			"status": {
+				"description": "--",
+				"notifiedBy": null
+			},
+			"response": "--"
+		},
+		{
+			"address": "278 Midwest Ave Lemoyne PA 50668",
+			"recommendation": "Send notification on devices that are offline",
+			"notificationType":["Email", "Text", "Call Center"], 
+			"status": {
+				"description": "Not notified",
+				"notifiedBy": null
+			},
+			"response": "--"
+		}
+	]
+}

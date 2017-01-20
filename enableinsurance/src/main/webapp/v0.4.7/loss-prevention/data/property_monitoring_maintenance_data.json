@@ -1,0 +1,198 @@
+{
+	"propertyMonitoringMaintenance": [
+		{
+			"address" : "70 Riley St Manchester FL 15199",
+			"currentOnlineStatus" : {
+				"online": 6,
+				"offline": 2,
+				"errors": 2
+			},
+			"currentReadings" : "No issues detected",
+			"currentRiskAssessment" : {
+				"description": "None",
+				"type": "none"
+			},
+			"eventImpactAssessment" : {
+				"description": "Highly Likely",
+				"type": "medium"
+			},
+			"locationId": 111,
+			"buildingId": 111
+		},
+		{
+			"address" : "107 McArthur St Manchester TX 30641",
+			"currentOnlineStatus" : {
+				"online": 6,
+				"offline": 2,
+				"errors": 2
+			},
+			"currentReadings" : "No issues detected",
+			"currentRiskAssessment" : {
+				"description": "None",
+				"type": "none"
+			},
+			"eventImpactAssessment" : {
+				"description": "Highly Likely",
+				"type": "medium"
+			},
+			"locationId": 111,
+			"buildingId": 222
+		},
+		{
+			"address" : "59 Main St Harrisburg PA 58337",
+			"currentOnlineStatus" : {
+				"online": 6,
+				"offline": 2,
+				"errors": 2
+			},
+			"currentReadings" : "Delay in retrieving readings",
+			"currentRiskAssessment" : {
+				"description": "Low",
+				"type": "low"
+			},
+			"eventImpactAssessment" : {
+				"description": "Likely",
+				"type": "low"
+			},
+			"locationId": 111,
+			"buildingId": 333
+		},
+		{
+			"address" : "410 Mercury St Orange NY 46299",
+			"currentOnlineStatus" : {
+				"online": 5,
+				"offline": 1,
+				"errors": 4
+			},
+			"currentReadings" : "Reading lower than established norm",
+			"currentRiskAssessment" : {
+				"description": "Medium",
+				"type": "medium"
+			},
+			"current-risk-assessment" : "Medium",
+			"eventImpactAssessment" : {
+				"description": "Likely",
+				"type": "low"
+			},
+			"locationId": 111,
+			"buildingId": 444
+		},
+		{
+			"address" : "31 Blake St Orange FL 60768",
+			"currentOnlineStatus" : {
+				"online": 3,
+				"offline": 1,
+				"errors": 6
+			},
+			"currentReadings" : "Not all devices sent readings",
+			"currentRiskAssessment" : {
+				"description": "High",
+				"type": "high"
+			},
+			"current-risk-assessment" : "High",
+			"eventImpactAssessment" : {
+				"description": "None",
+				"type": "none"
+			},
+			"locationId": 111,
+			"buildingId": 555
+		},
+		{
+			"address" : "44 Holland St New Town TX 31374",
+			"currentOnlineStatus" : {
+				"online": 6,
+				"offline": 2,
+				"errors": 2
+			},
+			"currentReadings" : "Not all devices sent readings",
+			"currentRiskAssessment" : {
+				"description": "Medium",
+				"type": "medium"
+			},
+			"current-risk-assessment" : "Medium",
+			"eventImpactAssessment" : {
+				"description": "None",
+				"type": "none"
+			},
+			"locationId": 111,
+			"buildingId": 666
+		},
+		{
+			"address" : "364 Blake St New Town TN 62657",
+			"currentOnlineStatus" : {
+				"online": 3,
+				"offline": 5,
+				"errors": 2
+			},
+			"currentReadings" : "Not all devices sent readings",
+			"currentRiskAssessment" : {
+				"description": "Medium",
+				"type": "medium"
+			},
+			"current-risk-assessment" : "Medium",
+			"eventImpactAssessment" : {
+				"description": "Extremely Likely",
+				"type": "high"
+			},
+			"locationId": 111,
+			"buildingId": 777
+		},
+		{
+			"address" : "385 Valley Drive Harris MA 33447",
+			"currentOnlineStatus" : {
+				"online": 4,
+				"offline": 2,
+				"errors": 4
+			},
+			"currentReadings" : "Reading higher than established norm",
+			"currentRiskAssessment" : {
+				"description": "Medium",
+				"type": "medium"
+			},
+			"eventImpactAssessment" : {
+				"description": "Extremely Likely",
+				"type": "high"
+			},
+			"locationId": 111,
+			"buildingId": 888
+		},
+		{
+			"address" : "224 Harrison Ave Lemoyne CT 53609",
+			"currentOnlineStatus" : {
+				"online": 6,
+				"offline": 2,
+				"errors": 2
+			},
+			"currentReadings" : "No issues detected",
+			"currentRiskAssessment" : {
+				"description": "None",
+				"type": "none"
+			},
+			"eventImpactAssessment" : {
+				"description": "None",
+				"type": "none"
+			},
+			"locationId": 111,
+			"buildingId": 999
+		},
+		{
+			"address" : "278 Midwest Ave Lemoyne PA 50668",
+			"currentOnlineStatus" : {
+				"online": 6,
+				"offline": 2,
+				"errors": 2
+			},
+			"currentReadings" : "Offline",
+			"currentRiskAssessment" : {
+				"description": "High",
+				"type": "high"
+			},
+			"eventImpactAssessment" : {
+				"description": "None",
+				"type": "none"
+			},
+			"locationId": 111,
+			"buildingId": 100
+		}
+	]
+}

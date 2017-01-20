@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appDetails">
+   <head>
+   <title>Insurance - Loss Prevention</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../plugins/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="../plugins/owl/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../plugins/fontawesome/css/font-awesome.min.css">
+    
+    <!-- PAGES CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/pages/global/global.css">
+    <link rel="stylesheet" type="text/css" href="../css/pages/loss-prevention/loss-prevention.css">
+	
+  </head>
+  <body>
+    <article class="mainWrapper container-fluid">
+        <header>
+            <div class="clearfix">
+                <div class="pull-left">
+                    <div class="poc-logo">
+                       <img src="../images/poc-logo.jpg">    
+                    </div>
+                </div>
+                <div class="pull-right">
+                    <div class="top">
+                        <ul class="list-unstyled">
+                            <li class="username">
+                             <i class="fa fa-user" aria-hidden="true"></i> Hi! Mike Sommers
+                            </li>
+                            <li class="main-menu">
+                                <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>    
+            </div>
+            <div class="submenu-container">
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation"><a href="../index.html"><i class="fa fa-eye" aria-hidden="true"></i> Overview</a></li>
+                <li class="hidden" role="presentation"><a href="#marketing-sales" aria-controls="marketing-sales"><i class="fa fa-line-chart" aria-hidden="true"></i> Marketing & Sales</a></li>
+                <li role="presentation"><a href="../underwriting/index.html"><i class="fa fa-suitcase" aria-hidden="true"></i>Underwriting</a></li>
+                <li role="presentation" class="active"><a href="#loss-prevention" aria-controls="loss-prevention"><i class="fa fa-level-down" aria-hidden="true"></i> Loss Prevention</a></li>
+                <li role="presentation"><a href="../claims/index.html" aria-controls="claims"><i class="fa fa-users" aria-hidden="true"></i> Claims</a></li>
+                <li class="hidden" role="presentation"><a href="#fraud" aria-controls="fraud" role="tab"><i class="fa fa-user-times" aria-hidden="true"></i> Claims Fraud</a></li>
+              </ul>
+            </div>
+        </header>
+        <div class="main-content">
+            <div class="container-fluid" id="claims-overview">
+                <div class="main">
+					<h1 class="pageTitle">Loss Prevention</h1>
+					<div class="row">
+						<!-- START OF 1ST COLUMN -->
+						<div class="col-lg-4">
+							<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingOne">
+										<h4 class="panel-title">
+											<a role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Estimated Loss Statistics<i class="fa fa-minus" aria-hidden="true"></i>
+											</a>
+										</h4>
+									</div>
+									<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+										<div class="panel-body" ng-controller="EstimatedLossStatsCtrl">
+											<div class="row">
+												<div class="col-lg-12 text-center">
+													<h4>Overall Estimated Damages</h4>
+													<p>{{totalEstimatedDamages.amount | currency}}</p>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-12">
+													<div class="tableContainer">
+														<table class="table">
+															<thead>
+																<tr>
+																	<th>Risk Level</th> 
+																	<th>Event Type</th> 
+																	<th>Area</th>    
+																	<th>Event Radius</th>
+																	<th>Possible Policies Affected</th>
+																	<th>LOBs</th>
+																	<th>Estimated Damages</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr ng-repeat="estimatedLossStatistic in estimatedLossStatistics">
+																	<td>{{estimatedLossStatistic.riskLevel}}</td>
+																	<td>{{estimatedLossStatistic.eventType}}</td>
+																	<td>{{estimatedLossStatistic.area}}</td>
+																	<td>{{estimatedLossStatistic.eventRadius}}</td>
+																	<td>{{estimatedLossStatistic.ppa}}</td>
+																	<td>{{estimatedLossStatistic.lobs}}</td>
+																	<td>{{estimatedLossStatistic.estimatedDamages | currency}}</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingFive">
+										<h4 class="panel-title">
+											<a role="button" data-toggle="collapse" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">Event Alert Assessment<i class="fa fa-minus" aria-hidden="true"></i>
+											</a>
+										</h4>
+									</div>
+									<div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFive">
+										<div class="panel-body">
+											<div class="row">
+												<div class="col-lg-12">
+													<div class="tableContainer" ng-controller="EventAlertAssessmentCtrl">
+														<table class="table">
+															<thead>
+																<tr>
+																	<th>Event Type</th> 
+																	<th>Details</th> 
+																	<th>Risk</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr ng-repeat="eventAlertAssessment in eventAlertAssessments">
+																	<td>{{eventAlertAssessment.eventType}}</td>
+																	<td>{{eventAlertAssessment.details}}</td>
+																	<td><b>{{eventAlertAssessment.risk}}</b></td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-12 text-center">
+												<br />
+												<h4 class="highlight">TOP CLIENT ESTIMATED DAMAGES</h4>
+												</div>	
+											</div>
+											<div class="row">
+												<div class="col-lg-12">
+													<div class="tableContainer" ng-controller="EventAlertAssessmentCtrl">
+														<table class="table">
+															<thead>
+																<tr>
+																	<th>Client Name</th> 
+																	<th>Contact Person</th> 
+																	<th>Event Type</th>    
+																	<th>Estimated Damages</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr ng-repeat="topClientEstimatedDamage in topClientEstimatedDamages" class="{{$index % 2 === 0 ? 'tr-purple' : ''}}">
+																	<td>{{topClientEstimatedDamage.clientName}}</td>
+																	<td>{{topClientEstimatedDamage.contactPerson}}</td>
+																	<td>{{topClientEstimatedDamage.eventType}}</td>
+																	<td>{{topClientEstimatedDamage.estimatedDamages | currency}}</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingTwo">
+										<h4 class="panel-title">
+											<a role="button" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">News Feed<i class="fa fa-minus" aria-hidden="true"></i>
+											</a>
+										</h4>
+									</div>
+									<div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+										<div class="panel-body" ng-controller="NewsFeedCtrl">
+											<div class="row">
+												<div class="col-lg-12">
+													<img src="{{featured.imageUrl}}" alt="{{featured.description}}" width="359">
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-12">
+													<br/>
+													<ul class="list-group">
+													  <li class="list-group-item" ng-repeat="headline in headlines">{{headline.headline}} <a href="{{headline.url}}" target='__blank'>({{$index}})</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- END OF 1ST COLUMN --> 
+						<!-- START OF 2ND COLUMN -->
+						<div class="col-lg-8">
+							<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingThree">
+										<h4 class="panel-title">
+											<a role="button" data-toggle="collapse" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">Event Alert Triage<i class="fa fa-minus" aria-hidden="true"></i>
+											</a>
+										</h4>
+									</div>
+									<div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+										<div class="panel-body">
+											<div class="row">
+												<div class="col-lg-12">
+													<p class="btn btn-sm red calamityNames" id="fireButton">FIRE</p>
+													<p class="btn btn-sm grey calamityNames" id="eqButton" >EARTHQUAKE</p>
+													<p class="btn btn-sm purple calamityNames" id="hailButton">HAIL</p>
+													<p class="btn btn-sm yellow calamityNames" id="floodButton" >FLOOD</p>
+													<p class="btn btn-sm blue calamityNames" id="stormButton">STORM</p>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-12 map">
+													<div id="map" data-active="fire">Loading Map....</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingFour">
+										<h4 class="panel-title">
+											<a role="button" data-toggle="collapse" href="#collapseInv" aria-expanded="true" aria-controls="collapseInv">Property Monitoring and Maintenance<i class="fa fa-minus" aria-hidden="true"></i>
+											</a>
+										</h4>
+									</div>
+									<div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour">
+										<div class="panel-body">
+											<div class="row">
+												<div class="col-lg-12">
+													<div id="IdPropertyMonitoringMaintenance" class="tableContainer" ng-controller="PropertyMonitoringMaintenanceCtrl">
+														<table class="table">
+															<thead>
+																<tr>
+																	<th>Address</th> 
+																	<th>Current Online Status</th> 
+																	<th>Current Readings</th>    
+																	<th>Current Risk Assessment</th>
+																	<th>Event Impact Assessment</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr ng-repeat="pmmResult in propertyMonitoringMaintenance">
+																	<td class="address"><a href="#" data-toggle="modal" data-target="#myModal2" data-location-id="{{pmmResult.locationId}}" data-building-id="{{pmmResult.buildingId}}">{{pmmResult.address}}</a></td>
+																	<td class="graph">
+																	<div style="width:70px; height:35px;">
+																	<canvas id="myPieChart{{$index}}"></canvas>
+																	</div>
+																	</td>
+																	<td class="td {{pmmResult.currentRiskAssessment.type}} readings">{{pmmResult.currentReadings}}</td>
+																	<td class="td {{pmmResult.currentRiskAssessment.type}} assessment">{{pmmResult.currentRiskAssessment.description}}</td>
+																	<td class="td {{pmmResult.eventImpactAssessment.type}} assessment">{{pmmResult.eventImpactAssessment.description}}</td>
+																</tr>
+															</tbody>
+														</table>
+														<span ng-show="showChart()"></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingSix">
+										<h4 class="panel-title">
+											<a role="button" data-toggle="collapse" href="#collapseSix" aria-expanded="true" aria-controls="collapseSix">Property Monitoring Notification<i class="fa fa-minus" aria-hidden="true"></i>
+											</a>
+										</h4>
+									</div>
+									<div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingSix">
+										<div class="panel-body">
+											<div class="row">
+												<div class="col-lg-12">
+													<div class="tableContainer" ng-controller="PropertyMonitoringNotificationCtrl">
+														<table class="table">
+															<thead>
+																<tr>
+																	<th>Address</th> 
+																	<th>Recommendation</th> 
+																	<th class="text-center">Notification Type</th>    
+																	<th>Status</th>
+																	<th>Response</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr ng-repeat="pmnResult in propertyMonitoringNotification" class="{{$index % 2 === 0 ? 'tr-grey' : ''}}">
+																	<td class="address"><a href="#" data-toggle="modal" data-target="#myModal2" data-location-id="{{pmnResult.locationId}}" data-building-id="{{pmnResult.buildingId}}">{{pmnResult.address}}</a></td>
+																	<td>{{pmnResult.recommendation}}</td>
+																	<td class="text-center">
+																		<span ng-if="pmnResult.notificationType[0] === 'Email'">
+																	       <i class="fa fa-envelope" aria-hidden="true"></i>
+																	    </span> 
+																	    <span ng-if="pmnResult.notificationType[1] === 'Text'">
+																	       <i class="fa fa-commenting" aria-hidden="true"></i>
+																	    </span> 
+																	    <span ng-if="pmnResult.notificationType[2] === 'Call Center'">
+																	       <i class="fa fa-phone-square" aria-hidden="true"></i>
+																	    </span>
+																	</td>
+																	<td>{{pmnResult.status.description}} <br/>
+																		<span ng-if="pmnResult.status.notifiedBy[0] === 'Email'">
+																	       <i class="fa fa-envelope" aria-hidden="true"></i>
+																	    </span> 
+																	    <span ng-if="pmnResult.status.notifiedBy[1] === 'Text'">
+																	       <i class="fa fa-commenting" aria-hidden="true"></i>
+																	    </span> 
+																	    <span ng-if="pmnResult.status.notifiedBy[2] === 'Call Center'">
+																	       <i class="fa fa-phone-square" aria-hidden="true"></i>
+																	    </span> 
+																	</td>
+																	<td>{{pmnResult.response}}</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						<!-- END OF 2ND COLUMN -->
+						<!-- START OF 3RD COLUMN -->
+						<div class="col-lg-4">
+							<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+								
+								
+							</div>
+						</div>
+						<!-- END OF 3RD COLUMN -->
+					</div>
+				</div>
+                <!-- Modal -->
+                <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" ng-controller="UnderwritingLocationsCtrl">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Location Details</h4>
+                        </div>
+                        <div class="modal-body"> 
+                            <div class="row">
+                                <div class="col-lg-6 locationBuildingInformation">
+                                    <h2 class="headerDivision">Location Building Information</h2>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <ul class="location">
+                                                <li class="clearfix">
+                                                    <div class="icon">
+                                                        <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                                                    </div>
+                                                    <div class="details">
+                                                        <h4>Location Id</h4>
+                                                        <p>{{locationInformation.locationId}}</p>
+                                                    </div>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <div class="icon">
+                                                        <i class="fa fa-building" aria-hidden="true"></i>
+                                                    </div>
+                                                    <div class="details">
+                                                        <h4>Building Id</h4>
+                                                        <p>{{locationInformation.buildingId}}</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <ul class="address">
+                                                <li class="clearfix">
+                                                    <div class="icon">
+                                                        <i class="fa fa-address-book" aria-hidden="true"></i>
+                                                    </div>
+                                                    <div class="details">
+                                                        <h4>Address</h4>
+                                                        <p>{{address.street}}</p>
+                                                    </div>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <div class="icon">
+                                                        <i class="fa fa-car" aria-hidden="true"></i>
+                                                    </div>
+                                                    <div class="details">
+                                                        <h4>City</h4>
+                                                        <p>{{address.city}}</p>
+                                                    </div>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <div class="icon">
+                                                        <i class="fa fa-flag" aria-hidden="true"></i>
+                                                    </div>
+                                                    <div class="details">
+                                                        <h4>State</h4>
+                                                        <p>{{address.state}}</p>
+                                                    </div>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <div class="icon">
+                                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                    </div>
+                                                    <div class="details">
+                                                        <h4>Zip</h4>
+                                                        <p>{{address.zip}}</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <table class="structureAttributes">
+                                               <thead>
+                                                    <tr>
+                                                        <th colspan="2">Structure Attributes</th>
+                                                    </tr>
+                                               </thead>
+                                               <tbody class="three">
+                                                    <tr>
+                                                        <td><strong>Valuation</strong></td>
+                                                        <td colspan="3">{{structureAttr.valuation}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Classification</strong></td>
+                                                        <td colspan="3">{{structureAttr.classification}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Construction Year</strong></td>
+                                                        <td colspan="3">{{structureAttr.constructionYear}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Area (sq ft)</strong></td>
+                                                        <td colspan="3">{{structureAttr.area.toLocaleString()}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Stories</strong></td>
+                                                        <td colspan="3">{{structureAttr.stories}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Construction Grade</strong></td>
+                                                        <td colspan="3">{{structureAttr.constructionGrade}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Last Major Renovation</strong></td>
+                                                        <td colspan="3">{{structureAttr.lastMajorRenovation}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Renovation Details</strong></td>
+                                                        <td colspan="3">{{structureAttr.renovationDetails}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Inspection Date</strong></td>
+                                                        <td colspan="3">{{structureAttr.inspectionDate}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Fire Rating</strong></td>
+                                                        <td colspan="3">{{structureAttr.fireRating}}</td>
+                                                    </tr>
+                                               </tbody>
+                                            </table>
+                                            <table class="locationAttributes">
+                                               <thead>
+                                                    <tr>
+                                                        <th colspan="2">Location Attributes</th>
+                                                    </tr>
+                                               </thead>
+                                               <tbody class="four">
+                                                    <tr>
+                                                        <td><strong>Crime Rating</strong></td>
+                                                        <td colspan="3">{{locationAttr.crimeRating}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Proximity to fire station</strong></td>
+                                                        <td colspan="3">{{locationAttr.proximityFireStation}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Proximity to water</strong></td>
+                                                        <td colspan="3">{{locationAttr.proximityWater}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Flood Rating</strong></td>
+                                                        <td colspan="3">{{locationAttr.floodRating}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Sinkhole Rating</strong></td>
+                                                        <td colspan="3">{{locationAttr.sinkholeRating}}</td>
+                                                    </tr>
+                                               </tbody>
+                                            </table>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 locationRiskAssessmentDetails">
+                                    <h2 class="headerDivision">Loss Risk Assessment Details</h2>
+                                    <div class="row graph">
+                                        <div class="col-lg-6">
+                                            <div id="radar-chart">
+                                                <canvas id="radar" height="240" class="chart chart-radar" chart-data="data" chart-options="options" chart-labels="labels"></canvas> 
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="tableContainer">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Risk</th>	
+                                                            <th>Assessment Grade</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr ng-repeat="riskData in riskGrade">
+                                                            <td>{{riskData.risk}}</td>
+                                                            <td>{{riskData.grade}}</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="row listRisk">
+                                        <!-- SLIDER -->
+                                        <div class="col-lg-12 slider">
+                                            <div class="owl-carousel owl-theme"> 
+                                                <div class="item">
+                                                    <div class="weather">
+                                                        <div class="panel">
+                                                            <div class="riskTitle clearfix">
+                                                                <h2><span><i class="fa fa-sun-o" aria-hidden="true"></i></span>Weather</h2>
+                                                                <h2 class="riskCount">{{weather.totalResults.toLocaleString()}}</h2>
+                                                            </div>
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Date</th>	
+                                                                            <th>Type</th>
+                                                                            <th>Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr ng-repeat="weather in weather.results">
+                                                                            <td>{{weather.date}}</td>
+                                                                            <td>{{weather.type}}</td>
+                                                                            <td>{{weather.desc}}</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="crime">
+                                                        <div class="panel">
+                                                            <div class="riskTitle clearfix">
+                                                                <h2><span><i class="fa fa-hand-paper-o" aria-hidden="true"></i></span>Crime</h2>
+                                                                <h2 class="riskCount">{{crime.totalResults.toLocaleString()}}</h2>
+                                                            </div>
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Date</th>	
+                                                                            <th>Type</th>
+                                                                            <th>Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr ng-repeat="crime in crime.results">
+                                                                            <td>{{crime.date}}</td>
+                                                                            <td>{{crime.type}}</td>
+                                                                            <td>{{crime.desc}}</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="fire">
+                                                        <div class="panel">
+                                                            <div class="riskTitle clearfix">
+                                                                <h2><span><i class="fa fa-fire" aria-hidden="true"></i></span>Fire</h2>
+                                                                <h2 class="riskCount">{{fire.totalResults.toLocaleString()}}</h2>
+                                                            </div>
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Date</th>	
+                                                                            <th>Level</th>
+                                                                            <th>Area</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr ng-repeat="fire in fire.results">
+                                                                            <td>{{fire.date}}</td>
+                                                                            <td>{{fire.level}}</td>
+                                                                            <td>{{fire.area}}</td>
+                                                                        </tr>
+                                                                        
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="hail">
+                                                        <div class="panel">
+                                                            <div class="riskTitle clearfix">
+                                                                <h2><span><i class="fa fa-snowflake-o" aria-hidden="true"></i></span>Hail</h2>
+                                                                <h2 class="riskCount">{{hail.totalResults.toLocaleString()}}</h2>
+                                                            </div>
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Date</th>	
+                                                                            <th>Type</th>
+                                                                            <th>Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr ng-repeat="hail in hail.results">
+                                                                            <td>{{hail.date}}</td>
+                                                                            <td>{{hail.type}}</td>
+                                                                            <td>{{hail.description}}</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- SLIDER -->
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>     
+                    </div>
+                  </div>
+                </div>
+                <!-- End of Modal -->               
+            </div> 
+			
+        </div>
+        <footer>
+            &copy;2017 RCG GLOBAL SERVICES
+        </footer>
+    </article>
+	<script type="text/javascript"  src="../js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript"  src="../js/bootstrap.min.js"></script>
+    <script src="../plugins/owl/owl.carousel.min.js"></script>
+    <script src="../js/pages/plugins.js"></script>
+
+    <!-- Angular Graphs CSS -->
+    <link rel="stylesheet" href="../node_modules/angular-nvd3/node_modules/nvd3/build/nv.d3.min.css"/>
+    
+    <!-- Angular Graphs JS -->
+    <script src="../node_modules/angular-nvd3/node_modules/angular/angular.min.js"></script>
+    <script src="../node_modules/angular-nvd3/node_modules/d3/d3.min.js" charset="utf-8"></script>
+    <script src="../node_modules/angular-nvd3/node_modules/nvd3/build/nv.d3.min.js"></script>
+    <script src="../node_modules/angular-nvd3/dist/angular-nvd3.js"></script>
+    <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+	<script src="../node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+    <script src="js/app_loss_prevention.js"></script>
+	
+    <script type="text/javascript">
+		
+		var fireFeatures = [ {'type': "FeatureCollection", 'features': [
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-73.989308, 40.741892], 'type': "Point"}, 'properties': {'weight' : 1}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-75.459308, 42.261895], 'type': "Point"}, 'properties': {'weight' : 2}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-72.864908, 43.421895], 'type': "Point"}, 'properties': {'weight' : 5}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-74.738938, 41.793951], 'type': "Point"}, 'properties': {'weight' : 8}}
+		]}, {'type': "FeatureCollection", 'features': [
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-93.989308, 40.741892], 'type': "Point"}, 'properties': {'weight' : 5}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-85.459308, 42.261895], 'type': "Point"}, 'properties': {'weight' : 4}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-52.864908, 43.421895], 'type': "Point"}, 'properties': {'weight' : 9}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-34.738938, 41.793951], 'type': "Point"}, 'properties': {'weight' : 1}}
+		]}, {'type': "FeatureCollection", 'features': [
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-103.989308, 40.741892], 'type': "Point"}, 'properties': {'weight' : 4}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-45.459308, 42.261895], 'type': "Point"}, 'properties': {'weight' : 2}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-96.864908, 43.421895], 'type': "Point"}, 'properties': {'weight' : 9}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-15.738938, 41.793951], 'type': "Point"}, 'properties': {'weight' : 7}}
+		]}
+		];
+		
+	    var eqFeatures = [ {'type': "FeatureCollection", 'features': [
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-72.989308, 41.741892], 'type': "Point"}, 'properties': {'weight' : 3}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-71.459308, 44.261895], 'type': "Point"}, 'properties': {'weight' : 4}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-73.864908, 42.421895], 'type': "Point"}, 'properties': {'weight' : 6}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-75.738938, 43.793951], 'type': "Point"}, 'properties': {'weight' : 2}}
+		]}, {'type': "FeatureCollection", 'features': [
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-93.989308, 40.741892], 'type': "Point"}, 'properties': {'weight' : 5}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-85.459308, 42.261895], 'type': "Point"}, 'properties': {'weight' : 4}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-52.864908, 43.421895], 'type': "Point"}, 'properties': {'weight' : 9}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-34.738938, 41.793951], 'type': "Point"}, 'properties': {'weight' : 1}}
+		]}, {'type': "FeatureCollection", 'features': [
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-103.989308, 40.741892], 'type': "Point"}, 'properties': {'weight' : 4}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-45.459308, 42.261895], 'type': "Point"}, 'properties': {'weight' : 2}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-96.864908, 43.421895], 'type': "Point"}, 'properties': {'weight' : 9}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-15.738938, 41.793951], 'type': "Point"}, 'properties': {'weight' : 7}}
+		]}
+		];
+		
+	    var hailFeatures = [{'type': "FeatureCollection", 'features': [
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-71.989308, 45.741892], 'type': "Point"}, 'properties': {'weight' : 8}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-74.459308, 43.261895], 'type': "Point"}, 'properties': {'weight' : 5}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-71.864908, 41.421895], 'type': "Point"}, 'properties': {'weight' : 6}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-73.738938, 42.793951], 'type': "Point"}, 'properties': {'weight' : 2}}
+		]}, {'type': "FeatureCollection", 'features': [
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-93.989308, 40.741892], 'type': "Point"}, 'properties': {'weight' : 5}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-85.459308, 42.261895], 'type': "Point"}, 'properties': {'weight' : 4}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-52.864908, 43.421895], 'type': "Point"}, 'properties': {'weight' : 9}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-34.738938, 41.793951], 'type': "Point"}, 'properties': {'weight' : 1}}
+		]}, {'type': "FeatureCollection", 'features': [
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-103.989308, 40.741892], 'type': "Point"}, 'properties': {'weight' : 4}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-45.459308, 42.261895], 'type': "Point"}, 'properties': {'weight' : 2}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-96.864908, 43.421895], 'type': "Point"}, 'properties': {'weight' : 9}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-15.738938, 41.793951], 'type': "Point"}, 'properties': {'weight' : 7}}
+		]}
+		];
+		
+	    var floodFeatures = [{'type': "FeatureCollection", 'features': [
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-75.989308, 43.741892], 'type': "Point"}, 'properties': {'weight' : 3}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-72.459308, 40.261895], 'type': "Point"}, 'properties': {'weight' : 10}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-74.864908, 45.421895], 'type': "Point"}, 'properties': {'weight' : 1}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-71.738938, 44.793951], 'type': "Point"}, 'properties': {'weight' : 5}}
+		]}, {'type': "FeatureCollection", 'features': [
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-93.989308, 40.741892], 'type': "Point"}, 'properties': {'weight' : 5}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-85.459308, 42.261895], 'type': "Point"}, 'properties': {'weight' : 4}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-52.864908, 43.421895], 'type': "Point"}, 'properties': {'weight' : 9}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-34.738938, 41.793951], 'type': "Point"}, 'properties': {'weight' : 1}}
+		]}, {'type': "FeatureCollection", 'features': [
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-103.989308, 40.741892], 'type': "Point"}, 'properties': {'weight' : 4}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-45.459308, 42.261895], 'type': "Point"}, 'properties': {'weight' : 2}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-96.864908, 43.421895], 'type': "Point"}, 'properties': {'weight' : 9}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-15.738938, 41.793951], 'type': "Point"}, 'properties': {'weight' : 7}}
+		]}
+		];
+		
+	    var stormFeatures = [{'type': "FeatureCollection", 'features': [
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-74.989308, 42.741892], 'type': "Point"}, 'properties': {'weight' : 5}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-73.459308, 41.261895], 'type': "Point"}, 'properties': {'weight' : 8}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-75.864908, 40.421895], 'type': "Point"}, 'properties': {'weight' : 3}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-72.738938, 45.793951], 'type': "Point"}, 'properties': {'weight' : 4}}
+		]}, {'type': "FeatureCollection", 'features': [
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-93.989308, 40.741892], 'type': "Point"}, 'properties': {'weight' : 5}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-85.459308, 42.261895], 'type': "Point"}, 'properties': {'weight' : 4}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-52.864908, 43.421895], 'type': "Point"}, 'properties': {'weight' : 9}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-34.738938, 41.793951], 'type': "Point"}, 'properties': {'weight' : 1}}
+		]}, {'type': "FeatureCollection", 'features': [
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-103.989308, 40.741892], 'type': "Point"}, 'properties': {'weight' : 4}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-45.459308, 42.261895], 'type': "Point"}, 'properties': {'weight' : 2}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-96.864908, 43.421895], 'type': "Point"}, 'properties': {'weight' : 9}},
+			{'type': 'Feature', 'geometry' : {'coordinates' : [-15.738938, 41.793951], 'type': "Point"}, 'properties': {'weight' : 7}}
+		]}
+		];
+		
+        var map, heatmap;
+        
+		function initMap() {
+			
+			map = new google.maps.Map(document.getElementById('map'), {
+			    zoom: 3,
+			    center: {lat: 41.793951, lng: -74.738938},
+			    mapTypeId: 'terrain'
+			}); 
+
+			heatmap = new google.maps.visualization.HeatmapLayer({			  
+			  dissipating: false,
+			  map: map,
+			  opacity: 0.5
+			});
+			
+		}				
+
+        function showFire() {	
+			
+			var arrayKey =  Math.floor((Math.random() * 2) + 0); 
+			
+			var heatmapData = [];
+			
+			fireFeatures[arrayKey].features.forEach(function(feature) {
+				var weightedLoc = createWeightedLoc(feature);
+				heatmapData.push(weightedLoc);
+			});			
+			heatmap.set('data', heatmapData);	
+
+			var gradient = [
+				'rgba(255, 185, 185, 0)',
+				'rgba(255, 185, 185, 1)',
+				'rgba(255, 167, 167, 1)',
+				'rgba(255, 159, 159, 1)',
+				'rgba(255, 139, 139, 1)',
+				'rgba(255, 129, 129, 1)',
+				'rgba(255, 117, 117, 1)',
+				'rgba(255, 97, 97, 1)',
+				'rgba(255, 79, 79, 1)',
+				'rgba(255, 67, 67, 1)',
+				'rgba(255, 47, 47, 1)',
+				'rgba(255, 33, 33, 1)',
+				'rgba(255, 21, 21, 1)',
+				'rgba(255, 0, 0, 1)'
+			];
+			heatmap.set('gradient', gradient);
+			
+		}
+	  
+	    function showEQ() {
+			var arrayKey =  Math.floor((Math.random() * 2) + 0); 
+			
+			var heatmapData = [];
+			eqFeatures[arrayKey].features.forEach(function(feature) {			
+				var weightedLoc = createWeightedLoc(feature);
+				heatmapData.push(weightedLoc); 
+			});			
+			heatmap.set('data', heatmapData);	
+
+			var gradient = [			
+				'rgba(179, 179, 179, 0)',
+				'rgba(179, 179, 179, 1)',
+				'rgba(167, 167, 167, 1)',
+				'rgba(155, 155, 155, 1)',
+				'rgba(143, 143, 143, 1)',
+				'rgba(131, 131, 131, 1)',
+				'rgba(119, 119, 119, 1)',
+				'rgba(107, 107, 107, 1)',
+				'rgba(95, 95, 95, 1)',
+				'rgba(83, 83, 83, 1)',
+				'rgba(71, 71, 71, 1)',
+				'rgba(59, 59, 59, 1)',
+				'rgba(47, 47, 47, 1)',
+				'rgba(35, 35, 35, 1)'
+			];
+			heatmap.set('gradient', gradient);
+	    }
+
+		function showHail() {
+			var arrayKey =  Math.floor((Math.random() * 2) + 0); 
+			var heatmapData = [];
+			hailFeatures[arrayKey].features.forEach(function(feature) {
+				var weightedLoc = createWeightedLoc(feature);
+				heatmapData.push(weightedLoc); 
+			});
+			heatmap.set('data', heatmapData);
+			
+			var gradient = [
+				'rgba(218, 194, 236, 0)',
+				'rgba(218, 194, 236, 1)',
+				'rgba(211, 181, 233, 1)',
+				'rgba(201, 164, 228, 1)',
+				'rgba(199, 161, 227, 1)',
+				'rgba(186, 140, 220, 1)',
+				'rgba(177, 126, 216, 1)',
+				'rgba(163, 101, 209, 1)',
+				'rgba(158, 94, 206, 1)',
+				'rgba(151, 81, 203, 1)',
+				'rgba(145, 72, 200, 1)',
+				'rgba(137, 59, 195, 1)',
+				'rgba(126, 54, 180, 1)',
+				'rgba(112, 48, 160, 1)'
+			];
+			heatmap.set('gradient', gradient);
+	    }
+		
+		function showFlood() {
+			var arrayKey =  Math.floor((Math.random() * 2) + 0); 
+			var heatmapData = [];
+			floodFeatures[arrayKey].features.forEach(function(feature) {
+				var weightedLoc = createWeightedLoc(feature);
+				heatmapData.push(weightedLoc);
+			});
+			heatmap.set('data', heatmapData);
+			
+			var gradient = [
+				'rgba(255, 255, 185, 0)',
+				'rgba(255, 255, 185, 1)',
+				'rgba(255, 255, 171, 1)',
+				'rgba(255, 255, 151, 1)',
+				'rgba(255, 255, 133, 1)',
+				'rgba(255, 255, 121, 1)',
+				'rgba(255, 255, 105, 1)',
+				'rgba(255, 255, 93, 1)',
+				'rgba(255, 255, 86, 1)',
+				'rgba(255, 255, 75, 1)',
+				'rgba(255, 255, 55, 1)',
+				'rgba(255, 255, 42, 1)',
+				'rgba(255, 255, 29, 1)',
+				'rgba(255, 255, 0, 1)',
+				'rgba(240, 234, 0, 1)'
+			];
+			heatmap.set('gradient', gradient);
+	    }
+		
+		function showStorm() {
+			var arrayKey =  Math.floor((Math.random() * 2) + 0); 
+			var heatmapData = [];
+			stormFeatures[arrayKey].features.forEach(function(feature) {
+				var weightedLoc = createWeightedLoc(feature);
+				heatmapData.push(weightedLoc);
+			});
+			heatmap.set('data', heatmapData);
+      
+			var gradient = [
+				'rgba(0, 255, 255, 0)',
+				'rgba(0, 255, 255, 1)',
+				'rgba(0, 225, 255, 1)',
+				'rgba(0, 200, 255, 1)',
+				'rgba(0, 175, 255, 1)',
+				'rgba(0, 160, 255, 1)',
+				'rgba(0, 145, 223, 1)',
+				'rgba(0, 125, 191, 1)',
+				'rgba(0, 110, 255, 1)',
+				'rgba(0, 100, 255, 1)',
+				'rgba(0, 75, 255, 1)',
+				'rgba(0, 50, 255, 1)',
+				'rgba(0, 25, 255, 1)',
+				'rgba(0, 0, 255, 1)'
+			];
+			heatmap.set('gradient', gradient);
+			  
+	  }
+		
+		function createWeightedLoc(feature) {
+			var coords = feature.geometry.coordinates;
+			var latLng = new google.maps.LatLng(coords[1], coords[0]);
+			var weightedLoc = {
+				location: latLng,
+				weight: feature.properties.weight
+			};			    
+			
+			return weightedLoc;
+		}
+	  
+	    $(document).ready(function() {		
+			$("#fireButton").on('click', function() {
+				$("#map").attr("data-active", "fire");
+				showFire();			
+			});
+			$("#eqButton").on('click', function() {
+				$("#map").attr("data-active", "eq");
+				showEQ();
+			});
+			$("#hailButton").on('click', function() {
+				$("#map").attr("data-active", "hail");
+				showHail();
+			});
+			$("#floodButton").on('click', function() {
+				$("#map").attr("data-active", "flood");
+				showFlood();
+			});
+			$("#stormButton").on('click', function() {
+				$("#map").attr("data-active", "storm");
+				showStorm();
+			});
+			
+	    });
+	
+	function getScope(ctrlName) {
+		var sel = 'div[ng-controller="' + ctrlName + '"]';
+		return angular.element(sel).scope();
+	}
+
+	function showPieChart() {
+		var $scope = getScope('PropertyMonitoringMaintenanceCtrl');
+		
+		// handle pie data from json
+		var statusLabels = ["Online", "Offline", "Errors"];
+		
+		angular.forEach($scope.propertyMonitoringMaintenance, function(item, key) {
+			var ctx = document.getElementById("myPieChart" + key);		
+			var onlineStatus = [item.currentOnlineStatus.online, item.currentOnlineStatus.offline, item.currentOnlineStatus.errors];
+			
+			var myChart = new Chart(ctx, {
+				type: 'pie',
+				data: {
+					labels: statusLabels,
+					datasets: [{
+						data: onlineStatus,
+						backgroundColor: [
+							'rgba(84, 130, 53, 1)',
+							'rgba(166, 166, 166, 1)',
+							'rgba(255, 192, 0, 1)'
+						]
+					}]
+				}
+			});
+		  
+		});        
+				
+		$scope.$apply();
+	}    
+	
+	jQuery(document).ready(function($) {
+		setTimeout(showPieChart, 4000);
+		
+		setInterval(function() {
+			var activeData = $("#map").attr("data-active");
+			
+			if (activeData == "fire") {
+				showFire(); 
+			}else if (activeData == "storm") {
+				showStorm(); 
+			}else if (activeData == "eq") {
+				showEQ(); 
+			}else if (activeData == "flood") {
+				showFlood(); 
+			}else if (activeData == "hail") {
+				showHail(); 
+			}
+			
+		}, 5000);
+		
+		$('#myModal2').on('show.bs.modal', function(e) {
+			//get data-id attribute of the clicked element
+			var locationId = $(e.relatedTarget).data('location-id');
+			var buildingId = $(e.relatedTarget).data('building-id');
+			
+			angular.element($("#myModal2")).scope().getData(locationId, buildingId);
+		});
+	})
+    </script>
+	
+	<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgiZSa_VLVLhdcJ9DmXP6L-uXDLmzD-OI&libraries=visualization&callback=initMap">
+    </script>
+	
+  </body>
+</html>

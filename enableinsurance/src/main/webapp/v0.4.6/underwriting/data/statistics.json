@@ -1,0 +1,9 @@
+{
+	"statisticsData": {
+		"averageProcessingDays" : 5.25,
+		"policiesIssuedToday" : 230,
+		"totalPremiumIssuedToday" :	191112.96,
+		"veryHighRiskLossRatio" :	84,
+		"veryHighRiskTotalExposure" :	53875
+	}
+}
