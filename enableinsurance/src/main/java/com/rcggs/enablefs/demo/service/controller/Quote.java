@@ -12,6 +12,10 @@ public class Quote {
     String quoteType;
     String company;
     String companyCode;
+    String quoteId;
+    String ploicyId;
+    String locationId;
+
 
     String lobs;
     float annualpremium ;
@@ -34,10 +38,53 @@ public class Quote {
     float earthquakeRisk;
     float windstromRisk;
 
+    public float getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(float latitude) {
+        this.latitude = latitude;
+    }
+
+    public float getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(float longitude) {
+        this.longitude = longitude;
+    }
+
     Date quoteRequestDate;
     Date quoteResponseDate;
     int policyTerm;
     float coverageAmount;
+
+    float latitude;
+    float longitude;
+
+    public String getQuoteId() {
+        return quoteId;
+    }
+
+    public void setQuoteId(String quoteId) {
+        this.quoteId = quoteId;
+    }
+
+    public String getPloicyId() {
+        return ploicyId;
+    }
+
+    public void setPloicyId(String ploicyId) {
+        this.ploicyId = ploicyId;
+    }
+
+    public String getLocationId() {
+        return locationId;
+    }
+
+    public void setLocationId(String locationId) {
+        this.locationId = locationId;
+    }
 
     public String getQuoteType() {
         return quoteType;

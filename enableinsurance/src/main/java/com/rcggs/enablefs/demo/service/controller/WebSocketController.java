@@ -58,11 +58,7 @@ public class WebSocketController {
 	public boolean updateInterfaceViaPost(@RequestBody Message message ) {
 		System.out.println("Incoming message " + message);
 		try {
-			String[] tokens = message.getMessage().split(",");
-			String address = tokens[3].replace("!", ",");
-			String jstr = "{\"lat\":" + tokens[0].trim()  + "," + "\"lng\":" + tokens[1].trim() + ",\"type\":" + tokens[2] + ",\"address\":\"" + address + "\"}";
-			message.setMessage(jstr);
-			complete(message);
+			complete(message.getMessage());
 			return true;
 		} catch (Exception e) {
 			e.printStackTrace();

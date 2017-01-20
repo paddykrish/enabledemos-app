@@ -2,9 +2,11 @@ package com.rcggs.enablefs.demo.service.controller;
 
 import java.io.*;
 import java.net.*;
+import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Random;
 
 import org.slf4j.Logger;
@@ -27,36 +29,26 @@ public class RecordGenerator {
 
 
 	public static void main(String... args) throws Exception {
-		String[] locations = getLines("/locations.txt");
+	int seq = 0;
+		float avg = 5.6f;
+		int count = 350;
+		int premium = 1233444;
+		try {
+			while (true) {
 
-		int seq = 0;
-		for (int i = 1; i < locations.length; i++) {
-			try {
-				String []tokens = locations[i].split("\\|");
-				System.out.println(locations[i]);
-				String address = tokens[6] + " ! " + tokens[7] + " ! " + tokens[2];
-				int srtype = rand.nextInt(4);
-				String message = tokens[3].replace("\"", "").trim()  + "," + tokens[4].replace("\"", "").trim() + "," + srtype + "," + address;
-				//String message = "{\"lat\":" + tokens[6].replace("\"", "").trim()  + "," + "\"lng\":" + tokens[7].replace("\"", "").trim() + ",\"type\":" + srtype + "}";
-				//System.out.println(message);
-				String wrapper = "{\"id\":\"1\",\"type\":\"2\",\"message\":\"" + message + "\"}";
-				String url = "http://rpc3848.daytonoh.ncr.com:8080/serviceincidents/service/updateInterface/";
-				//http://rpc3848.daytonoh.ncr.com:8080/serviceincidents/app/view/home.html
-
-				postMessage(url, wrapper);
-				/*
-
-				String message = "{\"lat\":" + tokens[6].replace("\"", "").trim()  + "," + "\"lng\":" + tokens[7].replace("\"", "").trim() + ",\"type\":" + srtype + "}";
-				String url = "http://localhost:8080/serviceincidents/service/updateInterface/ALL/342/" +  URLEncoder.encode(message) + "/";
-				LOG.info("url is " + url);
+				//String wrapper = "{\"id\":\"1\",\"type\":\"2\",\"message\":\"" + avg + "," + count + "," + premium  + "\"}";
+				//count += rand.nextInt(50);
+				//premium += rand.nextInt(5333);
+				//System.out.println(wrapper);
+				String url = "http://localhost:8080/enableinsurance/service/dataservice/increment/250";
 				sendMessagesToTopic(url);
-				*/
-				seq++;
-				//break;
-			} catch (Exception e) {
-				e.printStackTrace();
+				Thread.sleep(3000);
 			}
+
+		} catch (Exception e) {
+				e.printStackTrace();
 		}
+
 	}
 
 
@@ -99,8 +91,12 @@ public class RecordGenerator {
 
 			URL url = new URL(uri);
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+			conn.setDoOutput(true);
+
 			conn.setRequestMethod("GET");
 			//conn.setRequestProperty("Accept", "application/json");
+			//OutputStream os = conn.getOutputStream();
+
 
 			if (conn.getResponseCode() != 200) {
 				throw new RuntimeException("Failed : HTTP error code : "
@@ -108,11 +104,11 @@ public class RecordGenerator {
 			}
 			BufferedReader br = new BufferedReader(new InputStreamReader(
 					(conn.getInputStream())));
-			String output;
-			//System.out.println("Output from Server .... \n");
-			//while ((output = br.readLine()) != null) {
-			//	System.out.println(output);
-			//}
+			String output ;
+			System.out.println("Output from Server .... \n");
+			while ((output = br.readLine()) != null) {
+				System.out.println(output);
+			}
 			conn.disconnect();
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
@@ -144,24 +140,5 @@ public class RecordGenerator {
 			}
 		}
 	}
-
-	static String randomDate() {
-		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-
-		Date randomDate = new Date(getRandomTimeBetweenTwoDates());
-		return dateFormat.format(randomDate);
-
-	}
-
-	private static long getRandomTimeBetweenTwoDates() {
-		long beginTime = Timestamp.valueOf("2013-01-01 00:00:00").getTime();
-		long endTime = Timestamp.valueOf("2008-12-31 00:58:00").getTime();
-		long diff = endTime - beginTime + 1;
-		return beginTime + (long) (Math.random() * diff);
-	}
-
-	static String[] states = new String[] { "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA",
-			"KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH",
-			"OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY" };
 
 }

@@ -10,7 +10,7 @@ public class DemoContext {
 	static {
 		properties = new Properties();
 		try {
-			properties.load(new FileInputStream("/tmp/demo.properties"));
+			properties.load(new FileInputStream("/apps/data/enableins/enableinsurance.properties"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

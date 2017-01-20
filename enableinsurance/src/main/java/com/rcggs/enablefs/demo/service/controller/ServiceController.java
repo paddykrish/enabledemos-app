@@ -51,6 +51,11 @@ public class ServiceController {
 	DecimalFormat dFormat = new DecimalFormat("##############.00");
 	DecimalFormat tinyDFormat = new DecimalFormat("##.##");
 	Random rand = new Random();
+	String[] lowrisk = new String[] {"AL",  "OR",  "IL", "KY", "KS", "AR",  "MI"};
+	String[] mediumRisk = new String[] {"WA",  "ID",  "NV", "NM", "NH", "VT", "TN",  "MT"};
+	String[] highRisk = new String[] {"CA",  "TX",  "FL", "MN", "VA" , "NC"};
+	String[] veryHighRisk = new String[] {"PA",  "NJ",  "NY", "CT", "SC", "GA"};
+
 	final static RestTemplate restTemplate = new RestTemplate();
 
 	public Date getRandomDate(Date from, Date to) {
@@ -280,23 +285,29 @@ public class ServiceController {
 
 	@RequestMapping(value = "/getLocations/{name}", method = RequestMethod.GET)
 	public String getLocations(@PathVariable String name) {
+		JSONObject mainobj = new JSONObject();
 		String compancode = "WM";
 		if (!name.equals("all")){
 			compancode = name;
 		}
 		JSONArray list = new JSONArray();
-		for ( String rec : dataloader.loadLatLongs()){
+		int count = 0;
+		for ( Quote  q : dataloader.loadAllLocations()){
 
 			JSONArray item = new JSONArray();
-			String[] t = rec.split(",");
-			if ( t[0].equals(compancode)) {
-				item.put(Float.parseFloat(t[1]));
-				item.put(Float.parseFloat(t[2]));
+			if ( q.getCompanyCode().equals(compancode)) {
+				item.put(q.getLatitude());
+				item.put(q.getLongitude());
 				item.put(1 + rand.nextInt(4));
 				list.put(item);
+				count ++;
+			}
+			if (count > 1000){
+				break;
 			}
 		}
-		return list.toString();
+		mainobj.put("coordinates", list);
+		return mainobj.toString();
 
 	}
 
@@ -332,8 +343,85 @@ public class ServiceController {
 
 	}
 
+	@RequestMapping(value = "/getCompanies/{name}", method = RequestMethod.GET)
+	public String getCompanies(@PathVariable String name) {
+		JSONArray list = new JSONArray();
+		JSONObject c1 = new JSONObject();
+		c1.put("name","Wal-Mart");
+		c1.put("code","WM");
+		list.put(c1);
 
-		@RequestMapping(value = "/getRiskFactors/{name}", method = RequestMethod.GET)
+		JSONObject c2 = new JSONObject();
+		c2.put("name","CVS");
+		c2.put("code","CVS");
+		list.put(c2);
+
+		JSONObject c3 = new JSONObject();
+		c3.put("name","Valley National Bank");
+		c3.put("code","VNB");
+		list.put(c3);
+		JSONObject main = new JSONObject();
+		main.put("companies", list);
+		return list.toString();
+	}
+
+	@RequestMapping(value = "/getClientData/{name}", method = RequestMethod.GET)
+	public String getClientData(@PathVariable String name) {
+		JSONObject mainobj = new JSONObject();
+		JSONObject c1 = new JSONObject();
+		c1.put("policyType", "Renewal");
+		c1.put("policyTerm", "1 Year");
+		c1.put("numPriorPolicies", 5);
+		c1.put("numQuotesSent", 234);
+		mainobj.put("clientData", c1);
+		return mainobj.toString();
+	}
+
+	@RequestMapping(value = "/getLocationRiskAssessmentData/{name}", method = RequestMethod.GET)
+	public String getLocationRiskAssessmentData(@PathVariable String name) {
+		String compancode = "WM";
+		if (!name.equals("all")) {
+			compancode = name;
+		}
+
+		int reccount = 0;
+		JSONArray list = new JSONArray();
+		for (Quote q : dataloader.loadAllLocations()) {
+			if (!q.getCompanyCode().equals(compancode)) {
+				continue;
+			}
+			JSONObject row = new JSONObject();
+			row.put("address", q.getAddress());
+			row.put("city", q.getCity());
+			row.put("state", q.getState());
+			row.put("zip", q.getZipcode());
+			row.put("fire", q.getFireRisk());
+			row.put("earthquake", q.getEarthquakeRisk());
+			row.put("flood", q.getFloodRisk());
+			row.put("hail", q.getHailRisk());
+			row.put("windstorm", q.getWindstromRisk());
+			row.put("crime", q.getCrimeRisk());
+			double avg = (q.getFireRisk() + q.getEarthquakeRisk() +  q.getFloodRisk() + q.getHailRisk() + q.getWindstromRisk() + q.getCrimeRisk())/6.0;
+			if (avg < 5.0){
+				row.put("risk", "low");
+			} else if ( avg >=5.0 && avg <= 7.5){
+				row.put("risk", "Medium");
+			} else {
+				row.put("risk", "High");
+			}
+			row.put("locationId", q.getLocationId());
+			row.put("buildingId", q.getLocationId());
+			list.put(row);
+			reccount ++;
+			if (reccount > 10){
+				break;
+			}
+		}
+		return list.toString();
+
+	}
+
+	@RequestMapping(value = "/getRiskFactors/{name}", method = RequestMethod.GET)
 	public String getRiskFactors(@PathVariable String name) {
 		HashMap<String, Float> riskfactor = new HashMap<String, Float>();
 		String compancode = "WM";
@@ -406,10 +494,6 @@ public class ServiceController {
 	public String getQuotesByRiskClient(@PathVariable String name) {
 		JSONArray list = new JSONArray();
 		HashMap<String, Integer> riskcount = new HashMap<String, Integer>();
-		String[] lowrisk = new String[] {"AL",  "OR",  "IL", "KY", "KS", "AR",  "MI"};
-		String[] mediumRisk = new String[] {"WA",  "ID",  "NV", "NM", "NH", "VT", "TN",  "MT"};
-		String[] highRisk = new String[] {"CA",  "TX",  "FL", "MN", "VA" , "NC"};
-		String[] veryHighRisk = new String[] {"PA",  "NJ",  "NY", "CT", "SC", "GA"};
 
 		ArrayList<String> lowriskList = new ArrayList<String>(Arrays.asList(lowrisk));
 		ArrayList<String> mediumRiskList = new ArrayList<String>(Arrays.asList(mediumRisk));
@@ -528,6 +612,147 @@ public class ServiceController {
 		return null;
 
 	}
+
+	@RequestMapping(value = "/increment/{batchsize}", method = RequestMethod.GET)
+	public String increment(@PathVariable String batchsize)
+			throws JsonGenerationException, JsonMappingException, IOException {
+		try{
+			dataloader.increment(Integer.parseInt(batchsize));
+		}
+		catch (Exception e){
+			dataloader.increment(10);
+		}
+		//Map<String, Float> stats = new LinkedHashMap<String, Float>();
+		HashMap<String, Integer> status = new HashMap<String, Integer>();
+		HashMap<String, Integer> riskcount = new HashMap<String, Integer>();
+		HashMap<String, Integer> stepcount = new HashMap<String, Integer>();
+
+		ArrayList<String> lowriskList = new ArrayList<String>(Arrays.asList(lowrisk));
+		ArrayList<String> mediumRiskList = new ArrayList<String>(Arrays.asList(mediumRisk));
+		ArrayList<String> highRiskList = new ArrayList<String>(Arrays.asList(highRisk));
+		ArrayList<String> veryHighRiskList = new ArrayList<String>(Arrays.asList(veryHighRisk));
+
+		riskcount.put("lowRisk", 0);
+		riskcount.put("mediumRisk", 0);
+		riskcount.put("highRisk", 0);
+		riskcount.put("veryHighRisk", 0);
+
+		stepcount.put("preparation", 0);
+		stepcount.put("verification", 0);
+		stepcount.put("rating", 0);
+		stepcount.put("submission", 0);
+		stepcount.put("delivery", 0);
+
+
+
+		try {
+
+				float policyissued = 0f;
+				float premium = 0;
+				int averageprocesshrs = 0;
+			for (Quote q :  dataloader.loadAllLocations()){
+				DateTime t = DateTime.now().minusDays(1);
+				if ( q.getQuoteResponseDate().after(t.toDate()) ) {
+					if (q.getCurrentstep().equals("Quote Delivery")) {
+						policyissued += 1.0f;
+						premium += q.getAnnualpremium();
+						averageprocesshrs += ((q.getQuoteResponseDate().getTime() - q.getQuoteRequestDate().getTime() ) / (60 * 60 * 1000));
+					}
+				}
+				if( status.containsKey(q.getCurrentstep())){
+					status.put(q.getCurrentstep(), status.get(q.getCurrentstep()) + 1);
+				} else {
+					status.put(q.getCurrentstep(), 1);
+				}
+				if( lowriskList.contains(q.getState())){
+					riskcount.put("lowRisk" , riskcount.get("lowRisk") + 1);
+				} else if(mediumRiskList.contains(q.getState())){
+					riskcount.put("mediumRisk" , riskcount.get("mediumRisk") + 1);
+				} else if(highRiskList.contains(q.getState())){
+					riskcount.put("highRisk" , riskcount.get("highRisk") + 1);
+				} else if(veryHighRiskList.contains(q.getState())){
+					riskcount.put("veryHighRisk" , riskcount.get("veryHighRisk") + 1);
+				}
+				if(veryHighRiskList.contains(q.getState())) {
+					if(q.getCurrentstep().equals("Quote prep")){
+						stepcount.put("preparation" , stepcount.get("preparation") + 1);
+					} else if(q.getCurrentstep().equals("Verification")){
+						stepcount.put("verification" , stepcount.get("verification") + 1);
+					} else if(q.getCurrentstep().equals("Rating")){
+						stepcount.put("rating" , stepcount.get("rating") + 1);
+					} else if(q.getCurrentstep().equals("Submission")){
+						stepcount.put("submission" , stepcount.get("submission") + 1);
+					} else if(q.getCurrentstep().equals("Quote Delivery")){
+						stepcount.put("delivery" , stepcount.get("delivery") + 1);
+					}
+				}
+			}
+
+			JSONObject mainobj = new JSONObject();
+			mainobj.put("id", "1");
+			mainobj.put("type", "2");
+			JSONObject stats= new JSONObject();
+			JSONObject item1 = new JSONObject();
+
+			item1.put("averageProcessingDays", tinyDFormat.format(( averageprocesshrs/policyissued)/24.0));
+			item1.put("policiesIssuedToday", policyissued);
+			item1.put("totalPremiumIssuedToday", dFormat.format(premium));
+			stats.put("statisticsData", item1);
+
+			JSONObject item2 = new JSONObject();
+
+			item2.put("submission", status.get("Submission"));
+			item2.put("verification", status.get("Verification"));
+			item2.put("rating", status.get("Rating"));
+			item2.put("quotePrep", status.get("Quote prep"));
+			item2.put("quoteDelivery", status.get("Quote Delivery"));
+			stats.put("quoteStatusData", item2);
+
+			JSONObject item3 = new JSONObject();
+			item3.put("lowRisk", riskcount.get("lowRisk"));
+			item3.put("mediumRisk", riskcount.get("mediumRisk"));
+			item3.put("highRisk", riskcount.get("highRisk"));
+			item3.put("veryHighRisk", riskcount.get("veryHighRisk"));
+			stats.put("quotesByRisk", item3);
+
+			JSONObject item4 = new JSONObject();
+
+			item4.put("preparation", stepcount.get("preparation"));
+			item4.put("verification", stepcount.get("verification"));
+			item4.put("rating", stepcount.get("rating"));
+			item4.put("submission", stepcount.get("submission"));
+			item4.put("delivery", stepcount.get("delivery"));
+			stats.put("quotesBySteps", item4);
+
+
+			JSONArray top10quotes = new JSONArray();
+			List<Quote> alllocations = dataloader.loadAllLocations();
+
+			BeanComparator fieldComparator = new BeanComparator( "annualpremium");
+			Collections.sort(alllocations, fieldComparator);
+			for (int i = alllocations.size() - 1; i > alllocations.size() - 11; i--) {
+				JSONObject qt = new JSONObject();
+				qt.put("quote", alllocations.get(i).getQuote());
+				qt.put("company", alllocations.get(i).getCompany());
+				qt.put("annualpremium", alllocations.get(i).getAnnualpremium());
+				qt.put("completion", alllocations.get(i).getCompletion());
+				qt.put("currentstep", alllocations.get(i).getCurrentstep());
+				qt.put("underwriter", alllocations.get(i).getUnderwriter());
+				qt.put("riskclass", alllocations.get(i).getRiskclass());
+				top10quotes.put( qt);
+			}
+			stats.put("annual_premiums", top10quotes);
+			mainobj.put("message", stats.toString());
+				LOG.info(mainobj.toString());
+				String url = "http://localhost:8080/enableinsurance/service/updateInterface/";
+				RecordGenerator.postMessage(url, mainobj.toString());
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return "Incremented " + batchsize + " rows";
+	}
+
 
 
 	@RequestMapping(value = "/getUserPrefs/{name}", method = RequestMethod.GET)
