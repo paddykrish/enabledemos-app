@@ -1,0 +1,27 @@
+{
+	"main": {
+		"total_transactions": 27634,
+		"total_cased_opened": 6988,
+		"total_benign": 20646,
+		"total_active_cases": 22443
+	},
+	"all_transactions": {
+		"checking": 129,
+		"savings": 345,
+		"credit_cards": 150,
+		"loans": 99,
+		"mortgages": 120	
+	},
+	"transactions": {
+		"transactions": 27634,
+		"cases_opened": 6988,
+		"benign": 20646
+	},
+	"transactions_fnp" : {
+		"transactions": 27634,
+		"cases_opened_old": 9505,
+		"cases_opened_new": 6988,
+		"benign_old": 18129,
+		"benign_new": 20646
+	}
+}

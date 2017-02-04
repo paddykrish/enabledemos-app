@@ -13,6 +13,24 @@ public class Transaction {
     String beneficaryAccountId;
     String accountType;
     Date transactionDate;
+    String accountName;
+    String story;
+
+    public String getAccountName() {
+        return accountName;
+    }
+
+    public void setAccountName(String accountName) {
+        this.accountName = accountName;
+    }
+
+    public String getStory() {
+        return story;
+    }
+
+    public void setStory(String story) {
+        this.story = story;
+    }
 
     public String getTransactionId() {
         return transactionId;

@@ -1,0 +1,54 @@
+{
+	"events": [
+		{
+			"caseNo": 11478,
+			"accountNumber": "6557-3340-1331-4114",
+			"accountType": "Credit Card",
+			"entityName": "Ulysses Henry",
+			"benAccountNumber": "3200-2082-3686-3044",
+			"amount": 11633,
+			"analysisDetails": "Beneficiary account is a verified medical institution",
+			"type": "Benign"
+		},
+		{
+			"caseNo": 11489,
+			"accountNumber": "External",
+			"accountType": "Credit Card",
+			"entityName": "Oliver Alistair",
+			"benAccountNumber": "4090-7890-3186-7914",
+			"amount": 3333,
+			"analysisDetails": "Beneficiary Account is in the SAR",
+			"type": "Suspicious"
+		},
+		{
+			"caseNo": 11503,
+			"accountNumber": "4618-7752-4575-8213",
+			"accountType": "Credit Card",
+			"entityName": "Walter Paul",
+			"benAccountNumber": "6213-5219-2273-5251",
+			"amount": 11000,
+			"analysisDetails": "Beneficiary account is a verified educational institution",
+			"type": "Benign"
+		},
+		{
+			"caseNo": 11511,
+			"accountNumber": "4547-4635-2189-6108",
+			"accountType": "Credit Card",
+			"entityName": "Constance Bond",
+			"benAccountNumber": "7736-4716-3357-5923",
+			"amount": 3372,
+			"analysisDetails": "Originating Account is in the Terrorist Watchlist",
+			"type": "Suspicious"
+		},
+		{
+			"caseNo": 11518,
+			"accountNumber": "External",
+			"accountType": "Credit Card",
+			"entityName": "Oscar Bond",
+			"benAccountNumber": "4631-2192-4528-7239",
+			"amount": 12552,
+			"analysisDetails": "Beneficiary account is a verified educational institution",
+			"type": "Benign"
+		}
+	]
+}

@@ -1,0 +1,97 @@
+{
+	"accountInformation": {
+		"accountNumber": 76344545,
+		"accountType": "Checking",
+		"dateOpened": "03/01/15",
+		"dateClosed": "---",
+		"currentBalance": 234912,
+		"accountLength": "3 years 7 months"
+	},
+	"branchInformation": {
+		"address": "50th Ave. New York Branch",
+		"branchManager": "Ryan Reynolds",
+		"branchId": 25698962658,
+		"contactNo": "(749)111-2313",
+		"openCases": "100001013 - Mike Summers - In Progress",
+		"caseHistory": [
+			{
+				"item": "100006789 - Alex Pietro - Resolved"
+			},
+			{
+				"item": "100005555 - Stephen Strange - Resolved"
+			}
+		]		
+	},
+	"transactions":[
+		{
+			"caseNo": 987,
+			"transactionNum": "123-3456456",
+			"transactionDate": "11/23/16 16:45",
+			"transactionType": "Transfer",
+			"origAccountNum": "1859-8329-9999-1751",
+			"origAccountType": "Savings",
+			"benignAccountNum": "1859-8329-8888-1112",
+			"amount": 15250,
+			"balance": 262311.98
+		},
+		{
+			"caseNo": 321,
+			"transactionNum": "123-3456456",
+			"transactionDate": "11/25/16 13:45",
+			"transactionType": "Transfer",
+			"origAccountNum": "1859-8329-9999-1752",
+			"origAccountType": "Savings",
+			"benignAccountNum": "1859-8329-8888-1113",
+			"amount": 1500,
+			"balance": 260811.98
+		},
+		{
+			"caseNo": 444,
+			"transactionNum": "123-3456456",
+			"transactionDate": "11/28/16 10:45",
+			"transactionType": "Transfer",
+			"origAccountNum": "1859-8329-9999-1743",
+			"origAccountType": "Savings",
+			"benignAccountNum": "1859-8329-8888-1122",
+			"amount": 275,
+			"balance": 260536.98
+		}
+	],
+	"accountBalanceSnapshot": {
+		"firstRow": {
+			"current": 23423498,
+			"day7": 980099,
+			"day15": 222099,
+			"day30": 764001,
+			"day60": 236456
+		},
+		"belowAmount": [
+			{
+				"current": "--",
+				"day7": 789099,
+				"day15": 134099,
+				"day30": 178000,
+				"day60": 387651 
+			}
+		],
+		"percentage": {
+			"current": "--",
+			"day7": 13,
+			"day15": 26,
+			"day30": 42,
+			"day60": 60
+		}
+	},
+	"balanceOvertime": [
+		{
+		    "key": "Balance Overtime",
+		    "color": "#74EEFC",
+		    "values": [
+		        [1472702400000, 0.78],
+		        [1475294400000, 0.69],
+		        [1477972800000, 0.40],
+		        [1480568400000, 0.15]
+		    ]
+		}
+	]
+}

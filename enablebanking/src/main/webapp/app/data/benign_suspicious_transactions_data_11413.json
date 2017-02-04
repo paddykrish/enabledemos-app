@@ -1,0 +1,59 @@
+{
+	"transactions":[
+		{
+			"caseNo": 11413,
+			"transactionNum": "47935-415466866324336-714",
+			"transactionDate": "1/19/2017",
+			"transactionType": "Transfer",
+			"origAccountNum": "3069-2210-2204-7715",
+			"origAccountType": "Mutual Funds",
+			"benignAccountNum": "5796-7585-3008-2570",
+			"amount": -8000.00,
+			"balance":  347160.00
+		},
+		{
+			"caseNo": 11759,
+			"transactionNum": "46949-7614988985606850-514",
+			"transactionDate": "1/19/2017",
+			"transactionType": "Transfer",
+			"origAccountNum": "3069-2210-2204-7715",
+			"origAccountType": "Mutual Funds",
+			"benignAccountNum": "5796-7585-3008-2570",
+			"amount": -8000.00,
+			"balance":  347160.00
+		},
+		{
+			"caseNo": 12239,
+			"transactionNum": "41792-5292856076068300-123",
+			"transactionDate": "1/19/2017",
+			"transactionType": "Transfer",
+			"origAccountNum": "5796-7585-3008-2570",
+			"origAccountType": "Checking",
+			"benignAccountNum": "3477-5229-1542-1578",
+			"amount": -7302.00,
+			"balance":  33371.00
+		},
+		{
+			"caseNo": 12568,
+			"transactionNum": "51974-1822637365703950-849",
+			"transactionDate": "1/19/2017",
+			"transactionType": "Transfer",
+			"origAccountNum": "3069-2210-2204-7715",
+			"origAccountType": "Mutual Funds",
+			"benignAccountNum": "7348-6817-3828-1674",
+			"amount": -7500.00,
+			"balance":  347160.00
+		},
+		{
+			"caseNo": 12947,
+			"transactionNum": "44812-1755797980604560-407",
+			"transactionDate": "1/19/2017",
+			"transactionType": "Transfer",
+			"origAccountNum": "5796-7585-3008-2570",
+			"origAccountType": "Checking",
+			"benignAccountNum": "3477-5229-1542-1578",
+			"amount": -7302.00,
+			"balance":  33371.00
+		}
+	]
+}

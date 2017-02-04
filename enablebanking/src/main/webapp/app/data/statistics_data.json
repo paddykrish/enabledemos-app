@@ -1,0 +1,25 @@
+{
+	"allTransactions": {
+		"transactions": 1000000,
+		"casesOpened": 3400,
+		"casesOpenedTransact": 0.3
+	},
+	"transactionsNeedingInvestigation": {
+		"casesOpened": 3000,
+		"benign": 2857,
+		"suspicious": 143
+	},
+	"advancedTransactionAnalysis" : {
+		"casesOpened": 2000,
+		"falsePositive": -345,
+		"falseNegative": 35,
+		"casesOpenedNew": 2704
+	},
+	"eventTriage": {
+		"casesOpened": 2702,
+		"benignOld": 2857,
+		"benignNew": 2573,
+		"suspiciousOld": 143,
+		"suspiciousNew": 129
+	}
+}

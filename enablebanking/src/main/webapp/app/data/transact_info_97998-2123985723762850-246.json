@@ -1,0 +1,18 @@
+{
+	"transactionInfo": {
+		"transactionNumber": "97998-2123985723762850-246",
+		"transactionDate": "1/21/2017",
+		"transactionType": "Transfer",
+		"amount": "$1500.00",
+		"balance":  260958.00,
+		"startingBalance": 262458.00
+	},
+	"branchInfo": {
+		"branchId": 4543396,
+		"branchInfo": "141 Washington Ave Extension Albany Branch",
+		"branchManager": "Dennis Mariner",
+		"branchContactNum": "(316) 873-2345",
+		"bankTellerId": 5654,
+		"bankTellerName": "Dennis Esthers"
+	}
+}

@@ -1,0 +1,18 @@
+{
+	"transactionInfo": {
+		"transactionNumber": "52223-4102477789607080-263",
+		"transactionDate": "1/18/2017",
+		"transactionType": "Transfer",
+		"amount": "$1000.00",
+		"balance":  48695.00,
+		"startingBalance": 49695.00
+	},
+	"branchInfo": {
+		"branchId": 4543396,
+		"branchInfo": "141 Washington Ave Extension Albany Branch",
+		"branchManager": "Dennis Mariner",
+		"branchContactNum": "(316) 873-2345",
+		"bankTellerId": 6757,
+		"bankTellerName": "Henry Garret"
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"accountInformation": {
+		"accountNumber": "5583-5133-6735-2071",
+		"accountType": "Credit Card",
+		"dateOpened": "09/01/2014",
+		"dateClosed": "--",
+		"currentBalance": 2471.00,
+		"accountLength": "2 years"
+	},
+	"branchInformation": {
+		"address": "130 Fulton Street",
+		"branchManager": "Dennis Mariner",
+		"branchId": 4952732,
+		"contactNo": "(688) 488-4544",
+		"openCases": "11413 - Jack Reacher - In Progress",
+		"caseHistory": [
+			{
+				"item": "478 - Scott Summers - Resolved"
+			},
+			{
+				"item": "317 - Jean Logan - Resolved"
+			}
+		]
+	}
+}

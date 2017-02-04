@@ -1,0 +1,26 @@
+{
+	"caseId": "11410",
+	"accounts": [
+		{
+			"accountNumber": "5295-2906-2928-5907",
+			"accountType": "Mutual Funds"
+		},
+		{
+			"accountNumber": "5110-8382-4096-1936",
+			"accountType": "Checking"
+		},
+		{
+			"accountNumber": "7287-7666-5637-2510",
+			"accountType": "Savings"
+		},
+		{
+			"accountNumber": "7532-7718-4435-1877",
+			"accountType": "IRA"
+		},
+		{
+			"accountNumber": "4196-6032-8599-1583",
+			"accountType": "Credit Card"
+		}
+	],
+	"analysisResult": "Beneficiary Account is in the SAR"
+}

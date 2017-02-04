@@ -1,0 +1,18 @@
+{
+	"transactionInfo": {
+		"transactionNumber": "55825-7441991244791420-695",
+		"transactionDate": "1/20/2017",
+		"transactionType": "Transfer",
+		"amount": "$2000.00",
+		"balance":  35450.00,
+		"startingBalance": 37450.00
+	},
+	"branchInfo": {
+		"branchId": 4543396,
+		"branchInfo": "141 Washington Ave Extension Albany Branch",
+		"branchManager": "Dennis Mariner",
+		"branchContactNum": "(316) 873-2345",
+		"bankTellerId": 8393,
+		"bankTellerName": "Macy Williams"
+	}
+}

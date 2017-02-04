@@ -1,0 +1,25 @@
+{
+	"active_cases_investigator_levels": [
+		{
+			"investigator_level": "Investigator I",
+			"daily_min_cases": 17,
+			"daily_max_cases": 34,
+			"daily_average_cases": 21.33,
+			"average_processing_days": 6.0
+		},
+		{
+			"investigator_level": "Investigator II",
+			"daily_min_cases": 26,
+			"daily_max_cases": 38,
+			"daily_average_cases": 27.00,
+			"average_processing_days": 8.0
+		},
+		{
+			"investigator_level": "Investigator III",
+			"daily_min_cases": 35,
+			"daily_max_cases": 80,
+			"daily_average_cases": 47.00,
+			"average_processing_days": 14.0
+		}
+	]
+}

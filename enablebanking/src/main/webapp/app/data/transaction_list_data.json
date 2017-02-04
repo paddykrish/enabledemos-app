@@ -1,0 +1,94 @@
+{
+	"transactions": [
+		{
+			"transactionNumber": "26941-608970785424088-608",
+			"transactionType": "Deposit",
+			"transactionDate": "1/24/17 6:33",
+			"accountNumber": "7569-4857-4644-8683",
+			"accountType": "Savings",
+			"accountName": "Albert Fisher",
+			"benAccountNumber": "1111-2222-3333-1234",
+			"amount": 9754
+		},
+		{
+			"transactionNumber": "56217-588811179595560-371",
+			"transactionType": "Withdrawal",
+			"transactionDate": "1/24/17 3:58",
+			"accountNumber": "7569-4857-4644-8683",
+			"accountType": "Savings",
+			"accountName": "Albert Fisher",
+			"benAccountNumber": "1111-2222-3333-1234",
+			"amount": 12000
+		},
+		{
+			"transactionNumber": "49727-661472498757745-201",
+			"transactionType": "Transfer",
+			"transactionDate": "1/24/17 18:15",
+			"accountNumber": "7569-4857-4644-8683",
+			"accountType": "Savings",
+			"accountName": "Albert Fisher",
+			"benAccountNumber": "1111-2222-3333-1234",
+			"amount": 25445
+		},
+		{
+			"transactionNumber": "34371-423446382729030-412",
+			"transactionType": "Charge",
+			"transactionDate": "1/24/17 19:25",
+			"accountNumber": "9047-6741-7894-1540",
+			"accountType": "Credit Card",
+			"accountName": "Albert Fisher",
+			"benAccountNumber": "1111-2222-3333-1234",
+			"amount": 714
+		},
+		{
+			"transactionNumber": "41115-399440237607566-549",
+			"transactionType": "Charge",
+			"transactionDate": "1/24/17 4:15",
+			"accountNumber": "9047-6741-7894-1540",
+			"accountType": "Credit Card",
+			"accountName": "Albert Fisher",
+			"benAccountNumber": "1111-2222-3333-1234",
+			"amount": 2758
+		},
+		{
+			"transactionNumber": "53275-793439205580075-314",
+			"transactionType": "Charge",
+			"transactionDate": "1/24/17 16:30",
+			"accountNumber": "9047-6741-7894-1540",
+			"accountType": "Credit Card",
+			"accountName": "Albert Fisher",
+			"benAccountNumber": "1111-2222-3333-1234",
+			"amount": 6639
+		},
+		{
+			"transactionNumber": "22248-674007536478304-417",
+			"transactionType": "Charge",
+			"transactionDate": "1/24/17 9:36",
+			"accountNumber": "9047-6741-7894-1540",
+			"accountType": "Credit Card",
+			"accountName": "Albert Fisher",
+			"benAccountNumber": "1111-2222-3333-1234",
+			"amount": 119
+		},
+		{
+			"transactionNumber": "38602-374068711611153-623",
+			"transactionType": "Charge",
+			"transactionDate": "1/24/17 22:57",
+			"accountNumber": "9047-6741-7894-1540",
+			"accountType": "Credit Card",
+			"accountName": "Albert Fisher",
+			"benAccountNumber": "1111-2222-3333-1234",
+			"amount": 195
+		},
+		{
+			"transactionNumber": "75705-220448220342524-570",
+			"transactionType": "Deposit",
+			"transactionDate": "1/24/17 18:43",
+			"accountNumber": "7569-4857-4644-8683",
+			"accountType": "Savings",
+			"accountName": "Albert Fisher",
+			"benAccountNumber": "1111-2222-3333-1234",
+			"amount": 1157
+		}
+	]
+}

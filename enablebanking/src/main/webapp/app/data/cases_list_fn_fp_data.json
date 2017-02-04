@@ -1,0 +1,54 @@
+{
+	"cases": [
+		{
+			"caseNo": 11404,
+			"accountNumber": "Multiple",
+			"accountType": "Credit Card",
+			"entityName": "Oscar Ferris",
+			"benAccountNumber": "5273-3323-5515-8218",
+			"amount": 6957,
+			"ruleViolated": "Account # has been tagged in the SAR",
+			"analysisDetails": "Multiple cases under the same Entity has been merged into 1 case (FP)"
+		},
+		{
+			"caseNo": 11410,
+			"accountNumber": "Multiple",
+			"accountType": "Credit Card",
+			"entityName": "Andrew Lancer",
+			"benAccountNumber": "6793-2030-1003-5897",
+			"amount": 17877,
+			"ruleViolated": "Beneficiary Account is in the Terrorist Watchlist",
+			"analysisDetails": "Multiple cases under the same Household has been merged into 1 case (FP)"
+		},
+		{
+			"caseNo": 11411,
+			"accountNumber": "Multiple",
+			"accountType": "Credit Card",
+			"entityName": "Sam Jarret",
+			"benAccountNumber": "6285-7736-1672-7047",
+			"amount": 10787,
+			"ruleViolated": "Consolidated amount exceed $10,000",
+			"analysisDetails": "New case opened after grouping transactions cause rule to be violated (FN)"
+		},
+		{
+			"caseNo": 11413,
+			"accountNumber": "3069-2210-2204-7715",
+			"accountType": "Savings",
+			"entityName": "David Valdez",
+			"benAccountNumber": "Multiple",
+			"amount": 14604,
+			"ruleViolated": "Consolidated amount exceed $10,000",
+			"analysisDetails": "New case opened after grouping transactions cause rule to be violated (FN)"
+		},
+		{
+			"caseNo": 11428,
+			"accountNumber": "3063-3079-4401-5966",
+			"accountType": "Savings",
+			"entityName": "Samantha Garcia",
+			"benAccountNumber": "Multiple",
+			"amount": 10956,
+			"ruleViolated": "Consolidated amount exceed $10,000",
+			"analysisDetails": "New case opened after grouping transactions cause rule to be violated (FN)"
+		}
+	]
+}

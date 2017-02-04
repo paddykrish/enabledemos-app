@@ -1,0 +1,59 @@
+{
+	"transactions":[
+		{
+			"caseNo": 11404,
+			"transactionNum": "35027-6679798618567880-316",
+			"transactionDate": "1/19/2017",
+			"transactionType": "Transfer",
+			"origAccountNum": "5295-2906-2928-5907",
+			"origAccountType": "Mutual Funds",
+			"benignAccountNum": "5273-3323-5515-8218",
+			"amount": -957.00,
+			"balance":  438486.00
+		},
+		{
+			"caseNo": 11806,
+			"transactionNum": "98986-2752342585020690-658",
+			"transactionDate": "1/14/2017",
+			"transactionType": "Transfer",
+			"origAccountNum": "5110-8382-4096-1936",
+			"origAccountType": "Checking",
+			"benignAccountNum": "5273-3323-5515-8218",
+			"amount":  -2000.00,
+			"balance":  42508.00 
+		},
+		{
+			"caseNo": 12152,
+			"transactionNum": "47191-6167751284574880-870",
+			"transactionDate": "1/15/2017",
+			"transactionType": "Transfer",
+			"origAccountNum": "7287-7666-5637-2510",
+			"origAccountType": "Savings",
+			"benignAccountNum": "5273-3323-5515-8218",
+			"amount":  -1000.00,
+			"balance":  34948.00
+		},
+		{
+			"caseNo": 12531,
+			"transactionNum": "42067-1473862327232520-407",
+			"transactionDate": "1/20/2017",
+			"transactionType": "Transfer",
+			"origAccountNum": "7532-7718-4435-1877",
+			"origAccountType": "IRA",
+			"benignAccountNum": "5273-3323-5515-8218",
+			"amount":  -1500.00,
+			"balance":  161956.00
+		},
+		{
+			"caseNo": 12827,
+			"transactionNum": "81572-1620286681074340-822",
+			"transactionDate": "1/15/2017",
+			"transactionType": "Transfer",
+			"origAccountNum": "5110-8382-4096-1936",
+			"origAccountType": "Savings",
+			"benignAccountNum": "5273-3323-5515-8218",
+			"amount": -1500.00,
+			"balance":  42508.00
+		}
+	]
+}

@@ -1,0 +1,54 @@
+{
+	"events": [
+		{
+			"caseNo": 11404,
+			"accountNumber": "3069-2210-2204-7715",
+			"accountType": "Credit Card",
+			"entityName": "Oscar Ferris",
+			"benAccountNumber": "4290-6986-5172-6004",
+			"amount": 14604,
+			"analysisDetails": "Beneficiary Account is in the SAR",
+			"type": "Suspicious"
+		},
+		{
+			"caseNo": 11410,
+			"accountNumber": "3063-3079-4401-5966",
+			"accountType": "Credit Card",
+			"entityName": "Andrew Lancer",
+			"benAccountNumber": "7142-7440-2695-7709",
+			"amount": 10956,
+			"analysisDetails": "Beneficiary Account is in the SAR",
+			"type": "Suspicious"
+		},
+		{
+			"caseNo": 11411,
+			"accountNumber": "5148-4816-3170-7922",
+			"accountType": "Credit Card",
+			"entityName": "Sam Jarret",
+			"benAccountNumber": "6878-6126-4830-6271",
+			"amount": 13196,
+			"analysisDetails": "Beneficiary account has links to a case with stolen identity",
+			"type": "Suspicious"
+		},
+		{
+			"caseNo": 11413,
+			"accountNumber": "3642-7213-4985-6711",
+			"accountType": "Savings",
+			"entityName": "David Valdez",
+			"benAccountNumber": "3565-8815-4609-5197",
+			"amount": 14282,
+			"analysisDetails": "Beneficiary account is a verified educational institution",
+			"type": "Benign"
+		},
+		{
+			"caseNo": 11428,
+			"accountNumber": "3063-3079-4401-5966",
+			"accountType": "Savings",
+			"entityName": "Samantha Garcia",
+			"benAccountNumber": "Multiple",
+			"amount": 10956,
+			"analysisDetails": "Beneficiary account is a verified medical institution",
+			"type": "Benign"
+		}
+	]
+}

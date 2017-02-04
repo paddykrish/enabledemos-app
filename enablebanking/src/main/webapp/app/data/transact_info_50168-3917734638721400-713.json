@@ -1,0 +1,18 @@
+{
+	"transactionInfo": {
+		"transactionNumber": "50168-3917734638721400-713",
+		"transactionDate": "1/17/2017",
+		"transactionType": "Transfer",
+		"amount": "$7500.00",
+		"balance":  203559.00,
+		"startingBalance": 211059.00
+	},
+	"branchInfo": {
+		"branchId": 4952732,
+		"branchInfo": "130 Fulton Street",
+		"branchManager": "John Masters",
+		"branchContactNum": "(688) 488-4544",
+		"bankTellerId": 8812,
+		"bankTellerName": "David Johnson"
+	}
+}

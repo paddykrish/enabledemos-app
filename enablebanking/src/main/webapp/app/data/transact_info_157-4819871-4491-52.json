@@ -1,0 +1,18 @@
+{
+	"transactionInfo": {
+		"transactionNumber": "157-4819871-4491-52",
+		"transactionDate": "11/11/2016 21:56",
+		"transactionType": "Bank Withdrawal",
+		"amount": "-$8,000.00",
+		"balance": 285011.87,
+		"startingBalance": 277511.87
+	},
+	"branchInfo": {
+		"branchId": "7894568965",
+		"branchInfo": 15000,
+		"branchManager": "George McArthur",
+		"branchContactNum": "(747) 847-1574",
+		"bankTellerId": 682214,
+		"bankTellerName": "Diana Smith"
+	}
+}

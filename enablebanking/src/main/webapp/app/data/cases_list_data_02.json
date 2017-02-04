@@ -1,0 +1,124 @@
+{
+	"cases": [
+		{
+			"caseNo": 11498,
+			"transactionNumber": "16946-1175502116439140-886",
+			"transactionType": "Transfer",
+			"transactionDate": "12/3/16 3:58",
+			"accountNumber": "6557-3340-1331-4114",
+			"accountType": "Savings",
+			"accountName": "Ulysses Henry",
+			"benAccountNumber": "3200-2082-3686-3044",
+			"amount": 11633,
+			"ruleViolated": "Transaction amount exceeded $10,000"
+		},
+		{
+			"caseNo": 11499,
+			"transactionNumber": "70375-5997086518908170-381",
+			"transactionType": "Deposit",
+			"transactionDate": "12/3/16 18:15",
+			"accountNumber": "External",
+			"accountType": "Savings",
+			"accountName": "Oliver Alistair",
+			"benAccountNumber": "4090-7890-3186-7914",
+			"amount": 4695,
+			"ruleViolated": "Beneficiary Account is in the SAR"
+		},
+		{
+			"caseNo": 11511,
+			"transactionNumber": "76483-6489764356136820-885",
+			"transactionType": "Transfer",
+			"transactionDate": "12/5/16 19:25",
+			"accountNumber": "4618-7752-4575-8213",
+			"accountType": "Credit Card",
+			"accountName": "Walter Paul",
+			"benAccountNumber": "6213-5219-2273-5251",
+			"amount": 11000,
+			"ruleViolated": "Transaction amount exceeded $10,000"
+		},
+		{
+			"caseNo": 11519,
+			"transactionNumber": "12082-7482460831942620-889",
+			"transactionType": "Transfer",
+			"transactionDate": "12/14/16 4:15",
+			"accountNumber": "4547-4635-2189-6108",
+			"accountType": "Credit Card",
+			"accountName": "Constance Bond",
+			"benAccountNumber": "7736-4716-3357-5923",
+			"amount": 3372,
+			"ruleViolated": "Originating Account is in the Terrorist Watchlist"
+		},
+		{
+			"caseNo": 11531,
+			"transactionNumber": "24414-7270056106901370-464",
+			"transactionType": "Deposit",
+			"transactionDate": "12/16/16 16:30",
+			"accountNumber": "External",
+			"accountType": "Credit Card",
+			"accountName": "Oscar Bond",
+			"benAccountNumber": "4631-2192-4528-7239",
+			"amount": 729,
+			"ruleViolated": "Beneficiary Account is in the SAR"
+		},
+		{
+			"caseNo": 11540,
+			"transactionNumber": "20683-7063973829563300-533",
+			"transactionType": "Deposit",
+			"transactionDate": "12/17/16 9:36",
+			"accountNumber": "External",
+			"accountType": "Credit Card",
+			"accountName": "Veronica Carey",
+			"benAccountNumber": "4890-4369-2279-5082",
+			"amount": 5685,
+			"ruleViolated": "Beneficiary Account is in the Terrorist Watchlist"
+		},
+		{
+			"caseNo": 11549,
+			"transactionNumber": "60560-1848869794928230-520",
+			"transactionType": "Deposit",
+			"transactionDate": "12/20/16 22:57",
+			"accountNumber": "External",
+			"accountType": "Credit Card",
+			"accountName": "Samantha Michelson",
+			"benAccountNumber": "4578-8017-2087-5486",
+			"amount": 12374,
+			"ruleViolated": "Transaction amount exceeded $10,000"
+		},
+		{
+			"caseNo": 11553,
+			"transactionNumber": "36196-5945145714704870-493",
+			"transactionType": "Transfer",
+			"transactionDate": "12/26/16 18:43",
+			"accountNumber": "3094-2423-3600-4316",
+			"accountType": "Savings",
+			"accountName": "Laurie Michelson",
+			"benAccountNumber": "Barry Mariner",
+			"amount": 3633,
+			"ruleViolated": "Originating Account is in the Terrorist Watchlist"
+		},
+		{
+			"caseNo": 11557,
+			"transactionNumber": "22012-5500910260977070-719",
+			"transactionType": "Transfer",
+			"transactionDate": "12/2/16 6:33",
+			"accountNumber": "7681-4805-2084-8885",
+			"accountType": "Savings",
+			"accountName": "Karen Esthers",
+			"benAccountNumber": "4696-5559-5168-3011",
+			"amount": 3071,
+			"ruleViolated": "Originating Account is in the SAR"
+		},
+		{
+			"caseNo": 11565,
+			"transactionNumber": "34664-543951887020405-782",
+			"transactionType": "Transfer",
+			"transactionDate": "12/3/16 3:58",
+			"accountNumber": "6050-3184-5741-4468",
+			"accountType": "Savings",
+			"accountName": "Sally Garret",
+			"benAccountNumber": "6990-6763-2849-5239",
+			"amount": 3928,
+			"ruleViolated": "Originating Account is in the SAR"
+		}
+	]
+}

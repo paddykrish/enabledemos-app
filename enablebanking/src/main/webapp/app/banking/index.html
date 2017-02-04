@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appDetails">
+  <head>
+    <title>Banking</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../plugins/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="../plugins/owl/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../plugins/fontawesome/css/font-awesome.min.css">
+    
+    <!-- PAGES CSS -->
+    <link rel="stylesheet" href="../css/pages/banking-new-layout.css">
+    <link rel="stylesheet" type="text/css" href="../css/pages/overview.css">
+	
+	<!-- Chart JS -->
+	<script src="../js/highcharts.js"></script>
+	<script src="../js/circles.min.js"></script>
+  </head>
+  <body>
+    <article class="mainWrapper container-fluid">
+        <header>
+            <div class="clearfix">
+                <div class="pull-left">
+                    <div class="poc-logo">
+                       <img src="../images/poc-logo-banking.jpg">    
+                    </div>
+                </div>
+                <div class="pull-right">
+                    <div class="top">
+                        <ul class="list-unstyled">
+                            <li class="username">
+                             <i class="fa fa-user" aria-hidden="true"></i> Hi! Mike Sommers
+                            </li>
+                            <li class="main-menu">
+                                <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="submenu-container">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation"><a href="../index.html" aria-controls="overview"><i class="fa fa-eye" aria-hidden="true"></i> Overview</a></li>
+					<li role="presentation" class="active"><a href="index.html" aria-controls="marketing-sales"><i class="fa fa-database" aria-hidden="true"></i> Banking</a></li>
+                    <li role="presentation"><a href="../technology/index.html" aria-controls="technology"><i class="fa fa-cogs" aria-hidden="true"></i> Technology</a></li>
+                    <!--
+					<li role="presentation" class="active"><a href="index.html" aria-controls="marketing-sales"><i class="fa fa-mouse-pointer" aria-hidden="true"></i> Transaction Monitoring</a></li>
+                    <li role="presentation"><a href="../false-negatives/index.html" aria-controls="underwriting"><i class="fa fa-thumbs-down" aria-hidden="true"></i>False Negatives</a></li>
+                    <li role="presentation"><a href="../false-positives/index.html" aria-controls="loss-prevention"><i class="fa fa-thumbs-up" aria-hidden="true"></i> False Positives</a></li>
+                    <li role="presentation"><a href="../pattern-analysis/index.html" aria-controls="pattern-analysis"><i class="fa fa-cubes" aria-hidden="true"></i> Pattern Analysis</a></li>
+					-->
+                </ul>
+            </div>
+        </header>
+        <div class="main-content">
+        	<div class="container-fluid" id="banking-new-layout">
+              <div class="main">
+                    <br /><br />
+                    <!--
+                    <div class="row">
+                        <div class="title">
+                            <h1 class="pageTitle">Banking</h1>
+                        </div>
+                    </div>
+                    -->
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="row allTransactions">
+                            <!-- START OF ALL TRANSACTIONS -->
+                            <div class="col-lg-4"> 
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingOne">
+                                      <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                          All Transactions <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </a>
+                                      </h4>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                      <div class="panel-body">
+                                        <!-- Graph Here -->
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div ng-controller="AllTransactionsMixedAxesCtrl">
+                                                    <nvd3 options="options" data="data"></nvd3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row details" ng-controller="IncrementNumberCtrl">
+                                            <div class="col-lg-4">
+                                                <div class="details">
+                                                    <h4>Transactions</h4>
+                                                    <p>{{transactions.toLocaleString()}}</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="details">
+                                                    <h4>Cases Opened</h4>
+                                                    <p class="case-open">{{casesOpened.toLocaleString()}}</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">  
+                                                <div class="details">
+                                                    <h4>% Cases Opened - Transactions</h4>
+                                                    <p class="case-open">{{(casesOpened/transactions)*100 | number:2}}%</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>   
+                            </div>
+                            <!-- END OF ALL TRANSACTIONS -->
+                            <!-- START OF TRANSACTIONS LIST  -->
+                            <div class="col-lg-8">  
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingTwo">
+                                      <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                          Transaction List <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </a>
+                                      </h4>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                                      <div class="panel-body">
+                                        <div class="tableContainer transactionsList" ng-controller="TransactionListCtrl">
+                                                <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Date</th>   
+                                                        <th>Transaction Number</th>
+														<th>Amount</th>
+                                                        <th>Transaction Type</th>   
+                                                        <th>Origin Acct Number</th>
+                                                        <th>Beneficiary Acct Number</th>                                                        
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr ng-repeat="transaction in transactions">
+                                                        <td>{{transaction.transactionDate}}</td>
+                                                        <td>{{transaction.transactionNumber}}</td>
+														<td>{{transaction.amount | currency}}</td>
+                                                        <td>{{transaction.transactionType}}</td>
+                                                        <td>{{transaction.accountNumber}}</td>
+                                                        <td>{{transaction.benAccountNumber}}</td>                                                        
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                                </table>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div> 
+                            </div>
+                            <!-- END OF TRANSACTIONS LIST -->
+                        </div>
+                        <div class="row transactionsNeedingInvestigation">
+                            <!-- START OF TRANSACTIONS NEEDING INVESTIGATION -->
+                            <div class="col-lg-4"> 
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingThree">
+                                      <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                          Transactions Needing Investigation <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </a>
+                                      </h4>
+                                    </div>
+                                    <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+                                      <div class="panel-body">
+                                        <!-- Graph Here -->
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div ng-controller="BenignCtrl">
+                                                    <nvd3 options="options" data="data"></nvd3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row details">
+                                            <div class="col-lg-4">
+                                                <div class="details" ng-controller="IncrementNumberCtrl">
+                                                    <h4>Cases Opened</h4>
+                                                    <p class="case-open">{{casesOpened.toLocaleString()}}</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="details" ng-controller="StatisticsCtrl">
+                                                    <h4>Benign</h4>
+                                                    <p class="benign">{{transactionsNeedingInvestigation.benign.toLocaleString()}}</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">  
+                                                <div class="details" ng-controller="StatisticsCtrl">
+                                                    <h4>Suspicious</h4>
+                                                    <p class="suspicious">{{transactionsNeedingInvestigation.suspicious.toLocaleString()}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div> 
+                            </div>
+                            <!-- END OF TRANSACTIONS NEEDING INVESTIGATION -->
+                            <!-- START OF CASE LIST -->
+                            <div class="col-lg-8">     
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingFour">
+                                      <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                          Case List <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </a>
+                                      </h4>
+                                    </div>
+                                    <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour">
+                                      <div class="panel-body">
+                                        <div class="tableContainer transactionsList" ng-controller="CasesListCtrl">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="width:7%">Case Number</th>   
+                                                        <th style="width:15%">Transaction Number</th>
+                                                        <th>Rule Violated</th>   
+                                                        <th>Amount</th>
+                                                        <th>Origin Acct Number</th>
+                                                        <th>Beneficiary Acct Number</th>
+                                                        <th>Transaction Type</th>
+                                                        <th>Account Type</th>
+                                                        <th>Account Name</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr ng-repeat="case in cases">
+                                                        <td>{{case.caseNo}}</td>
+                                                        <td>{{case.transactionNumber}}</td>
+                                                        <td>{{case.ruleViolated}}</td>
+                                                        <td>{{case.amount | currency}}</td>
+                                                        <td>{{case.accountNumber}}</td>
+                                                        <td>{{case.benAccountNumber}}</td>
+                                                        <td>{{case.transactionType}}</td>
+                                                        <td>{{case.accountType}}</td>
+                                                        <td>{{case.accountName}}</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div> 
+                            </div>
+                            <!-- END OF CASES LIST -->
+                        </div>
+                        <div class="row advancedTransactions">
+                            <!-- START OF ADVANCED TRANSACTIONS LIST -->
+                            <div class="col-lg-4">   
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingFive">
+                                      <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                          Advanced Transactions Analysis <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </a>
+                                      </h4>
+                                    </div>
+                                    <div id="collapseFive" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFive">
+                                      <div class="panel-body">
+                                        <!-- Graph Here -->
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div ng-controller="AdvancedTransactionsAnalysisCtrl">
+                                                    <nvd3 options="options" data="data"></nvd3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row details">
+                                            <div class="col-lg-12">
+                                                <div class="details" ng-controller="IncrementNumberCtrl">
+                                                    <h4>Cases Opened</h4>
+                                                    <p class="case-open">{{casesOpened.toLocaleString()}}</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="details" ng-controller="StatisticsCtrl">
+                                                            <h4>False Positive</h4>
+                                                            <p class="falseP">{{advancedTransactionAnalysis.falsePositive.toLocaleString()}}</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="details" ng-controller="StatisticsCtrl">
+                                                            <h4>False Negative</h4>
+                                                            <p class="falseN">{{advancedTransactionAnalysis.falseNegative.toLocaleString()}}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="details" ng-controller="StatisticsCtrl"> 
+                                                            <h4>Cases Opened (new)</h4>
+                                                            <p class="case-open">{{advancedTransactionAnalysis.casesOpenedNew.toLocaleString()}}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div> 
+                            </div>
+                            <!-- END OF ADVANCED TRANSACTIONS LIST -->
+                            <!-- START OF CASE LIST - FALSE POSITIVE & FALSE NEGATIVE LIST -->
+                            <div class="col-lg-8">      
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingSix">
+                                      <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" href="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                          Case List - False Positive & False Negative List <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </a>
+                                      </h4>
+                                    </div>
+                                    <div id="collapseSix" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingSix">
+                                      <div class="panel-body">
+                                        <div class="tableContainer transactionsList" ng-controller="CasesListFNFPCtrl">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Case Number</th>   
+                                                        <th>Entity Name</th>
+                                                        <th>Analysis Details</th>   
+                                                        <th>Rule Violated</th>
+                                                        <th>Amount</th>
+                                                        <th>Origin Acct Number</th>
+                                                        <th>Beneficiary Acct Number</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr ng-repeat="caseFnFpResult in casesListFnFp">
+                                                        <td><a href="cases-list.html?caseId={{caseFnFpResult.caseNo}}">{{caseFnFpResult.caseNo}}</a></td>
+                                                        <td>{{caseFnFpResult.entityName}}</td>
+                                                        <td>{{caseFnFpResult.analysisDetails}}</td>
+                                                        <td>{{caseFnFpResult.ruleViolated}}</td>
+                                                        <td>{{caseFnFpResult.amount | currency}}</td>
+                                                        <td>{{caseFnFpResult.accountNumber}}</td>
+                                                        <td>{{caseFnFpResult.benAccountNumber}}</td>
+                                                    </tr>
+                                                    <tr ng-repeat="caseFnFpResult in casesListFnFpRandom">
+                                                        <td><a href="cases-list.html?caseId={{caseFnFpResult.caseNo}}">{{caseFnFpResult.caseNo}}</a></td>
+                                                        <td>{{caseFnFpResult.entityName}}</td>
+                                                        <td>{{caseFnFpResult.analysisDetails}}</td>
+                                                        <td>{{caseFnFpResult.ruleViolated}}</td>
+                                                        <td>{{caseFnFpResult.amount | currency}}</td>
+                                                        <td>{{caseFnFpResult.accountNumber}}</td>
+                                                        <td>{{caseFnFpResult.benAccountNumber}}</td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div> 
+                            </div>
+                            <!-- END OF CASE LIST - FALSE POSITIVE & FALSE NEGATIVE LIST -->
+                        </div>
+                        <div class="row eventTriage">
+                            <!-- START OF EVENT TRIAGE -->
+                            <div class="col-lg-4">   
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingSeven">
+                                      <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" href="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                                          Event Triage <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </a>
+                                      </h4>
+                                    </div>
+                                    <div id="collapseSeven" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingSeven">
+                                      <div class="panel-body">
+                                        <!-- Graph Here -->
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div ng-controller="AllTransactionsCtrl">
+                                                    <nvd3 options="options" data="data"></nvd3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row details">
+                                            <div class="col-lg-12">
+                                                <div class="details" ng-controller="IncrementNumberCtrl">
+                                                    <h4>Cases Opened</h4>
+                                                    <p class="case-open">{{casesOpened.toLocaleString()}}</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6" ng-controller="StatisticsCtrl">
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="details">
+                                                            <h4>Benign</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="details">
+                                                            <h4>Old</h4>
+                                                            <p class="benign-old">{{eventTriage.benignOld.toLocaleString()}}</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="details">
+                                                            <h4>New</h4>
+                                                            <p class="benign-new">{{eventTriage.benignNew.toLocaleString()}}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6" ng-controller="StatisticsCtrl">  
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="details">
+                                                            <h4>Suspicious</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="details">
+                                                            <h4>Old</h4>
+                                                            <p class="suspicious-old">{{eventTriage.suspiciousOld.toLocaleString()}}</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="details">
+                                                            <h4>New</h4>
+                                                            <p class="suspicious-new">{{eventTriage.suspiciousNew.toLocaleString()}}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END OF EVENT TRIAGE -->
+                            <!-- START OF EVENTS LIST -->
+                            <div class="col-lg-8">      
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingEight">
+                                      <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" href="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+                                          Event List <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </a>
+                                      </h4>
+                                    </div>
+                                    <div id="collapseEight" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingEight">
+                                      <div class="panel-body">
+                                        <div class="tableContainer transactionsList" ng-controller="EventsListCtrl">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Case Number</th>   
+                                                        <th>Entity Name</th>
+                                                        <th>Type</th>   
+                                                        <th>Analysis Details</th>
+                                                        <th>Amount</th>
+                                                        <th>Origin Acct Number</th>
+                                                        <th>Beneficiary Acct Number</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr ng-repeat="elResult in events">
+                                                        <td><a href="benign-suspicious.html?caseId={{elResult.caseNo}}">{{elResult.caseNo}}</a></td>
+                                                        <td>{{elResult.entityName}}</td>
+                                                        <td>{{elResult.type}}</td>
+                                                        <td>{{elResult.analysisDetails}}</td>
+                                                        <td>{{elResult.amount | currency}}</td>
+                                                        <td>{{elResult.accountNumber}}</td>
+                                                        <td>{{elResult.benAccountNumber}}</td>
+                                                    </tr>
+                                                    <tr ng-repeat="elResult in eventsRandom">
+                                                        <td><a href="benign-suspicious.html?caseId={{elResult.caseNo}}">{{elResult.caseNo}}</a></td>
+                                                        <td>{{elResult.entityName}}</td>
+                                                        <td>{{elResult.type}}</td>
+                                                        <td>{{elResult.analysisDetails}}</td>
+                                                        <td>{{elResult.amount | currency}}</td>
+                                                        <td>{{elResult.accountNumber}}</td>
+                                                        <td>{{elResult.benAccountNumber}}</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END OF EVENTS LIST -->
+                        </div>
+                    </div>
+                </div>
+              </div>
+                
+           <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Case Details</h4>
+                  </div>
+                  <div class="modal-body" ng-controller="CaseDetailsCtrl">
+                    <div class="row first">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <p>Name:</p>
+                                    <p>{{company_info.name}}</p>
+                                </div>
+                                <div class="col-lg-4">
+                                    <p>SSN:</p>
+                                    <p>{{company_info.ssn}}</p>
+                                </div>
+                                <div class="col-lg-4">
+                                    <p>Contact Number:</p>
+                                    <p>{{company_info.contact_number}}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <p>Address:</p>
+                                    <p>{{company_info.address}}</p>
+                                </div>
+                                <div class="col-lg-3">
+                                    <p>City:</p>
+                                    <p>{{company_info.city}}</p>
+                                </div>
+                                <div class="col-lg-5 clearfix">
+                                    <div class="state">
+                                        <p>State:</p>
+                                        <p>{{company_info.state}}</p>
+                                    </div>
+                                    <div>
+                                        <p>Zip:</p>
+                                        <p>{{company_info.zip}}</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="tableContainer">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Account Number</th>  
+                                            <th>Account Type</th>
+                                            <th>Account Length</th>  
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="account_list in account_lists">
+                                            <td>{{account_list.account_name}}</td>
+                                            <td>{{account_list.account_type}}</td>
+                                            <td>{{account_list.account_length}}</td>
+                                           
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                        
+                        </div>
+                    </div>
+                    <div class="row second">
+                        <div class="col-lg-12">
+                            <p>Analysis Details:</p>
+                            <p>{{company_info.analysis_details}}</p>  
+                        </div>
+                    </div>
+                    <div class="row third">
+                        <div class="col-lg-12">
+                            <div class="tableContainer">
+                                <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Transaction Number</th>	
+                                        <th>Daily Min Cases</th>
+                                        <th>Daily Max Cases</th>	
+                                        <th>Daily Average Cases</th>
+                                        <th>Investigator Level</th>	
+                                        <th>Daily Min Cases</th>
+                                        <th>Daily Max Cases</th>	
+                                        <th>Daily Average Cases</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="transaction_list in transaction_lists">
+                                        <td>{{transaction_list.transaction_number}}</td>
+                                        <td>{{transaction_list.daily_min_cases1}}</td>
+                                        <td>{{transaction_list.daily_max_cases1}}</td>
+                                        <td>{{transaction_list.daily_ave_cases1 | number:2}}</td>
+                                        <td>{{transaction_list.investigator_level}}</td>
+                                        <td>{{transaction_list.daily_min_cases2}}</td>
+                                        <td>{{transaction_list.daily_max_cases2}}</td>
+                                        <td>{{transaction_list.daily_ave_cases2 | number:2}}</td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div> 
+            <!-- END OF MODAL -->
+            </div>
+        </div>
+        </div>
+        <footer>
+            &copy;2017 RCG GLOBAL SERVICES
+        </footer>
+    </article>
+    <script type="text/javascript"  src="../js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript"  src="../js/bootstrap.min.js"></script>
+    <script src="../plugins/owl/owl.carousel.min.js"></script>
+    <script type="text/javascript"  src="../js/pages/plugins-banking.js"></script>
+	
+    <!-- Angular Graphs CSS -->
+    <link rel="stylesheet" href="../node_modules/angular-nvd3/node_modules/nvd3/build/nv.d3.min.css"/>
+    
+    <!-- Angular Graphs JS -->
+    <script src="../node_modules/angular-nvd3/node_modules/angular/angular.min.js"></script>
+    <script src="../node_modules/angular-nvd3/node_modules/d3/d3.min.js" charset="utf-8"></script>
+    <script src="../node_modules/angular-nvd3/node_modules/nvd3/build/nv.d3.min.js"></script>
+    <script src="../node_modules/angular-nvd3/dist/angular-nvd3.js"></script>
+    <script src="../js/app_banking.js"></script>
+    
+	<script>	
+	/*jQuery(document).ready(function($) {
+		setTimeout(showCircleChart, 1000);
+	})*/
+    </script>
+	
+  </body>
+</html>

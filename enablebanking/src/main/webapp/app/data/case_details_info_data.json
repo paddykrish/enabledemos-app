@@ -1,0 +1,81 @@
+{
+	"company_info": {
+		"name": "Albert Fisher",
+		"ssn": "02658923",
+		"contact_number": "+3434-235-235",
+		"address": "SS Palmer St.",
+		"city": "Worcester",
+		"state": "Connecticut",
+		"zip": 4025,
+		"analysis_details": "Prior pattern for educational institution payment"
+	},
+	"account_lists": [{
+		"account_name": 34234234,
+		"account_type": 14,
+		"account_length": 45
+	}, {
+		"account_name": 56363666,
+		"account_type": 16,
+		"account_length": 45
+	}, {
+		"account_name": 23245455,
+		"account_type": 18,
+		"account_length": 45
+	}],
+	"transaction_lists": [{
+		"transaction_number": 2323,
+		"daily_min_cases1": 14,
+		"daily_max_cases1": 45,
+		"daily_ave_cases1": 22.33,
+		"investigator_level": "Investigator I",
+		"daily_min_cases2": 14,
+		"daily_max_cases2": 45,
+		"daily_ave_cases2": 22.33
+	}, {
+		"transaction_number": 3423,
+		"daily_min_cases1": 14,
+		"daily_max_cases1": 45,
+		"daily_ave_cases1": 22.33,
+		"investigator_level": "Investigator I",
+		"daily_min_cases2": 16,
+		"daily_max_cases2": 45,
+		"daily_ave_cases2": 26.33
+	}, {
+		"transaction_number": 5667,
+		"daily_min_cases1": 14,
+		"daily_max_cases1": 45,
+		"daily_ave_cases1": 22.33,
+		"investigator_level": "Investigator II",
+		"daily_min_cases2": 17,
+		"daily_max_cases2": 45,
+		"daily_ave_cases2": 26.33
+	}, {
+		"transaction_number": 3456,
+		"daily_min_cases1": 14,
+		"daily_max_cases1": 45,
+		"daily_ave_cases1": 22.33,
+		"investigator_level": "Investigator II",
+		"daily_min_cases2": 19,
+		"daily_max_cases2": 45,
+		"daily_ave_cases2": 26.33
+	}, {
+		"transaction_number": 3523,
+		"daily_min_cases1": 14,
+		"daily_max_cases1": 45,
+		"daily_ave_cases1": 22.33,
+		"investigator_level": "Investigator III",
+		"daily_min_cases2": 4,
+		"daily_max_cases2": 45,
+		"daily_ave_cases2": 26.33
+	}, {
+		"transaction_number": 9876,
+		"daily_min_cases1": 14,
+		"daily_max_cases1": 45,
+		"daily_ave_cases1": 22.33,
+		"investigator_level": "Investigator I",
+		"daily_min_cases2": 21,
+		"daily_max_cases2": 45,
+		"daily_ave_cases2": 26.33
+
+	}]
+}

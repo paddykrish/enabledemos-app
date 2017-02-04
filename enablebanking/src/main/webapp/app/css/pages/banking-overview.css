@@ -1,0 +1,30 @@
+/* Banking Overview */
+
+#banking-overview .graphContainer .box {
+    position: relative;
+    width: 1200px;
+    margin: auto;
+    min-height: 700px;
+}
+
+
+#banking-overview .graphContainer .box .imgCont {
+    position: absolute;
+}
+
+#banking-overview .graphContainer .box .slide1 {
+    top: 70px;
+    left: 50px;
+    z-index: 1;
+}
+
+#banking-overview .graphContainer .box .slide2 {
+    top: 171px;
+    left: 6px;
+}
+
+#banking-overview .graphContainer .box .slide3 {
+    top: 195px;
+    left: 407px;
+    z-index: 2;
+}

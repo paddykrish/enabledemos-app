@@ -1,0 +1,115 @@
+{
+	"transactionLists": [
+		{
+			"transactionDate": "12/1/16 8:00",
+			"classification": "Suspicious",
+			"transactionNumber": "52014-509675311454734-242",
+			"transactionType": "Transfer",
+			"origAccountNumber": "4957-3283-5225-1309",
+			"benAccountNumber": "2844-2037-5069-8143",
+			"accountName": "Oscar Kent",
+			"accountType": "Savings",
+			"amount": 11119
+		},
+		{
+			"transactionDate": "12/1/16 8:01",
+			"classification": "Suspicious",
+			"transactionNumber": "18862-505813570718533-904",
+			"transactionType": "Payment",
+			"origAccountNumber": "4143-9985-4706-7842",
+			"benAccountNumber": "3924-3397-6829-8335",
+			"accountName": "Oscar Kent",
+			"accountType": "Checking",
+			"amount": 15534
+		},
+		{
+			"transactionDate": "12/1/16 10:51",
+			"classification": "Suspicious",
+			"transactionNumber": "30151-398037205501777-176",
+			"transactionType": "Deposit",
+			"origAccountNumber": "External",
+			"benAccountNumber": "9338-7341-9057-8937",
+			"accountName": "Oscar Kent",
+			"accountType": "Credit Card",
+			"amount": 5894
+		},
+		{
+			"transactionDate": "12/1/16 12:22",
+			"classification": "Suspicious",
+			"transactionNumber": "92833-428672366658138-965",
+			"transactionType": "Charge",
+			"origAccountNumber": "2161-3667-9395-5825",
+			"benAccountNumber": "2654-3171-8877-8090",
+			"accountName": "Oscar Kent",
+			"accountType": "Credit Card",
+			"amount": 616
+		},
+		{
+			"transactionDate": "12/1/16 12:24",
+			"classification": "Benign",
+			"transactionNumber": "53882-746806173556711-188",
+			"transactionType": "Withdrawal",
+			"origAccountNumber": "1859-8329-1135-1754",
+			"benAccountNumber": "Cash",
+			"accountName": "Albert Fisher",
+			"accountType": "Savings",
+			"amount": 15000
+		},
+		{
+			"transactionDate": "12/1/16 12:34",
+			"classification": "Benign",
+			"transactionNumber": "65427-520844522277952-484",
+			"transactionType": "Withdrawal",
+			"origAccountNumber": "1828-8943-6036-6778",
+			"benAccountNumber": "Cash",
+			"accountName": "Albert Fisher",
+			"accountType": "Savings",
+			"amount": 15000
+		},
+		{
+			"transactionDate": "12/1/16 15:34",
+			"classification": "Benign",
+			"transactionNumber": "54945-537164396696862-966",
+			"transactionType": "Charge",
+			"origAccountNumber": "4605-2235-5294-7452",
+			"benAccountNumber": "5052-1737-8234-8065",
+			"accountName": "Albert Fisher",
+			"accountType": "Savings",
+			"amount": 727
+		},
+		{
+			"transactionDate": "12/1/16 15:41",
+			"classification": "Suspicious",
+			"transactionNumber": "35366-325791854425075-971",
+			"transactionType": "Charge",
+			"origAccountNumber": "2161-3667-9395-5825",
+			"benAccountNumber": "5922-1131-5479-8851",
+			"accountName": "Albert Fisher",
+			"accountType": "Credit Card",
+			"amount": 205
+		},
+		{
+			"transactionDate": "12/1/16 17:36",
+			"classification": "Benign",
+			"transactionNumber": "77155-385418538214840-419",
+			"transactionType": "Charge",
+			"origAccountNumber": "1590-6930-7196-8533",
+			"benAccountNumber": "3042-1170-7744-8860",
+			"accountName": "Oscar Kent",
+			"accountType": "Credit Card",
+			"amount": 289
+		},
+		{
+			"transactionDate": "12/1/16 19:52",
+			"classification": "Suspicious",
+			"transactionNumber": "30523-427437870595677-473",
+			"transactionType": "Withdrawal",
+			"origAccountNumber": "8317-6448-5073-9688",
+			"benAccountNumber": "Cash",
+			"accountName": "Oscar Kent",
+			"accountType": "Credit Card",
+			"amount": 7794
+		}
+
+	]
+}

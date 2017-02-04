@@ -1,0 +1,94 @@
+{
+	"caseOpenedSuspicious": [
+		{
+			"caseNumber": 10001010,
+			"party": "Mike Johnson",
+			"transactions": 5,
+			"transactionAmount": 12003,
+			"createdDate": "2016-06-15 12:00:00",
+			"primaryInvestigator": "Maurie Drewse",
+			"status": "In Progress"
+		},
+		{
+			"caseNumber": 10001013,
+			"party": "Steve Chills",
+			"transactions": 2,
+			"transactionAmount": 22003,
+			"createdDate": "2016-06-15 12:30:00",
+			"primaryInvestigator": "John Bikes",
+			"status": "In Progress"
+		},
+		{
+			"caseNumber": 10001033,
+			"party": "Jane Meadows",
+			"transactions": 8,
+			"transactionAmount": 9803,
+			"createdDate": "2016-06-15 12:45:00",
+			"primaryInvestigator": "Maurie Drewse",
+			"status": "In Progress"
+		},
+		{
+			"caseNumber": 10001044,
+			"party": "Rick Wellows",
+			"transactions": 4,
+			"transactionAmount": 16987,
+			"createdDate": "2016-06-15 13:01:00",
+			"primaryInvestigator": "John Doe",
+			"status": "In Progress"
+		},
+		{
+			"caseNumber": 10001054,
+			"party": "Nancy Sears",
+			"transactions": 9,
+			"transactionAmount": 11233,
+			"createdDate": "2016-06-15 13:15:00",
+			"primaryInvestigator": "Maurie Drewse",
+			"status": "In Progress"
+		},
+		{
+			"caseNumber": 10001087,
+			"party": "Bill Roars",
+			"transactions": 12,
+			"transactionAmount": 10493,
+			"createdDate": "2016-06-15 13:30:00",
+			"primaryInvestigator": "Roger Milkies",
+			"status": "In Progress"
+		},
+		{
+			"caseNumber": 10001088,
+			"party": "Jonathan Views",
+			"transactions": 4,
+			"transactionAmount": 14324,
+			"createdDate": "2016-06-15 13:46:00",
+			"primaryInvestigator": "John Doe",
+			"status": "In Progress"
+		},
+		{
+			"caseNumber": 10001089,
+			"party": "Nathan Wards",
+			"transactions": 3,
+			"transactionAmount": 17200,
+			"createdDate": "2016-06-15 13:55:00",
+			"primaryInvestigator": "Maurie Drewse",
+			"status": "In Progress"
+		},
+		{
+			"caseNumber": 10001090,
+			"party": "Barnie Stoves",
+			"transactions": 5,
+			"transactionAmount": 19983,
+			"createdDate": "2016-06-15 14:00:00",
+			"primaryInvestigator": "Maurie Drewse",
+			"status": "In Progress"
+		},
+		{
+			"caseNumber": 10001091,
+			"party": "Rick Skates",
+			"transactions": 6,
+			"transactionAmount": 12432,
+			"createdDate": "2016-06-15 14:15:00",
+			"primaryInvestigator": "Jon London",
+			"status": "In Progress"
+		}
+	]
+}

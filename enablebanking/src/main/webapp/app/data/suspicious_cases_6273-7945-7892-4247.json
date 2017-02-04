@@ -1,0 +1,25 @@
+{
+	"accountInformation": {
+		"accountNumber": "6273-7945-7892-4247",
+		"accountType": "Credit Card",
+		"dateOpened": "11/01/2011",
+		"dateClosed": "---",
+		"currentBalance":       157.00,
+		"accountLength": "6 years"
+	},
+	"branchInformation": {
+		"address": "141 Washington Ave Extension Albany Branch",
+		"branchManager": "Dennis Mariner",
+		"branchId": 5290326,
+		"contactNo": "(537) 816-2443",
+		"openCases": "11404 - Alex Pietro - In Progress",
+		"caseHistory": [
+			{
+				"item": "574 - Stephen Strange - Resolved"
+			},
+			{
+				"item": "417 - Alex Summers - Resolved"
+			}
+		]
+	}
+}

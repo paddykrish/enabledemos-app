@@ -1,0 +1,55 @@
+{
+	"cases": [
+		{
+			"caseNo": 11439,
+			"accountNumber": "5148-4816-3170-7922",
+			"accountType": "Credit Card",
+			"entityName": "Claire Gentry",
+			"benAccountNumber": "6878-6126-4830-6271",
+			"amount": 13196,
+			"ruleViolated": "Consolidated amount exceed $10,000",
+			"analysisDetails": "Multiple cases under the same Entity has been merged into 1 case (FP)"
+		},
+		{
+			"caseNo": 11447,
+			"accountNumber": "3525-6291-5318-7870",
+			"accountType": "Credit Card",
+			"entityName": "Macy Carl",
+			"benAccountNumber": "Cash",
+			"amount": 11899,
+			"ruleViolated": "Consolidated amount exceed $10,000",
+			"analysisDetails": "Multiple cases under the same Entity has been merged into 1 case (FP)"
+		},
+		{
+			"caseNo": 11456,
+			"accountNumber": "3642-7213-4985-6711",
+			"accountType": "Savings",
+			"entityName": "David Valdez",
+			"benAccountNumber": "3565-8815-4609-5197",
+			"amount": 14288,
+			"ruleViolated": "Consolidated amount exceed $10,000",
+			"analysisDetails": "Multiple cases under the same Entity has been merged into 1 case (FP)"
+		},
+		{
+			"caseNo": 11456,
+			"accountNumber": "3642-7213-4985-6711",
+			"accountType": "Savings",
+			"entityName": "David Valdez",
+			"benAccountNumber": "3565-8815-4609-5197",
+			"amount": 14288,
+			"ruleViolated": "Consolidated amount exceed $10,000",
+			"analysisDetails": "Multiple cases under the same Entity has been merged into 1 case (FP)"
+		},
+		{
+			"caseNo": 11464,
+			"accountNumber": "3320-4355-5159-6192",
+			"accountType": "Savings",
+			"entityName": "Laurie Michelson",
+			"benAccountNumber": "Cash",
+			"amount": 1061,
+			"ruleViolated": "Originating Account is in the SAR",
+			"analysisDetails": "Multiple cases under the same Household has been merged into 1 case (FP)"
+		}
+
+	]
+}

@@ -1,0 +1,25 @@
+{
+	"accountInformation": {
+		"accountNumber": "4456-6266-1067-1087",
+		"accountType": "Checking",
+		"dateOpened": "08/01/1999",
+		"dateClosed": "09/01/2014",
+		"currentBalance": "-",
+		"accountLength": "15 years"
+	},
+	"branchInformation": {
+		"address": "130 Fulton Street",
+		"branchManager": "Dennis Mariner",
+		"branchId": 4952732,
+		"contactNo": "(688) 488-4544",
+		"openCases": "11413 - Jack Reacher - In Progress",
+		"caseHistory": [
+			{
+				"item": "478 - Scott Summers - Resolved"
+			},
+			{
+				"item": "317 - Jean Logan - Resolved"
+			}
+		]
+	}
+}

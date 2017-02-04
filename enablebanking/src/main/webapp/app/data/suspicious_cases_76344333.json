@@ -1,0 +1,97 @@
+{
+	"accountInformation": {
+		"accountNumber": 76344333,
+		"accountType": "Checking",
+		"dateOpened": "02/01/15",
+		"dateClosed": "---",
+		"currentBalance": 456123,
+		"accountLength": "2 years 11 months"
+	},
+	"branchInformation": {
+		"address": "50th Ave. New York Branch",
+		"branchManager": "John Doe",
+		"branchId": 25698962658,
+		"contactNo": "(749)123-1122",
+		"openCases": "100001013 - Mike Summers - In Progress",
+		"caseHistory": [
+			{
+				"item": "100001234 - Alex Pietro - Resolved"
+			},
+			{
+				"item": "100004567 - Stephen Strange - Resolved"
+			}
+		]
+	},
+	"transactions":[
+		{
+			"caseNo": 456,
+			"transactionNum": "123-3456456",
+			"transactionDate": "11/23/16 16:45",
+			"transactionType": "Transfer",
+			"origAccountNum": "1859-8329-1231-1754",
+			"origAccountType": "Savings",
+			"benignAccountNum": "1859-8329-1231-1111",
+			"amount": 15250,
+			"balance": 262311.98
+		},
+		{
+			"caseNo": 234,
+			"transactionNum": "123-3456456",
+			"transactionDate": "11/25/16 13:45",
+			"transactionType": "Transfer",
+			"origAccountNum": "1859-8329-1231-0088",
+			"origAccountType": "Savings",
+			"benignAccountNum": "1859-8329-1231-9999",
+			"amount": 99111,
+			"balance": 260811.98
+		},
+		{
+			"caseNo": 678,
+			"transactionNum": "123-3456456",
+			"transactionDate": "11/28/16 10:45",
+			"transactionType": "Transfer",
+			"origAccountNum": "1859-8329-1231-1231",
+			"origAccountType": "Savings",
+			"benignAccountNum": "1859-8329-1231-3456",
+			"amount": 23411,
+			"balance": 260536.98
+		}
+	],
+	"accountBalanceSnapshot": {
+		"firstRow": {
+			"current": 23423498,
+			"day7": 980099,
+			"day15": 222099,
+			"day30": 764001,
+			"day60": 236456
+		},
+		"belowAmount": [
+			{
+				"current": "--",
+				"day7": 789099,
+				"day15": 134099,
+				"day30": 178000,
+				"day60": 387651 
+			}
+		],
+		"percentage": {
+			"current": "--",
+			"day7": 13,
+			"day15": 26,
+			"day30": 42,
+			"day60": 60
+		}
+	},
+	"balanceOvertime": [
+		{
+		    "key": "Balance Overtime",
+		    "color": "#74EEFC",
+		    "values": [
+		        [1472702400000, 0.83],
+		        [1475294400000, 0.65],
+		        [1477972800000, 0.41],
+		        [1480568400000, 0.22]
+		    ]
+		}
+	]
+}

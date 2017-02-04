@@ -1,0 +1,33 @@
+{
+	"possibleRelatedEntities": [{
+		"party": "Victor Fries",
+		"primaryInvestigator": "Bruce Wayne",
+		"status": "Active Cases",
+		"activity": [-5,-10,-5,-6,-7,-2,-4,-7],
+		"observation": "Account activity pattern similar by 65% and established relation identified"
+	}, {
+		"party": "Norman Osborn",
+		"primaryInvestigator": "Peter Parker",
+		"status": "Active Cases",
+		"activity": [-6,-7,8,10,-5,6,7,-8],
+		"observation": "Account activity pattern similar by 50% and possible relation identified"
+	}, {
+		"party": "Cain Marko",
+		"primaryInvestigator": "Charles Xavier",
+		"status": "Closed Cases",
+		"activity": [-9,-7,-5,-3,-5,-4,-7,-4],
+		"observation": "Account activity pattern similar by 70% and closed case tagged as stolen identity"
+	}, {
+		"party": "Justin Hammer",
+		"primaryInvestigator": "Tony Stark",
+		"status": "Watchlist",
+		"activity": [9,7,5,10,5,9,7,8],
+		"observation": "Current party has established relation with watchlist"
+	}, {
+		"party": "William Stryker",
+		"primaryInvestigator": "James Howlett",
+		"status": "No Prior",
+		"activity": [-10,-9,-8,-10,-5,-9,-7,-3],
+		"observation": "Party has activity pattern similar by 70% with established relation identified"
+	}]
+}

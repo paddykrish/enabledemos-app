@@ -1,0 +1,18 @@
+{
+	"transactionInfo": {
+		"transactionNumber": "69134-1684426799313100-567",
+		"transactionDate": "1/17/2017",
+		"transactionType": "Transfer",
+		"amount": "$8000.00",
+		"balance":  203559.00,
+		"startingBalance": 211559.00
+	},
+	"branchInfo": {
+		"branchId": 4952732,
+		"branchInfo": "130 Fulton Street",
+		"branchManager": "John Masters",
+		"branchContactNum": "(688) 488-4544",
+		"bankTellerId": 6161,
+		"bankTellerName": "Oliver Ender"
+	}
+}

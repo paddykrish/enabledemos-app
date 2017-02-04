@@ -1,0 +1,18 @@
+{
+	"transactionInfo": {
+		"transactionNumber": "81572-1620286681074340-822",
+		"transactionDate": "1/15/2017",
+		"transactionType": "Transfer",
+		"amount": "-$1500.00",
+		"balance":       42508.00,
+		"startingBalance":    44008.00
+	},
+	"branchInfo": {
+		"branchId": "4982028",
+		"branchInfo": "141 Washington Ave Extension Albany Branch",
+		"branchManager": "Dennis Mariner",
+		"branchContactNum": "(884) 508-4594",
+		"bankTellerId": 7414,
+		"bankTellerName": "David Eckhart"
+	}
+}

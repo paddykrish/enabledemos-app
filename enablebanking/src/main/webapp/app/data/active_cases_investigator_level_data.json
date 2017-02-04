@@ -1,0 +1,28 @@
+{
+	"activeCasesInvestigators": [
+		{
+			"investigator": "Team 1",
+			"numCases": 58,
+			"dailyMinCases": 17,
+			"dailyMaxCases": 34,
+			"dailyAverageCases": 21.33,
+			"averageProcessingDays": 6.0
+		},
+		{
+			"investigator": "Team 2",
+			"numCases": 65,
+			"dailyMinCases": 26,
+			"dailyMaxCases": 38,
+			"dailyAverageCases": 27.00,
+			"averageProcessingDays": 8.0
+		},
+		{
+			"investigator": "Team 3",
+			"numCases": 82,
+			"dailyMinCases": 35,
+			"dailyMaxCases": 80,
+			"dailyAverageCases": 47.00,
+			"averageProcessingDays": 14.0
+		}
+	]
+}

@@ -1,0 +1,41 @@
+{
+	"overallStatistics": {
+		"allTransactions": 227,
+		"beforePatternAnalysis": {
+			"suspicious": 35,
+			"benign": 175
+		},
+		"postPatternAnalysis": {
+			"suspicious": 57,
+			"benign": 185
+		}
+	},
+	"suspiciousTransactionStatistics": {
+		"beforePatternAnalysis": {
+			"suspicious": 35,
+			"caseOpened": 35
+		},
+		"postPatternAnalysis": {
+			"suspicious": 47,
+			"casesOpened": 35,
+			"movedToBenign": "-5",
+			"casesOpenedTransactions": 47,
+			"movedToSupicious": "+17",
+			"criticalRiskCasesOpened": 12
+		}	
+	},
+	"benignTransactionsStatistics": {
+		"beforePatternAnalysis": {
+			"suspicious": 148,
+			"casesOpened": 0
+		},
+		"postPatternAnalysis": {
+			"benign": 47,
+			"casesOpened": 3,
+			"movedToBenign": "+5",
+			"casesOpenedTransactions": 12,
+			"movedToSupicious": "-17",
+			"criticalRiskCasesOpened": 0
+		}	
+	}
+}

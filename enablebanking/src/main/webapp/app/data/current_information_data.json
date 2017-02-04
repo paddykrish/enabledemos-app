@@ -1,0 +1,23 @@
+{
+	"currentHomeAddress": {
+		"address": "737 Albany-Shaker Road",
+		"city": "Albany",
+		"state": "NY",
+		"zip": "12211",
+		"phoneNumber": "(570) 746-9620",
+		"cellPhoneNumber": "(500) 736-2599",
+		"email": "oferris@gmail.com"
+	},
+	"currentWorkAddress": {
+		"company": "Orion Corp",
+		"position": "Senior Vice President - Technology",
+		"address": "1244 Western Avenue",
+		"city": "Albany",
+		"state": "NY",
+		"zip": "12203",
+		"phoneNumber": "(864) 449-2401",
+		"cellPhoneNumber": "(575) 609-3492",
+		"email": "oscar.ferris@orion.com"
+	},
+	"analysisResult": "Multiple cases were created for multiple transactions have been merged to 1 case after entity resolution"
+}

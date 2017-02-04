@@ -1,0 +1,16 @@
+{
+	"investigatorSummary": [
+		{
+			"investigatorLevel": "Investigator I",
+			"numCases": 58
+		},
+		{
+			"investigatorLevel": "Investigator II",
+			"numCases": 65
+		},
+		{
+			"investigatorLevel": "Investigator III",
+			"numCases": 82
+		}
+	]
+}

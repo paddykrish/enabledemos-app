@@ -1,0 +1,25 @@
+{
+	"accountInformation": {
+		"accountNumber": "5295-2906-2928-5907",
+		"accountType": "Mutual Funds",
+		"dateOpened": "02/01/2012",
+		"dateClosed": "---",
+		"currentBalance": 402442.00,
+		"accountLength": "5 years"
+	},
+	"branchInformation": {
+		"address": "141 Washington Ave Extension Albany Branch",
+		"branchManager": "Dennis Mariner",
+		"branchId": 5290326,
+		"contactNo": "(537) 816-2443",
+		"openCases": "11404 - Alex Pietro - In Progress",
+		"caseHistory": [
+			{
+				"item": "574 - Stephen Strange - Resolved"
+			},
+			{
+				"item": "417 - Alex Summers - Resolved"
+			}
+		]
+	}
+}

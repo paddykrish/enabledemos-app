@@ -1,0 +1,98 @@
+{
+	"accountInformation": {
+		"accountNumber": 76343431,
+		"accountType": "Checking",
+		"dateOpened": "01/25/15",
+		"dateClosed": "---",
+		"currentBalance": 454456,
+		"accountLength": "5 years 9 months"
+	},
+	"branchInformation": {
+		"address": "57th Ave. New York Branch",
+		"branchManager": "George McArthur",
+		"branchId": 25698962658,
+		"contactNo": "(749)345-3456",
+		"openCases": "100001013 - Mike Summers - In Progress",
+		"caseHistory": [
+			{
+				"item": "100001455 - Alex Pietro - Resolved"
+			},
+			{
+				"item": "100001324 - Stephen Strange - Resolved"
+			}
+		]
+	},
+	"transactions":[
+		{
+			"caseNo": 123,
+			"transactionNum": "123-3456456",
+			"transactionDate": "11/23/16 16:45",
+			"transactionType": "Transfer",
+			"origAccountNum": "1859-8329-1135-1754",
+			"origAccountType": "Savings",
+			"benignAccountNum": "1859-8329-1135-1111",
+			"amount": 15250,
+			"balance": 262311.98
+		},
+		{
+			"caseNo": 111,
+			"transactionNum": "123-3456456",
+			"transactionDate": "11/25/16 13:45",
+			"transactionType": "Transfer",
+			"origAccountNum": "1859-8329-1135-2222",
+			"origAccountType": "Savings",
+			"benignAccountNum": "1859-8329-1135-1456",
+			"amount": 25000,
+			"balance": 260811.98
+		},
+		{
+			"caseNo": 222,
+			"transactionNum": "123-3456456",
+			"transactionDate": "11/28/16 10:45",
+			"transactionType": "Transfer",
+			"origAccountNum": "1859-8329-1135-5555",
+			"origAccountType": "Savings",
+			"benignAccountNum": "1859-8329-1135-3334",
+			"amount": 27512,
+			"balance": 260536.98
+		}
+	],
+	"accountBalanceSnapshot": {
+		"firstRow": {
+			"current": 23423498,
+			"day7": 980099,
+			"day15": 222099,
+			"day30": 764001,
+			"day60": 236456
+		},
+		"belowAmount": [
+			{
+				"current": "--",
+				"day7": 789099,
+				"day15": 134099,
+				"day30": 178000,
+				"day60": 387651 
+			}
+		],
+		"percentage": {
+			"current": "--",
+			"day7": 13,
+			"day15": 26,
+			"day30": 42,
+			"day60": 60
+		}
+	},
+	"balanceOvertime": [
+		{
+		    "key": "Balance Overtime",
+		    "color": "#74EEFC",
+		    "values": [
+		        [1472702400000, 0.75],
+		        [1475294400000, 0.55],
+		        [1477972800000, 0.35],
+		        [1480568400000, 0.2]
+		    ]
+		}
+	]
+
+}

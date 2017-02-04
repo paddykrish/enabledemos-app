@@ -1,0 +1,25 @@
+{
+	"accountInformation": {
+		"accountNumber": "7738-7229-6550-3574",
+		"accountType": "IRA",
+		"dateOpened": "08/01/1999",
+		"dateClosed": "--",
+		"currentBalance": 402550.00,
+		"accountLength": "18 years"
+	},
+	"branchInformation": {
+		"address": "130 Fulton Street",
+		"branchManager": "Dennis Mariner",
+		"branchId": 4952732,
+		"contactNo": "(688) 488-4544",
+		"openCases": "11413 - Jack Reacher - In Progress",
+		"caseHistory": [
+			{
+				"item": "478 - Scott Summers - Resolved"
+			},
+			{
+				"item": "317 - Jean Logan - Resolved"
+			}
+		]
+	}
+}

@@ -1,0 +1,55 @@
+{
+	"events": [
+		{
+			"caseNo": 11530,
+			"accountNumber": "External",
+			"accountType": "Credit Card",
+			"entityName": "Veronica Carey",
+			"benAccountNumber": "4890-4369-2279-5082",
+			"amount": 5685,
+			"analysisDetails": "Beneficiary Account is in the Terrorist Watchlist",
+			"type": "Suspicious"
+		},
+		{
+			"caseNo": 11545,
+			"accountNumber": "External",
+			"accountType": "Credit Card",
+			"entityName": "Samantha Michelson",
+			"benAccountNumber": "4578-8017-2087-5486",
+			"amount": 12374,
+			"analysisDetails": "Beneficiary account is a verified medical institution",
+			"type": "Benign"
+		},
+		{
+			"caseNo": 11550,
+			"accountNumber": "3094-2423-3600-4316",
+			"accountType": "Credit Card",
+			"entityName": "Barry Mariner",
+			"benAccountNumber": "4602-4054-3120-6132",
+			"amount": 3633,
+			"analysisDetails": "Originating Account is in the Terrorist Watchlist",
+			"type": "Suspicious"
+		},
+		{
+			"caseNo": 11563,
+			"accountNumber": "7681-4805-2084-8885",
+			"accountType": "Credit Card",
+			"entityName": "Karen Esthers",
+			"benAccountNumber": "4696-5559-5168-3011",
+			"amount": 16824,
+			"analysisDetails": "Both originating and beneficiary accounts are verified account holders, established similar prior pattern of transactions and verified documentation",
+			"type": "Benign"
+		},
+		{
+			"caseNo": 11577,
+			"accountNumber": "6050-3184-5741-4468",
+			"accountType": "Credit Card",
+			"entityName": "Sally Garret",
+			"benAccountNumber": "6990-6763-2849-5239",
+			"amount": 1276,
+			"analysisDetails": "Originating Account is in the SAR",
+			"type": "Suspicious"
+		}
+
+	]
+}

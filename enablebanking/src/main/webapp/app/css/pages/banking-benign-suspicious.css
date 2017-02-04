@@ -1,0 +1,346 @@
+/*** CSS FOR BANKING CASE LIST ***/
+
+
+h1.pageTitle {
+   text-align: center;
+   font-size: 25px;
+   margin: 35px 0; 
+}
+
+/* GLOBAL FOR PANELS */
+
+#banking-benign-suspicious .panelContainer {
+	border: 1px solid #ddd;
+	margin-bottom: 15px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}	
+
+#banking-benign-suspicious .panelContainer .detailsWrapper {
+	padding: 15px;
+}
+
+#banking-benign-suspicious .panel-header {
+	background: #777;
+	color: #fff;
+	padding: 10px 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+#banking-benign-suspicious .panel-header h4 {
+	margin: 0;
+	font-size: 16px;
+}
+
+#banking-benign-suspicious .panel-header h4 i {
+	margin-right: 10px;
+}
+
+#banking-benign-suspicious .panelContainer .detailsWrapper h4 {
+	margin: 0 0 3px;
+	font-size: 13px;
+	font-weight: 800;
+	
+}
+
+#banking-benign-suspicious .panelContainer .detailsWrapper p {
+	margin: 0;
+	font-size: 12px;
+}
+
+/* TABLIST */
+
+#banking-benign-suspicious .panelContainer .tablist .detailsWrapperList {
+	min-height: 355px;
+	overflow-y: scroll;
+}
+
+#banking-benign-suspicious .panelContainer .tablist .detailsWrapperList .detailsWrapperListDetails {
+	padding: 0;
+	background: #555;
+	border-bottom: 1px solid #ddd;
+}
+
+#banking-benign-suspicious .panelContainer .tablist .detailsWrapperList .detailsWrapperListDetails a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 15px 10px;
+}
+
+#banking-benign-suspicious .panelContainer .tablist .detailsWrapperList .detailsWrapperListDetails .details h5:first-child {
+	margin-bottom: 5px;
+}
+
+#banking-benign-suspicious .panelContainer .tablist .detailsWrapperList .detailsWrapperListDetails .details h5 {
+	font-size: 12px;
+	margin: 0;
+	color: #fff;
+}
+
+#banking-benign-suspicious .panelContainer .tablist .detailsWrapperList .detailsWrapperListDetails .icon {
+	color: #fff;
+}
+
+
+/* TABPANEL */
+
+#banking-benign-suspicious .panelContainer .row.main {
+	margin-right: 0px;
+}
+
+#banking-benign-suspicious .panelContainer .tabPanel {
+    overflow-y: scroll;
+}
+
+#banking-benign-suspicious .panelContainer .tabPanel .tab-content {
+	height: auto!important;
+	padding: 20px 0;
+}	
+
+#banking-benign-suspicious .panelContainer .tabPanel .detailsWrapper{
+	padding: 0;
+	margin-bottom: 15px;
+}
+
+#banking-benign-suspicious .panelContainer .tabPanel .row.account,
+#banking-benign-suspicious .panelContainer .tabPanel .row.branch {
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 20px;
+	padding-bottom: 5px;
+}
+
+#banking-benign-suspicious .panelContainer .tabPanel .row.openCases .col-lg-12:last-child  .detailsWrapper {
+	margin-bottom: 0;
+}
+
+#banking-benign-suspicious .panelContainer .tabPanel .detailsWrapper.currentBalance {
+	background: #fdfde1;
+	padding: 10px;
+}
+
+#banking-benign-suspicious .panelContainer .tabPanel .detailsWrapper.currentBalance p {
+	font-size: 18px;
+	color: #6bbc6b;
+}
+
+/* PANEL HEADING BG COLORS */
+
+#banking-benign-suspicious  .panel-header.accountInformation {
+    background:#337ab7;
+}
+
+#banking-benign-suspicious  .panel-header.homeAddress {
+    background:#6e0684;
+}
+
+#banking-benign-suspicious  .panel-header.workAddress {
+    background:#d64040;
+}
+
+#banking-benign-suspicious  .panel-header.recentTransactions{
+    background: #d77812;
+}
+
+/* GLOBAL FOR STATIC PANELS */
+
+#banking-benign-suspicious .static .homeAddress .detailsWrapper,
+#banking-benign-suspicious .recentTransactions .detailsWrapper,
+#banking-benign-suspicious .references .detailsWrapper  {
+	padding: 0;
+}
+
+#banking-benign-suspicious .static .workAddress .panel-body,
+#banking-benign-suspicious .static .homeAddress .panel-body { 
+	padding: 20px 0 20px;
+}
+
+#banking-benign-suspicious .static .workAddress .row:last-child .col-lg-3 .detailsWrapper,
+#banking-benign-suspicious .static .homeAddress .row:last-child .col-lg-3 .detailsWrapper {
+	margin-bottom: 0;
+}
+
+
+#banking-benign-suspicious .static .workAddress .panelContainer {
+	min-height: 190px;
+}
+
+/* ANALYSIS */
+
+#banking-benign-suspicious .analysis .panelContainer {
+	background: #d9edf7;
+    margin-bottom: 25px;
+    border-radius: 0;
+}
+
+#banking-benign-suspicious .analysis .panel-header {
+	background: transparent;
+	color: #444;
+}
+
+#banking-benign-suspicious .panelContainer .tabPanel .analysis .detailsWrapper {
+    padding: 15px;
+    margin: 0;
+}
+
+#banking-benign-suspicious .analysis .detailsWrapper p {
+    margin: 0;
+    font-size:18px;
+}
+
+#banking-benign-suspicious .analysis .detailsWrapper p span {
+    font-size: 18px; 
+    font-weight: 800;
+    margin-right: 5px;
+}
+
+/* TRANSACTIONS TABLE */
+
+#banking-benign-suspicious .static .homeAddress table {
+    margin-top: 20px;
+}
+
+#banking-benign-suspicious .static .homeAddress table th:first-child {
+	width: 100px;
+}
+
+#banking-benign-suspicious .static .homeAddress table th:nth-child(2) {
+	width: 190px;
+}
+
+#banking-benign-suspicious .static .homeAddress table th:nth-child(3) {
+	width: 150px;
+}
+
+#banking-benign-suspicious .static .homeAddress table th:nth-child(5) {
+	width: 150px;
+}
+
+
+/* POSSIBLE RELATED ENTITIES */
+
+#banking-benign-suspicious .recentTransactions table th:first-child {
+	width: 70px;
+}
+
+#banking-benign-suspicious .recentTransactions table th:nth-child(2) {
+	width: 85px;
+}
+
+#banking-benign-suspicious .recentTransactions table th:nth-child(3) {
+	width: 60px;
+}
+
+#banking-benign-suspicious .recentTransactions table th:nth-child(4) {
+	width: 70px;
+}
+
+/* REFERENCES */
+
+
+#banking-benign-suspicious .references .panelContainer {
+    min-height: 373px;
+}
+
+/* REFERENCES */
+
+
+#banking-benign-suspicious .recentTransactions .panelContainer {
+    min-height: 373px;
+}
+
+
+/* GLOBAL FOR TABLES */
+
+#banking-benign-suspicious .tableContainer {
+	padding: 15px;
+}
+
+#banking-benign-suspicious table {
+    margin-bottom: 0;
+}
+
+#banking-benign-suspicious table thead th {
+    font-size: 13px;
+    padding-top: 0;
+	width: 200px;
+}
+
+#banking-benign-suspicious table tbody td {
+    font-size: 12px;
+}
+
+#banking-benign-suspicious table tbody tr:nth-child(even) {
+    background: #e7e7e7;
+}
+
+/* MODAL */
+
+#myModal .modal-header {
+	background: #444;
+	color: #fff;
+	padding: 10px;
+}
+
+#myModal .modal-header h4 {
+	font-size: 16px;
+}
+
+#myModal .modal-header h4 i {
+	margin-right: 10px;
+}
+
+#myModal .modal-header button {
+	color: #fff;
+	opacity: 1;
+}
+
+#myModal .modal-body {
+	padding: 30px 20px;
+}
+
+#myModal .panelContainer {
+    border: 0;
+    margin: 0;
+}
+
+#myModal .panelContainer .divider {
+	border-bottom: 1px solid #ddd;
+	margin: 5px 0 20px;
+	width: 100%;
+	height:1px;
+}
+
+#myModal .panelContainer .currentBalance {
+	background: #fdfde1;
+	padding: 10px;
+}
+
+#myModal .panelContainer .currentBalance p {
+	color: #6bbc6b;
+	font-size: 18px !important;
+}
+
+#myModal .panelContainer .row:last-child .detailsWrapper {
+	margin-bottom: 0;
+}
+
+#myModal .panelContainer .detailsWrapper {
+	margin-bottom: 15px;
+    padding: 0;
+}
+
+#myModal .panelContainer .detailsWrapper h4 {
+	margin: 0 0 3px;
+	font-size: 13px;
+	font-weight: 800;
+	
+}
+
+#myModal .panelContainer .detailsWrapper p {
+	margin: 0;
+	font-size: 12px;
+}
