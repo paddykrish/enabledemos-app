@@ -24,11 +24,12 @@
 
 		<!--repository> <id>jci-nexus</id> <url>http://c201s039.jci.com:8081/nexus/content/repositories/beingestion/</url>
 			</repository -->
-
+		<!--
 		<repository>
 			<id>rcg-archiva</id>
 			<url>http://node2.rcggs.com:8090/repository/internal/</url>
 		</repository>
+		-->
 		<repository>
 			<url>https://repository.cloudera.com/content/repositories/releases/</url>
 			<id>cloudera</id>
