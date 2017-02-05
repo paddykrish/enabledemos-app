@@ -135,13 +135,13 @@ public class DataLoader {
                     q.setQuoteType("NBA");
                 }
                 int premium = 24000 + (100* rand.nextInt(15));
-                if( q.companyCode.equals("WM")){
+                if( q.companyid.equals("WM")){
                     if (  q.getStoretype() != null && q.getStoretype().equals("Supercenter")) {
                         premium = 290000 + (1000 * rand.nextInt(15));
                     } else {
                         premium = 125000 + (1000 * rand.nextInt(150));
                     }
-                } else if( q.companyCode.equals("VNB")){
+                } else if( q.companyid.equals("VNB")){
                     premium = 65000 + (1000* rand.nextInt(100));
                 }
                 q.setAnnualpremium(  premium );
@@ -163,15 +163,15 @@ public class DataLoader {
                 q.setEarthquakeRisk((float)Math.random() * (maxrisk - minrisk) + minrisk);
                 q.setWindstromRisk((float)Math.random() * (maxrisk - minrisk) + minrisk);
                 RiskFactor r = null;
-                if( q.getCompanyCode().equals("VNB") && q.getCounty() != null ){
+                if( q.getCompanyid().equals("VNB") && q.getCounty() != null ){
                     if (riskFactors.keySet().contains(q.getCounty())){
                         r = riskFactors.get( q.getCounty());
                     }
-                }  else if ( q.getCompanyCode().equals("WM") && q.getState() != null ){
+                }  else if ( q.getCompanyid().equals("WM") && q.getState() != null ){
                     if (riskFactors.keySet().contains(q.getState())){
                         r = riskFactors.get( q.getState());
                     }
-                }  else if ( q.getCompanyCode().equals("CVS") && q.getZipcode() != null ){
+                }  else if ( q.getCompanyid().equals("CVS") && q.getZipcode() != null ){
                     if (riskFactors.keySet().contains(q.getZipcode())){
                         r = riskFactors.get( q.getZipcode());
                     }
@@ -187,11 +187,11 @@ public class DataLoader {
                 }
                 q.setPolicyTerm(1+ rand.nextInt(3));
                 int coverageamt = 800000;
-                if (q.getCompanyCode().equals("WM")) {
+                if (q.getCompanyid().equals("WM")) {
                     coverageamt =+ 6000000;
-                } else if (q.getCompanyCode().equals("CVS")) {
+                } else if (q.getCompanyid().equals("CVS")) {
                     coverageamt =+ 2000000;
-                } else if (q.getCompanyCode().equals("VNB")) {
+                } else if (q.getCompanyid().equals("VNB")) {
                     coverageamt =+ 1000000;
                 }
                 q.setCoverageAmount(coverageamt +  RandomUtils.nextInt( rand, 10000));
@@ -262,7 +262,7 @@ public class DataLoader {
                 q.setZipcode(tokens[7]);
                 q.setStorename(tokens[3]);
                 q.setCounty(tokens[8]);
-                q.setCompanyCode( tokens[1]);
+                q.setCompanyid( tokens[1]);
 
 
                 q.setLobs(sb.toString().substring(0, sb.toString().length() -2));
@@ -281,13 +281,13 @@ public class DataLoader {
                     q.setQuoteType("NBA");
                 }
                 int premium = 24000 + (100* rand.nextInt(15));
-                if( q.companyCode.equals("WM")){
+                if( q.companyid.equals("WM")){
                     if (  q.getStoretype() != null && q.getStoretype().equals("Supercenter")) {
                         premium = 290000 + (1000 * rand.nextInt(15));
                     } else {
                         premium = 125000 + (1000 * rand.nextInt(150));
                     }
-                } else if( q.companyCode.equals("VNB")){
+                } else if( q.companyid.equals("VNB")){
                     premium = 65000 + (1000* rand.nextInt(100));
                 }
                 q.setAnnualpremium(  premium );
@@ -309,15 +309,15 @@ public class DataLoader {
                 q.setEarthquakeRisk((float)Math.random() * (maxrisk - minrisk) + minrisk);
                 q.setWindstromRisk((float)Math.random() * (maxrisk - minrisk) + minrisk);
                 RiskFactor r = null;
-                if( q.getCompanyCode().equals("VNB") && q.getCounty() != null ){
+                if( q.getCompanyid().equals("VNB") && q.getCounty() != null ){
                     if (riskFactors.keySet().contains(q.getCounty())){
                         r = riskFactors.get( q.getCounty());
                     }
-                }  else if ( q.getCompanyCode().equals("WM") && q.getState() != null ){
+                }  else if ( q.getCompanyid().equals("WM") && q.getState() != null ){
                     if (riskFactors.keySet().contains(q.getState())){
                         r = riskFactors.get( q.getState());
                     }
-                }  else if ( q.getCompanyCode().equals("CVS") && q.getZipcode() != null ){
+                }  else if ( q.getCompanyid().equals("CVS") && q.getZipcode() != null ){
                     if (riskFactors.keySet().contains(q.getZipcode())){
                         r = riskFactors.get( q.getZipcode());
                     }
@@ -333,11 +333,11 @@ public class DataLoader {
                 }
                 q.setPolicyTerm(1+ rand.nextInt(3));
                 int coverageamt = 800000;
-                if (q.getCompanyCode().equals("WM")) {
+                if (q.getCompanyid().equals("WM")) {
                     coverageamt =+ 6000000;
-                } else if (q.getCompanyCode().equals("CVS")) {
+                } else if (q.getCompanyid().equals("CVS")) {
                     coverageamt =+ 2000000;
-                } else if (q.getCompanyCode().equals("VNB")) {
+                } else if (q.getCompanyid().equals("VNB")) {
                     coverageamt =+ 1000000;
                 }
                 q.setCoverageAmount(coverageamt +  RandomUtils.nextInt( rand, 10000));

@@ -3,15 +3,11 @@ package com.rcggs.enablefs.demo.service.controller;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.security.UserGroupInformation;
 import org.apache.log4j.Logger;
-import scala.tools.cmd.Demo;
 
-import java.security.PrivilegedExceptionAction;
 import java.sql.*;
-import java.io.IOException;
 import java.sql.Statement;
 import java.util.*;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
 /**
  * Created by Administrator on 1/13/17.
@@ -65,7 +61,7 @@ public class HiveDao {
 
             Quote q = new Quote();
             q.setQuote(rs.getString(1));
-            q.setCompanyCode(rs.getString(1));
+            q.setCompanyid(rs.getString(1));
             q.setCompany(rs.getString(1));
             q.setStorename(rs.getString(1));
             q.setAddress(rs.getString(1));

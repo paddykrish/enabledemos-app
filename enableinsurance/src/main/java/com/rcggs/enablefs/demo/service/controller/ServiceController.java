@@ -24,9 +24,6 @@ import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -148,7 +145,7 @@ public class ServiceController {
 		try {
 			int i = 0;
 			for (Quote q : dataloader.loadAllLocations()){
-				if (!q.getCompanyCode().equals(compancode)){
+				if (!q.getCompanyid().equals(compancode)){
 					continue;
 				}
 				if (!q.getQuoteType().equals("NBA")){
@@ -187,7 +184,7 @@ public class ServiceController {
 			List<Quote> quotes = dataloader.loadAllLocations();
 			int quotecount = 0;
 			for (Quote q : quotes){
-				if (!q.getCompanyCode().equals(compancode)){
+				if (!q.getCompanyid().equals(compancode)){
 					continue;
 				}
 				quotecount ++;
@@ -251,7 +248,7 @@ public class ServiceController {
 			List<Quote> quotes = dataloader.loadAllLocations();
 			int quotecount = 0;
 			for (Quote q : quotes){
-				if (!q.getCompanyCode().equals(compancode)){
+				if (!q.getCompanyid().equals(compancode)){
 					continue;
 				}
 				if (!q.getQuoteType().equals("NBA")){
@@ -295,7 +292,7 @@ public class ServiceController {
 		for ( Quote  q : dataloader.loadAllLocations()){
 
 			JSONArray item = new JSONArray();
-			if ( q.getCompanyCode().equals(compancode)) {
+			if ( q.getCompanyid().equals(compancode)) {
 				item.put(q.getLatitude());
 				item.put(q.getLongitude());
 				item.put(1 + rand.nextInt(4));
@@ -387,7 +384,7 @@ public class ServiceController {
 		int reccount = 0;
 		JSONArray list = new JSONArray();
 		for (Quote q : dataloader.loadAllLocations()) {
-			if (!q.getCompanyCode().equals(compancode)) {
+			if (!q.getCompanyid().equals(compancode)) {
 				continue;
 			}
 			JSONObject row = new JSONObject();
@@ -436,7 +433,7 @@ public class ServiceController {
 		riskfactor.put("Windstorm Risk", 0.0f);
 		int reccount = 0;
 		for (Quote q : dataloader.loadAllLocations()) {
-			if (!q.getCompanyCode().equals(compancode)){
+			if (!q.getCompanyid().equals(compancode)){
 				continue;
 			}
 			riskfactor.put("Crime", riskfactor.get("Crime") + q.getCrimeRisk());

@@ -1,5 +1,5 @@
 
 <%
-	String redirectURL = "/enableinsurance/v0.4/underwriting/index.html";
+	String redirectURL = "/enableinsurance/app/index.html";
 	response.sendRedirect(redirectURL);
 %>

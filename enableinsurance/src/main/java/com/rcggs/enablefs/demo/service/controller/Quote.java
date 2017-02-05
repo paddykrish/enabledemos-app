@@ -11,7 +11,7 @@ public class Quote {
     //renewal vs new
     String quoteType;
     String company;
-    String companyCode;
+    String companyid;
     String quoteId;
     String ploicyId;
     String locationId;
@@ -102,12 +102,12 @@ public class Quote {
         this.coverageAmount = coverageAmount;
     }
 
-    public String getCompanyCode() {
-        return companyCode;
+    public String getCompanyid() {
+        return companyid;
     }
 
-    public void setCompanyCode(String companyCode) {
-        this.companyCode = companyCode;
+    public void setCompanyid(String companyid) {
+        this.companyid = companyid;
     }
 
     public int getPolicyTerm() {
