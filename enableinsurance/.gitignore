@@ -32,6 +32,8 @@
 
 *.zip
 *.jar
+!ingest-engine-java-1.2.jar
+
 *.war
 *.ear
 *.class

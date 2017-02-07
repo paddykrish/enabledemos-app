@@ -10,6 +10,7 @@
 
 # Package Files #
 *.jar
+!ingest-engine-java-1.2.jar
 *.war
 *.ear
 
