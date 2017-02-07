@@ -11,8 +11,8 @@ public class DemoContext {
 		properties = new Properties();
 		try {
 			//properties.load(new FileInputStream("/home/bitnami/enableins/enableinsurance.properties"));
-			properties.load(new FileInputStream("/home/ec2-user/enableins/enableinsurance.properties"));
-			//properties.load(new FileInputStream("/apps/data/enableinsurance.properties"));
+			//properties.load(new FileInputStream("/home/ec2-user/enableins/enableinsurance.properties"));
+			properties.load(new FileInputStream("/apps/data/enableinsurance.properties"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

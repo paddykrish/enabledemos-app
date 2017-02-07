@@ -1,0 +1,177 @@
+{
+"locationId": "254",
+"buildingId": "154",
+"address": {
+	"street": "120 COMMERCIAL PARKWAY",
+	"city": "Branford",
+	"state": "CT",
+	"zip": "06405"
+},
+"structureAttr": {
+	"valuation": "$203,700",
+	"classification": "Warehouse",
+	"constructionYear": 2016,
+	"area": 18841,
+	"stories": 2,
+	"constructionGrade": "A",
+	"lastMajorRenovation": 2015,
+	"renovationDetails": "Plumbing,Electrical",
+	"inspectionDate": 2015,
+	"fireRating": "Medium Risk"
+},
+"locationAttr": {
+	"crimeRating": "Below Average",
+	"proximityFireStation": "4.33 miles",
+	"proximityWater": "11.81 miles",
+	"floodRating": "Low Risk",
+	"sinkholeRating": "Excellent"
+},
+"riskGrade": [
+	{
+	"grade": 4.28,
+	"risk": "Crime"
+},
+{
+	"grade": 4.37,
+	"risk": "Hail Risk"
+},
+{
+	"grade": 5.42,
+	"risk": "Fire Risk"
+},
+{
+	"grade": 4.5,
+	"risk": "Flood Risk"
+},
+{
+	"grade": 1.54,
+	"risk": "Earthquake Risk"
+},
+{
+	"grade": 7.62,
+	"risk": "Windstorm Risk"
+}
+],
+"riskExposure": {
+"weather": {
+"totalResults" : 5,
+"results": [
+{
+	"date": "7/19/2016",
+	"type": "Typhoon",
+	"desc": "Typhoon Category 4"
+},
+{
+	"date": "11/15/2015",
+	"type": "Thunderstorm",
+	"desc": "Thunderstorm warning in effect"
+},
+{
+	"date": "9/9/2015",
+	"type": "Thunderstorm",
+	"desc": "Thunderstorm warning in effect"
+},
+{
+	"date": "8/1/2015",
+	"type": "Storm",
+	"desc": "Storm Signal is at Level 3"
+},
+{
+	"date": "4/21/2015",
+	"type": "Thunderstorm",
+	"desc": "Thunderstorm warning in effect"
+}
+	]
+},
+"fire": {
+"totalResults" : 5,
+"results": [
+{
+	"date": "10/23/2016",
+	"level": 5,
+	"area": "Derby"
+},
+{
+	"date": "3/21/2016",
+	"level": 5,
+	"area": "Naugatuck"
+},
+{
+	"date": "1/18/2016",
+	"level": 3,
+	"area": "East Windsor"
+},
+{
+	"date": "8/15/2015",
+	"level": 5,
+	"area": "Shelton"
+},
+{
+	"date": "3/13/2015",
+	"level": 5,
+	"area": "North Windham"
+}
+	]
+},
+"crime": {
+"totalResults" : 5,
+"results": [
+{
+	"date": "7/15/2016",
+	"type": "Burglary",
+	"desc": "Burglary"
+},
+{
+	"date": "1/6/2016",
+	"type": "Theft",
+	"desc": "Warehouse Theft"
+},
+{
+	"date": "9/2/2015",
+	"type": "Arrest",
+	"desc": "Destruction of property"
+},
+{
+	"date": "5/30/2015",
+	"type": "Arrest",
+	"desc": "Disturbing the peace"
+},
+{
+	"date": "1/27/2015",
+	"type": "Burglary",
+	"desc": "Burglary"
+}
+	]
+},
+"hail": {
+"totalResults" : 5,
+"results": [
+{
+	"date": "11/17/2016",
+	"type": "Hail Damages",
+	"description": "Severe property damages reported"
+},
+{
+	"date": "9/9/2016",
+	"type": "Hail Damages",
+	"description": "Minor property damages reported"
+},
+{
+	"date": "4/6/2016",
+	"type": "Hail Storm Warning",
+	"description": "No damages reported"
+},
+{
+	"date": "12/4/2015",
+	"type": "Hail Damages",
+	"description": "Minor property damages reported"
+},
+{
+	"date": "5/28/2015",
+	"type": "Hail Damages",
+	"description": "Minor property damages reported"
+}
+	]
+}
+}
+}

@@ -1,0 +1,104 @@
+{
+	"annual_premiums": [
+	  {
+	  	"quote": 100047999,
+		"company": "ABC Corporation",
+		"annualpremium": "$ 750,575",
+		"completion": "80%",
+		"currentstep": "Quote Preparation",
+		"underwriter": "Scott Summers",
+		"riskclass": "Preferred",
+		"companyId": "123-45-abc"
+	  },
+	  {
+	  	"quote": 100048077,
+		"company": "Nova Corporation",
+		"annualpremium": "$ 695,125",
+		"completion": "80%",
+		"currentstep": "Quote Preparation",
+		"underwriter": "Barry Allen",
+		"riskclass": "Preferred",
+		"companyId": "345-99-nova"
+	  },
+	  {
+	  	"quote": 100048173,
+		"company": "Scientia Industries",
+		"annualpremium": "$ 680,450",
+		"completion": "80%",
+		"currentstep": "Quote Preparation",
+		"underwriter": "Mike Sommers",
+		"riskclass": "Preferred",
+		"companyId": "121-45-scientia"
+	  },
+	  {
+	  	"quote": 100048231,
+		"company": "OsCorp Industries",
+		"annualpremium": "$ 575,325",
+		"completion": "90%",
+		"currentstep": "Quote Delivery",
+		"underwriter": "Hank McCoy",
+		"riskclass": "Standard",
+		"companyId": "555-12-oscorp"
+	  },
+	  {
+	  	"quote": 100048302,
+		"company": "Wayne Enterprise",
+		"annualpremium": "$ 535,150",
+		"completion": "35%",
+		"currentstep": "Verification",
+		"underwriter": "Warren Worthington III",
+		"riskclass": "High Risk",
+		"companyId": "333-11-wayne"
+	  },
+	  {
+	  	"quote": 100048352,
+		"company": "Luthor Corp",
+		"annualpremium": "$ 500,450",
+		"completion": "60%",
+		"currentstep": "Rating",
+		"underwriter": "Alex Pietro",
+		"riskclass": "Very High Risk",
+		"companyId": "123-45-abc"
+	  },
+	  {
+	  	"quote": 100048404,
+		"company": "Revive Technologies",
+		"annualpremium": "$ 480,750",
+		"completion": "25%",
+		"currentstep": "Verification",
+		"underwriter": "Stephen Strange",
+		"riskclass": "Preferred",
+		"companyId": "123-45-abc"
+	  },
+	  {
+	  	"quote": 100048502,
+		"company": "WeServe Inc",
+		"annualpremium": "$ 430,375",
+		"completion": "25%",
+		"currentstep": "Verification",
+		"underwriter": "Bruce Banner",
+		"riskclass": "Standard",
+		"companyId": "123-45-abc"
+	  },
+	  {
+	  	"quote": 100048600,
+		"company": "JLA Inc",
+		"annualpremium": "$ 350,955",
+		"completion": "80%",
+		"currentstep": "Quote Preparation",
+		"underwriter": "Aidan Guillen",
+		"riskclass": "Very High Risk",
+		"companyId": "123-45-abc"
+	  },
+	  {
+	  	"quote": 100048660,
+		"company": "Stark Enterprise",
+		"annualpremium": "$ 315,675",
+		"completion": "25%",
+		"currentstep": "Verification",
+		"underwriter": "John Winchester",
+		"riskclass": "Standard",
+		"companyId": "123-45-abc"
+	  }
+	]
+}

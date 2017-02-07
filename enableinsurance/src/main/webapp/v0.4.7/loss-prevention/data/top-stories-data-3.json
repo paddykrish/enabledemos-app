@@ -1,0 +1,34 @@
+{
+	"featuredStory" : {
+		"imageUrl" : "http://s3.amazonaws.com/digitaltrends-uploads-prod/2016/01/News-Apps-Header.jpg",
+		"description" : "News image description here",
+		"altText": ""
+	},
+	"headlines" : [
+		{
+			"headline" : "Man waves flag from hijacked plane",
+			"url" : "http://www.bbc.com/news/world-us-canada-38611474",
+			"text": "View Link"
+		},
+		{
+			"headline" : "3 trump tweets shake world relations",
+			"url" : "http://www.bbc.com/news/world-us-canada-38611474",
+			"text": "View Link"
+		},
+		{
+			"headline" : "Cop arrests mother who calls for help",
+			"url" : "http://www.bbc.com/news/world-us-canada-38611474",
+			"text": "View Link"
+		},
+		{
+			"headline" : "Putin shrugs off Trump's comments",
+			"url" : "http://www.bbc.com/news/world-us-canada-38611474",
+			"text": "View Link"
+		},
+		{
+			"headline" : "Trump WH may be lobbying bonanza",
+			"url" : "http://www.bbc.com/news/world-us-canada-38611474",
+			"text": "View Link"
+		}
+	]
+}

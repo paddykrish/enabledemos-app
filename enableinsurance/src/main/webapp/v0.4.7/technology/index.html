@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appDetails">
+   <head>
+   <title>Insurance - Technology</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../plugins/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="../plugins/owl/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../plugins/fontawesome/css/font-awesome.min.css">
+    
+    <!-- PAGES CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/pages/global/global.css">
+    <link rel="stylesheet" type="text/css" href="../css/pages/technology/technology.css">
+	
+  </head>
+  <body>
+    <article class="mainWrapper container-fluid">
+        <header>
+            <div class="clearfix">
+                <div class="pull-left">
+                    <div class="poc-logo">
+                       <img src="../images/poc-logo.jpg">    
+                    </div>
+                </div>
+                <div class="pull-right">
+                    <div class="top">
+                        <ul class="list-unstyled">
+                            <li class="username">
+                             <i class="fa fa-user" aria-hidden="true"></i> Hi! Mike Sommers
+                            </li>
+                            <li class="main-menu">
+                                <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>    
+            </div>
+            <div class="submenu-container">
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation"><a href="../index.html"><i class="fa fa-eye" aria-hidden="true"></i> Overview</a></li>
+                <!--<li class="hidden" role="presentation"><a href="#marketing-sales" aria-controls="marketing-sales"><i class="fa fa-line-chart" aria-hidden="true"></i> Marketing & Sales</a></li> -->
+                <li role="presentation"><a href="../underwriting/index.html"><i class="fa fa-suitcase" aria-hidden="true"></i>Underwriting</a></li>
+                <li role="presentation"><a href="../loss-prevention/index.html" aria-controls="loss-prevention"><i class="fa fa-level-down" aria-hidden="true"></i> Loss Prevention</a></li>
+                <!--<li role="presentation" class="hidden"><a href="../claims/index.html" aria-controls="claims"><i class="fa fa-users" aria-hidden="true"></i> Claims</a></li> -->
+                <!--<li class="hidden" role="presentation"><a href="#fraud" aria-controls="fraud" role="tab"><i class="fa fa-user-times" aria-hidden="true"></i> Claims Fraud</a></li> -->
+                <li role="presentation" class="active"><a href="index.html" aria-controls="technology"><i class="fa fa-cogs" aria-hidden="true"></i> Technology</a></li>
+              </ul>
+            </div>
+        </header>
+        <div class="main-content">
+            <div class="container-fluid" id="technology-overview">
+                <div class="main">
+					<h1 class="pageTitle hidden">Technology</h1>
+					<div class="row">
+						<div class="imgContainer">
+                            <img src="../images/technology/insurance-tech-cloudera.jpg"> 
+                        </div>
+					</div>
+				</div>      
+            </div> 
+        </div>
+        <footer>
+            &copy;2017 RCG GLOBAL SERVICES
+        </footer>
+    </article>
+	<script type="text/javascript"  src="../js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript"  src="../js/bootstrap.min.js"></script>
+    <script src="../plugins/owl/owl.carousel.min.js"></script>
+    <script src="../js/pages/plugins.js"></script>
+
+    <!-- Angular Graphs CSS -->
+    <link rel="stylesheet" href="../node_modules/angular-nvd3/node_modules/nvd3/build/nv.d3.min.css"/>
+    
+    <!-- Angular Graphs JS -->
+    <script src="../node_modules/angular-nvd3/node_modules/angular/angular.min.js"></script>
+    <script src="../node_modules/angular-nvd3/node_modules/d3/d3.min.js" charset="utf-8"></script>
+    <script src="../node_modules/angular-nvd3/node_modules/nvd3/build/nv.d3.min.js"></script>
+    <script src="../node_modules/angular-nvd3/dist/angular-nvd3.js"></script>
+    <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+	<script src="../node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+    <script src="js/app_loss_prevention.js"></script>
+	
+    <script type="text/javascript">
+        var map, heatmap;
+        
+		function initMap() {
+			
+			map = new google.maps.Map(document.getElementById('map'), {
+			    zoom: 2,
+			    center: {lat: 41.793951, lng: -74.738938},
+			    mapTypeId: 'terrain'
+			}); 
+
+			heatmap = new google.maps.visualization.HeatmapLayer({			  
+			  dissipating: false,
+			  map: map,
+			  opacity: 0.5
+			});
+			
+		}				
+
+        function showFire() {	
+            
+            var key =  Math.floor((Math.random() * 2) + 1); 
+            
+            var jsonFile = "weather_fire_data_" + key + ".json";
+            //console.log(jsonFile);
+			
+            $.getJSON("data/" + jsonFile, function(data) {
+                
+                map.setCenter({lat: data.results[0].latitude, lng: data.results[0].longitude});     
+                    
+                var heatmapData = [];
+                data.results.forEach(function(location) {
+                    var weightedLoc = createWeightedLocation(location);
+                    heatmapData.push(weightedLoc);
+                });			
+                //console.log(heatmapData);
+                heatmap.set('data', heatmapData);	
+
+                var gradient = [
+                    'rgba(255, 185, 185, 0)',
+                    'rgba(255, 185, 185, 1)',
+                    'rgba(255, 167, 167, 1)',
+                    'rgba(255, 159, 159, 1)',
+                    'rgba(255, 139, 139, 1)',
+                    'rgba(255, 129, 129, 1)',
+                    'rgba(255, 117, 117, 1)',
+                    'rgba(255, 97, 97, 1)',
+                    'rgba(255, 79, 79, 1)',
+                    'rgba(255, 67, 67, 1)',
+                    'rgba(255, 47, 47, 1)',
+                    'rgba(255, 33, 33, 1)',
+                    'rgba(255, 21, 21, 1)',
+                    'rgba(255, 0, 0, 1)'
+                ];
+                heatmap.set('gradient', gradient);
+            
+            });
+			
+		}
+	  
+	    function showEQ() {
+            var jsonFile = "weather_eq_data_1.json";
+			//var arrayKey =  Math.floor((Math.random() * 2) + 0); 
+			
+            $.getJSON("data/" + jsonFile, function(data) {
+                
+                map.setCenter({lat: data.results[0].latitude, lng: data.results[0].longitude});   
+                
+                var heatmapData = [];
+                data.results.forEach(function(location) {			
+                    var weightedLoc = createWeightedLocation(location);
+                    heatmapData.push(weightedLoc); 
+                });			
+                heatmap.set('data', heatmapData);	
+
+                var gradient = [			
+                    'rgba(179, 179, 179, 0)',
+                    'rgba(179, 179, 179, 1)',
+                    'rgba(167, 167, 167, 1)',
+                    'rgba(155, 155, 155, 1)',
+                    'rgba(143, 143, 143, 1)',
+                    'rgba(131, 131, 131, 1)',
+                    'rgba(119, 119, 119, 1)',
+                    'rgba(107, 107, 107, 1)',
+                    'rgba(95, 95, 95, 1)',
+                    'rgba(83, 83, 83, 1)',
+                    'rgba(71, 71, 71, 1)',
+                    'rgba(59, 59, 59, 1)',
+                    'rgba(47, 47, 47, 1)',
+                    'rgba(35, 35, 35, 1)'
+                ];
+                
+                heatmap.set('gradient', gradient);
+            
+            });
+	    }
+
+		function showHail() {
+			//var arrayKey =  Math.floor((Math.random() * 2) + 0); 
+            
+            var jsonFile = "weather_hail_data_1.json";
+			
+            $.getJSON("data/" + jsonFile, function(data) {
+                
+                map.setCenter({lat: data.results[0].latitude, lng: data.results[0].longitude});   
+                
+                var heatmapData = [];
+                data.results.forEach(function(location) {
+                    var weightedLoc = createWeightedLocation(location);
+                    heatmapData.push(weightedLoc); 
+                });
+                heatmap.set('data', heatmapData);
+                
+                var gradient = [
+                    'rgba(218, 194, 236, 0)',
+                    'rgba(218, 194, 236, 1)',
+                    'rgba(211, 181, 233, 1)',
+                    'rgba(201, 164, 228, 1)',
+                    'rgba(199, 161, 227, 1)',
+                    'rgba(186, 140, 220, 1)',
+                    'rgba(177, 126, 216, 1)',
+                    'rgba(163, 101, 209, 1)',
+                    'rgba(158, 94, 206, 1)',
+                    'rgba(151, 81, 203, 1)',
+                    'rgba(145, 72, 200, 1)',
+                    'rgba(137, 59, 195, 1)',
+                    'rgba(126, 54, 180, 1)',
+                    'rgba(112, 48, 160, 1)'
+                ];
+                
+                heatmap.set('gradient', gradient);
+            
+            });
+	    }
+		
+		function showFlood() {
+    
+			//var arrayKey =  Math.floor((Math.random() * 2) + 0); 
+            
+            var jsonFile = "weather_flood_data_1.json";
+			
+            $.getJSON("data/" + jsonFile, function(data) {
+                
+                map.setCenter({lat: data.results[0].latitude, lng: data.results[0].longitude});   
+                
+                var heatmapData = [];
+                data.results.forEach(function(location) {
+                    var weightedLoc = createWeightedLocation(location);
+                    heatmapData.push(weightedLoc);
+                });
+                heatmap.set('data', heatmapData);
+                
+                var gradient = [
+                    'rgba(255, 255, 185, 0)',
+                    'rgba(255, 255, 185, 1)',
+                    'rgba(255, 255, 171, 1)',
+                    'rgba(255, 255, 151, 1)',
+                    'rgba(255, 255, 133, 1)',
+                    'rgba(255, 255, 121, 1)',
+                    'rgba(255, 255, 105, 1)',
+                    'rgba(255, 255, 93, 1)',
+                    'rgba(255, 255, 86, 1)',
+                    'rgba(255, 255, 75, 1)',
+                    'rgba(255, 255, 55, 1)',
+                    'rgba(255, 255, 42, 1)',
+                    'rgba(255, 255, 29, 1)',
+                    'rgba(255, 255, 0, 1)',
+                    'rgba(240, 234, 0, 1)'
+                ];
+                heatmap.set('gradient', gradient);
+            });
+	    }
+		
+		function showStorm() {
+			
+            var jsonFile = "weather_storm_data_1.json";
+			
+            $.getJSON("data/" + jsonFile, function(data) {
+                
+                map.setCenter({lat: data.results[0].latitude, lng: data.results[0].longitude});           
+            
+                var heatmapData = [];
+                data.results.forEach(function(location) {
+                    var weightedLoc = createWeightedLocation(location);
+                    heatmapData.push(weightedLoc);
+                });
+                heatmap.set('data', heatmapData);
+          
+                var gradient = [
+                    'rgba(0, 255, 255, 0)',
+                    'rgba(0, 255, 255, 1)',
+                    'rgba(0, 225, 255, 1)',
+                    'rgba(0, 200, 255, 1)',
+                    'rgba(0, 175, 255, 1)',
+                    'rgba(0, 160, 255, 1)',
+                    'rgba(0, 145, 223, 1)',
+                    'rgba(0, 125, 191, 1)',
+                    'rgba(0, 110, 255, 1)',
+                    'rgba(0, 100, 255, 1)',
+                    'rgba(0, 75, 255, 1)',
+                    'rgba(0, 50, 255, 1)',
+                    'rgba(0, 25, 255, 1)',
+                    'rgba(0, 0, 255, 1)'
+                ];
+                heatmap.set('gradient', gradient);
+			});  
+        }
+	
+    function createWeightedLocation(mapLoc) {      
+        // latitude, longitude
+        var latLng = new google.maps.LatLng(mapLoc.latitude, mapLoc.longitude);
+        var weightedLoc = {
+            location: latLng,
+            weight: mapLoc.weight
+        };			    
+        
+        return weightedLoc;
+    }
+	
+    function createWeightedLoc(feature) {
+        var coords = feature.geometry.coordinates;
+        var latLng = new google.maps.LatLng(coords[1], coords[0]);
+        var weightedLoc = {
+            location: latLng,
+            weight: feature.properties.weight
+        };			    
+        
+        return weightedLoc;
+    }
+  
+	
+	function getScope(ctrlName) {
+		var sel = 'div[ng-controller="' + ctrlName + '"]';
+		return angular.element(sel).scope();
+	}
+    
+	function showPieChart() {
+		var $scope = getScope('PropertyMonitoringMaintenanceCtrl');
+		
+		// handle pie data from json
+		var statusLabels = ["Online", "Offline", "Errors"];
+		
+		angular.forEach($scope.propertyMonitoringMaintenance, function(item, key) {
+			var ctx = document.getElementById("myPieChart" + key);		
+			var onlineStatus = [item.currentOnlineStatus.online, item.currentOnlineStatus.offline, item.currentOnlineStatus.errors];
+			
+			var myChart = new Chart(ctx, {
+				type: 'pie',
+				data: {
+					labels: statusLabels,
+					datasets: [{
+						data: onlineStatus,
+						backgroundColor: [
+							'rgba(84, 130, 53, 1)',
+							'rgba(166, 166, 166, 1)',
+							'rgba(255, 192, 0, 1)'
+						]
+					}]
+				}
+			});
+		  
+		});        
+				
+		$scope.$apply();
+	}    
+    
+	jQuery(document).ready(function($) {
+        //loadMapData();
+        
+        $("#fireButton").on('click', function() {
+            $("#map").attr("data-active", "fire");
+            showFire();			
+        });
+        $("#eqButton").on('click', function() {
+            $("#map").attr("data-active", "eq");
+            showEQ();
+        });
+        $("#hailButton").on('click', function() {
+            $("#map").attr("data-active", "hail");
+            showHail();
+        });
+        $("#floodButton").on('click', function() {
+            $("#map").attr("data-active", "flood");
+            showFlood();
+        });
+        $("#stormButton").on('click', function() {
+            $("#map").attr("data-active", "storm");
+            showStorm();
+        });
+            
+		setTimeout(showPieChart, 4000);
+		
+		setInterval(function() {
+			var activeData = $("#map").attr("data-active");
+            //console.log(activeData);
+			
+			if (activeData == "fire") {
+				showFire(); 
+			}else if (activeData == "storm") {
+				showStorm(); 
+			}else if (activeData == "eq") {
+				showEQ(); 
+			}else if (activeData == "flood") {
+				showFlood(); 
+			}else if (activeData == "hail") {
+				showHail(); 
+			}
+			
+		}, 5000);
+		
+		$('#myModal2').on('show.bs.modal', function(e) {
+			//get data-id attribute of the clicked element
+			var locationId = $(e.relatedTarget).data('location-id');
+			var buildingId = $(e.relatedTarget).data('building-id');
+			
+			angular.element($("#myModal2")).scope().getData(locationId, buildingId);
+		});
+	})
+    </script>
+	
+	<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgiZSa_VLVLhdcJ9DmXP6L-uXDLmzD-OI&libraries=visualization&callback=initMap">
+    </script>
+	
+  </body>
+</html>

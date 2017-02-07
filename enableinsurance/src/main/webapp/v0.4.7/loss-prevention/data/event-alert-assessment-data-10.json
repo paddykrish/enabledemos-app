@@ -1,0 +1,53 @@
+{
+	"eventAlertAssessments": [{
+		"eventType": "Typhoon",
+		"details": "No typhoon events",
+		"risk": "Low"
+	}, {
+		"eventType": "Flood",
+		"details": "Flash flood warning at 2 inches",
+		"risk": "High"
+	}, {
+		"eventType": "Fire",
+		"details": "Fire Alert is now set to 1",
+		"risk": "High Risk"
+	}, {
+		"eventType": "Earthquake",
+		"details": "Earthquake reported at magnitude 5.77",
+		"risk": "High Risk"
+	}, {
+		"eventType": "Hail",
+		"details": "Hailstorm alert reported",
+		"risk": "High Risk"
+	}, {
+		"eventType": "Sink Hole",
+		"details": "Sink hole alert reported",
+		"risk": "Medium Risk"
+	}],
+	"topClientEstimatedDamages": [{
+		"clientName": "ABC Corporation",
+		"contactPerson": "Andrew Charles",
+		"eventType": "Fire",
+		"estimatedDamages": 9478147
+	}, {
+		"clientName": "Nova Corporation",
+		"contactPerson": "John Carter",
+		"eventType": "Typhoon",
+		"estimatedDamages": 5471896
+	}, {
+		"clientName": "Scientia Industries",
+		"contactPerson": "Melissa Sy",
+		"eventType": "Typhoon",
+		"estimatedDamages": 3748951
+	}, {
+		"clientName": "OzCorp Industries",
+		"contactPerson": "William Osbourn",
+		"eventType": "Earthquake",
+		"estimatedDamages": 845741
+	}, {
+		"clientName": "Wayne Enterprise",
+		"contactPerson": "Bruce Wayne",
+		"eventType": "Earthquake",
+		"estimatedDamages": 574962
+	}]
+}

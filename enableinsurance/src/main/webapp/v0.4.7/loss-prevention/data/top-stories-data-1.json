@@ -1,0 +1,34 @@
+{
+	"featuredStory" : {
+		"imageUrl" : "http://a57.foxnews.com/media.foxbusiness.com/BrightCove/854081161001/201701/2506/536/300/854081161001_5305044325001_ne-nation-under-healthcare-Drugmakers-excited-to-work-with-.jpg",
+		"description" : "Trump Pushes Drugmakers for Lower Prices, More U.S. Production",
+		"url": "http://www.foxbusiness.com/politics/2017/01/31/trump-pushes-drugmakers-for-lower-prices-more-u-s-production.html"
+	},
+	"headlines" : [
+		{
+			"headline" : "Pentagon believes attack on Saudi frigate meant for US warship",
+			"url" : "http://www.foxnews.com/world/2017/01/31/exclusive-pentagon-believes-attack-on-saudi-frigate-meant-for-us-warship.html",
+			"text": "Read"
+		},
+		{
+			"headline" : "Warren Buffett: I Bought $12 Billion of Stock After Trump Won",
+			"url" : "http://www.foxbusiness.com/markets/2017/01/31/warren-buffett-bought-12-billion-stock-after-trump-won.html",
+			"text": "Read"
+		},
+		{
+			"headline" : "Wasserman Schultz: We Need Regulation to Protect Consumers",
+			"url" : "http://www.foxbusiness.com/politics/2017/01/31/wasserman-schultz-need-regulation-to-protect-consumers.html",
+			"text": "Read"
+		},
+		{
+			"headline" : "Wal-Mart Takes Latest Shot at Amazon",
+			"url" : "http://www.foxbusiness.com/markets/2017/01/31/wal-mart-takes-latest-shot-at-amazon.html",
+			"text": "Read"
+		},
+		{
+			"headline" : "Trump Offers Hope for Battered Steel Industry",
+			"url" : "http://www.foxbusiness.com/markets/2017/01/31/trump-offers-hope-for-battered-steel-industry.html",
+			"text": "Read"
+		}
+	]
+}

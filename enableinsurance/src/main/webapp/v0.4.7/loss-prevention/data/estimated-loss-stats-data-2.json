@@ -1,0 +1,31 @@
+{
+	"totalOverallEstimatedDamages" : {	
+		"amount":  19569924.00 
+	},
+	"estimatedLossStatistics": [{
+			"riskLevel": "High",
+			"eventType": "Fire",
+			"area": "Farmington",
+			"eventRadius": "20 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "Critical",
+			"eventType": "Typhoon",
+			"area": "Marblehead",
+			"eventRadius": "78 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "Critical",
+			"eventType": "Typhoon",
+			"area": "Simsbury",
+			"eventRadius": "183 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}
+	]
+}

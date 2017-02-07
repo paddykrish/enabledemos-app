@@ -32,6 +32,33 @@ public class WeatherGovInfo implements Serializable {
     String valuename;
     String readingtime;
 
+    String states ;
+    String counties;
+    String zipcodes;
+
+    public String getStates() {
+        return states;
+    }
+
+    public void setStates(String states) {
+        this.states = states;
+    }
+
+    public String getCounties() {
+        return counties;
+    }
+
+    public void setCounties(String counties) {
+        this.counties = counties;
+    }
+
+    public String getZipcodes() {
+        return zipcodes;
+    }
+
+    public void setZipcodes(String zipcodes) {
+        this.zipcodes = zipcodes;
+    }
 
     public String getId() {
         return id;
