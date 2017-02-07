@@ -23,6 +23,10 @@
 			<name>Internal Release Repository</name>
 			<url>http://repo.hortonworks.com/content/groups/public/</url>
 		</repository>
+		<repository>
+			<url>https://repository.cloudera.com/content/repositories/releases/</url>
+			<id>cloudera</id>
+		</repository>
 
 
 
@@ -165,7 +169,9 @@
 		<dependency>
 			<groupId>com.rcggs.framework</groupId>
 			<artifactId>ingest-engine-java</artifactId>
-			<version>1.0</version>
+			<version>1.2</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/ingest-engine-java-1.2.jar</systemPath>
 		</dependency>
 
 		<dependency>
@@ -200,7 +206,8 @@
 					<groupId>org.mortbay.jetty</groupId>
 					<artifactId>jsp-api-2.1</artifactId>
 				</exclusion>
-			</exclusions>		</dependency>
+			</exclusions>
+		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.apache.phoenix/phoenix-server-client -->
 		<!--

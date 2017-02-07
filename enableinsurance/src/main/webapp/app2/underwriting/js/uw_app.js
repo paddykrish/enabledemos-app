@@ -5,14 +5,6 @@ app.controller("StackedAreaCtrl", function($scope, $http) {
         chart: {
             type: 'stackedAreaChart',
             height: 370,
-            /*legend: {
-                margin : {
-                    top: 1,
-                    right: 115,
-                    bottom: 5,
-                    left: 0
-                }    
-            },*/
             margin : {
                 top: 70,
                 right: 15,
@@ -29,13 +21,11 @@ app.controller("StackedAreaCtrl", function($scope, $http) {
                 tooltipHide: function(e){ console.log("tooltipHide"); }
             },
             xAxis: {
-                //axisLabel: 'Time (ms)',
                 tickFormat: function(d) {
                     return d3.time.format('%I:%M %p')(new Date(d))
                 }
             },
             yAxis: {
-                //axisLabel: 'Voltage (v)',
                 tickFormat: function(d){
                     return d3.format('.00f')(d);
                 },
@@ -58,36 +48,7 @@ app.controller("StackedAreaCtrl", function($scope, $http) {
         { values: [], key: 'Property', color: 'yellow', classed: 'dashed' },
         { values: [], key: 'Workers Compensation', color: '#DA5C0A', classed: 'dashed' },
     ];
-        
-    /*$scope.run = true;
-    
-    Date.prototype.addHours= function(h){
-        this.setHours(this.getHours()+h);
-        return this;
-    }
 
-    var x = 0;
-    setInterval(function(){
-        if (!$scope.run) return;
-        $scope.data[0].values.push({ x: new Date().addHours(x),  y: Math.random() * 30});
-        $scope.data[1].values.push({ x: new Date().addHours(x),  y: Math.random() * 35});
-        $scope.data[2].values.push({ x: new Date().addHours(x),  y: Math.random() * 40});
-        $scope.data[3].values.push({ x: new Date().addHours(x),  y: Math.random() * 45});
-        $scope.data[4].values.push({ x: new Date().addHours(x),  y: Math.random() * 50});
-
-        if ($scope.data[0].values.length > 20) {
-             $scope.data[0].values.shift();
-             $scope.data[1].values.shift();
-             $scope.data[2].values.shift();
-             $scope.data[3].values.shift();
-             $scope.data[4].values.shift();
-        }
-
-        x++;
-        
-      $scope.$apply(); // update both chart
-    }, 10000);*/
-    
     var jsonFile = ["submissions_by_lob2.json", "submissions_by_lob3.json", "submissions_by_lob4.json"];
     function getJson() {
        return jsonFile[Math.floor(Math.random() * jsonFile.length)];
@@ -99,21 +60,16 @@ app.controller("StackedAreaCtrl", function($scope, $http) {
     setInterval(function() {
         loadData(); 
     }, 3000);
-    //console.log($scope.data);  
 
     function loadData() {
         $scope.data = [];
-        $http.get('data/' + getJson())
+        $http.get('/enableinsurance/service/dataservice/getLOBCounts/all')
             .then(function(response) {
                 //console.log(response.data);
                 var x = 0;
                 $scope.data = response.data;
                 angular.forEach($scope.data, function(data1) {
-                    //console.log(data1);
-                    //$scope.data.push({
-                    //    key: data1.key,
-                    //    color: data1.color
-                    //});
+
                     angular.forEach(data1.values, function(items) {
                         //console.log(items[0],items[1]);                
                         $scope.data[x].values.push({x: items[0], y: items[1]});
@@ -126,7 +82,7 @@ app.controller("StackedAreaCtrl", function($scope, $http) {
 });
 
 app.controller("ListCtrl", function($scope, $http) {
-    $http.get('data/top_10_active_quotes-av.json')
+    $http.get('/enableinsurance/service/dataservice/getTop10ActiveQuotes/all')
         .then(function(response) {
             //console.log(response.data);
             $scope.premiums = response.data.annual_premiums;
@@ -134,7 +90,7 @@ app.controller("ListCtrl", function($scope, $http) {
 });
 
 app.controller("StatusBreakdownCtrl", function($scope, $http) {
-    $http.get('data/status_breakdown.json')
+    $http.get('/enableinsurance/service/dataservice/getStatusBreakdown/all')
         .then(function(response) {       
             $scope.quoteStatusData = response.data.quoteStatusData;
             $scope.total = $scope.quoteStatusData.submission + $scope.quoteStatusData.verification
@@ -144,7 +100,7 @@ app.controller("StatusBreakdownCtrl", function($scope, $http) {
 });
 
 app.controller("StatisticsCtrl", function($scope, $http) {
-   $http.get('data/statistics.json')
+   $http.get('/enableinsurance/service/dataservice/getStatistics/all')
         .then(function(response) {
             //console.log(response.data);
             $scope.date = new Date();
@@ -153,7 +109,7 @@ app.controller("StatisticsCtrl", function($scope, $http) {
 });
 
 app.controller("quotesByRiskCtrl", function($scope, $http) {
-   $http.get('data/quotes_by_risk_client.json')
+   $http.get('/enableinsurance/service/dataservice/getQuotesByRiskClient/all/')
         .then(function(response) {
             $scope.quotesByRisk = response.data.quotesByRiskClient;
 			var maxHeight = 300;
@@ -167,7 +123,7 @@ app.controller("quotesByRiskCtrl", function($scope, $http) {
 });
 
 app.controller("riskQuotesStepCtrl", function($scope, $http) {
-   $http.get('data/quotes_by_risk_client.json')
+   $http.get('/enableinsurance/service/dataservice/getQuotesByRiskClient/all/')
         .then(function(response) {
             $scope.quotesBySteps = response.data.highRiskQuotesStep;
 			var maxHeight = 300;

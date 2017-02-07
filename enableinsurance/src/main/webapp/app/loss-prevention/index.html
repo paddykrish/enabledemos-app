@@ -716,8 +716,8 @@
 			    strokeWeight: .5
 			};
         }
-		
-        function clearData() {            
+
+        function clearData() {
 			map.data.forEach(function(feature) {								
 				map.data.remove(feature);
 				return;
@@ -935,6 +935,33 @@
                     heatmap.setData([]);
                     
                     var heatmapData = [];
+                    var floodcoordinates = [ {lat:30.74, lng:-83.06},  {lat:30.69 , lng:-83.07 },  {lat:30.62 , lng:-83.07 },
+                     {lat:30.62, lng:-83.03 }, {lat:30.71, lng:-83.03}, {lat:30.74, lng:-83.02} , {lat:30.74, lng:-83.06}  ];
+
+                    var floodcoordinates2 = [ {lat:18.49, lng:-66.78},  {lat:18.48, lng:-66.77},  {lat:18.32, lng:-66.77},
+                     {lat:18.32, lng:-66.82}, {lat:18.35, lng:-66.82}, {lat:18.39, lng:-66.81} , {lat:18.43, lng:-66.83},
+                      {lat:18.45, lng:-66.82}, {lat:18.48, lng:-66.84}, {lat:18.49, lng:-66.82}, {lat:18.49, lng:-66.78}];
+
+					var floodmap = new google.maps.Polygon({
+					  paths: floodcoordinates,
+					  strokeColor: '#FF0000',
+					  strokeOpacity: 0.8,
+					  strokeWeight: 2,
+					  fillColor: '#FF0000',
+					  fillOpacity: 0.35
+					});
+
+					var floodmap2 = new google.maps.Polygon({
+					  paths: floodcoordinates2,
+					  strokeColor: '#FF0000',
+					  strokeOpacity: 0.8,
+					  strokeWeight: 2,
+					  fillColor: '#FF0000',
+					  fillOpacity: 0.35
+					});
+					floodmap.setMap(map);
+					floodmap2.setMap(map);
+                    /*
                     data.results.forEach(function(location) {
                         var weightedLoc = new google.maps.LatLng(location.latitude, location.longitude);
                         heatmapData.push(weightedLoc);
@@ -943,6 +970,7 @@
                     heatmap.setData(heatmapData);
                     //map.setCenter({lat: data.results[0].latitude, lng: data.results[0].longitude});     
                     heatmap.setMap(map);
+                    */
                 
                 }
             });

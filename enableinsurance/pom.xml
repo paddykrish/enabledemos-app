@@ -18,12 +18,6 @@
 	</properties>
 
 	<repositories>
-
-		<!-- repository> <id>codelds</id> <url>https://code.lds.org/nexus/content/groups/main-repo</url>
-			</repository -->
-
-		<!--repository> <id>jci-nexus</id> <url>http://c201s039.jci.com:8081/nexus/content/repositories/beingestion/</url>
-			</repository -->
 		<!--
 		<repository>
 			<id>rcg-archiva</id>
@@ -31,14 +25,18 @@
 		</repository>
 		-->
 		<repository>
+			<id>com.hortonworks</id>
+			<name>Internal Release Repository</name>
+			<url>http://repo.hortonworks.com/content/groups/public/</url>
+		</repository>
+
+		<repository>
 			<url>https://repository.cloudera.com/content/repositories/releases/</url>
 			<id>cloudera</id>
 		</repository>
-
 	</repositories>
 
 	<dependencies>
-
 
 		<!-- Spring -->
 		<dependency>
@@ -149,17 +147,6 @@
 			<version>0.98.2-hadoop2</version>
 		</dependency>
 
-		<dependency>
-			<groupId>com.datastax.cassandra</groupId>
-			<artifactId>cassandra-driver-core</artifactId>
-			<version>2.0.2</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.pig</groupId>
-			<artifactId>pig</artifactId>
-			<version>0.12.1</version>
-		</dependency>
 
 		<dependency>
 			<groupId>org.apache.hive</groupId>
@@ -174,52 +161,9 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.apache.flume</groupId>
-			<artifactId>flume-ng-core</artifactId>
-			<version>1.5.1</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.google.gdata</groupId>
-			<artifactId>core</artifactId>
-			<version>1.47.1</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.sqoop</groupId>
-			<artifactId>sqoop</artifactId>
-			<version>1.4.1-incubating</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>org.elasticsearch</groupId>
-			<artifactId>elasticsearch</artifactId>
-			<version>1.4.2</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.solr</groupId>
-			<artifactId>solr-solrj</artifactId>
-			<version>4.10.2</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.kafka</groupId>
-			<artifactId>kafka_2.10</artifactId>
-			<version>0.8.0</version>
-		</dependency>
-
-		<dependency>
 			<groupId>com.rcggs.framework</groupId>
 			<artifactId>splunk-compiled</artifactId>
 			<version>1.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.amazonaws</groupId>
-			<artifactId>aws-java-sdk-s3</artifactId>
-			<version>1.9.16</version>
 		</dependency>
 
 		<dependency>
@@ -241,40 +185,6 @@
 			<version>1.10</version>
 		</dependency>
 
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpclient</artifactId>
-			<version>4.3.6</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpcore</artifactId>
-			<version>4.4</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.geronimo.specs</groupId>
-			<artifactId>geronimo-jms_1.1_spec</artifactId>
-			<version>1.1.1</version>
-		</dependency>
-<!--
-		<dependency>
-			<groupId>com.oracle</groupId>
-			<artifactId>ojdbc6</artifactId>
-			<version>11.2.0.3</version>
-		</dependency>
--->
-		<dependency>
-			<groupId>com.microsoft.sqlserver</groupId>
-			<artifactId>sqljdbc4</artifactId>
-			<version>4.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>net.sf.jt400</groupId>
-			<artifactId>jt400</artifactId>
-			<version>8.5</version>
-		</dependency>
 
 		<dependency>
 			<groupId>org.quartz-scheduler</groupId>
@@ -316,10 +226,37 @@
 			<artifactId>commons-lang3</artifactId>
 			<version>3.3.2</version>
 		</dependency>
+
 		<dependency>
 			<groupId>com.rcggs.framework</groupId>
 			<artifactId>ingest-engine-java</artifactId>
-			<version>1.0</version>
+			<version>1.2</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/ingest-engine-java-1.2.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.phoenix</groupId>
+			<artifactId>phoenix-core</artifactId>
+			<version>4.2.0.2.2.4.2-2</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.mortbay.jetty</groupId>
+					<artifactId>servlet-api</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.mortbay.jetty</groupId>
+					<artifactId>servlet-api-2.5</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.mortbay.jetty</groupId>
+					<artifactId>jsp-2.1</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.mortbay.jetty</groupId>
+					<artifactId>jsp-api-2.1</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
 
@@ -328,13 +265,13 @@
 			<artifactId>json-simple</artifactId>
 			<version>1.1</version>
 		</dependency>
-
+		<!--
 		<dependency>
 			<groupId>com.rcggs.framework</groupId>
 			<artifactId>twilio-master</artifactId>
 			<version>1.0.0</version>
 		</dependency>
-
+		-->
 		<dependency>
 			<groupId>commons-validator</groupId>
 			<artifactId>commons-validator</artifactId>
@@ -367,12 +304,6 @@
 			<version>4.8.1</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-all</artifactId>
-			<version>1.8.4</version>
-			<scope>test</scope>
-		</dependency>
 		<!--
 		<dependency>
 			<groupId>joda-time</groupId>
@@ -380,24 +311,6 @@
 			<version>2.8.2</version>
 		</dependency>
 		-->
-		<!-- sales force -->
-		<dependency>
-			<groupId>com.force.api</groupId>
-			<artifactId>force-metadata-api</artifactId>
-			<version>36.0.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.force.api</groupId>
-			<artifactId>force-wsc</artifactId>
-			<version>36.3.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.force.api</groupId>
-			<artifactId>force-partner-api</artifactId>
-			<version>36.0.0</version>
-		</dependency>
 <!--
 		<dependency>
 			<groupId>cloudera</groupId>
@@ -405,19 +318,7 @@
 			<version>0.5.0</version>
 		</dependency>
 -->
-		<!-- hanna driver -->
-		<dependency>
-			<groupId>com.sap.db</groupId>
-			<artifactId>ngdbc</artifactId>
-			<version>1.3</version>
-		</dependency>
 
-		<!-- openedge driver -->
-		<dependency>
-			<groupId>com.ddtek.jdbc</groupId>
-			<artifactId>openedge</artifactId>
-			<version>11.6</version>
-		</dependency>
 
 		<dependency>
 			<groupId>org.hibernate</groupId>

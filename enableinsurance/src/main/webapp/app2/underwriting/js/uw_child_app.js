@@ -1,7 +1,13 @@
 var app = angular.module('appDetails', ['chart.js', 'nvd3']);
 
 app.controller("NumberQuotesCtrl", function($scope, $http) {
-    $http.get('data/child_type_renewal_data.json')
+    var companycode = location['search'].split('&')[0].split("=")[1];
+    if (companycode == null){
+        companycode = "all"
+    }
+
+    console.log("company code " + companycode);
+    $http.get('/enableinsurance/service/dataservice/getChildTypeRenewalData/' + companycode + '/')
         .then(function(response) {
             //console.log(response.data);
             $scope.quotes_requests = response.data.results;
@@ -9,7 +15,11 @@ app.controller("NumberQuotesCtrl", function($scope, $http) {
 });
 
 app.controller("LossRatioCtrl", function($scope, $http) {
-	$http.get('data/lost_ratio_history_data.json')
+    var companycode = location['search'].split('&')[0].split("=")[1];
+    if (companycode == null){
+        companycode = "all"
+    }
+	$http.get('/enableinsurance/service/dataservice/getLostRatioHistoryData/' + companycode + '/')
         .then(function(response) {
             //console.log(response.data);
             $scope.loss_ratios = response.data.results;
@@ -17,7 +27,12 @@ app.controller("LossRatioCtrl", function($scope, $http) {
 });
 
 app.controller("LossRatioSummaryCtrl", function($scope, $http) {
-	$http.get('data/loss_ratio_summary.json')
+    var companycode = location['search'].split('&')[0].split("=")[1];
+    if (companycode == null){
+        companycode = "all"
+    }
+
+	$http.get('/enableinsurance/service/dataservice/getLossRatioSummary/' + companycode + '/')
         .then(function(response) {
             $scope.lossRatioSummary = response.data.lossRatioSummary;
         });
@@ -62,14 +77,14 @@ app.controller("ClaimsPremiumCtrl", function($scope, $http) {
     /*$scope.options1 = angular.copy($scope.options);
     $scope.options1.chart.duration = 0;
     $scope.options1.chart.yDomain = [-1,1];*/
-    
+
     /*$scope.data = [
-    	{ values: [], key: 'Claims', color: '#000' }, 
+    	{ values: [], key: 'Claims', color: '#000' },
     	{ values: [], key: 'Premium', color: '#0f0' }
     ];
-        
+
     $scope.run = true;
-    
+
     var x = 0;
     setInterval(function(){
 	    if (!$scope.run) return;
@@ -80,7 +95,7 @@ app.controller("ClaimsPremiumCtrl", function($scope, $http) {
       		$scope.data[1].values.shift();
       	}
 	    x++;
-	    
+
       $scope.$apply(); // update both chart
     }, 10000); */
 
@@ -96,8 +111,8 @@ app.controller("ClaimsPremiumCtrl", function($scope, $http) {
                 key: 'Claims',
                 color: '#0f0',
                 values: [
-                    [1451624400000 , 8], [ 1454302800000 , 7], [1456808400000, 8], [1459483200000, 7], 
-                    [1462075200000, 7], [1464753600000, 4], [1467345600000, 5], [1470024000000, 3], 
+                    [1451624400000 , 8], [ 1454302800000 , 7], [1456808400000, 8], [1459483200000, 7],
+                    [1462075200000, 7], [1464753600000, 4], [1467345600000, 5], [1470024000000, 3],
                     [1472702400000, 5], [1475294400000, 6], [1477972800000, 5], [1480568400000, 7]
                 ]
             },
@@ -105,14 +120,18 @@ app.controller("ClaimsPremiumCtrl", function($scope, $http) {
                 key: 'Premium',
                 color: '#000',
                 values: [
-                    [ 1451624400000 , 22], [ 1454302800000 , 10], [1456808400000, 24], [1459483200000, 9], 
-                    [1462075200000, 12], [1464753600000, 23], [1467345600000, 18], [1470024000000, 10], 
+                    [ 1451624400000 , 22], [ 1454302800000 , 10], [1456808400000, 24], [1459483200000, 9],
+                    [1462075200000, 12], [1464753600000, 23], [1467345600000, 18], [1470024000000, 10],
                     [1472702400000, 15], [1475294400000, 30], [1477972800000, 10], [1480568400000, 14]
                 ]
             }
-            
+
         ];*/
-        $http.get('data/claims_premium_data.json')
+        var companycode = location['search'].split('&')[0].split("=")[1];
+        if (companycode == null){
+            companycode = "all"
+        }
+        $http.get('/enableinsurance/service/dataservice/getClaimsPremiumData/' + companycode + '/')
             .then(function(response) {
                 //console.log(response.data);
                 $scope.data = response.data;
@@ -237,7 +256,12 @@ app.controller("HailCtrl", function($scope, $http) {
 
 app.controller("RadarCtrl", function($scope, $http) {    
 	
-	$http.get('data/risk_grade.json')
+    var companycode = location['search'].split('&')[0].split("=")[1];
+    if (companycode == null){
+        companycode = "all"
+    }
+
+	$http.get('/enableinsurance/service/dataservice/getRiskFactors/' +companycode + '/')
         .then(function(response) {
             
 			// handle data from json
@@ -264,7 +288,7 @@ app.controller("RadarCtrl", function($scope, $http) {
 });
 
 app.controller("CompaniesCtrl", function($scope, $http, $window) {
-    $http.get('data/company_list_data.json')
+    $http.get('/enableinsurance/service/dataservice/getCompanies/all')
         .then(function(response) {
             
             var search = $window.location.search
@@ -295,7 +319,12 @@ app.controller("CompaniesCtrl", function($scope, $http, $window) {
 });
 
 app.controller("clientDataCtrl", function($scope, $http) {
-    $http.get('data/client_data.json')
+    var companycode = location['search'].split('&')[0].split("=")[1];
+    if (companycode == null){
+        companycode = "all"
+    }
+
+    $http.get('/enableinsurance/service/dataservice/getClientData/' + companycode + '/')
         .then(function(response) {
             $scope.clientData = response.data.clientData;
         });
@@ -309,7 +338,11 @@ app.controller("SocialStreamCtrl", function($scope, $http) {
 });
 
 app.controller("LocationRiskAssessmentCtrl", function($scope, $http) {
-    $http.get('data/location_risk_assessment_data_av.json')
+    var companycode = location['search'].split('&')[0].split("=")[1];
+    if (companycode == null){
+        companycode = "all"
+    }
+	$http.get('/enableinsurance/service/dataservice/getLocationRiskAssessmentData/' +companycode + '/')
         .then(function(response) {
             $scope.locationRiskAssessments = response.data;
 
