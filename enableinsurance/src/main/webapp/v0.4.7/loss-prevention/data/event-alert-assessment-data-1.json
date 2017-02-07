@@ -1,0 +1,55 @@
+{
+	"eventAlertAssessments": [{
+			"eventType": "Typhoon",
+			"details": "Typhoon Kenneth is now Category 1",
+			"risk": "Medium"
+		}, {
+			"eventType": "Flood",
+			"details": "Flash flood warning at 4.03 inches",
+			"risk": "High"
+		}, {
+			"eventType": "Fire",
+			"details": "No fire events",
+			"risk": "Low"
+		}, {
+			"eventType": "Earthquake",
+			"details": "No earthquake events",
+			"risk": "Low"
+		}, {
+			"eventType": "Hail",
+			"details": "Hailstorm alert reported",
+			"risk": "High Risk"
+		}, {
+			"eventType": "Sink Hole",
+			"details": "Sink hole alert reported",
+			"risk": "High Risk"
+		}
+
+	],
+	"topClientEstimatedDamages": [{
+		"clientName": "ABC Corporation",
+		"contactPerson": "Andrew Charles",
+		"eventType": "Fire",
+		"estimatedDamages": 9128132
+	}, {
+		"clientName": "Nova Corporation",
+		"contactPerson": "John Carter",
+		"eventType": "Typhoon",
+		"estimatedDamages": 3058917
+	}, {
+		"clientName": "Scientia Industries",
+		"contactPerson": "Melissa Sy",
+		"eventType": "Typhoon",
+		"estimatedDamages": 2251383
+	}, {
+		"clientName": "OzCorp Industries",
+		"contactPerson": "William Osbourn",
+		"eventType": "Earthquake",
+		"estimatedDamages": 3238106
+	}, {
+		"clientName": "Wayne Enterprise",
+		"contactPerson": "Bruce Wayne",
+		"eventType": "Earthquake",
+		"estimatedDamages": 1514304
+	}]
+}

@@ -1,0 +1,177 @@
+{
+"locationId": "240",
+"buildingId": "151",
+"address": {
+	"street": "220 SALEM TURNPIKE",
+	"city": "Norwich",
+	"state": "CT",
+	"zip": "06360"
+},
+"structureAttr": {
+	"valuation": "$216,300",
+	"classification": "Warehouse",
+	"constructionYear": 1974,
+	"area": 49142,
+	"stories": 1,
+	"constructionGrade": "A",
+	"lastMajorRenovation": 1986,
+	"renovationDetails": "Electrical",
+	"inspectionDate": 2012,
+	"fireRating": "Medium Risk"
+},
+"locationAttr": {
+	"crimeRating": "Average",
+	"proximityFireStation": "7.22 miles",
+	"proximityWater": "13.35 miles",
+	"floodRating": "Medium Risk",
+	"sinkholeRating": "Excellent"
+},
+"riskGrade": [
+	{
+	"grade": 5.84,
+	"risk": "Crime"
+},
+{
+	"grade": 3.23,
+	"risk": "Hail Risk"
+},
+{
+	"grade": 7.34,
+	"risk": "Fire Risk"
+},
+{
+	"grade": 6.34,
+	"risk": "Flood Risk"
+},
+{
+	"grade": 2.56,
+	"risk": "Earthquake Risk"
+},
+{
+	"grade": 2.52,
+	"risk": "Windstorm Risk"
+}
+],
+"riskExposure": {
+"weather": {
+"totalResults" : 5,
+"results": [
+{
+	"date": "7/19/2016",
+	"type": "Typhoon",
+	"desc": "Typhoon Category 4"
+},
+{
+	"date": "11/15/2015",
+	"type": "Thunderstorm",
+	"desc": "Thunderstorm warning in effect"
+},
+{
+	"date": "9/9/2015",
+	"type": "Thunderstorm",
+	"desc": "Thunderstorm warning in effect"
+},
+{
+	"date": "8/1/2015",
+	"type": "Storm",
+	"desc": "Storm Signal is at Level 3"
+},
+{
+	"date": "4/21/2015",
+	"type": "Thunderstorm",
+	"desc": "Thunderstorm warning in effect"
+}
+	]
+},
+"fire": {
+"totalResults" : 5,
+"results": [
+{
+	"date": "10/23/2016",
+	"level": 5,
+	"area": "Derby"
+},
+{
+	"date": "3/21/2016",
+	"level": 5,
+	"area": "Naugatuck"
+},
+{
+	"date": "1/18/2016",
+	"level": 3,
+	"area": "East Windsor"
+},
+{
+	"date": "8/15/2015",
+	"level": 5,
+	"area": "Shelton"
+},
+{
+	"date": "3/13/2015",
+	"level": 5,
+	"area": "North Windham"
+}
+	]
+},
+"crime": {
+"totalResults" : 5,
+"results": [
+{
+	"date": "7/15/2016",
+	"type": "Burglary",
+	"desc": "Burglary"
+},
+{
+	"date": "1/6/2016",
+	"type": "Theft",
+	"desc": "Warehouse Theft"
+},
+{
+	"date": "9/2/2015",
+	"type": "Arrest",
+	"desc": "Destruction of property"
+},
+{
+	"date": "5/30/2015",
+	"type": "Arrest",
+	"desc": "Disturbing the peace"
+},
+{
+	"date": "1/27/2015",
+	"type": "Burglary",
+	"desc": "Burglary"
+}
+	]
+},
+"hail": {
+"totalResults" : 5,
+"results": [
+{
+	"date": "11/17/2016",
+	"type": "Hail Damages",
+	"description": "Severe property damages reported"
+},
+{
+	"date": "9/9/2016",
+	"type": "Hail Damages",
+	"description": "Minor property damages reported"
+},
+{
+	"date": "4/6/2016",
+	"type": "Hail Storm Warning",
+	"description": "No damages reported"
+},
+{
+	"date": "12/4/2015",
+	"type": "Hail Damages",
+	"description": "Minor property damages reported"
+},
+{
+	"date": "5/28/2015",
+	"type": "Hail Damages",
+	"description": "Minor property damages reported"
+}
+	]
+}
+}
+}

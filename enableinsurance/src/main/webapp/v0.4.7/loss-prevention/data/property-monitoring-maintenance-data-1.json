@@ -1,0 +1,160 @@
+{
+	"propertyMonitoringMaintenance": [
+		{
+			"address" : "420 BUCKLAND HILLS DR",
+			"currentOnlineStatus" : {
+				"online": 6,
+				"offline": 2,
+				"errors": 2
+			},
+			"currentReadings" : "No issues detected",
+			"currentRiskAssessment" : {
+				"description": "None",
+				"type": "none"
+			},
+			"eventImpactAssessment" : {
+				"description": "Highly Likely",
+				"type": "medium"
+			},
+			"locationId": 197,
+			"buildingId": 140
+		},
+		{
+			"address" : "625 SCHOOL STREET",
+			"currentOnlineStatus" : {
+				"online": 6,
+				"offline": 2,
+				"errors": 2
+			},
+			"currentReadings" : "No issues detected",
+			"currentRiskAssessment" : {
+				"description": "None",
+				"type": "none"
+			},
+			"eventImpactAssessment" : {
+				"description": "Highly Likely",
+				"type": "medium"
+			},
+			"locationId": 204,
+			"buildingId": 143
+		},
+		{
+			"address" : "474 BOSTON POST ROAD",
+			"currentOnlineStatus" : {
+				"online": 6,
+				"offline": 2,
+				"errors": 2
+			},
+			"currentReadings" : "Delay in retrieving readings",
+			"currentRiskAssessment" : {
+				"description": "Low",
+				"type": "low"
+			},
+			"eventImpactAssessment" : {
+				"description": "Likely",
+				"type": "low"
+			},
+			"locationId": 214,
+			"buildingId": 145
+		},
+		{
+			"address" : "970 TORRINGFORD STREET",
+			"currentOnlineStatus" : {
+				"online": 5,
+				"offline": 1,
+				"errors": 4
+			},
+			"currentReadings" : "Reading lower than established norm",
+			"currentRiskAssessment" : {
+				"description": "Medium",
+				"type": "medium"
+			},
+			"current-risk-assessment" : "Medium",
+			"eventImpactAssessment" : {
+				"description": "Likely",
+				"type": "low"
+			},
+			"locationId": 222,
+			"buildingId": 148
+		},
+		{
+			"address" : "465 BRIDGEPORT AVENUE",
+			"currentOnlineStatus" : {
+				"online": 3,
+				"offline": 1,
+				"errors": 6
+			},
+			"currentReadings" : "Not all devices sent readings",
+			"currentRiskAssessment" : {
+				"description": "High",
+				"type": "high"
+			},
+			"current-risk-assessment" : "High",
+			"eventImpactAssessment" : {
+				"description": "None",
+				"type": "none"
+			},
+			"locationId": 232,
+			"buildingId": 150
+		},
+		{
+			"address" : "220 SALEM TURNPIKE",
+			"currentOnlineStatus" : {
+				"online": 6,
+				"offline": 2,
+				"errors": 2
+			},
+			"currentReadings" : "Not all devices sent readings",
+			"currentRiskAssessment" : {
+				"description": "Medium",
+				"type": "medium"
+			},
+			"current-risk-assessment" : "Medium",
+			"eventImpactAssessment" : {
+				"description": "None",
+				"type": "none"
+			},
+			"locationId": 240,
+			"buildingId": 151
+		},
+		{
+			"address" : "150 GOLD STAR HWY",
+			"currentOnlineStatus" : {
+				"online": 3,
+				"offline": 5,
+				"errors": 2
+			},
+			"currentReadings" : "Not all devices sent readings",
+			"currentRiskAssessment" : {
+				"description": "Medium",
+				"type": "medium"
+			},
+			"current-risk-assessment" : "Medium",
+			"eventImpactAssessment" : {
+				"description": "Extremely Likely",
+				"type": "high"
+			},
+			"locationId": 244,
+			"buildingId": 152
+		},
+		{
+			"address" : "120 COMMERCIAL PARKWAY",
+			"currentOnlineStatus" : {
+				"online": 4,
+				"offline": 2,
+				"errors": 4
+			},
+			"currentReadings" : "Reading higher than established norm",
+			"currentRiskAssessment" : {
+				"description": "Medium",
+				"type": "medium"
+			},
+			"eventImpactAssessment" : {
+				"description": "Extremely Likely",
+				"type": "high"
+			},
+			"locationId": 254,
+			"buildingId": 154
+		}
+	]
+}

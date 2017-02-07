@@ -1,0 +1,244 @@
+/*** CSS FOR OVERVIEW MAIN PAGE ***/
+
+.main-content .tab-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 780px;
+}
+
+.main-content .tab-content > #overview {
+    position:relative;
+}
+
+.main-shape-container {
+    width: 556px;
+    margin: auto;
+}  
+
+.shape-container {
+    width: 556px;
+    height: 160px;
+    position: relative;
+}
+
+.layer-1, .layer-3 {
+    padding: 0 93px;
+}
+
+.hex {
+    width:175px;
+    height:100px;
+    background-color: #ccc;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;			
+    background-size: auto 173px;							
+    position: relative;
+    float:left;
+    margin:25px 5px;
+    text-align:center;
+    zoom:1;
+    cursor: pointer;
+}
+
+.hex a {
+    display:block;
+    width: 100%;
+    height:100%;
+    text-indent:-9999em;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.hex .corner-1,
+.hex .corner-2 {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: inherit;								
+    z-index:-2;						
+    overflow:hidden;		
+    backface-visibility: hidden;			
+}
+
+.hex .corner-1 {
+    z-index:-1;
+    transform: rotate(60deg);
+    cursor: pointer;
+}
+
+.hex .corner-2 {
+    transform: rotate(-60deg);
+    cursor: pointer;
+}
+
+.hex .corner-1:before,
+.hex .corner-2:before {
+    width: 173px;
+    height:	173px;
+    content: '';
+    position: absolute;
+    background: inherit;
+    top:0;
+    left: 0;
+    z-index: 1;
+    background: inherit;
+    background-repeat:no-repeat;
+    backface-visibility: hidden;				  
+}			
+
+.hex .corner-1:before {
+    transform: rotate(-60deg) translate(-87px, 0px);	
+    transform-origin: 0 0;
+}			
+
+.hex .corner-2:before {
+    transform: rotate(60deg) translate(-48px, -11px);	
+    bottom:0;
+}		
+
+/**** HEXAGON BACKGROUND COLORS ****/
+
+.hex.hex-3.marketing-sales {
+    background: #1cade4;
+}
+
+.hex.hex-3.marketing-sales:hover {
+    background: #1791bf;
+}
+
+.hex.hex-3.claims {
+    background: #c0504d;
+}
+
+.hex.hex-3.claims:hover {
+    background: #a54542;
+}
+
+.hex.hex-3.finance {
+    background: #4bacc6;
+}
+
+.hex.hex-3.finance:hover {
+    background: #3e8fa4;
+}
+
+.hex.hex-3.actuarial {
+    background: #333;
+}
+
+.hex.hex-3.actuarial:hover  {
+    background: #222;
+}
+
+.hex.hex-3.underwriting {
+    background: #8064a2;
+}
+
+.hex.hex-3.underwriting:hover {
+    background: #675183;
+}
+
+.hex.hex-3.loss-prevention {
+    background: #f79646;
+}
+
+.hex.hex-3.loss-prevention:hover {
+    background: #d7823d;
+}
+
+.hex.hex-3.policy-admin {
+    background: #479b5f;
+}
+
+.hex.hex-3.policy-admin:hover {
+    background: #3a7f4e;
+}
+
+.inner {
+    color: #fff;
+	font-size: 20px;
+    height: 201px;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    margin-top: -51px;
+}
+
+/* CATEGORY DESCRIPTION POSITIONING */
+
+.category-description {
+    position:absolute;
+    width: 268px;
+    color: #777;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.category-description.left {
+    left:-195px;
+    top: 30px;
+    text-align: right;
+}
+
+.category-description.right {
+    right: -195px;
+    top: 30px;
+}
+
+.category-description.left.second {
+    left:-285px;
+}
+
+.category-description.right.second {
+    right: -285px;
+}
+
+/**** CATEGORY DESCRIPTION COLORS ****/
+
+.category-description.marketing-sales {
+    color: #1cade4;
+}
+.category-description.claims {
+    color: #c0504d;
+}
+.category-description.finance {
+    color: #4bacc6;
+}
+.category-description.actuarial {
+    color: #000;
+}
+.category-description.underwriting {
+    color: #8064a2;
+}
+.category-description.loss-prevention {
+    color: #f79646;
+}
+
+.category-description.policy-admin {
+    color: #479b5f;
+}
+
+.category-description.actuarial > div {
+    width: 250px;
+    margin:auto;
+}
+
+.category-description.actuarial.top {
+    left:0;
+    top: -101px;
+    text-align: center;
+    width: 100%;
+}
+
+.category-description.actuarial.bottom{
+    right: 0;
+    bottom: -115px;
+    text-align: center;
+    width: 100%;
+}
+
+  

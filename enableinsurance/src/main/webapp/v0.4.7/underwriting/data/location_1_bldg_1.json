@@ -1,0 +1,105 @@
+{
+	"locationId": "1",
+	"buildingId": "1",
+	"address": {
+		"street": "123 Main St",
+		"city": "New York City",
+		"state": "New York",
+		"zip": "10001"
+	},
+	"structureAttr": {
+		"valuation": "$12,000",
+		"classification": "Warehouse",
+		"constructionYear": 1950,
+		"area": 15478,
+		"stories": 1,
+		"constructionGrade": "AA",
+		"lastMajorRenovation": 2015,
+		"renovationDetails": "Roof Placement, Plumbing, Electrical",
+		"inspectionDate": 2015,
+		"fireRating": "Excellent"
+	},
+	"locationAttr": {
+		"crimeRating": "Below Average",
+		"proximityFireStation": "3.5 miles",
+		"proximityWater": "25 miles",
+		"floodRating": "Excellent",
+		"sinkholeRating": "Excellent"
+	},
+	"riskGrade": [
+		{
+			"grade": 4.4,
+			"risk": "Crime"
+		},
+		{
+			"grade": 2,
+			"risk": "Hail Risk"
+		},
+		{
+			"grade": 3.2,
+			"risk": "Fire Risk"
+		},
+		{
+			"grade": 9.3,
+			"risk": "Flood Risk"
+		},
+		{
+			"grade": 5,
+			"risk": "Earthquake Risk"
+		},
+		{
+			"grade": 7,
+			"risk": "Windstorm Risk"
+		}	
+	],
+	"riskExposure": [
+		{
+			"weather": [
+				{
+					"date": "12/20/2016",
+					"type": "Storm",
+					"desc": "Thurderstorm Warning"
+				},
+				{
+					"date": "12/18/2016",
+					"type": "Flood",
+					"desc": "Flood Alert"
+				},
+				{
+					"date": "12/16/2016",
+					"type": "Storm",
+					"desc": "Winter Storm Warning"
+				},
+				{
+					"date": "12/15/2016",
+					"type": "Tornado",
+					"desc": "Tornado Warning"
+				}
+			]
+		},		
+		{
+			"fire": [
+				{
+					"date": "12/20/2016",
+					"level": 4,
+					"area": "Middlesex County"
+				},
+				{
+					"date": "12/18/2016",
+					"level": 4,
+					"area": "Princeton"
+				},
+				{
+					"date": "12/16/2016",
+					"level": 3,
+					"area": "Jersey City"
+				},
+				{
+					"date": "12/15/2016",
+					"level": 1,
+					"area": "Bridge Water"
+				}
+			]
+		}
+	]
+}

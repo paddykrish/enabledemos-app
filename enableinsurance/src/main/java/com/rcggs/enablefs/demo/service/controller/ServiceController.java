@@ -33,8 +33,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import org.xml.sax.SAXException;
 
-import com.rcggs.datalake.notification.NotificationService;
-import com.rcggs.datalake.notification.SMSNotificationService;
+//import com.rcggs.datalake.notification.NotificationService;
+//import com.rcggs.datalake.notification.SMSNotificationService;
 
 @RestController
 @RequestMapping(value = "/dataservice")
@@ -64,10 +64,10 @@ public class ServiceController {
 
 	@RequestMapping(value = "/notify/{name}", method = RequestMethod.GET)
 	public String notify(@PathVariable String name) {
-
+		/*
 		NotificationService<String> service = new SMSNotificationService<String>();
 		service.notify(name.replaceAll("\\<[^>]*>", ""), DemoContext.getProperty("demo.sms.number"));
-
+		*/
 		return null;
 	}
 

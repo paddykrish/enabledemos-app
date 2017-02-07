@@ -1,0 +1,177 @@
+{
+"locationId": "214",
+"buildingId": "145",
+"address": {
+	"street": "474 BOSTON POST ROAD",
+	"city": "North Windham",
+	"state": "CT",
+	"zip": "06256"
+},
+"structureAttr": {
+	"valuation": "$231,000",
+	"classification": "Office",
+	"constructionYear": 1971,
+	"area": 29633,
+	"stories": 2,
+	"constructionGrade": "AB",
+	"lastMajorRenovation": 1997,
+	"renovationDetails": "Electrical",
+	"inspectionDate": 2016,
+	"fireRating": "High Risk"
+},
+"locationAttr": {
+	"crimeRating": "Below Average",
+	"proximityFireStation": "5.7 miles",
+	"proximityWater": "13.07 miles",
+	"floodRating": "Low Risk",
+	"sinkholeRating": "Excellent"
+},
+"riskGrade": [
+	{
+	"grade": 1.8,
+	"risk": "Crime"
+},
+{
+	"grade": 3.31,
+	"risk": "Hail Risk"
+},
+{
+	"grade": 8.44,
+	"risk": "Fire Risk"
+},
+{
+	"grade": 3.63,
+	"risk": "Flood Risk"
+},
+{
+	"grade": 6.77,
+	"risk": "Earthquake Risk"
+},
+{
+	"grade": 3.25,
+	"risk": "Windstorm Risk"
+}
+],
+"riskExposure": {
+"weather": {
+"totalResults" : 5,
+"results": [
+{
+	"date": "7/19/2016",
+	"type": "Typhoon",
+	"desc": "Typhoon Category 4"
+},
+{
+	"date": "11/15/2015",
+	"type": "Thunderstorm",
+	"desc": "Thunderstorm warning in effect"
+},
+{
+	"date": "9/9/2015",
+	"type": "Thunderstorm",
+	"desc": "Thunderstorm warning in effect"
+},
+{
+	"date": "8/1/2015",
+	"type": "Storm",
+	"desc": "Storm Signal is at Level 3"
+},
+{
+	"date": "4/21/2015",
+	"type": "Thunderstorm",
+	"desc": "Thunderstorm warning in effect"
+}
+	]
+},
+"fire": {
+"totalResults" : 5,
+"results": [
+{
+	"date": "10/23/2016",
+	"level": 5,
+	"area": "Derby"
+},
+{
+	"date": "3/21/2016",
+	"level": 5,
+	"area": "Naugatuck"
+},
+{
+	"date": "1/18/2016",
+	"level": 3,
+	"area": "East Windsor"
+},
+{
+	"date": "8/15/2015",
+	"level": 5,
+	"area": "Shelton"
+},
+{
+	"date": "3/13/2015",
+	"level": 5,
+	"area": "North Windham"
+}
+	]
+},
+"crime": {
+"totalResults" : 5,
+"results": [
+{
+	"date": "7/15/2016",
+	"type": "Burglary",
+	"desc": "Burglary"
+},
+{
+	"date": "1/6/2016",
+	"type": "Theft",
+	"desc": "Warehouse Theft"
+},
+{
+	"date": "9/2/2015",
+	"type": "Arrest",
+	"desc": "Destruction of property"
+},
+{
+	"date": "5/30/2015",
+	"type": "Arrest",
+	"desc": "Disturbing the peace"
+},
+{
+	"date": "1/27/2015",
+	"type": "Burglary",
+	"desc": "Burglary"
+}
+	]
+},
+"hail": {
+"totalResults" : 5,
+"results": [
+{
+	"date": "11/17/2016",
+	"type": "Hail Damages",
+	"description": "Severe property damages reported"
+},
+{
+	"date": "9/9/2016",
+	"type": "Hail Damages",
+	"description": "Minor property damages reported"
+},
+{
+	"date": "4/6/2016",
+	"type": "Hail Storm Warning",
+	"description": "No damages reported"
+},
+{
+	"date": "12/4/2015",
+	"type": "Hail Damages",
+	"description": "Minor property damages reported"
+},
+{
+	"date": "5/28/2015",
+	"type": "Hail Damages",
+	"description": "Minor property damages reported"
+}
+	]
+}
+}
+}

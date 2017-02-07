@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appDetails">
+  <head>
+    <title>Insurance - Weather Map</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../plugins/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="../plugins/owl/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../plugins/fontawesome/css/font-awesome.min.css">
+    
+    <!-- PAGES CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/pages/global/global.css">
+    <link rel="stylesheet" href="../css/pages/underwriting/underwriting-detail.css">
+	
+	<!-- Chart JS -->
+	<script src="../js/fusioncharts.js"></script>
+	<script src="../js/fusioncharts.widgets.js"></script>
+	<script src="../js/fusioncharts.theme.fint.js"></script>
+	<script src="../js/highcharts.js"></script>
+
+  </head>
+  <body>
+    <article class="mainWrapper container-fluid">
+        <header>
+            <div class="clearfix">
+                <div class="pull-left">
+                    <div class="poc-logo">
+                       <img src="../images/poc-logo.jpg">    
+                    </div>
+                </div>
+                <div class="pull-right">
+                    <div class="top">
+                        <ul class="list-unstyled">
+                            <li class="username">
+                             <i class="fa fa-user" aria-hidden="true"></i> Hi! Mike Sommers
+                            </li>
+                            <li class="main-menu">
+                                <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="submenu-container">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation"><a href="../index.html" aria-controls="overview"><i class="fa fa-eye" aria-hidden="true"></i> Overview</a></li>
+                    <!--<li class="hidden" role="presentation"><a href="#marketing-sales" aria-controls="marketing-sales"><i class="fa fa-line-chart" aria-hidden="true"></i> Marketing & Sales</a></li>-->
+                    <li role="presentation" class="active"><a href="index.html" aria-controls="underwriting"><i class="fa fa-suitcase" aria-hidden="true"></i>Underwriting</a></li>
+                    <li role="presentation"><a href="../loss-prevention/index.html" aria-controls="loss-prevention"><i class="fa fa-level-down" aria-hidden="true"></i> Loss Prevention</a></li>
+                    <!--<li role="presentation" class="hidden"><a href="../claims/index.html" aria-controls="claims"><i class="fa fa-users" aria-hidden="true"></i> Claims</a></li>-->
+                    <!--<li class="hidden" role="presentation"><a href="#fraud" aria-controls="fraud" role="tab" data-toggle="tab"><i class="fa fa-user-times" aria-hidden="true"></i> Claims Fraud</a></li>-->
+                    <li role="presentation"><a href="../technology/index.html" aria-controls="technology"><i class="fa fa-cogs" aria-hidden="true"></i> Technology</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="main-content">
+        	<div class="container-fluid" id="underwriting-child">
+                <div class="main">
+                <div class="row quoteDropdown">
+                    <div class="col-lg-12">
+						<form>
+							<div class="form-group" ng-controller="CompaniesCtrl">
+								<select class="form-control" id="selCompany">
+								  <option ng-repeat="company in companies" value="{{company.code}}">{{company.name}} - {{company.code}}</option>
+								</select>
+							</div>
+						</form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 summary">
+                        <div class="summaryContainer"  ng-controller="clientDataCtrl">
+                            <div class="clearfix">
+                                <div class="summaryBox">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="box icon-container">
+                                                <i class="fa fa-paperclip" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="box details-container">
+                                                <div>
+                                                    <p>Type</p>
+                                                    <h3>{{clientData.policyType}}</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summaryBox">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="box icon-container">
+                                                <i class="fa fa-folder-open" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="box details-container">
+                                                <div>
+                                                    <p>No. of Prior Policies</p>
+                                                    <h3>{{clientData.numPriorPolicies.toLocaleString()}}</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summaryBox">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="box icon-container">
+                                                <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="box details-container">
+                                                <div>
+                                                    <p>Policy Term</p>
+                                                    <h3>{{clientData.policyTerm}}</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summaryBox">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="box icon-container">
+                                                <i class="fa fa-check" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="box details-container">
+                                                <div>
+                                                    <p>No. Of Quotes Sent</p>
+                                                    <h3>{{clientData.numQuotesSent.toLocaleString()}}</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                          <!-- QUOTES SUMMARY -->
+                          <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                              <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                  Quotes Request <i class="fa fa-minus" aria-hidden="true"></i>
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                              <div class="panel-body">
+                                <div class="row">
+                                    <!-- QUOTE SUMMARY TABLE -->
+                                    <div class="col-lg-12">
+                                        <div class="tableContainer" ng-controller="NumberQuotesCtrl">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Quote Request Date</th> 
+                                                        <th>Annual Premium</th> 
+                                                        <th>Quote Sent Date</th>    
+                                                        <th>Underwriter</th>    
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr ng-repeat="quotes_request in quotes_requests">
+                                                        <td>{{quotes_request.quote_request_date}}</td>
+                                                        <td>{{quotes_request.annual_premium | currency}}</td>
+                                                        <td>{{quotes_request.quote_sent_date}}</td>
+                                                        <td>{{quotes_request.underwriter}}</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div> 
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- END OF QUOTES SUMMARY -->
+                          
+                          <!-- FRAUD RISK -->
+                          <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingSix">
+                              <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" href="#collapseSix" aria-expanded="true" aria-controls="collapseSix"> Fraud Risk Guide <i class="fa fa-minus" aria-hidden="true"></i>
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="collapseSix" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingSix">
+							  <div class="panel-body" ng-controller="FraudRiskCtrl">
+								<div class="row">
+									<div class="col-lg-12">
+										<div class="mainFrGuideGraph">
+											<div class="frGuideGraph">
+												<div id="gauge-chart-container">Loading...</div>	
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-12">
+										<h3>Insights </h3>
+										<ul>
+										  <li ng-repeat="insight in fraudRiskGrade.insights track by $index">{{insight}}</li>
+										</ul>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- END OF FRAUD RISK -->
+						  
+						  <!-- SOCIAL STREAM -->
+                          <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingFour">
+                              <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" href="#collapseInv" aria-expanded="true" aria-controls="collapseInv">
+                                  Social Stream <i class="fa fa-minus" aria-hidden="true"></i>
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="collapseInv" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour">
+                              <div class="panel-body">
+                                   <div class="row">
+                                        <!-- Social Stream-->
+                                        <div class="col-lg-12" ng-controller="SocialStreamCtrl">
+                                            <i class="fa fa-paper-plane" aria-hidden="true"></i><h3>Social Stream</h3>
+                                            <ul class="list-group">
+                                              <li class="list-group-item" ng-repeat="social_stream in social_streams">{{social_stream.name}} <a href="#">({{social_stream.value | number:0}})</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                              </div>
+                            </div>
+                          </div>
+                            <!-- panel-group -->
+                          <!-- END OF SOCIAL STREAM -->
+						  
+                        </div>
+                        <!-- panel-group -->
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="row">
+                            <!--LOSS RATIO -->
+                            <div class="col-lg-12">
+                              <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingThree">
+                                  <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                      Loss Ratio<i class="fa fa-minus" aria-hidden="true"></i>
+                                    </a>
+                                  </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+                                  <div class="panel-body">
+                                    <div class="row" ng-controller="LossRatioSummaryCtrl">
+                                        <div class="col-lg-12 asOfCont">
+                                            <div class="row">
+                                                <div class="col-lg-3">
+                                                    <div class="box">{{lossRatioSummary[0].date}}</div>
+                                                    <div class="box">{{lossRatioSummary[0].percent}}%</div>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <div class="box">{{lossRatioSummary[1].date}}</div>
+                                                    <div class="box">{{lossRatioSummary[1].percent}}%</div>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <div class="box">{{lossRatioSummary[2].date}}</div>
+                                                    <div class="box">{{lossRatioSummary[2].percent}}%</div>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <div class="box">{{lossRatioSummary[3].date}}</div>
+                                                    <div class="box">{{lossRatioSummary[3].percent}}%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div>
+                                   <div class="row">
+                                        <div class="col-lg-6" ng-controller="ClaimsPremiumCtrl">
+                                            <h4> Claims and Premiums Till Data</h4>
+                                            <nvd3 options="options" data="data"></nvd3>
+                                        </div>
+                                        <div class="col-lg-6" ng-controller="LossRatioGraphCtrl">
+                                            <h4>Loss Ratio Till Date</h4>
+                                            <nvd3 options="options" data="data"></nvd3>
+                                        </div>
+                                   </div>
+                                   <div class="row lossRatioHistory">
+                                        <!-- LOSS RATIO TABLE -->
+                                        <div class="col-lg-12">
+                                            <h4>Loss Ratio History</h4>
+                                            <div class="tableContainer" ng-controller="LossRatioCtrl">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Claim Number</th>   
+                                                            <th>Policy Number</th>  
+                                                            <th>Date</th>   
+                                                            <th>Claim Amount</th>   
+                                                            <th>LOB</th>
+                                                            <th>Limit</th>
+                                                            <th>Loss Ratio</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr ng-repeat="loss_ratio in loss_ratios">
+                                                            <td>{{loss_ratio.claim_number}}</td>
+                                                            <td>{{loss_ratio.policy_number}}</td>
+                                                            <td>{{loss_ratio.date}}</td>
+                                                            <td>{{loss_ratio.claim_amount | currency}}</td>
+                                                            <td>{{loss_ratio.lob}}</td>
+                                                            <td>{{loss_ratio.limit | currency}}</td>
+                                                            <td>{{loss_ratio.loss_ratio}}</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                   </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- panel-group -->
+                            </div>
+                            <!--END OF LOSS RATIO -->
+                            
+                            
+                            
+                            <!--RISK EXPOSURE -->
+                            <div class="col-lg-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingTwo">
+                                      <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                          Risk Exposure <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </a>
+                                      </h4>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                                      <div class="panel-body">
+                                        <div class="row">
+                                            <!-- MAP -->
+                                            <div class="col-lg-12">
+                                                <div class="rgExposureMap" style="margin-bottom:20px; margin-left:15px; margin-right:15px;">
+                                                    <div id="weatherMap" style = "width:100%; height:250px;"></div>
+                                                </div>
+                                            
+                                            </div>
+                                            <!-- SLIDER -->
+                                            <div class="col-lg-12 slider">
+                                                <div class="owl-carousel owl-theme"> 
+                                                    <div class="item">
+                                                        <div class="panel">
+                                                            <div class="row">
+                                                                <div class="col-lg-12">
+                                                                    <div class="riskTitle clearfix">
+                                                                        <h2><span><i class="fa fa-sun-o" aria-hidden="true"></i></span>Weather</h2>
+                                                                    </div>
+                                                                    <div class="table-responsive" ng-controller="WeatherCtrl">
+                                                                        <table class="table">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>Date</th>	
+                                                                                    <th>Type</th>
+                                                                                    <th>Description</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr ng-repeat="weather in weather_results">
+                                                                                    <td>{{weather.date}}</td>
+                                                                                    <td>{{weather.type}}</td>
+                                                                                    <td>{{weather.desc}}</td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="panel">
+                                                            <div class="row">
+                                                                <div class="col-lg-12">
+                                                                    <div class="riskTitle clearfix">
+                                                                        <h2><span><i class="fa fa-hand-paper-o" aria-hidden="true"></i></span>Crime</h2>
+                                                                    </div>
+                                                                    <div class="table-responsive" ng-controller="CrimeCtrl">
+                                                                        <table class="table">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>Date</th>	
+                                                                                    <th>Type</th>
+                                                                                    <th>Description</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr ng-repeat="crime in crime_results">
+                                                                                    <td>{{crime.date}}</td>
+                                                                                    <td>{{crime.type}}</td>
+                                                                                    <td>{{crime.desc}}</td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="panel">
+                                                            <div class="row">
+                                                                <div class="col-lg-12">
+                                                                    <div class="riskTitle clearfix">
+                                                                        <h2><span><i class="fa fa-fire" aria-hidden="true"></i></span>Fire</h2>
+                                                                    </div>
+                                                                    <div class="table-responsive" ng-controller="FireCtrl">
+                                                                        <table class="table">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>Date</th>	
+                                                                                    <th>Level</th>
+                                                                                    <th>Area</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr ng-repeat="fire in fire_results">
+                                                                                    <td>{{fire.date}}</td>
+                                                                                    <td>{{fire.level}}</td>
+                                                                                    <td>{{fire.area}}</td>
+                                                                                </tr>
+                                                                                
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="panel">
+                                                            <div class="row">
+                                                                <div class="col-lg-12">
+                                                                    <div class="riskTitle clearfix">
+                                                                        <h2><span><i class="fa fa-snowflake-o" aria-hidden="true"></i></span>Hail</h2>
+                                                                    </div>
+                                                                    <div class="table-responsive" ng-controller="HailCtrl">
+                                                                        <table class="table">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>Date</th>	
+                                                                                    <th>Type</th>
+                                                                                    <th>Description</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr ng-repeat="hail in hail_results">
+                                                                                    <td>{{hail.date}}</td>
+                                                                                    <td>{{hail.type}}</td>
+                                                                                    <td>{{hail.description}}</td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- SLIDER -->
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--END OF RISK EXPOSURE -->
+							
+							<!--LOCATION RISK ASSESSMENT -->
+                            <div class="col-lg-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingFive">
+                                      <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive"> Location Risk Assessment <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </a>
+                                      </h4>
+                                    </div>
+                                    <div id="collapseFive" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFive">
+                                      <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="tableContainer locationRisk" ng-controller="LocationRiskAssessmentCtrl">
+                                                    <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Address</th>	
+                                                            <th>City</th>
+                                                            <th>State</th>
+                                                            <th>Zip</th>
+                                                            <th>Fire</th>
+                                                            <th>Earthquake</th>
+                                                            <th>Flood</th>
+                                                            <th>Hail</th>
+                                                            <th>Windstorm</th>
+                                                            <th>Overall</th>
+                                                            <th>Assessment</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr ng-repeat="locationRiskAssessment in locationRiskAssessments">
+                                                            <td class="capitalize"><a href="#" data-toggle="modal" data-target="#myModal" data-location-id="{{locationRiskAssessment.locationId}}" data-building-id="{{locationRiskAssessment.buildingId}}">{{locationRiskAssessment.address}}</a></td>
+                                                            <td>{{locationRiskAssessment.city}}</td>
+                                                            <td>{{locationRiskAssessment.state}}</td>
+                                                            <td>{{locationRiskAssessment.zip}}</td>
+                                                            <td class="{{applyCSS(locationRiskAssessment.fire)}}Risk">{{locationRiskAssessment.fire | number:1}}</td>
+                                                            <td class="{{applyCSS(locationRiskAssessment.earthquake)}}Risk">{{locationRiskAssessment.earthquake | number:1}}</td>
+                                                            <td class="{{applyCSS(locationRiskAssessment.flood)}}Risk">{{locationRiskAssessment.flood | number:1}}</td>
+                                                            <td class="{{applyCSS(locationRiskAssessment.hail)}}Risk">{{locationRiskAssessment.hail | number:1}}</td>
+                                                            <td class="{{applyCSS(locationRiskAssessment.windstorm)}}Risk">{{locationRiskAssessment.windstorm | number:1}}</td>
+                                                            <td class="{{applyCSS(calcAverage(locationRiskAssessment.fire,locationRiskAssessment.earthquake,locationRiskAssessment.flood,locationRiskAssessment.hail,locationRiskAssessment.windstorm))}}Risk">{{calcAverage(locationRiskAssessment.fire,locationRiskAssessment.earthquake,locationRiskAssessment.flood,locationRiskAssessment.hail,locationRiskAssessment.windstorm) | number:1}}</td>
+                                                            <td class="capitalize {{locationRiskAssessment.risk}}Risk">{{locationRiskAssessment.risk}} Risk</td>
+                                                        </tr>
+                                                    </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--END OF LOCATION RISK ASSESSMENT -->
+							
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" ng-controller="UnderwritingLocationsCtrl">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Location Details</h4>
+                  </div>
+                  <div class="modal-body"> 
+                    <div class="row">
+                        <div class="col-lg-6 locationBuildingInformation">
+                            <h2 class="headerDivision">Location Building Information</h2>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <ul class="location">
+                                        <li class="clearfix">
+                                            <div class="icon">
+                                                <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="details">
+                                                <h4>Location Id</h4>
+                                                <p>{{locationInformation.locationId}}</p>
+                                            </div>
+                                        </li>
+                                        <li class="clearfix">
+                                            <div class="icon">
+                                                <i class="fa fa-building" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="details">
+                                                <h4>Building Id</h4>
+                                                <p>{{locationInformation.buildingId}}</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="address">
+                                        <li class="clearfix">
+                                            <div class="icon">
+                                                <i class="fa fa-address-book" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="details">
+                                                <h4>Address</h4>
+                                                <p>{{address.street}}</p>
+                                            </div>
+                                        </li>
+                                        <li class="clearfix">
+                                            <div class="icon">
+                                                <i class="fa fa-car" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="details">
+                                                <h4>City</h4>
+                                                <p>{{address.city}}</p>
+                                            </div>
+                                        </li>
+                                        <li class="clearfix">
+                                            <div class="icon">
+                                                <i class="fa fa-flag" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="details">
+                                                <h4>State</h4>
+                                                <p>{{address.state}}</p>
+                                            </div>
+                                        </li>
+                                        <li class="clearfix">
+                                            <div class="icon">
+                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="details">
+                                                <h4>Zip</h4>
+                                                <p>{{address.zip}}</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-8">
+                                    <table class="structureAttributes">
+                                       <thead>
+                                            <tr>
+                                                <th colspan="2">Structure Attributes</th>
+                                            </tr>
+                                       </thead>
+                                       <tbody class="three">
+											<tr>
+                                                <td><strong>Valuation</strong></td>
+                                                <td colspan="3">{{structureAttr.valuation}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Classification</strong></td>
+                                                <td colspan="3">{{structureAttr.classification}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Construction Year</strong></td>
+                                                <td colspan="3">{{structureAttr.constructionYear}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Area (sq ft)</strong></td>
+                                                <td colspan="3">{{structureAttr.area.toLocaleString()}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Stories</strong></td>
+                                                <td colspan="3">{{structureAttr.stories}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Construction Grade</strong></td>
+                                                <td colspan="3">{{structureAttr.constructionGrade}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Last Major Renovation</strong></td>
+                                                <td colspan="3">{{structureAttr.lastMajorRenovation}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Renovation Details</strong></td>
+                                                <td colspan="3">{{structureAttr.renovationDetails}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Inspection Date</strong></td>
+                                                <td colspan="3">{{structureAttr.inspectionDate}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Fire Rating</strong></td>
+                                                <td colspan="3">{{structureAttr.fireRating}}</td>
+                                            </tr>
+                                       </tbody>
+                                    </table>
+                                    <table class="locationAttributes">
+                                       <thead>
+                                            <tr>
+                                                <th colspan="2">Location Attributes</th>
+                                            </tr>
+                                       </thead>
+                                       <tbody class="four">
+                                            <tr>
+                                                <td><strong>Crime Rating</strong></td>
+                                                <td colspan="3">{{locationAttr.crimeRating}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Proximity to fire station</strong></td>
+                                                <td colspan="3">{{locationAttr.proximityFireStation}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Proximity to water</strong></td>
+                                                <td colspan="3">{{locationAttr.proximityWater}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Flood Rating</strong></td>
+                                                <td colspan="3">{{locationAttr.floodRating}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Sinkhole Rating</strong></td>
+                                                <td colspan="3">{{locationAttr.sinkholeRating}}</td>
+                                            </tr>
+                                       </tbody>
+                                    </table>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-6 locationRiskAssessmentDetails">
+                            <h2 class="headerDivision">Loss Risk Assessment Details</h2>
+                            <div class="row graph">
+                                <div class="col-lg-6">
+                                    <div id="radar-chart">
+										<canvas id="radar" height="240" class="chart chart-radar" chart-data="data" chart-options="options" chart-labels="labels"></canvas> 
+									</div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="tableContainer">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Risk</th>	
+                                                    <th>Assessment Grade</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr ng-repeat="riskData in riskGrade">
+                                                    <td>{{riskData.risk}}</td>
+                                                    <td>{{riskData.grade}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="row listRisk">
+                                <!-- SLIDER -->
+                                <div class="col-lg-12 slider">
+                                    <div class="owl-carousel owl-theme"> 
+                                        <div class="item">
+                                            <div class="weather">
+                                                <div class="panel">
+                                                    <div class="riskTitle clearfix">
+                                                        <h2><span><i class="fa fa-sun-o" aria-hidden="true"></i></span>Weather</h2>
+                                                        <h2 class="riskCount">{{weather.totalResults.toLocaleString()}}</h2>
+                                                    </div>
+                                                    <div class="table-responsive">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Date</th>	
+                                                                    <th>Type</th>
+                                                                    <th>Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr ng-repeat="weather in weather.results">
+                                                                    <td>{{weather.date}}</td>
+                                                                    <td>{{weather.type}}</td>
+                                                                    <td>{{weather.desc}}</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="crime">
+                                                <div class="panel">
+                                                    <div class="riskTitle clearfix">
+                                                        <h2><span><i class="fa fa-hand-paper-o" aria-hidden="true"></i></span>Crime</h2>
+                                                        <h2 class="riskCount">{{crime.totalResults.toLocaleString()}}</h2>
+                                                    </div>
+                                                    <div class="table-responsive">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Date</th>	
+                                                                    <th>Type</th>
+                                                                    <th>Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr ng-repeat="crime in crime.results">
+                                                                    <td>{{crime.date}}</td>
+                                                                    <td>{{crime.type}}</td>
+                                                                    <td>{{crime.desc}}</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="fire">
+                                                <div class="panel">
+                                                    <div class="riskTitle clearfix">
+                                                        <h2><span><i class="fa fa-fire" aria-hidden="true"></i></span>Fire</h2>
+                                                        <h2 class="riskCount">{{fire.totalResults.toLocaleString()}}</h2>
+                                                    </div>
+                                                    <div class="table-responsive">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Date</th>	
+                                                                    <th>Level</th>
+                                                                    <th>Area</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr ng-repeat="fire in fire.results">
+                                                                    <td>{{fire.date}}</td>
+                                                                    <td>{{fire.level}}</td>
+                                                                    <td>{{fire.area}}</td>
+                                                                </tr>
+                                                                
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="hail">
+                                                <div class="panel">
+                                                    <div class="riskTitle clearfix">
+                                                        <h2><span><i class="fa fa-snowflake-o" aria-hidden="true"></i></span>Hail</h2>
+                                                        <h2 class="riskCount">{{hail.totalResults.toLocaleString()}}</h2>
+                                                    </div>
+                                                    <div class="table-responsive">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Date</th>	
+                                                                    <th>Type</th>
+                                                                    <th>Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr ng-repeat="hail in hail.results">
+                                                                    <td>{{hail.date}}</td>
+                                                                    <td>{{hail.type}}</td>
+                                                                    <td>{{hail.description}}</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- SLIDER -->
+
+                            </div>
+                        </div>
+                    </div> 
+                </div>     
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of Modal -->
+        </div>
+        <footer>&copy;2017 RCG GLOBAL SERVICES</footer>
+    </article>
+    <script type="text/javascript"  src="../js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript"  src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../plugins/owl/owl.carousel.min.js"></script>
+    <script type="text/javascript"  src="../js/pages/plugins-underwriting-details.js"></script>
+
+    <!-- Angular Graphs CSS -->
+    <link rel="stylesheet" href="../node_modules/angular-nvd3/node_modules/nvd3/build/nv.d3.min.css"/>  
+
+    <!-- Angular Graphs JS -->
+    <script src="../node_modules/angular-nvd3/node_modules/angular/angular.min.js"></script>
+    <script src="../node_modules/angular-nvd3/node_modules/d3/d3.min.js" charset="utf-8"></script>
+    <script src="../node_modules/angular-nvd3/node_modules/nvd3/build/nv.d3.min.js"></script>
+    <script src="../node_modules/angular-nvd3/dist/angular-nvd3.js"></script>
+	<script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+	<script src="../node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+
+    <script type="text/javascript" src="js/uw_child_app.js"></script>
+
+    <script type="text/javascript">
+
+    function loadWeatherMap(divName) {        
+        var locations = [
+			{
+				"coordinates": [37.782, -122.447],
+				"magnitude": 0.5
+			},
+			{
+				"coordinates": [37.782, -122.445],
+				"magnitude": null
+			},
+			{
+				"coordinates": [37.782, -122.443],
+				"magnitude": 2
+			},
+			{
+				"coordinates": [37.782, -122.441],
+				"magnitude": 3
+			},
+			{
+				"coordinates": [37.782, -122.439],
+				"magnitude": 2
+			},
+			{
+				"coordinates": [37.782, -122.437],
+				"magnitude": null
+			},
+			{
+				"coordinates": [37.782, -122.435],
+				"magnitude": 0.5
+			},
+			{
+				"coordinates": [37.785, -122.447],
+				"magnitude": 3
+			},
+			{
+				"coordinates": [37.785, -122.445],
+				"magnitude": 2
+			},
+			{
+				"coordinates": [37.785, -122.443],
+				"magnitude": null
+			},
+			{
+				"coordinates": [37.785, -122.441],
+				"magnitude": 0.5
+			},
+			{
+				"coordinates": [37.785, -122.439],
+				"magnitude": null
+			},
+			{
+				"coordinates": [37.785, -122.437],
+				"magnitude": 2
+			},
+			{
+				"coordinates": [37.785, -122.435],
+				"magnitude": 3
+			}
+        ];
+		
+		var sanFrancisco = new google.maps.LatLng(37.782546, -122.433523);
+		
+        var mapOptions = {
+			zoom: 12,
+			center: sanFrancisco,
+			mapTypeId: 'satellite'
+        };
+        var map = new google.maps.Map(document.getElementById(divName), mapOptions);
+
+		// heat map data
+		var heatmapData = [];
+        for (var i = 0; i < locations.length; i++) {
+          var latLng = new google.maps.LatLng(locations[i].coordinates[0], locations[i].coordinates[1]);
+		  
+		  if (locations[i].magnitude != null){
+			  var weightedLoc = {
+				location: latLng,
+				weight: Math.pow(10, locations[i].magnitude)
+			  };
+			  heatmapData.push(weightedLoc);
+		  } else {
+			heatmapData.push(latLng);
+		  }
+        }
+		
+		var gradients = [
+          'rgba(0, 255, 255, 0)',
+          'rgba(0, 255, 255, 1)',
+          'rgba(0, 191, 255, 1)',
+          'rgba(0, 127, 255, 1)',
+          'rgba(0, 63, 255, 1)',
+          'rgba(0, 0, 255, 1)',
+          'rgba(0, 0, 223, 1)',
+          'rgba(0, 0, 191, 1)',
+          'rgba(0, 0, 159, 1)',
+          'rgba(0, 0, 127, 1)',
+          'rgba(63, 0, 91, 1)',
+          'rgba(127, 0, 63, 1)',
+          'rgba(191, 0, 31, 1)',
+          'rgba(255, 0, 0, 1)'
+        ];
+		
+        var heatmap = new google.maps.visualization.HeatmapLayer({
+          data: heatmapData,
+		  gradient: gradients
+        });
+		
+		heatmap.setMap(map);
+		
+    }
+
+    //Load Google Map
+    $(document).ready(function() {
+        loadWeatherMap("weatherMap");
+        
+		//change company then redirect to page
+        $("#selCompany").change(function() {
+            var getUrl = window.location;
+            window.location = getUrl.protocol + "//" + getUrl.host + getUrl.pathname + "?company=" + $(this).val();
+        })
+
+        $('#myModal').on('show.bs.modal', function(e) {
+
+            //get data-id attribute of the clicked element
+            var locationId = $(e.relatedTarget).data('location-id');
+            var buildingId = $(e.relatedTarget).data('building-id');
+
+            angular.element($("#myModal")).scope().getData(locationId, buildingId);
+        });
+    });
+    </script>
+	
+	<script src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAgiZSa_VLVLhdcJ9DmXP6L-uXDLmzD-OI&libraries=visualization"></script>
+
+  </body>
+</html>

@@ -1,0 +1,295 @@
+{
+	"totalOverallEstimatedDamages" : {	
+		"amount":   15776731.00
+	},
+	"estimatedLossStatistics": [{
+			"riskLevel": "High",
+			"eventType": "Fire",
+			"area": "Farmington",
+			"eventRadius": "20 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "Critical",
+			"eventType": "Typhoon",
+			"area": "Marblehead",
+			"eventRadius": "78 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "Critical",
+			"eventType": "Typhoon",
+			"area": "Simsbury",
+			"eventRadius": "183 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "Medium",
+			"eventType": "Typhoon",
+			"area": "Natick",
+			"eventRadius": "167 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "Critical",
+			"eventType": "Typhoon",
+			"area": "Stratford",
+			"eventRadius": "162 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "Critical",
+			"eventType": "Fire",
+			"area": "Amherst",
+			"eventRadius": "16 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "Medium",
+			"eventType": "Typhoon",
+			"area": "Ledyard",
+			"eventRadius": "78 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "Critical",
+			"eventType": "Typhoon",
+			"area": "Ansonia",
+			"eventRadius": "153 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "Medium",
+			"eventType": "Earthquake",
+			"area": "Hingham",
+			"eventRadius": "40 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "High",
+			"eventType": "Fire",
+			"area": "Lynn",
+			"eventRadius": "2 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "Critical",
+			"eventType": "Fire",
+			"area": "Medway",
+			"eventRadius": "3 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "Critical",
+			"eventType": "Typhoon",
+			"area": "Worcester",
+			"eventRadius": "111 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "Medium",
+			"eventType": "Hail",
+			"area": "Worcester",
+			"eventRadius": "147 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "Medium",
+			"eventType": "Hail",
+			"area": "Billerica",
+			"eventRadius": "124 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "Critical",
+			"eventType": "Fire",
+			"area": "Rockyhill",
+			"eventRadius": "12 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "Critical",
+			"eventType": "Typhoon",
+			"area": "Skowhegen",
+			"eventRadius": "138 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "Critical",
+			"eventType": "Typhoon",
+			"area": "Bloomfield",
+			"eventRadius": "72 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "High",
+			"eventType": "Fire",
+			"area": "Avon",
+			"eventRadius": "10 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "Medium",
+			"eventType": "Typhoon",
+			"area": "Putnam",
+			"eventRadius": "124 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "High",
+			"eventType": "Fire",
+			"area": "Sudbury",
+			"eventRadius": "4 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "Critical",
+			"eventType": "Fire",
+			"area": "Wallingford",
+			"eventRadius": "18 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "Critical",
+			"eventType": "Typhoon",
+			"area": "Wilton",
+			"eventRadius": "130 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "Critical",
+			"eventType": "Earthquake",
+			"area": "brewer",
+			"eventRadius": "78 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "High",
+			"eventType": "Fire",
+			"area": "Burlington",
+			"eventRadius": "8 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "High",
+			"eventType": "Typhoon",
+			"area": "Longmeadow",
+			"eventRadius": "49 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "Critical",
+			"eventType": "Fire",
+			"area": "Arlington",
+			"eventRadius": "5 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "Critical",
+			"eventType": "Typhoon",
+			"area": "New Britain",
+			"eventRadius": "28 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "High",
+			"eventType": "Fire",
+			"area": "Waterbury(Reidville)",
+			"eventRadius": "19 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "Critical",
+			"eventType": "Typhoon",
+			"area": "Hanover",
+			"eventRadius": "162 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "Medium",
+			"eventType": "Typhoon",
+			"area": "West Boylston",
+			"eventRadius": "91 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "Critical",
+			"eventType": "Hail",
+			"area": "Dedham",
+			"eventRadius": "38 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "Critical",
+			"eventType": "Earthquake",
+			"area": "Waltham",
+			"eventRadius": "132 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "Medium",
+			"eventType": "Typhoon",
+			"area": "Taunton",
+			"eventRadius": "15 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "High",
+			"eventType": "Fire",
+			"area": "Falmouth",
+			"eventRadius": "9 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "High",
+			"eventType": "Fire",
+			"area": "Orleans",
+			"eventRadius": "9 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}, {
+			"riskLevel": "Medium",
+			"eventType": "Fire",
+			"area": "Shelton",
+			"eventRadius": "10 miles",
+			"ppa": 2601,
+			"lobs": "Auto, Property, Businessowners",
+			"estimatedDamages": 25475841
+		}
+	]
+}

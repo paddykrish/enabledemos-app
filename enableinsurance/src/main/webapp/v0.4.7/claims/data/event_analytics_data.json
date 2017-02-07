@@ -1,0 +1,43 @@
+{
+	"event_analytics": [
+		{
+			"company_name": "ABC Company",
+			"active_claims": 2,
+			"total_claim_amount": 1234567.89,
+			"limit": 1000,
+			"estimated_exposure": 4567891.12
+		},
+		{
+			"company_name": "XYZ Company",
+			"active_claims": 3,
+			"total_claim_amount": 1234567.89,
+			"limit": 1000,
+			"estimated_exposure": 4567891.12	
+		},
+		{
+			"company_name": "123 Company",
+			"active_claims": 4,
+			"total_claim_amount": 1234567.89,
+			"limit": 1000,
+			"estimated_exposure": 4567891.12	
+		},
+		{
+			"company_name": "ABC Company",
+			"active_claims": 5,
+			"total_claim_amount": 1234567.89,
+			"limit": 1000,
+			"estimated_exposure": 4567891.12	
+		},
+		{
+			"company_name": "ABC Company",
+			"active_claims": 1,
+			"total_claim_amount": 1234567.89,
+			"limit": 1000,
+			"estimated_exposure": 4567891.12	
+		}
+	],
+	"statistics": {
+		"claims_amount_in_process": 2345678,
+		"total_estimated_exposure": 1234567
+	}
+}

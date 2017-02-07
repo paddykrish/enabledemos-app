@@ -1,0 +1,53 @@
+{
+	"eventAlertAssessments": [{
+		"eventType": "Typhoon",
+		"details": "Typhoon Barry is now Category 4",
+		"risk": "Very High"
+	}, {
+		"eventType": "Flood",
+		"details": "No flood events",
+		"risk": "Low"
+	}, {
+		"eventType": "Fire",
+		"details": "Fire Alert is now set to 1",
+		"risk": "Very High Risk"
+	}, {
+		"eventType": "Earthquake",
+		"details": "Earthquake reported at magnitude 5.85",
+		"risk": "Very High Risk"
+	}, {
+		"eventType": "Hail",
+		"details": "Hailstorm alert reported",
+		"risk": "Medium Risk"
+	}, {
+		"eventType": "Sink Hole",
+		"details": "Sink hole alert reported",
+		"risk": "Medium Risk"
+	}],
+	"topClientEstimatedDamages": [{
+		"clientName": "ABC Corporation",
+		"contactPerson": "Andrew Charles",
+		"eventType": "Fire",
+		"estimatedDamages": 8076542
+	}, {
+		"clientName": "Nova Corporation",
+		"contactPerson": "John Carter",
+		"eventType": "Typhoon",
+		"estimatedDamages": 5006739
+	}, {
+		"clientName": "Scientia Industries",
+		"contactPerson": "Melissa Sy",
+		"eventType": "Typhoon",
+		"estimatedDamages": 2946219
+	}, {
+		"clientName": "OzCorp Industries",
+		"contactPerson": "William Osbourn",
+		"eventType": "Earthquake",
+		"estimatedDamages": 4218576
+	}, {
+		"clientName": "Wayne Enterprise",
+		"contactPerson": "Bruce Wayne",
+		"eventType": "Earthquake",
+		"estimatedDamages": 1765802
+	}]
+}
