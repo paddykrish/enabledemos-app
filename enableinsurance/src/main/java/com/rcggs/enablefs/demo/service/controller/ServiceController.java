@@ -13,7 +13,7 @@ import java.util.*;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.apache.commons.beanutils.BeanComparator;
-import org.apache.phoenix.jdbc.PhoenixDriver;
+//import org.apache.phoenix.jdbc.PhoenixDriver;
 import org.codehaus.jackson.JsonFactory;
 import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.map.JsonMappingException;
@@ -60,7 +60,7 @@ public class ServiceController {
 		return new Date(  (long)d );
 	}
 
-	private static final Driver phoenixDriver = new PhoenixDriver();
+	//private static final Driver phoenixDriver = new PhoenixDriver();
 
 	@RequestMapping(value = "/notify/{name}", method = RequestMethod.GET)
 	public String notify(@PathVariable String name) {
@@ -751,7 +751,7 @@ public class ServiceController {
 	}
 
 
-
+	/*
 	@RequestMapping(value = "/getUserPrefs/{name}", method = RequestMethod.GET)
 	public String getUserPrefs(@PathVariable String name)
 			throws JsonGenerationException, JsonMappingException, IOException {
@@ -772,7 +772,7 @@ public class ServiceController {
 		}
 		return ow.writeValueAsString(userData);
 	}
-
+	*/
 
 	@RequestMapping(value = "/logger/{name}", method = RequestMethod.GET)
 	public String logger(@PathVariable String name) {
