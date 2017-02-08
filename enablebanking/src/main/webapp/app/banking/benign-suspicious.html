@@ -290,7 +290,7 @@
                                         </thead>
                                         <tbody>
                                             <tr ng-repeat="possibleRelatedEntity in possibleRelatedEntities | pagination : currentPage*itemsPerPage | limitTo: itemsPerPage">
-                                                <td>{{possibleRelatedEntity.party}}</td>
+                                                <td><a href="#" data-toggle="modal" data-target="#myModal2">{{possibleRelatedEntity.party}}</a</td>
                                                 <td>{{possibleRelatedEntity.primaryInvestigator}}</td>
                                                 <td>{{possibleRelatedEntity.status}}</td>
                                                 <td>
