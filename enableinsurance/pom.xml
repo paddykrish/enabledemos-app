@@ -159,13 +159,13 @@
 			<artifactId>poi</artifactId>
 			<version>3.11-beta3</version>
 		</dependency>
-
+        <!--
 		<dependency>
 			<groupId>com.rcggs.framework</groupId>
 			<artifactId>splunk-compiled</artifactId>
 			<version>1.0</version>
 		</dependency>
-
+        -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
