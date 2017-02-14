@@ -431,9 +431,9 @@
 							<div class="panelContainer">
 								<div class="row">
                                     <div class="col-lg-6">
-                                        <div class="gcFull"></div>
+                                        <div id="chart"></div>
                                     </div>
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-6" ng-controller="RelatedEntityCtrl">
                                         <table class="table" id="possibleRelatedTable">
                                             <thead>
                                                 <tr>
@@ -443,55 +443,10 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td>Mike Johnson</td>
-                                                    <td>jane Johnson</td>
-                                                    <td>100</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Mike Johnson</td>
-                                                    <td>jane Johnson</td>
-                                                    <td>100</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Mike Johnson</td>
-                                                    <td>jane Johnson</td>
-                                                    <td>100</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Mike Johnson</td>
-                                                    <td>jane Johnson</td>
-                                                    <td>100</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Mike Johnson</td>
-                                                    <td>jane Johnson</td>
-                                                    <td>100</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Mike Johnson</td>
-                                                    <td>jane Johnson</td>
-                                                    <td>100</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Mike Johnson</td>
-                                                    <td>jane Johnson</td>
-                                                    <td>100</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Mike Johnson</td>
-                                                    <td>jane Johnson</td>
-                                                    <td>100</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Mike Johnson</td>
-                                                    <td>jane Johnson</td>
-                                                    <td>100</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Mike Johnson</td>
-                                                    <td>jane Johnson</td>
-                                                    <td>100</td>
+                                                <tr ng-repeat="entityRelationship in entityRelationships">
+                                                    <td>{{entityRelationship.source}}</td>
+                                                    <td>{{entityRelationship.target}}</td>
+                                                    <td>{{entityRelationship.value}}</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -529,6 +484,8 @@
     <script src="../js/jquery.sparkline.min.js"></script>
 
     <script src="../js/app_benign_suspicious.js"></script>
+
+    <script src="../js/entity_graph.js"></script>
     
 	<script type="text/javascript">
     /*$(document).ready(function() {

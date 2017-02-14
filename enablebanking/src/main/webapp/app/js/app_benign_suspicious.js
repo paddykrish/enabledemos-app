@@ -241,3 +241,11 @@ app.controller("GetTransactionInfoCtrl", function($scope, $http) {
             });
     };
 });
+
+app.controller("RelatedEntityCtrl", function($scope, $http) {
+    $http.get('../data/entity_relationship_graph_data.json')
+        .then(function(response) {
+            //console.log(response.data);
+            $scope.entityRelationships = response.data;
+        });
+});
