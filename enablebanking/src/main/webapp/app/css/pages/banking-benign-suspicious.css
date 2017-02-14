@@ -279,35 +279,42 @@ h1.pageTitle {
 
 /* MODAL */
 
-#myModal .modal-header {
+#myModal .modal-header,
+#myModal2 .modal-header {
 	background: #444;
 	color: #fff;
 	padding: 10px;
 }
 
-#myModal .modal-header h4 {
+#myModal .modal-header h4,
+#myModal2 .modal-header h4 {
 	font-size: 16px;
 }
 
-#myModal .modal-header h4 i {
+#myModal .modal-header h4 i,
+#myModal2 .modal-header h4 i {
 	margin-right: 10px;
 }
 
-#myModal .modal-header button {
+#myModal .modal-header button,
+#myModal2 .modal-header button {
 	color: #fff;
 	opacity: 1;
 }
 
-#myModal .modal-body {
+#myModal .modal-body,
+#myModal2 .modal-body {
 	padding: 30px 20px;
 }
 
-#myModal .panelContainer {
+#myModal .panelContainer,
+#myModal2 .panelContainer {
     border: 0;
     margin: 0;
 }
 
-#myModal .panelContainer .divider {
+#myModal .panelContainer .divider,
+#myModal2 .panelContainer .divider {
 	border-bottom: 1px solid #ddd;
 	margin: 5px 0 20px;
 	width: 100%;
@@ -343,4 +350,32 @@ h1.pageTitle {
 #myModal .panelContainer .detailsWrapper p {
 	margin: 0;
 	font-size: 12px;
+}
+
+
+#myModal2 .modal-dialog {
+    width: 750px;
+}
+
+#myModal2 .modal-dialog .gcFull {
+    height: 380px;
+}
+
+/** For Entity Relationship Graph **/
+path.link {
+  fill: none;
+  stroke: #666;
+  stroke-width: 1.5px;
+}
+
+circle {
+  fill: #ccc;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+text {
+  fill: #000;
+  font: 10px sans-serif;
+  pointer-events: none;
 }

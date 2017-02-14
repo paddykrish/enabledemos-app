@@ -290,7 +290,7 @@
                                         </thead>
                                         <tbody>
                                             <tr ng-repeat="possibleRelatedEntity in possibleRelatedEntities | pagination : currentPage*itemsPerPage | limitTo: itemsPerPage">
-                                                <td>{{possibleRelatedEntity.party}}</td>
+                                                <td><a href="#" data-toggle="modal" data-target="#myModal2">{{possibleRelatedEntity.party}}</a</td>
                                                 <td>{{possibleRelatedEntity.primaryInvestigator}}</td>
                                                 <td>{{possibleRelatedEntity.status}}</td>
                                                 <td>
@@ -320,7 +320,7 @@
                     </div>
                 </div>
               </div>
-              <!-- Modal -->
+              <!-- MODAL FOR TRANSACTIONS -->
               <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" ng-controller="GetTransactionInfoCtrl">
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -417,8 +417,47 @@
                       </div>
                     </div>
                   </div>
-                </div> 
-              <!-- END OF MODAL -->
+              </div> 
+              <!-- END OF MODAL FOR TRANSACTIONS -->
+              <!-- MODAL FOR POSSIBLE RELATED ENTITIES -->
+              <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" ng-controller="GetTransactionInfoCtrl">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel"><i class="fa fa-users" aria-hidden="true"></i>Related Entity</h4>
+                      </div>
+                      <div class="modal-body">
+							<div class="panelContainer">
+								<div class="row">
+                                    <div class="col-lg-6">
+                                        <div id="chart"></div>
+                                    </div>
+                                    <div class="col-lg-6" ng-controller="RelatedEntityCtrl">
+                                        <table class="table" id="possibleRelatedTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>Entity Source</th>   
+                                                    <th>Entity Target</th>
+                                                    <th>Relationship Score</th>   
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr ng-repeat="entityRelationship in entityRelationships">
+                                                    <td>{{entityRelationship.source}}</td>
+                                                    <td>{{entityRelationship.target}}</td>
+                                                    <td>{{entityRelationship.value}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>	
+							</div>
+                      </div>
+                    </div>
+                  </div>
+              </div> 
+              <!-- END OF MODAL FOR POSSIBLE RELATED ENTITIES -->
               </div>
         </div>
         </div>
@@ -445,6 +484,8 @@
     <script src="../js/jquery.sparkline.min.js"></script>
 
     <script src="../js/app_benign_suspicious.js"></script>
+
+    <script src="../js/entity_graph.js"></script>
     
 	<script type="text/javascript">
     /*$(document).ready(function() {

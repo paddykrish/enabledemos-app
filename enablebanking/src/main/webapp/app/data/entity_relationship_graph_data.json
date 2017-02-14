@@ -1,0 +1,72 @@
+[
+	{
+		"source": "Mike Johnson",
+		"target": "Jane Johnson",
+		"value": "100"
+	},
+	{
+		"source": "Mike Johnson",
+		"target": "Karen Luthor",
+		"value": "100"
+	},
+	{
+		"source": "Mike Johnson",
+		"target": "Nancy Oscars",
+		"value": "100"
+	},
+	{
+		"source": "Mike Johnson",
+		"target": "Justin Hammer",
+		"value": "75"
+	},
+	{
+		"source": "Mike Johnson",
+		"target": "William Stryker",
+		"value": "75"
+	},
+	{
+		"source": "Mike Johnson",
+		"target": "Walmart Store 23145",
+		"value": "54"
+	},
+	{
+		"source": "Mike Johnson",
+		"target": "Best Buy 1983",
+		"value": "32"
+	},
+	{
+		"source": "Mike Johnson",
+		"target": "Retail Store 41068",
+		"value": "95"
+	},
+	{
+		"source": "Victor Fries",
+		"target": "Walmart Store 23145",
+		"value": "41"
+	},
+	{
+		"source": "Victor Fries",
+		"target": "Best Buy 1983",
+		"value": "38"
+	},
+	{
+		"source": "Victor Fries",
+		"target": "Retail Store 41068",
+		"value": "95"
+	},
+	{
+		"source": "Cain Marko",
+		"target": "Walmart Store 23145",
+		"value": "58"
+	},
+	{
+		"source": "Cain Marko",
+		"target": "Best Buy 1983",
+		"value": "37"
+	},
+	{
+		"source": "Cain Marko",
+		"target": "Retail Store 41068",
+		"value": "84"
+	}
+]
