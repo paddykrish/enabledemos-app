@@ -61,77 +61,13 @@
                     <div class="row">
                         <h1 class="pageTitle">Event Information (Benign-Suspicious)</h1>
                     </div>
-                    <div class="row eventSummary">
-                        <div class="col-lg-12">
-							<div class="panelContainer">
-								<div class="panel-header eventSummary">
-									<h4><i class="fa fa-bullhorn" aria-hidden="true"></i>Event Summary</h4>
-								</div>
-								<div class="panel-body">
-                                    <div class="col-lg-9">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <div class="gcFull">
-                                                    <!-- graph -->
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-12">
-                                                <div class="analysis">
-                                                    <p><span>Analysis:</span> Beneficiary Account # 3453-5666-56456-3456 is on the Terrorist Watchlist. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="fraudScore">
-                                            <div>
-                                                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                                                <h1>Event Fraud Score</h1>
-                                                <h2>25</h2>
-                                            </div>
-                                        </div>
-                                    </div>
-									
-                                    
-                                    <div class="col-lg-12">
-                                        <div class="tableContainer transactionsList" ng-controller="TransactionsCtrl">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Case Number</th>   
-                                                        <th>Transaction Number</th>
-                                                        <th>Transaction Type</th> 
-                                                        <th>Origin Account Number</th>															
-                                                        <th>Origin Account Type</th>
-                                                        <th>Beneficiary Account Number</th>
-                                                        <th>Amount</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr ng-repeat="transaction in transactions">
-                                                        <td>{{transaction.caseNo}}</td>
-                                                        <td><a href="#" data-toggle="modal" data-target="#myModal" data-transaction-number="{{transaction.transactionNum}}">{{transaction.transactionNum}}</a></td>
-                                                        <td>{{transaction.transactionType}}</td>
-                                                        <td>{{transaction.origAccountNum}}</td>
-                                                        <td>{{transaction.origAccountType}}</td>
-                                                        <td>{{transaction.benignAccountNum}}</td>
-                                                        <td>{{transaction.amount | currency}}</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-								</div>
-							</div>
-						</div>
-                    </div>
-                    <div class="row accountSummary" ng-controller="AccountInformationCtrl">
+                    <div class="row" ng-controller="AccountInformationCtrl">
                         <div class="col-lg-12">
 							<div class="panelContainer">
 								<div class="panel-header accountInformation">
-									<h4><i class="fa fa-user" aria-hidden="true"></i>Account Summary</h4>
+									<h4><i class="fa fa-user" aria-hidden="true"></i>Account Information</h4>
 								</div>
-								<div class="panel-body">
+								<div class="row main">
 									<div class="col-lg-3 tablist">
 										<div class="detailsWrapperList">
 										
@@ -148,132 +84,118 @@
 									<div class="col-lg-9 tabPanel">
 										<div class="tab-content">
 											<div role="tabpanel" class="tab-pane active" id="one">
-                                                <div>
-                                                    <div class="col-lg-12">
-                                                        <div class="row">
-                                                            <div class="col-lg-2">
-                                                                <div class="detailsWrapper">
-                                                                    <h4>Account Number</h4>
-                                                                    <p>{{accountInformation.accountNumber}}</p>
-                                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-11 analysis">
+                                                        <div class="panelContainer">
+                                                            <div class="detailsWrapper">
+                                                                <p><span>Analysis:</span>{{caseAnalysis}}</p>
                                                             </div>
-                                                            <div class="col-lg-2">
-                                                                <div class="detailsWrapper">
-                                                                    <h4>Account Type</h4>
-                                                                    <p>{{accountInformation.accountType}}</p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-2">
-                                                                <div class="detailsWrapper">
-                                                                    <h4>Date Opened</h4>
-                                                                    <p>{{accountInformation.dateOpened}}</p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-2">
-                                                                <div class="detailsWrapper">
-                                                                    <h4>Date Closed</h4>
-                                                                    <p>{{accountInformation.dateClosed}}</p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-2">
-                                                                <div class="detailsWrapper">
-                                                                    <h4>Current Balance</h4>
-                                                                    <p>{{accountInformation.currentBalance | currency}}</p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-2">
-                                                                <div class="detailsWrapper">
-                                                                    <h4>Account Length</h4>
-                                                                    <p>{{accountInformation.accountLength}}</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                                <div>
-                                                    <div class="col-lg-4">
-                                                        <div class="fraudScore">
-                                                            <div>
-                                                                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                                                                <h1>Account Fraud Score</h1>
-                                                                <h2>25</h2>
-                                                            </div>
-                                                        </div>
-                                                           
-                                                        
-                                                    </div>
-                                                    <div class="col-lg-8">
-                                                        <div class="gcFull">
-                                                        <!-- graph -->
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="row hidden">
-                                                    <div class="col-lg-12">
-                                                        <div class="tableContainer transactionsList" ng-controller="TransactionsCtrl">
-                                                            <table class="table">
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th>Case Number</th>   
-                                                                        <th>Transaction Number</th>
-                                                                        <th>Transaction Type</th> 
-                                                                        <th>Origin Account Number</th>															
-                                                                        <th>Origin Account Type</th>
-                                                                        <th>Beneficiary Account Number</th>
-                                                                        <th>Amount</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    <tr ng-repeat="transaction in transactions">
-                                                                        <td>{{transaction.caseNo}}</td>
-                                                                        <td><a href="#" data-toggle="modal" data-target="#myModal" data-transaction-number="{{transaction.transactionNum}}">{{transaction.transactionNum}}</a></td>
-                                                                        <td>{{transaction.transactionType}}</td>
-                                                                        <td>{{transaction.origAccountNum}}</td>
-                                                                        <td>{{transaction.origAccountType}}</td>
-                                                                        <td>{{transaction.benignAccountNum}}</td>
-                                                                        <td>{{transaction.amount | currency}}</td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
+                                                    <div class="col-lg-6 account">
+                                                        <div class="col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-lg-12">
+                                                                    <div class="detailsWrapper">
+                                                                        <h4>Account Number</h4>
+                                                                        <p>{{accountInformation.accountNumber}}</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-12">
+                                                                    <div class="detailsWrapper">
+                                                                        <h4>Account Type</h4>
+                                                                        <p>{{accountInformation.accountType}}</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-12">
+                                                                    <div class="detailsWrapper">
+                                                                        <h4>Date Opened</h4>
+                                                                        <p>{{accountInformation.dateOpened}}</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-12">
+                                                                    <div class="detailsWrapper">
+                                                                        <h4>Date Closed</h4>
+                                                                        <p>{{accountInformation.dateClosed}}</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-lg-12">
+                                                                    <div class="detailsWrapper currentBalance">
+                                                                        <h4>Current Balance</h4>
+                                                                        <p>{{accountInformation.currentBalance | currency}}</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-12">
+                                                                    <div class="detailsWrapper">
+                                                                        <h4>Account Length</h4>
+                                                                        <p>{{accountInformation.accountLength}}</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>	
+                                                    </div>
+                                                    <div class="col-lg-6 branch">
+                                                        <div class="col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-lg-12">
+                                                                    <div class="detailsWrapper">
+                                                                        <h4>Branch Information</h4>
+                                                                        <p>{{branchInformation.address}}</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-12">
+                                                                    <div class="detailsWrapper">
+                                                                        <h4>Branch Manager</h4>
+                                                                        <p>{{branchInformation.branchManager}}</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-lg-12">
+                                                                    <div class="detailsWrapper">
+                                                                        <h4>Branch ID</h4>
+                                                                        <p>{{branchInformation.branchId}}</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-12">
+                                                                    <div class="detailsWrapper">
+                                                                        <h4>Branch Contact Number</h4>
+                                                                        <p>{{branchInformation.contactNo}}</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>	
+                                                    </div>
+                                                    <div class="col-lg-6 openCases">
+                                                        <div class="col-lg-12">
+                                                            <div class="detailsWrapper">
+                                                                <h4>Open Cases</h4>	
+                                                                <p>{{branchInformation.openCases}}</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="detailsWrapper">
+                                                                <h4>Case History</h4>
+                                                                <p ng-repeat="data in branchInformation.caseHistory">{{data.item}}</p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
 											</div>
+											
 										</div>
 									</div>
-                                    <div class="col-lg-12">
-                                        <div class="tableContainer transactionsList" ng-controller="TransactionsCtrl">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Case Number</th>   
-                                                        <th>Transaction Number</th>
-                                                        <th>Transaction Type</th> 
-                                                        <th>Origin Account Number</th>															
-                                                        <th>Origin Account Type</th>
-                                                        <th>Beneficiary Account Number</th>
-                                                        <th>Amount</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr ng-repeat="transaction in transactions">
-                                                        <td>{{transaction.caseNo}}</td>
-                                                        <td><a href="#" data-toggle="modal" data-target="#myModal" data-transaction-number="{{transaction.transactionNum}}">{{transaction.transactionNum}}</a></td>
-                                                        <td>{{transaction.transactionType}}</td>
-                                                        <td>{{transaction.origAccountNum}}</td>
-                                                        <td>{{transaction.origAccountType}}</td>
-                                                        <td>{{transaction.benignAccountNum}}</td>
-                                                        <td>{{transaction.amount | currency}}</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
 								</div>
 							</div>
 						</div>
                     </div>
-                    <div class="row hidden">
+                    <div class="row">
                         <div class="col-lg-12 static">
 							<div class="row">
 								<div class="col-lg-12 homeAddress">
@@ -328,9 +250,8 @@
 								<div class="panel-header">
 									<h4><i class="fa fa-tag" aria-hidden="true"></i>References</h4>
 								</div>
-                                <div class="panel-body">
-                                    <div class="detailsWrapper">
-                                        <div class="tableContainer possibleEntities" ng-controller="ReferenceDocumentsCtrl">
+								<div class="detailsWrapper">
+									<div class="tableContainer possibleEntities" ng-controller="ReferenceDocumentsCtrl">
                                             <table class="table">
                                                 <thead>
                                                     <tr>
@@ -348,8 +269,7 @@
                                                 </tbody>
                                             </table>
                                         </div> 
-                                    </div>
-                                </div>
+								</div>
 							</div>
                         </div>
                         <div class="col-lg-8 recentTransactions">
@@ -357,49 +277,45 @@
 								<div class="panel-header recentTransactions">
 									<h4><i class="fa fa-server" aria-hidden="true"></i> Possible Related Entities</h4>
 								</div>
-                                <div class="panel-body">
-                                    <div class="detailsWrapper">
-                                        <div class="tableContainer possibleEntities" ng-controller="PossibleRelatedEntitiesCtrl" ng-init="initData()">
-                                            <table class="table" id="possibleRelatedTable">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Party</th>   
-                                                        <th>Primary Investigator</th>
-                                                        <th>Status</th>   
-                                                        <th>Activity</th>
-                                                        <th>Observation</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr ng-repeat="possibleRelatedEntity in possibleRelatedEntities | pagination : currentPage*itemsPerPage | limitTo: itemsPerPage">
-                                                        <td><a href="#" data-toggle="modal" data-target="#myModal2">{{possibleRelatedEntity.party}}</a</td>
-                                                        <td>{{possibleRelatedEntity.primaryInvestigator}}</td>
-                                                        <td>{{possibleRelatedEntity.status}}</td>
-                                                        <td>
-                                                            <div style="width:70px; height:35px;">
-                                                            <div id="myBarChart{{$index}}"></div>
-                                                            </div>    
-                                                        </td>
-                                                        <td>{{possibleRelatedEntity.observation}}</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            <!--
-                                            <ul class="pagination pagination-sm">
-                                              <li ng-class="DisablePrevPage()">
-                                                <a href ng-click="prevPage()">« Prev</a>
-                                              </li>
-                                              <li ng-repeat="n in range()" ng-class="{active: n == currentPage}" ng-click="setPage(n)">
-                                                <a href="javascript:renderGraph();">{{n+1}}</a>
-                                              </li>
-                                              <li ng-class="DisableNextPage()">
-                                                <a href ng-click="nextPage()">Next »</a>
-                                              </li>
-                                            </ul> 
-                                            -->
-                                        </div>
-                                    </div>
-                                </div>
+								<div class="tableContainer possibleEntities" ng-controller="PossibleRelatedEntitiesCtrl" ng-init="initData()">
+                                    <table class="table" id="possibleRelatedTable">
+                                        <thead>
+                                            <tr>
+                                                <th>Party</th>   
+                                                <th>Primary Investigator</th>
+                                                <th>Status</th>   
+                                                <th>Activity</th>
+                                                <th>Observation</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="possibleRelatedEntity in possibleRelatedEntities | pagination : currentPage*itemsPerPage | limitTo: itemsPerPage">
+                                                <td><a href="#" data-toggle="modal" data-target="#myModal2">{{possibleRelatedEntity.party}}</a</td>
+                                                <td>{{possibleRelatedEntity.primaryInvestigator}}</td>
+                                                <td>{{possibleRelatedEntity.status}}</td>
+                                                <td>
+                                                    <div style="width:70px; height:35px;">
+                                                    <div id="myBarChart{{$index}}"></div>
+                                                    </div>    
+                                                </td>
+                                                <td>{{possibleRelatedEntity.observation}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+									<!--
+                                    <ul class="pagination pagination-sm">
+						              <li ng-class="DisablePrevPage()">
+						                <a href ng-click="prevPage()">« Prev</a>
+						              </li>
+						              <li ng-repeat="n in range()" ng-class="{active: n == currentPage}" ng-click="setPage(n)">
+						                <a href="javascript:renderGraph();">{{n+1}}</a>
+						              </li>
+						              <li ng-class="DisableNextPage()">
+						                <a href ng-click="nextPage()">Next »</a>
+						              </li>
+						            </ul> 
+									-->
+							</div>
                         </div>
                     </div>
                 </div>
@@ -415,33 +331,27 @@
                       <div class="modal-body">
 							<div class="panelContainer">
 								<div class="row">
-									<div class="col-lg-4">
+									<div class="col-lg-6">
 										<div class="detailsWrapper">
 											<h4>Transaction Number</h4>
 											<p>{{transactionInfo.transactionNumber}}</p>
 										</div>
 									</div>
-									<div class="col-lg-4">
+									<div class="col-lg-6">
 										<div class="detailsWrapper">
 											<h4>Transaction Date</h4>
 											<p>{{transactionInfo.transactionDate}}</p>
 										</div>
 									</div>
-                                    <div class="col-lg-4 modalFraudScore">
-										<div class="detailsWrapper">
-											<h4>Transaction Fraud Score</h4>
-											<p>52</p>
-										</div>
-									</div>
                                 </div>
                                 <div class="row">
-									<div class="col-lg-4">
+									<div class="col-lg-6">
 										<div class="detailsWrapper">
 											<h4>Transaction Type</h4>
 											<p>{{transactionInfo.transactionType}}</p>
 										</div>
 									</div>
-									<div class="col-lg-4">
+									<div class="col-lg-6">
 										<div class="detailsWrapper">
 											<h4>Amount</h4>
 											<p>{{transactionInfo.amount}}</p>
@@ -449,13 +359,13 @@
 									</div>
 								</div>
 								<div class="row">
-									<div class="col-lg-4">
+									<div class="col-lg-6">
 										<div class="detailsWrapper">
 											<h4>Starting Balance</h4>
 											<p>{{transactionInfo.startingBalance | currency}}</p>
 										</div>
 									</div>
-									<div class="col-lg-4">
+									<div class="col-lg-6">
 										<div class="detailsWrapper currentBalance">
 											<h4>Current Balance</h4>
 											<p>{{transactionInfo.balance | currency}}</p>
@@ -464,37 +374,39 @@
 								</div>
 								<div class="divider"></div>
 								<div class="row">
-								    <div class="col-lg-4">
+								    <div class="col-lg-6">
 										<div class="detailsWrapper">
 											<h4>Teller Name</h4>
 											<p>{{branchInfo.bankTellerName}}</p>
 										</div>
 									</div>
-									<div class="col-lg-4">
+									<div class="col-lg-6">
 										<div class="detailsWrapper">
 											<h4>Bank Teller ID</h4>
 											<p>{{branchInfo.bankTellerId}}</p>
 										</div>
 									</div>
-									<div class="col-lg-4">
+									<div class="col-lg-6">
 										<div class="detailsWrapper">
 											<h4>Branch Information</h4>
 											<p>{{branchInfo.branchInfo}}</p>
 										</div>
 									</div>
-									<div class="col-lg-4">
+									<div class="col-lg-6">
 										<div class="detailsWrapper">
 											<h4>Branch ID</h4>
 											<p>{{branchInfo.branchId}}</p>
 										</div>
 									</div>
-                                    <div class="col-lg-4">
+								</div>
+								<div class="row">
+									<div class="col-lg-6">
 										<div class="detailsWrapper">
 											<h4>Branch Manager</h4>
 											<p>{{branchInfo.branchManager}}</p>
 										</div>
 									</div>
-									<div class="col-lg-4">
+									<div class="col-lg-6">
 										<div class="detailsWrapper">
 											<h4>Branch Contact Number</h4>
 											<p>{{branchInfo.branchContactNum}}</p>

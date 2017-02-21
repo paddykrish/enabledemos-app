@@ -9,15 +9,6 @@ h1.pageTitle {
 
 /* GLOBAL FOR PANELS */
 
-#banking-benign-suspicious .panel-body {
-    padding: 30px 0;
-}
-
-#banking-benign-suspicious .recentTransactions .panel-body,
-#banking-benign-suspicious .references .panel-body {
-    padding: 15px 0;
-}
-
 #banking-benign-suspicious .panelContainer {
 	border: 1px solid #ddd;
 	margin-bottom: 15px;
@@ -63,7 +54,7 @@ h1.pageTitle {
 /* TABLIST */
 
 #banking-benign-suspicious .panelContainer .tablist .detailsWrapperList {
-	height: 286px;
+	min-height: 355px;
 	overflow-y: scroll;
 }
 
@@ -97,6 +88,13 @@ h1.pageTitle {
 
 /* TABPANEL */
 
+#banking-benign-suspicious .panelContainer .row.main {
+	margin-right: 0px;
+}
+
+#banking-benign-suspicious .panelContainer .tabPanel {
+    overflow-y: scroll;
+}
 
 #banking-benign-suspicious .panelContainer .tabPanel .tab-content {
 	height: auto!important;
@@ -135,15 +133,25 @@ h1.pageTitle {
     background:#337ab7;
 }
 
-#banking-benign-suspicious  .panel-header.eventSummary {
-    background:#68C2D7;
+#banking-benign-suspicious  .panel-header.homeAddress {
+    background:#6e0684;
+}
+
+#banking-benign-suspicious  .panel-header.workAddress {
+    background:#d64040;
 }
 
 #banking-benign-suspicious  .panel-header.recentTransactions{
-    background: #E67986;
+    background: #d77812;
 }
 
 /* GLOBAL FOR STATIC PANELS */
+
+#banking-benign-suspicious .static .homeAddress .detailsWrapper,
+#banking-benign-suspicious .recentTransactions .detailsWrapper,
+#banking-benign-suspicious .references .detailsWrapper  {
+	padding: 0;
+}
 
 #banking-benign-suspicious .static .workAddress .panel-body,
 #banking-benign-suspicious .static .homeAddress .panel-body { 
@@ -160,80 +168,66 @@ h1.pageTitle {
 	min-height: 190px;
 }
 
-/* EVENT SUMMARY */
-
-#banking-benign-suspicious .fraudScore {
-    height: 240px;
-    background: #DB5143;
-    text-align:center;
-    display: table;
-    width: 100%;
-    color: #fff;
-}
-
-#banking-benign-suspicious .accountSummary .fraudScore {
-    background: #DE9C3D;
-    height: 200px;
-}
-
-#banking-benign-suspicious .fraudScore i {
-    font-size: 55px;
-    opacity: 0.4;
-    margin-bottom: 10px;
-}
-
-#banking-benign-suspicious .fraudScore h1 {
-    font-size: 20px;
-    margin-bottom: 5px;
-    margin-top: 0;
-    
-}
-
-#banking-benign-suspicious .fraudScore h2 {
-    font-size: 35px;
-    
-}
-
-#banking-benign-suspicious .fraudScore > div {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-#banking-benign-suspicious .fraudScore h2 {
-    margin: 0;
-    
-}
-
 /* ANALYSIS */
 
-#banking-benign-suspicious .eventSummary .analysis {
-    color: #fff;
-    padding: 10px 15px;
-    background: #9CA971;
+#banking-benign-suspicious .analysis .panelContainer {
+	background: #d9edf7;
+    margin-bottom: 25px;
+    border-radius: 0;
 }
 
-#banking-benign-suspicious .eventSummary .analysis p span {
-    font-weight: 800;
-    margin-right:5px;
+#banking-benign-suspicious .analysis .panel-header {
+	background: transparent;
+	color: #444;
 }
 
-#banking-benign-suspicious .eventSummary .analysis p {
+#banking-benign-suspicious .panelContainer .tabPanel .analysis .detailsWrapper {
+    padding: 15px;
     margin: 0;
+}
+
+#banking-benign-suspicious .analysis .detailsWrapper p {
+    margin: 0;
+    font-size:18px;
+}
+
+#banking-benign-suspicious .analysis .detailsWrapper p span {
+    font-size: 18px; 
+    font-weight: 800;
+    margin-right: 5px;
+}
+
+/* TRANSACTIONS TABLE */
+
+#banking-benign-suspicious .static .homeAddress table {
+    margin-top: 20px;
+}
+
+#banking-benign-suspicious .static .homeAddress table th:first-child {
+	width: 100px;
+}
+
+#banking-benign-suspicious .static .homeAddress table th:nth-child(2) {
+	width: 190px;
+}
+
+#banking-benign-suspicious .static .homeAddress table th:nth-child(3) {
+	width: 150px;
+}
+
+#banking-benign-suspicious .static .homeAddress table th:nth-child(5) {
+	width: 150px;
 }
 
 
 /* POSSIBLE RELATED ENTITIES */
-
-#banking-benign-suspicious .recentTransactions table th {
-    width: 200px;
-}
 
 #banking-benign-suspicious .recentTransactions table th:first-child {
 	width: 70px;
 }
 
 #banking-benign-suspicious .recentTransactions table th:nth-child(2) {
-	width: 109px;
+	width: 85px;
 }
 
 #banking-benign-suspicious .recentTransactions table th:nth-child(3) {
@@ -244,22 +238,25 @@ h1.pageTitle {
 	width: 70px;
 }
 
-#banking-benign-suspicious .recentTransactions .panelContainer {
+/* REFERENCES */
+
+
+#banking-benign-suspicious .references .panelContainer {
     min-height: 373px;
 }
 
 /* REFERENCES */
 
 
-#banking-benign-suspicious .references .panelContainer {
-    min-height: 386px;
+#banking-benign-suspicious .recentTransactions .panelContainer {
+    min-height: 373px;
 }
+
 
 /* GLOBAL FOR TABLES */
 
-#banking-benign-suspicious .eventSummary .tableContainer,
-#banking-benign-suspicious .accountSummary .tableContainer {
-	margin-top:50px;
+#banking-benign-suspicious .tableContainer {
+	padding: 15px;
 }
 
 #banking-benign-suspicious table {
@@ -269,6 +266,7 @@ h1.pageTitle {
 #banking-benign-suspicious table thead th {
     font-size: 13px;
     padding-top: 0;
+	width: 200px;
 }
 
 #banking-benign-suspicious table tbody td {
@@ -280,10 +278,6 @@ h1.pageTitle {
 }
 
 /* MODAL */
-
-#myModal .modal-dialog {
-    width: 60%;
-}
 
 #myModal .modal-header,
 #myModal2 .modal-header {
@@ -327,13 +321,19 @@ h1.pageTitle {
 	height:1px;
 }
 
+#myModal .panelContainer .currentBalance {
+	background: #fdfde1;
+	padding: 10px;
+}
+
 #myModal .panelContainer .currentBalance p {
 	color: #6bbc6b;
 	font-size: 18px !important;
-    font-weight: 800;
 }
 
-
+#myModal .panelContainer .row:last-child .detailsWrapper {
+	margin-bottom: 0;
+}
 
 #myModal .panelContainer .detailsWrapper {
 	margin-bottom: 15px;
@@ -361,14 +361,7 @@ h1.pageTitle {
     height: 380px;
 }
 
-#myModal .modalFraudScore p {
-    font-size: 19px !important;
-    font-weight: 800;
-    color: #DB5143;
-}
-
 /** For Entity Relationship Graph **/
-
 path.link {
   fill: none;
   stroke: #666;
