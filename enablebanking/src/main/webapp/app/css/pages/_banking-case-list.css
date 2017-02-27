@@ -1,0 +1,263 @@
+/*** CSS FOR BANKING CASE LIST ***/
+
+
+h1.pageTitle {
+   text-align: center;
+   font-size: 25px;
+   margin: 35px 0; 
+}
+
+
+
+/* GLOBAL FOR PANELS */
+
+#banking-case-list .panelContainer {
+	border: 1px solid #ddd;
+	margin-bottom: 15px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}	
+
+#banking-case-list .panelContainer .detailsWrapper {
+	padding: 15px;
+}
+
+#banking-case-list .panel-header {
+	background: #777;
+	color: #fff;
+	padding: 10px 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+#banking-case-list .panel-header h4 {
+	margin: 0;
+	font-size: 16px;
+}
+
+#banking-case-list .panel-header h4 i {
+	margin-right: 10px;
+}
+
+#banking-case-list .panelContainer .detailsWrapper h4 {
+	margin: 0 0 3px;
+	font-size: 13px;
+	font-weight: 800;
+	
+}
+
+#banking-case-list .panelContainer .detailsWrapper p {
+	margin: 0;
+	font-size: 12px;
+}
+
+/* TABLIST */
+
+#banking-case-list .panelContainer .tablist .detailsWrapperList {
+	min-height: 546px;
+	overflow-y: scroll;
+}
+
+#banking-case-list .panelContainer .tablist .detailsWrapperList .detailsWrapperListDetails {
+	padding: 0;
+	background: #555;
+	border-bottom: 1px solid #ddd;
+}
+
+#banking-case-list .panelContainer .tablist .detailsWrapperList .detailsWrapperListDetails a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 15px 10px;
+}
+
+#banking-case-list .panelContainer .tablist .detailsWrapperList .detailsWrapperListDetails .details h5:first-child {
+	margin-bottom: 5px;
+}
+
+#banking-case-list .panelContainer .tablist .detailsWrapperList .detailsWrapperListDetails .details h5 {
+	font-size: 12px;
+	margin: 0;
+	color: #fff;
+}
+
+#banking-case-list .panelContainer .tablist .detailsWrapperList .detailsWrapperListDetails .icon {
+	color: #fff;
+}
+
+
+/* TABPANEL */
+
+#banking-case-list .panelContainer .row.main {
+	margin-right: 15px;
+}
+
+#banking-case-list .panelContainer .tabPanel .tab-content {
+	height: auto!important;
+	padding: 20px 0;
+}	
+
+#banking-case-list .panelContainer .tabPanel .detailsWrapper{
+	padding: 0;
+	margin-bottom: 15px;
+}
+
+#banking-case-list .panelContainer .tabPanel .row.account,
+#banking-case-list .panelContainer .tabPanel .row.branch {
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 20px;
+	padding-bottom: 5px;
+}
+
+#banking-case-list .panelContainer .tabPanel .row.openCases .col-lg-12:last-child  .detailsWrapper {
+	margin-bottom: 0;
+}
+
+#banking-case-list .panelContainer .tabPanel .detailsWrapper.currentBalance {
+	background: #fdfde1;
+	padding: 10px;
+}
+
+#banking-case-list .panelContainer .tabPanel .detailsWrapper.currentBalance p {
+	font-size: 18px;
+	color: #6bbc6b;
+}
+
+/* PANEL HEADING BG COLORS */
+
+#banking-case-list  .panel-header.accountInformation {
+    background:#6bbc6b;
+}
+
+#banking-case-list  .panel-header.homeAddress {
+    background:#6e0684;
+}
+
+#banking-case-list  .panel-header.workAddress {
+    background:#d64040;
+}
+
+#banking-case-list  .panel-header.recentTransactions{
+    background: #f49229;
+}
+
+/* GLOBAL FOR STATIC PANELS */
+
+#banking-case-list .static .workAddress .detailsWrapper,
+#banking-case-list .static .homeAddress .detailsWrapper {
+	padding: 0;
+	margin-bottom: 15px;
+	padding: 0 15px;
+}
+
+#banking-case-list .static .workAddress .panel-body,
+#banking-case-list .static .homeAddress .panel-body { 
+	padding: 20px 0 20px;
+}
+
+#banking-case-list .static .workAddress .row:last-child .col-lg-3 .detailsWrapper,
+#banking-case-list .static .homeAddress .row:last-child .col-lg-3 .detailsWrapper {
+	margin-bottom: 0;
+}
+
+/* ANALYSIS */
+
+#banking-case-list .static .analysis .panelContainer {
+	background: #d9edf7;
+}
+
+#banking-case-list .static .analysis .panel-header {
+	background: #337ab7;
+	color: #fff;
+}
+
+#banking-case-list .static .workAddress .panelContainer { 
+	min-height: 243px;
+}
+
+#banking-case-list .static .analysis .panelContainer p { 
+	font-size: 18px;
+}
+
+/* GLOBAL FOR TABLES */
+
+#banking-case-list table {
+    margin-bottom: 0;
+}
+
+#banking-case-list table thead th {
+    font-size: 13px;
+    padding-top: 0;
+}
+
+#banking-case-list table tbody td {
+    font-size: 12px;
+}
+
+#banking-case-list table tbody tr:nth-child(odd) {
+    background: #e7e7e7;
+}
+
+/* MODAL */
+
+#myModal .modal-header {
+	background: #444;
+	color: #fff;
+	padding: 10px;
+}
+
+#myModal .modal-header h4 {
+	font-size: 16px;
+}
+
+#myModal .modal-header h4 i {
+	margin-right: 10px;
+}
+
+#myModal .modal-header button {
+	color: #fff;
+	opacity: 1;
+}
+
+#myModal .modal-body {
+	padding: 30px 20px;
+}
+
+#myModal .panelContainer .divider {
+	border-bottom: 1px solid #ddd;
+	margin: 5px 0 20px;
+	width: 100%;
+	height:1px;
+}
+
+#myModal .panelContainer .currentBalance {
+	background: #fdfde1;
+	padding: 10px;
+}
+
+#myModal .panelContainer .currentBalance p {
+	color: #6bbc6b;
+	font-size: 18px !important;
+}
+
+#myModal .panelContainer .row:last-child .detailsWrapper {
+	margin-bottom: 0;
+}
+
+#myModal .panelContainer .detailsWrapper {
+	margin-bottom: 15px;
+}
+
+#myModal .panelContainer .detailsWrapper h4 {
+	margin: 0 0 3px;
+	font-size: 13px;
+	font-weight: 800;
+	
+}
+
+#myModal .panelContainer .detailsWrapper p {
+	margin: 0;
+	font-size: 12px;
+}

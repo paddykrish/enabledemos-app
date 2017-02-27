@@ -21,5 +21,14 @@
 				"item": "317 - Jean Logan - Resolved"
 			}
 		]
+	},
+	"currentHomeAddress": {
+		"address": "229 Seventh Avenue",
+		"city": "New York",
+		"state": "NY",
+		"zip": "10011",
+		"phoneNumber": "(593) 380-3032",
+		"cellPhoneNumber": "(814) 867-5653",
+		"email": "dv2156@gmail.com"
 	}
 }

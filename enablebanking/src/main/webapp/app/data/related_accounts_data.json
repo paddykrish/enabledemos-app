@@ -1,0 +1,65 @@
+{
+	"accounts": [
+		{
+			"accountNumber": "5295-2906-2928-5907",
+			"accountType": "Mutual Funds",
+			"homeAddress": "no",
+			"workAddress": "yes",
+			"accountName": "no",
+			"birthDate": "yes",
+			"ssn": "no",
+			"pastAddress": "maybe",
+			"email": "yes",
+			"phoneNUmber": "yes"
+
+		},
+		{
+			"accountNumber": "5110-8382-4096-1936",
+			"accountType": "Checking",
+			"homeAddress": "yes",
+			"workAddress": "no",
+			"accountName": "maybe",
+			"birthDate": "yes",
+			"ssn": "no",
+			"pastAddress": "maybe",
+			"email": "yes",
+			"phoneNUmber": "yes"
+		},
+		{
+			"accountNumber": "7287-7666-5637-2510",
+			"accountType": "Savings",
+			"homeAddress": "yes",
+			"workAddress": "no",
+			"accountName": "maybe",
+			"birthDate": "yes",
+			"ssn": "no",
+			"pastAddress": "maybe",
+			"email": "yes",
+			"phoneNUmber": "yes"
+		},
+		{
+			"accountNumber": "7532-7718-4435-1877",
+			"accountType": "IRA",
+			"homeAddress": "yes",
+			"workAddress": "no",
+			"accountName": "maybe",
+			"birthDate": "yes",
+			"ssn": "no",
+			"pastAddress": "maybe",
+			"email": "yes",
+			"phoneNUmber": "yes"
+		},
+		{
+			"accountNumber": "4196-6032-8599-1583",
+			"accountType": "Credit Card",
+			"homeAddress": "yes",
+			"workAddress": "yes",
+			"accountName": "yes",
+			"birthDate": "yes",
+			"ssn": "no",
+			"pastAddress": "maybe",
+			"email": "yes",
+			"phoneNUmber": "yes"
+		}
+	]
+}

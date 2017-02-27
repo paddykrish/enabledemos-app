@@ -61,394 +61,378 @@
                     <div class="row">
                         <h1 class="pageTitle">Case Information</h1>
                     </div>
-                    <div class="row" ng-controller="AccountInformationCtrl">
-                        <div class="col-lg-6">
-							<div class="panelContainer">
-								<div class="panel-header accountInformation">
-									<h4><i class="fa fa-user" aria-hidden="true"></i> Account Information</h4>
-								</div>
-								<div class="row main">
-									<div class="col-lg-4 tablist">
-										<div class="detailsWrapperList">
-											<div class="detailsWrapperListDetails" ng-repeat="account in caseAccounts">
-												<a href="#one" aria-controls="home" role="tab" data-toggle="tab">
-													<div class="details" ng-click="getData(account.accountNumber)">
-														<h5>Account #: <span>{{account.accountNumber}}</span></h5>
-														<h5>Account Type: <span>{{account.accountType}}</span></h5>
-													</div>
-												</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-8 tabPanel">
-										<div class="tab-content">
-											<div role="tabpanel" class="tab-pane active" id="one">
-												<div class="row account">
-													<div class="col-lg-6">
-														<div class="row">
-															<div class="col-lg-12">
-																<div class="detailsWrapper">
-																	<h4>Account Number</h4>
-																	<p>{{accountInformation.accountNumber}}</p>
-																</div>
-															</div>
-															<div class="col-lg-12">
-																<div class="detailsWrapper">
-																	<h4>Account Type</h4>
-																	<p>{{accountInformation.accountType}}</p>
-																</div>
-															</div>
-															<div class="col-lg-12">
-																<div class="detailsWrapper">
-																	<h4>Date Opened</h4>
-																	<p>{{accountInformation.dateOpened}}</p>
-																</div>
-															</div>
-															<div class="col-lg-12">
-																<div class="detailsWrapper">
-																	<h4>Date Closed</h4>
-																	<p>{{accountInformation.dateClosed}}</p>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-lg-6">
-														<div class="row">
-															<div class="col-lg-12">
-																<div class="detailsWrapper currentBalance">
-																	<h4>Current Balance</h4>
-																	<p>{{accountInformation.currentBalance | currency}}</p>
-																</div>
-															</div>
-															<div class="col-lg-12">
-																<div class="detailsWrapper">
-																	<h4>Account Length</h4>
-																	<p>{{accountInformation.accountLength}}</p>
-																</div>
-															</div>
-														</div>
-													</div>	
-												</div>
-												<div class="row branch">
-													<div class="col-lg-6">
-														<div class="row">
-															<div class="col-lg-12">
-																<div class="detailsWrapper">
-																	<h4>Branch Information</h4>
-																	<p>{{branchInformation.address}}</p>
-																</div>
-															</div>
-															<div class="col-lg-12">
-																<div class="detailsWrapper">
-																	<h4>Branch Manager</h4>
-																	<p>{{branchInformation.branchManager}}</p>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-lg-6">
-														<div class="row">
-															<div class="col-lg-12">
-																<div class="detailsWrapper">
-																	<h4>Branch ID</h4>
-																	<p>{{branchInformation.branchId}}</p>
-																</div>
-															</div>
-															<div class="col-lg-12">
-																<div class="detailsWrapper">
-																	<h4>Branch Contact Number</h4>
-																	<p>{{branchInformation.contactNo}}</p>
-																</div>
-															</div>
-														</div>
-													</div>	
-												</div>
-												<div class="row openCases">
-													<div class="col-lg-12">
-														<div class="detailsWrapper">
-															<h4>Open Cases</h4>	
-															<p>{{branchInformation.openCases}}</p>
-														</div>
-													</div>
-													<div class="col-lg-12">
-														<div class="detailsWrapper">
-															<h4>Case History</h4>
-															<p ng-repeat="data in branchInformation.caseHistory">{{data.item}}</p>
-														</div>
-													</div>
-												</div>
-											</div>
-											
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-6 static">
-							<div class=" row" ng-controller="CurrentInformationCtrl">
-								<div class="col-lg-12 analysis">
-									<div class="panelContainer">
-										<div class="panel-header analysis">
-											<h4><i class="fa fa-paper-plane" aria-hidden="true"></i> Analysis</h4>
-										</div>
-										<div class="detailsWrapper">
-											<p>{{caseAnalysis}}</p>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-12 homeAddress">
-									<div class="panelContainer">
-										<div class="panel-header homeAddress">
-											<h4><i class="fa fa-home" aria-hidden="true"></i> Current Home Address</h4>
-										</div>
-										<div class="panel-body">
-											<div class="row">
-												<div class="col-lg-3">
-													<div class="detailsWrapper">
-														<h4>Address</h4>
-														<p>{{currentHomeAddress.address}}</p>
-													</div>
-												</div>
-												<div class="col-lg-3">
-													<div class="detailsWrapper">
-														<h4>City</h4>
-														<p>{{currentHomeAddress.city}}</p>
-													</div>
-												</div>
-												<div class="col-lg-3">
-													<div class="detailsWrapper">
-														<h4>State</h4>
-														<p>{{currentHomeAddress.state}}</p>
-													</div>
-												</div>
-												<div class="col-lg-3">
-													<div class="detailsWrapper">
-														<h4>Zip</h4>
-														<p>{{currentHomeAddress.zip}}</p>
-													</div>
-												</div>
-											</div>
-											<div class="row">
-												<div class="col-lg-3">
-													<div class="detailsWrapper">
-														<h4>Phone Number</h4>
-														<p>{{currentHomeAddress.phoneNumber}}</p>
-													</div>
-												</div>
-												<div class="col-lg-3">
-													<div class="detailsWrapper">
-														<h4>Cell Phone Number</h4>
-														<p>{{currentHomeAddress.cellPhoneNumber}}</p>
-													</div>
-												</div>
-												<div class="col-lg-3">
-													<div class="detailsWrapper">
-														<h4>Email Address</h4>
-														<p>{{currentHomeAddress.email}}</p>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-12 workAddress">
-									<div class="panelContainer">
-										<div class="panel-header workAddress">
-											<h4><i class="fa fa-suitcase" aria-hidden="true"></i> Current Work Address</h4>
-										</div>
-										<div class="panel-body">
-											<div class="row">
-												<div class="col-lg-6">
-													<div class="detailsWrapper">
-														<h4>Company Organization / Institution</h4>
-														<p>{{currentWorkAddress.company}}</p>
-													</div>
-												</div>
-												<div class="col-lg-6">
-													<div class="detailsWrapper">
-														<h4>Position</h4>
-														<p>{{currentWorkAddress.position}}</p>
-													</div>
-												</div>
-											</div>
-											<div class="row">
-												<div class="col-lg-3">
-													<div class="detailsWrapper">
-														<h4>Address</h4>
-														<p>{{currentWorkAddress.address}}</p>
-													</div>
-												</div>
-												<div class="col-lg-3">
-													<div class="detailsWrapper">
-														<h4>City</h4>
-														<p>{{currentWorkAddress.city}}</p>
-													</div>
-												</div>
-												<div class="col-lg-3">
-													<div class="detailsWrapper">
-														<h4>State</h4>
-														<p>{{currentWorkAddress.state}}</p>
-													</div>
-												</div>
-												<div class="col-lg-3">
-													<div class="detailsWrapper">
-														<h4>Zip</h4>
-														<p>{{currentWorkAddress.zip}}</p>
-													</div>
-												</div>
-											</div>
-											<div class="row">
-												<div class="col-lg-3">
-													<div class="detailsWrapper">
-														<h4>Phone Number</h4>
-														<p>{{currentWorkAddress.phoneNumber}}</p>
-													</div>
-												</div>
-												<div class="col-lg-3">
-													<div class="detailsWrapper">
-														<h4>Cell Phone Number</h4>
-														<p>{{currentWorkAddress.cellPhoneNumber}}</p>
-													</div>
-												</div>
-												<div class="col-lg-3">
-													<div class="detailsWrapper">
-														<h4>Email Address</h4>
-														<p>{{currentWorkAddress.email}}</p>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-                    </div>
                     <div class="row">
-                        <div class="col-lg-12">
-							<div class="panelContainer">
-								<div class="panel-header recentTransactions">
-									<h4><i class="fa fa-folder-open" aria-hidden="true"></i> Recent Transactions</h4>
+                        <div class="col-lg-12 primaryAccountInfo">
+                            <div class="panelContainer">
+								<div class="panel-header accountInformation">
+									<h4><i class="fa fa-key" aria-hidden="true"></i> Primary Account Information</h4>
 								</div>
-								<div class="detailsWrapper">
-									<div class="tableContainer transactionsList" ng-controller="TransactionsCtrl">
-											<table class="table">
-												<thead>
-													<tr>
-														<th>Case Number</th>   
-														<th>Transaction Number</th>
-														<th>Transaction Type</th> 
-														<th>Origin Account Number</th>															
-														<th>Origin Account Type</th>
-														<th>Beneficiary Account Number</th>
-														<th>Amount</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr ng-repeat="transaction in transactions">
-														<td>{{transaction.caseNo}}</td>
-														<td><a href="#" data-toggle="modal" data-target="#myModal" data-transaction-number="{{transaction.transactionNum}}">{{transaction.transactionNum}}</a></td>
-														<td>{{transaction.transactionType}}</td>
-														<td>{{transaction.origAccountNum}}</td>
-														<td>{{transaction.origAccountType}}</td>
-														<td>{{transaction.benignAccountNum}}</td>
-														<td>{{transaction.amount | currency}}</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-								</div>
-							</div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-lg-7 leftPanel oneAcct">
+                                            <ul class="nav nav-tabs acctInfoTab" role="tablist">
+                                                <li class="active"><a href="#acctinfo" aria-controls="acctInfo" role="tab" data-toggle="tab"><i class="fa fa-user" aria-hidden="true"></i>Account Information</a></li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div role="tabpanel" class="tab-pane active" id="acctinfo">
+                                                    <div class="col-lg-12" ng-controller="AccountInformationCtrl">
+                                                        <div class="row account">
+                                                            <div class="col-lg-6">
+                                                                <div class="row">
+                                                                    <div class="col-lg-6">
+                                                                        <div class="detailsWrapper">
+                                                                            <h4>Account <br/>Number</h4>
+                                                                            <p>{{accountInformation.accountNumber}}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-6">
+                                                                        <div class="detailsWrapper">
+                                                                            <h4>Account <br/>Type</h4>
+                                                                            <p>{{accountInformation.accountType}}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-12">
+                                                                        <div class="detailsWrapper currentBalance">
+                                                                            <h4>Current Balance</h4>
+                                                                            <p>{{accountInformation.currentBalance | currency}}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="row">
+                                                                    <div class="col-lg-6">
+                                                                        <div class="detailsWrapper">
+                                                                            <h4>Date <br/>Opened</h4>
+                                                                            <p>{{accountInformation.dateOpened}}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-6">
+                                                                        <div class="detailsWrapper">
+                                                                            <h4>Date <br/>Closed</h4>
+                                                                            <p>{{accountInformation.dateClosed}}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                    <div class="col-lg-12">
+                                                                        <div class="detailsWrapper">
+                                                                            <h4>Account Length</h4>
+                                                                            <p>{{accountInformation.accountLength}}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>	
+                                                        </div>
+                                                        <div class="row openCases">
+                                                            <div class="col-lg-6">
+                                                                <div class="detailsWrapper">
+                                                                    <h4>Open Cases</h4>	
+                                                                    <p>{{branchInformation.openCases}}</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="detailsWrapper">
+                                                                    <h4>Case History</h4>
+                                                                    <p ng-repeat="data in branchInformation.caseHistory">{{data.item}}</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>                                   
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5 leftPanel">
+                                            <ul class="nav nav-tabs acctInfoTab" role="tablist">
+                                                <li class="active"><a href="#homeAddress" aria-controls="homeAddress" role="tab" data-toggle="tab"><i class="fa fa-home" aria-hidden="true"></i>Home Address</a></li>
+                                                <li><a href="#workAddress" aria-controls="workAddress" role="tab" data-toggle="tab"><i class="fa fa-suitcase" aria-hidden="true"></i>Work Address</a></li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div role="tabpanel" class="tab-pane active" id="homeAddress">
+                                                    <div class="col-lg-12 homeAddress" ng-controller="CurrentInformationCtrl">
+                                                        <div class="row">
+                                                            <div class="col-lg-3">
+                                                                <div class="detailsWrapper">
+                                                                    <h4>Address</h4>
+                                                                    <p>{{currentHomeAddress.address}}</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <div class="detailsWrapper">
+                                                                    <h4>City</h4>
+                                                                    <p>{{currentHomeAddress.city}}</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <div class="detailsWrapper">
+                                                                    <h4>State</h4>
+                                                                    <p>{{currentHomeAddress.state}}</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <div class="detailsWrapper">
+                                                                    <h4>Zip</h4>
+                                                                    <p>{{currentHomeAddress.zip}}</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-3">
+                                                                <div class="detailsWrapper">
+                                                                    <h4>Phone Number</h4>
+                                                                    <p>{{currentHomeAddress.phoneNumber}}</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <div class="detailsWrapper">
+                                                                    <h4>Cell Phone Number</h4>
+                                                                    <p>{{currentHomeAddress.cellPhoneNumber}}</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <div class="detailsWrapper">
+                                                                    <h4>Email Address</h4>
+                                                                    <p>{{currentHomeAddress.email}}</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div role="tabpanel" class="tab-pane" id="workAddress">
+                                                    <div class="col-lg-12 workAddress" ng-controller="CurrentInformationCtrl">
+                                                        <div class="row">
+                                                            <div class="col-lg-6">
+                                                                <div class="detailsWrapper">
+                                                                    <h4>Company Organization / Institution</h4>
+                                                                    <p>{{currentWorkAddress.company}}</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="detailsWrapper">
+                                                                    <h4>Position</h4>
+                                                                    <p>{{currentWorkAddress.position}}</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-3">
+                                                                <div class="detailsWrapper">
+                                                                    <h4>Address</h4>
+                                                                    <p>{{currentWorkAddress.address}}</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <div class="detailsWrapper">
+                                                                    <h4>City</h4>
+                                                                    <p>{{currentWorkAddress.city}}</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <div class="detailsWrapper">
+                                                                    <h4>State</h4>
+                                                                    <p>{{currentWorkAddress.state}}</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <div class="detailsWrapper">
+                                                                    <h4>Zip</h4>
+                                                                    <p>{{currentWorkAddress.zip}}</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-3">
+                                                                <div class="detailsWrapper">
+                                                                    <h4>Phone Number</h4>
+                                                                    <p>{{currentWorkAddress.phoneNumber}}</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <div class="detailsWrapper">
+                                                                    <h4>Cell Phone Number</h4>
+                                                                    <p>{{currentWorkAddress.cellPhoneNumber}}</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <div class="detailsWrapper">
+                                                                    <h4>Email Address</h4>
+                                                                    <p>{{currentWorkAddress.email}}</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 rightPanel">
+                                            <ul class="nav nav-tabs acctInfoTab" role="tablist">
+                                                <li class="active"><a href="#acctinfo" aria-controls="acctInfo" role="tab" data-toggle="tab"><i class="fa fa-folder-open" aria-hidden="true"></i>Recent Transactions</a></li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div class="tableContainer transactionsList" ng-controller="TransactionsCtrl">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Case Number</th>   
+                                                                <th>Transaction Number</th>
+                                                                <th>Transaction Type</th> 
+                                                                <th>Origin Account Number</th>															
+                                                                <th>Origin Account Type</th>
+                                                                <th>Beneficiary Account Number</th>
+                                                                <th>Amount</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr ng-repeat="transaction in transactions">
+                                                                <td>{{transaction.caseNo}}</td>
+                                                                <td><a href="#" data-toggle="modal" data-target="#myModal" data-transaction-number="{{transaction.transactionNum}}">{{transaction.transactionNum}}</a></td>
+                                                                <td>{{transaction.transactionType}}</td>
+                                                                <td>{{transaction.origAccountNum}}</td>
+                                                                <td>{{transaction.origAccountType}}</td>
+                                                                <td>{{transaction.benignAccountNum}}</td>
+                                                                <td>{{transaction.amount | currency}}</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-lg-6 hidden">
-							<div class="panelContainer">
-								<div class="panel-header">
-									<h4><i class="fa fa-cube" aria-hidden="true"></i> Transaction Information</h4>
+                        <div class="col-lg-12 relatedAccounts">
+                            <div class="panelContainer">
+								<div class="panel-header relatedAccounts">
+									<h4><i class="fa fa-users" aria-hidden="true"></i> Related Accounts</h4>
 								</div>
-								<div class="row">
-									<div class="col-lg-3">
-										<div class="detailsWrapper">
-											<h4>Transaction Number</h4>
-											<p>185-3424255346-2331-14</p>
-										</div>
-									</div>
-									<div class="col-lg-3">
-										<div class="detailsWrapper">
-											<h4>Transaction Date</h4>
-											<p>11/15/2016 19:45</p>
-										</div>
-									</div>
-									<div class="col-lg-3">
-										<div class="detailsWrapper">
-											<h4>Transactio Type</h4>
-											<p>Bank Withdrawal</p>
-										</div>
-									</div>
-									<div class="col-lg-3">
-										<div class="detailsWrapper">
-											<h4>Amount</h4>
-											<p>$  15,000.00</p>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-lg-6">
-										<div class="detailsWrapper">
-											<h4>Starting Balance</h4>
-											<p>$  277,511.09</p>
-										</div>
-									</div>
-									<div class="col-lg-6">
-										<div class="detailsWrapper">
-											<h4>Current Balance</h4>
-											<p>$  262,456.09</p>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-lg-3">
-										<div class="detailsWrapper">
-											<h4>Teller Name</h4>
-											<p>Sam Smith</p>
-										</div>
-									</div>
-									<div class="col-lg-3">
-										<div class="detailsWrapper">
-											<h4>Bank Teller ID</h4>
-											<p>23457</p>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-lg-6">
-										<div class="detailsWrapper">
-											<h4>Branch Information</h4>
-											<p>57h Ave. New York Branch</p>
-										</div>
-									</div>
-									<div class="col-lg-6">
-										<div class="detailsWrapper">
-											<h4>Branch ID</h4>
-											<p>2334564476667</p>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-lg-6">
-										<div class="detailsWrapper">
-											<h4>Branch Manager</h4>
-											<p>George McArthur</p>
-										</div>
-									</div>
-									<div class="col-lg-6">
-										<div class="detailsWrapper">
-											<h4>Branch Contact Number</h4>
-											<p>(747)456-3445</p>
-										</div>
-									</div>
-								</div>
-							</div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="tableContainer transactionsList" ng-controller="RelatedAccountCtrl">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>&nbsp;</th>   
+                                                        <th><i class="fa fa-home" aria-hidden="true"></i><p>Home Address</p></th>   
+                                                        <th><i class="fa fa-suitcase" aria-hidden="true"></i><p>Work Address</p></th>
+                                                        <th><i class="fa fa-user-circle" aria-hidden="true"></i><p>Account Name</p></th> 
+                                                        <th><i class="fa fa-birthday-cake" aria-hidden="true"></i><p>Birth Date</p></th>
+                                                        <th><i class="fa fa-book" aria-hidden="true"></i><p>SSN</p></th>
+                                                        <th><i class="fa fa-address-card-o" aria-hidden="true"></i><p>Past Address</p></th>
+                                                        <th><i class="fa fa-envelope" aria-hidden="true"></i><p>Email Address</p></th>
+                                                        <th><i class="fa fa-phone" aria-hidden="true"></i><p>Phone Number</p></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr ng-repeat="relatedAccount in relatedAccounts">
+                                                        <td>
+                                                            <div class="detailsWrapperListDetails ng-scope">
+                                                                <a data-toggle="modal" data-target="#myModal2" data-transaction-number="{{relatedAccount.accountNumber}}">
+                                                                    <div class="details">
+                                                                        <h5>Account #: {{relatedAccount.accountNumber}}</span></h5>
+                                                                        <h5>Account Type: {{relatedAccount.accountType}}</span></h5>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div ng-if="relatedAccount.homeAddress == 'no'">
+                                                                <div class="details"><i class="fa fa-times" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.homeAddress == 'yes'">
+                                                                <div class="details"><i class="fa fa-check" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.homeAddress == 'maybe'">
+                                                                <div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div ng-if="relatedAccount.workAddress == 'no'">
+                                                                <div class="details"><i class="fa fa-times" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.workAddress == 'yes'">
+                                                                <div class="details"><i class="fa fa-check" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.workAddress == 'maybe'">
+                                                                <div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div ng-if="relatedAccount.accountName == 'no'">
+                                                                <div class="details"><i class="fa fa-times" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.accountName == 'yes'">
+                                                                <div class="details"><i class="fa fa-check" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.accountName == 'maybe'">
+                                                                <div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div ng-if="relatedAccount.birthDate == 'no'">
+                                                                <div class="details"><i class="fa fa-times" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.birthDate == 'yes'">
+                                                                <div class="details"><i class="fa fa-check" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.birthDate == 'maybe'">
+                                                                <div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div ng-if="relatedAccount.ssn == 'no'">
+                                                                <div class="details"><i class="fa fa-times" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.ssn == 'yes'">
+                                                                <div class="details"><i class="fa fa-check" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.ssn == 'maybe'">
+                                                                <div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div ng-if="relatedAccount.pastAddress == 'no'">
+                                                                <div class="details"><i class="fa fa-times" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.pastAddress == 'yes'">
+                                                                <div class="details"><i class="fa fa-check" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.pastAddress == 'maybe'">
+                                                                <div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div ng-if="relatedAccount.email == 'no'">
+                                                                <div class="details"><i class="fa fa-times" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.email == 'yes'">
+                                                                <div class="details"><i class="fa fa-check" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.email == 'maybe'">
+                                                                <div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div ng-if="relatedAccount.phoneNUmber == 'no'">
+                                                                <div class="details"><i class="fa fa-times" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.phoneNUmber == 'yes'">
+                                                                <div class="details"><i class="fa fa-check" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.phoneNUmber == 'maybe'">
+                                                                <div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </div> 
                 </div>
               </div>
               <!-- Modal -->
@@ -549,7 +533,199 @@
 
                     </div>
                   </div>
-                </div> 
+              </div> 
+              <!-- END OF MODAL -->
+              <!-- Modal -->
+              <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" ng-controller="GetTransactionInfoCtrl">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel"><i class="fa fa-users" aria-hidden="true"></i>Related Accounts</h4>
+                      </div>
+                      <div class="modal-body">
+						<div class="row">
+                            <div class="col-lg-8 leftPanel">
+                                <ul class="nav nav-tabs acctInfoTab" role="tablist">
+                                    <li class="active"><a href="#acctinfo2" aria-controls="acctInfo2" role="tab" data-toggle="tab"><i class="fa fa-book" aria-hidden="true"></i></a></li>
+                                    <li><a href="#homeAddress2" aria-controls="homeAddress2" role="tab" data-toggle="tab"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                                    
+                                </ul>
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active" id="acctinfo2">
+                                        <div class="col-lg-12">
+                                            <div class="row account">
+                                                <div class="col-lg-6">
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="detailsWrapper">
+                                                                <h4>Account <br/>Number</h4>
+                                                                <p>{{accountInformation.accountNumber}}</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="detailsWrapper">
+                                                                <h4>Account <br/>Type</h4>
+                                                                <p>{{accountInformation.accountType}}</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="detailsWrapper currentBalance">
+                                                                <h4>Current Balance</h4>
+                                                                <p>{{accountInformation.currentBalance | currency}}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="detailsWrapper">
+                                                                <h4>Date <br/>Opened</h4>
+                                                                <p>{{accountInformation.dateOpened}}</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="detailsWrapper">
+                                                                <h4>Date <br/>Closed</h4>
+                                                                <p>{{accountInformation.dateClosed}}</p>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="col-lg-12">
+                                                            <div class="detailsWrapper">
+                                                                <h4>Account Length</h4>
+                                                                <p>{{accountInformation.accountLength}}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>	
+                                            </div>
+                                            <div class="row openCases">
+                                                <div class="col-lg-6">
+                                                    <div class="detailsWrapper">
+                                                        <h4>Open Cases</h4>	
+                                                        <p>{{branchInformation.openCases}}</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="detailsWrapper">
+                                                        <h4>Case History</h4>
+                                                        <p ng-repeat="data in branchInformation.caseHistory">{{data.item}}</p>
+                                                    </div>
+                                                </div>
+                                            </div>                                   
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="homeAddress2">
+                                        <div class="col-lg-12 homeAddress">
+                                            <div class="row">
+                                                <div class="col-lg-3">
+                                                    <div class="detailsWrapper">
+                                                        <h4>Address</h4>
+                                                        <p>{{currentHomeAddress.address}}</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <div class="detailsWrapper">
+                                                        <h4>City</h4>
+                                                        <p>{{currentHomeAddress.city}}</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <div class="detailsWrapper">
+                                                        <h4>State</h4>
+                                                        <p>{{currentHomeAddress.state}}</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <div class="detailsWrapper">
+                                                        <h4>Zip</h4>
+                                                        <p>{{currentHomeAddress.zip}}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-3">
+                                                    <div class="detailsWrapper">
+                                                        <h4>Phone Number</h4>
+                                                        <p>{{currentHomeAddress.phoneNumber}}</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <div class="detailsWrapper">
+                                                        <h4>Cell Phone Number</h4>
+                                                        <p>{{currentHomeAddress.cellPhoneNumber}}</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <div class="detailsWrapper">
+                                                        <h4>Email Address</h4>
+                                                        <p>{{currentHomeAddress.email}}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div> 
+                            <div class="col-lg-4 rightPanel">
+                                <div class ="panelContainer">
+                                    <div class="panelHeader">
+                                        <h4><i class="fa fa-users" aria-hidden="true"></i> Entity Relationship Analysis</h4>
+                                    </div>
+                                    <div class="panelBody">
+                                       <p>The following matches with the Primary Account:</p> 
+                                       <ul>
+                                          <li>Home Address</li>
+                                          <li>Birth Date</li>
+                                       </ul>
+                                       
+                                       <p>The following has a partial match with the Primary Account:</p> 
+                                       <ul>
+                                          <li>Account Name - Same Last Name</li>
+                                          <li>Social Security Number - Same Last 4 digits</li>
+                                       </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="tableContainer transactionsList" ng-controller="TransactionsCtrl">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Case Number</th>   
+                                                <th>Transaction Number</th>
+                                                <th>Transaction Type</th> 
+                                                <th>Origin Account Number</th>															
+                                                <th>Origin Account Type</th>
+                                                <th>Beneficiary Account Number</th>
+                                                <th>Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="transaction in transactions">
+                                                <td>{{transaction.caseNo}}</td>
+                                                <td>{{transaction.transactionNum}}</td>
+                                                <td>{{transaction.transactionType}}</td>
+                                                <td>{{transaction.origAccountNum}}</td>
+                                                <td>{{transaction.origAccountType}}</td>
+                                                <td>{{transaction.benignAccountNum}}</td>
+                                                <td>{{transaction.amount | currency}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+              </div> 
               <!-- END OF MODAL -->
               </div>
         </div>
@@ -576,12 +752,12 @@
 	<script>	
 	$(document).ready(function() {
 
-        $('#myModal').on('show.bs.modal', function(e) {
+        $('#myModal2').on('show.bs.modal', function(e) {
 
             //get data-id attribute of the clicked element
             var transactionNo = $(e.relatedTarget).data('transaction-number');
-
-            angular.element($("#myModal")).scope().getData(transactionNo);
+            //alert(transactionNo);
+            angular.element($("#myModal2")).scope().getData(transactionNo);
         });
     }); 
     </script>
