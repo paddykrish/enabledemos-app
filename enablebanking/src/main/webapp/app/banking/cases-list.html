@@ -308,7 +308,7 @@
 								</div>
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <div class="tableContainer transactionsList">
+                                        <div class="tableContainer transactionsList" ng-controller="RelatedAccountCtrl">
                                             <table class="table">
                                                 <thead>
                                                     <tr>
@@ -324,126 +324,107 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
+                                                    <tr ng-repeat="relatedAccount in relatedAccounts">
                                                         <td>
                                                             <div class="detailsWrapperListDetails ng-scope">
-                                                                <a data-toggle="modal" data-target="#myModal2">
+                                                                <a data-toggle="modal" data-target="#myModal2" data-transaction-number="{{relatedAccount.accountNumber}}">
                                                                     <div class="details">
-                                                                        <h5>Account #: 5295-2906-2928-5907</span></h5>
-                                                                        <h5>Account Type: Mutual Funds</span></h5>
+                                                                        <h5>Account #: {{relatedAccount.accountNumber}}</span></h5>
+                                                                        <h5>Account Type: {{relatedAccount.accountType}}</span></h5>
                                                                     </div>
                                                                 </a>
                                                             </div>
                                                         </td>
-                                                        <td><div class="details"><i class="fa fa-times" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-times" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-times" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-check" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-times" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-times" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div></td>
-                                                    </tr>
-                                                    <tr>
                                                         <td>
-                                                            <div class="detailsWrapperListDetails ng-scope">
-                                                                <a>
-                                                                    <div class="details">
-                                                                        <h5>Account #: 5295-2906-2928-5907</span></h5>
-                                                                        <h5>Account Type: Mutual Funds</span></h5>
-                                                                    </div>
-                                                                </a>
+                                                            <div ng-if="relatedAccount.homeAddress == 'no'">
+                                                                <div class="details"><i class="fa fa-times" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.homeAddress == 'yes'">
+                                                                <div class="details"><i class="fa fa-check" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.homeAddress == 'maybe'">
+                                                                <div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div>
                                                             </div>
                                                         </td>
-                                                        <td><div class="details"><i class="fa fa-check" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-times" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-check" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-times" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-times" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div></td>
-                                                    </tr>
-                                                    <tr>
                                                         <td>
-                                                            <div class="detailsWrapperListDetails ng-scope">
-                                                                <a>
-                                                                    <div class="details">
-                                                                        <h5>Account #: 5295-2906-2928-5907</span></h5>
-                                                                        <h5>Account Type: Mutual Funds</span></h5>
-                                                                    </div>
-                                                                </a>
+                                                            <div ng-if="relatedAccount.workAddress == 'no'">
+                                                                <div class="details"><i class="fa fa-times" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.workAddress == 'yes'">
+                                                                <div class="details"><i class="fa fa-check" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.workAddress == 'maybe'">
+                                                                <div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div>
                                                             </div>
                                                         </td>
-                                                        <td><div class="details"><i class="fa fa-check" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-times" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-check" aria-hidden="true"></i></div></td>
-                                                       <td><div class="details"><i class="fa fa-times" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-times" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div></td>
-                                                    </tr>
-                                                    <tr>
                                                         <td>
-                                                            <div class="detailsWrapperListDetails ng-scope">
-                                                                <a>
-                                                                    <div class="details">
-                                                                        <h5>Account #: 5295-2906-2928-5907</span></h5>
-                                                                        <h5>Account Type: Mutual Funds</span></h5>
-                                                                    </div>
-                                                                </a>
+                                                            <div ng-if="relatedAccount.accountName == 'no'">
+                                                                <div class="details"><i class="fa fa-times" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.accountName == 'yes'">
+                                                                <div class="details"><i class="fa fa-check" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.accountName == 'maybe'">
+                                                                <div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div>
                                                             </div>
                                                         </td>
-                                                        <td><div class="details"><i class="fa fa-check" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-times" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-check" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-times" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-times" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div></td>
-                                                    </tr>
-                                                    <tr>
                                                         <td>
-                                                            <div class="detailsWrapperListDetails ng-scope">
-                                                                <a>
-                                                                    <div class="details">
-                                                                        <h5>Account #: 5295-2906-2928-5907</span></h5>
-                                                                        <h5>Account Type: Mutual Funds</span></h5>
-                                                                    </div>
-                                                                </a>
+                                                            <div ng-if="relatedAccount.birthDate == 'no'">
+                                                                <div class="details"><i class="fa fa-times" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.birthDate == 'yes'">
+                                                                <div class="details"><i class="fa fa-check" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.birthDate == 'maybe'">
+                                                                <div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div>
                                                             </div>
                                                         </td>
-                                                        <td><div class="details"><i class="fa fa-check" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-check" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-check" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-check" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-times" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-times" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div></td>
-                                                    </tr>
-                                                    <tr>
                                                         <td>
-                                                            <div class="detailsWrapperListDetails ng-scope">
-                                                                <a>
-                                                                    <div class="details">
-                                                                        <h5>Account #: 5295-2906-2928-5907</span></h5>
-                                                                        <h5>Account Type: Mutual Funds</span></h5>
-                                                                    </div>
-                                                                </a>
+                                                            <div ng-if="relatedAccount.ssn == 'no'">
+                                                                <div class="details"><i class="fa fa-times" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.ssn == 'yes'">
+                                                                <div class="details"><i class="fa fa-check" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.ssn == 'maybe'">
+                                                                <div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div>
                                                             </div>
                                                         </td>
-                                                        <td><div class="details"><i class="fa fa-check" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-times" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-times" aria-hidden="true"></i></div></td>
-                                                        <td><div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div></td>
+                                                        <td>
+                                                            <div ng-if="relatedAccount.pastAddress == 'no'">
+                                                                <div class="details"><i class="fa fa-times" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.pastAddress == 'yes'">
+                                                                <div class="details"><i class="fa fa-check" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.pastAddress == 'maybe'">
+                                                                <div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div ng-if="relatedAccount.email == 'no'">
+                                                                <div class="details"><i class="fa fa-times" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.email == 'yes'">
+                                                                <div class="details"><i class="fa fa-check" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.email == 'maybe'">
+                                                                <div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div ng-if="relatedAccount.phoneNUmber == 'no'">
+                                                                <div class="details"><i class="fa fa-times" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.phoneNUmber == 'yes'">
+                                                                <div class="details"><i class="fa fa-check" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div ng-if="relatedAccount.phoneNUmber == 'maybe'">
+                                                                <div class="details"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></div>
+                                                            </div>
+                                                        </td>
                                                     </tr>
+                                                    
                                                 </tbody>
                                             </table>
                                         </div>
@@ -572,7 +553,7 @@
                                 </ul>
                                 <div class="tab-content">
                                     <div role="tabpanel" class="tab-pane active" id="acctinfo2">
-                                        <div class="col-lg-12" ng-controller="AccountInformationCtrl">
+                                        <div class="col-lg-12">
                                             <div class="row account">
                                                 <div class="col-lg-6">
                                                     <div class="row">
@@ -637,7 +618,7 @@
                                         </div>
                                     </div>
                                     <div role="tabpanel" class="tab-pane" id="homeAddress2">
-                                        <div class="col-lg-12 homeAddress" ng-controller="CurrentInformationCtrl">
+                                        <div class="col-lg-12 homeAddress">
                                             <div class="row">
                                                 <div class="col-lg-3">
                                                     <div class="detailsWrapper">
@@ -771,12 +752,12 @@
 	<script>	
 	$(document).ready(function() {
 
-        $('#myModal').on('show.bs.modal', function(e) {
+        $('#myModal2').on('show.bs.modal', function(e) {
 
             //get data-id attribute of the clicked element
             var transactionNo = $(e.relatedTarget).data('transaction-number');
-
-            angular.element($("#myModal")).scope().getData(transactionNo);
+            //alert(transactionNo);
+            angular.element($("#myModal2")).scope().getData(transactionNo);
         });
     }); 
     </script>

@@ -176,13 +176,28 @@ app.controller("ReferenceDocumentsCtrl", function($scope, $http) {
 });
 
 app.controller("GetTransactionInfoCtrl", function($scope, $http) {
-    $scope.getData = function(transctionNo) {
+    /*$scope.getData = function(transctionNo) {
         //console.log(transctionNo);
         $http.get('../data/transact_info_' + transctionNo + '.json')
             .then(function(response) {
                 $scope.transactionInfo = response.data.transactionInfo;
                 $scope.branchInfo = response.data.branchInfo;
             });
+    };*/
+    function getAccountData(accountNumber) {
+        //console.log('initdata');
+        $http.get('../data/suspicious_cases_' + accountNumber + '.json')
+             .then(function(response) {
+                console.log('../data/suspicious_cases_' + accountNumber + '.json');
+                console.log(response.data);
+                $scope.accountInformation = response.data.accountInformation;
+                $scope.branchInformation = response.data.branchInformation;
+                $scope.currentHomeAddress = response.data.currentHomeAddress;
+             });
+    }
+    
+    $scope.getData = function(accountNumber) {
+        getAccountData(accountNumber);
     };
 });
 
@@ -194,4 +209,13 @@ app.controller("CurrentInformationCtrl", function($scope, $http) {
             $scope.currentWorkAddress = response.data.currentWorkAddress;
 			$scope.caseAnalysis = response.data.analysisResult;
         });
+});
+
+app.controller("RelatedAccountCtrl", function($scope, $http) {
+   $http.get('../data/related_accounts_data.json')
+        .then(function(response) {
+            //console.log(response.data);
+            $scope.relatedAccounts = response.data.accounts;
+            
+        }); 
 });

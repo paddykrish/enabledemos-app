@@ -56,9 +56,10 @@ app.controller("AccountInformationCtrl", function($scope, $http, $window) {
 	
 	function getCaseAccounts(caseId) {
 		$http.get('../data/case_' + caseId + '.json')
-			 .then(function(response) {				
+			 .then(function(response) {
 			 	$scope.caseAccounts = response.data.accounts;
 				$scope.caseAnalysis = response.data.analysisResult;
+                $scope.fraudScore = response.data.fraudScore;
 				getAccountData($scope.caseAccounts[0].accountNumber);	
 			 });
 	}
@@ -248,4 +249,94 @@ app.controller("RelatedEntityCtrl", function($scope, $http) {
             //console.log(response.data);
             $scope.entityRelationships = response.data;
         });
+});
+
+app.controller("EventFraudScoreActivityCtrl", function($scope, $http) {
+    $scope.options = {
+        chart: {
+            type: 'lineChart',
+            height: 190,
+            margin : {
+                top: 20,
+                right: 20,
+                bottom: 20,
+                left: 32
+            },
+            x: function(d){ return d[0]; },
+            y: function(d){ return d[1]; },
+            useInteractiveGuideline: true,
+            duration: 0,    
+            yAxis: {
+                //axisLabel: 'Millions',
+                //axisLabelDistance: -25,
+                tickFormat: function(d){
+                   return d3.format('.00f')(d);
+                }
+            },
+            xAxis: {
+                tickFormat: function(d) {
+                    //return d3.time.format('%b %Y')(new Date(d))
+                    return '';
+                }
+            },
+            noData: "Loading Data",
+            showLegend: false,
+            yDomain: [100, 1000]
+        }
+    };
+
+    $scope.data = getData();
+
+    function getData() {
+        $http.get('../data/event_fraud_score_data.json')
+            .then(function(response) {
+                //console.log(response.data);
+                $scope.data = response.data;
+            });
+    }
+});
+
+app.controller("AccountFraudScoreActivityCtrl", function($scope, $http) {
+    $scope.options = {
+        chart: {
+            type: 'lineChart',
+            height: 190,
+            margin : {
+                top: 20,
+                right: 20,
+                bottom: 20,
+                left: 32
+            },
+            x: function(d){ return d[0]; },
+            y: function(d){ return d[1]; },
+            useInteractiveGuideline: true,
+            duration: 0,    
+            yAxis: {
+                //axisLabel: 'Millions',
+                //axisLabelDistance: -25,
+                tickFormat: function(d){
+                   return d3.format('.00f')(d);
+                }
+            },
+            xAxis: {
+                tickFormat: function(d) {
+                    //return d3.time.format('%b %Y')(new Date(d))
+                    return '';
+                }
+            },
+            noData: "Loading Data",
+            showLegend: false,
+            yDomain: [100, 1000]
+        }
+    };
+
+    $scope.data = getData();
+
+    function getData() {
+        $http.get('../data/account_fraud_score_data.json')
+            .then(function(response) {
+                //console.log(response.data);
+                $scope.data = response.data;
+            });
+    }
 });

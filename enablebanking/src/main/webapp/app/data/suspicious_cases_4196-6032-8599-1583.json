@@ -21,5 +21,14 @@
 				"item": "417 - Alex Summers - Resolved"
 			}
 		]
+	},
+	"currentHomeAddress": {
+		"address": "737 Albany-Shaker Road",
+		"city": "Albany",
+		"state": "NY",
+		"zip": "12211",
+		"phoneNumber": "(641) 366-3933",
+		"cellPhoneNumber": "(308) 359-4781",
+		"email": "oferris@gmail.com"
 	}
 }
